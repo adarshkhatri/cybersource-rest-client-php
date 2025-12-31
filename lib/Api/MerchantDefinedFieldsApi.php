@@ -202,6 +202,10 @@ class MerchantDefinedFieldsApi
         }
 
         self::$logger->debug("Return Type : \CyberSource\Model\InlineResponse2003[]");
+        
+        // Response MLE check
+        $isResponseMLEForAPI = MLEUtility::checkIsResponseMLEForAPI($this->apiClient->merchantConfig, "createMerchantDefinedFieldDefinition,createMerchantDefinedFieldDefinitionWithHttpInfo");
+        
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
@@ -211,7 +215,8 @@ class MerchantDefinedFieldsApi
                 $httpBody,
                 $headerParams,
                 '\CyberSource\Model\InlineResponse2003[]',
-                '/invoicing/v2/{referenceType}/merchantDefinedFields'
+                '/invoicing/v2/{referenceType}/merchantDefinedFields',
+                $isResponseMLEForAPI
             );
             
             self::$logger->debug("Response Headers :\n" . \CyberSource\Utilities\Helpers\ListHelper::toString($httpHeader));
@@ -349,6 +354,10 @@ class MerchantDefinedFieldsApi
         }
 
         self::$logger->debug("Return Type : null");
+        
+        // Response MLE check
+        $isResponseMLEForAPI = MLEUtility::checkIsResponseMLEForAPI($this->apiClient->merchantConfig, "deleteMerchantDefinedFieldsDefinitions,deleteMerchantDefinedFieldsDefinitionsWithHttpInfo");
+        
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
@@ -358,7 +367,8 @@ class MerchantDefinedFieldsApi
                 $httpBody,
                 $headerParams,
                 null,
-                '/invoicing/v2/{referenceType}/merchantDefinedFields/{id}'
+                '/invoicing/v2/{referenceType}/merchantDefinedFields/{id}',
+                $isResponseMLEForAPI
             );
             
             self::$logger->debug("Response Headers :\n" . \CyberSource\Utilities\Helpers\ListHelper::toString($httpHeader));
@@ -465,6 +475,10 @@ class MerchantDefinedFieldsApi
         }
 
         self::$logger->debug("Return Type : \CyberSource\Model\InlineResponse2003[]");
+        
+        // Response MLE check
+        $isResponseMLEForAPI = MLEUtility::checkIsResponseMLEForAPI($this->apiClient->merchantConfig, "getMerchantDefinedFieldsDefinitions,getMerchantDefinedFieldsDefinitionsWithHttpInfo");
+        
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
@@ -474,7 +488,8 @@ class MerchantDefinedFieldsApi
                 $httpBody,
                 $headerParams,
                 '\CyberSource\Model\InlineResponse2003[]',
-                '/invoicing/v2/{referenceType}/merchantDefinedFields'
+                '/invoicing/v2/{referenceType}/merchantDefinedFields',
+                $isResponseMLEForAPI
             );
             
             self::$logger->debug("Response Headers :\n" . \CyberSource\Utilities\Helpers\ListHelper::toString($httpHeader));
@@ -618,6 +633,10 @@ class MerchantDefinedFieldsApi
         }
 
         self::$logger->debug("Return Type : \CyberSource\Model\InlineResponse2003[]");
+        
+        // Response MLE check
+        $isResponseMLEForAPI = MLEUtility::checkIsResponseMLEForAPI($this->apiClient->merchantConfig, "putMerchantDefinedFieldsDefinitions,putMerchantDefinedFieldsDefinitionsWithHttpInfo");
+        
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
@@ -627,7 +646,8 @@ class MerchantDefinedFieldsApi
                 $httpBody,
                 $headerParams,
                 '\CyberSource\Model\InlineResponse2003[]',
-                '/invoicing/v2/{referenceType}/merchantDefinedFields/{id}'
+                '/invoicing/v2/{referenceType}/merchantDefinedFields/{id}',
+                $isResponseMLEForAPI
             );
             
             self::$logger->debug("Response Headers :\n" . \CyberSource\Utilities\Helpers\ListHelper::toString($httpHeader));

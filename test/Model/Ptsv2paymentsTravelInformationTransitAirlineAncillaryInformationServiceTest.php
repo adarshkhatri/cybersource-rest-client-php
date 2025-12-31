@@ -89,4 +89,18 @@ class Ptsv2paymentsTravelInformationTransitAirlineAncillaryInformationServiceTes
     public function testPropertySubCategoryCode()
     {
     }
+
+    /**
+     * Test attribute "feeAmount"
+     */
+    public function testPropertyFeeAmount()
+    {
+    }
+
+    /**
+     * Test attribute "feeCode"
+     */
+    public function testPropertyFeeCode()
+    {
+    }
 }

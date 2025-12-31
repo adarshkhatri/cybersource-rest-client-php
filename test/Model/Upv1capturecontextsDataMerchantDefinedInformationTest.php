@@ -32,7 +32,7 @@ namespace CyberSource;
  * Upv1capturecontextsDataMerchantDefinedInformationTest Class Doc Comment
  *
  * @category    Class */
-// * @description Upv1capturecontextsDataMerchantDefinedInformation
+// * @description Contains merchant-defined key-value pairs
 /**
  * @package     CyberSource
  * @author      Swagger Codegen team

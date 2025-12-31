@@ -242,6 +242,10 @@ class OffersApi
         }
 
         self::$logger->debug("Return Type : \CyberSource\Model\InlineResponse2018");
+        
+        // Response MLE check
+        $isResponseMLEForAPI = MLEUtility::checkIsResponseMLEForAPI($this->apiClient->merchantConfig, "createOffer,createOfferWithHttpInfo");
+        
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
@@ -251,7 +255,8 @@ class OffersApi
                 $httpBody,
                 $headerParams,
                 '\CyberSource\Model\InlineResponse2018',
-                '/vas/v1/currencyconversion'
+                '/vas/v1/currencyconversion',
+                $isResponseMLEForAPI
             );
             
             self::$logger->debug("Response Headers :\n" . \CyberSource\Utilities\Helpers\ListHelper::toString($httpHeader));
@@ -425,6 +430,10 @@ class OffersApi
         }
 
         self::$logger->debug("Return Type : \CyberSource\Model\InlineResponse20015");
+        
+        // Response MLE check
+        $isResponseMLEForAPI = MLEUtility::checkIsResponseMLEForAPI($this->apiClient->merchantConfig, "getOffer,getOfferWithHttpInfo");
+        
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
@@ -434,7 +443,8 @@ class OffersApi
                 $httpBody,
                 $headerParams,
                 '\CyberSource\Model\InlineResponse20015',
-                '/vas/v1/currencyconversion/{id}'
+                '/vas/v1/currencyconversion/{id}',
+                $isResponseMLEForAPI
             );
             
             self::$logger->debug("Response Headers :\n" . \CyberSource\Utilities\Helpers\ListHelper::toString($httpHeader));

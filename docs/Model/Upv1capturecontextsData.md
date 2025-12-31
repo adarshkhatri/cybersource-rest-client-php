@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **merchantInformation** | [**\CyberSource\Model\Upv1capturecontextsDataMerchantInformation**](Upv1capturecontextsDataMerchantInformation.md) |  | [optional] 
 **processingInformation** | [**\CyberSource\Model\Upv1capturecontextsDataProcessingInformation**](Upv1capturecontextsDataProcessingInformation.md) |  | [optional] 
 **recipientInformation** | [**\CyberSource\Model\Upv1capturecontextsDataRecipientInformation**](Upv1capturecontextsDataRecipientInformation.md) |  | [optional] 
-**merchantDefinedInformation** | [**\CyberSource\Model\Upv1capturecontextsDataMerchantDefinedInformation**](Upv1capturecontextsDataMerchantDefinedInformation.md) |  | [optional] 
+**merchantDefinedInformation** | [**\CyberSource\Model\Upv1capturecontextsDataMerchantDefinedInformation[]**](Upv1capturecontextsDataMerchantDefinedInformation.md) |  | [optional] 
 **deviceInformation** | [**\CyberSource\Model\Upv1capturecontextsDataDeviceInformation**](Upv1capturecontextsDataDeviceInformation.md) |  | [optional] 
 **paymentInformation** | [**\CyberSource\Model\Upv1capturecontextsDataPaymentInformation**](Upv1capturecontextsDataPaymentInformation.md) |  | [optional] 
 

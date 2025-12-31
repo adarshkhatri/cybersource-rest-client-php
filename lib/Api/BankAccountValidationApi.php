@@ -189,6 +189,10 @@ class BankAccountValidationApi
         }
 
         self::$logger->debug("Return Type : \CyberSource\Model\InlineResponse20014");
+        
+        // Response MLE check
+        $isResponseMLEForAPI = MLEUtility::checkIsResponseMLEForAPI($this->apiClient->merchantConfig, "bankAccountValidationRequest,bankAccountValidationRequestWithHttpInfo");
+        
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
@@ -198,7 +202,8 @@ class BankAccountValidationApi
                 $httpBody,
                 $headerParams,
                 '\CyberSource\Model\InlineResponse20014',
-                '/bavs/v1/account-validations'
+                '/bavs/v1/account-validations',
+                $isResponseMLEForAPI
             );
             
             self::$logger->debug("Response Headers :\n" . \CyberSource\Utilities\Helpers\ListHelper::toString($httpHeader));
