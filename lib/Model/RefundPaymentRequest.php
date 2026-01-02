@@ -63,7 +63,7 @@ class RefundPaymentRequest implements ArrayAccess
         'aggregatorInformation' => '\CyberSource\Model\Ptsv2paymentsidcapturesAggregatorInformation',
         'pointOfSaleInformation' => '\CyberSource\Model\Ptsv2paymentsidrefundsPointOfSaleInformation',
         'merchantDefinedInformation' => '\CyberSource\Model\Ptsv2paymentsMerchantDefinedInformation[]',
-        'travelInformation' => '\CyberSource\Model\Ptsv2paymentsTravelInformation',
+        'travelInformation' => '\CyberSource\Model\Ptsv2paymentsidrefundsTravelInformation',
         'promotionInformation' => '\CyberSource\Model\Ptsv2paymentsPromotionInformation',
         'processorInformation' => '\CyberSource\Model\Ptsv2reversalsProcessorInformation'
     ];
@@ -443,7 +443,7 @@ class RefundPaymentRequest implements ArrayAccess
 
     /**
      * Gets travelInformation
-     * @return \CyberSource\Model\Ptsv2paymentsTravelInformation
+     * @return \CyberSource\Model\Ptsv2paymentsidrefundsTravelInformation
      */
     public function getTravelInformation()
     {
@@ -452,7 +452,7 @@ class RefundPaymentRequest implements ArrayAccess
 
     /**
      * Sets travelInformation
-     * @param \CyberSource\Model\Ptsv2paymentsTravelInformation $travelInformation
+     * @param \CyberSource\Model\Ptsv2paymentsidrefundsTravelInformation $travelInformation
      * @return $this
      */
     public function setTravelInformation($travelInformation)

@@ -4,6 +4,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **string** |  | 
+**locale** | **string** |  | [optional] 
+**localizedNames** | [**\CyberSource\Model\Boardingv1registrationsOrganizationInformationBusinessInformationLocalizedNames**](Boardingv1registrationsOrganizationInformationBusinessInformationLocalizedNames.md) |  | [optional] 
 **doingBusinessAs** | **string** |  | [optional] 
 **description** | **string** |  | [optional] 
 **startDate** | [**\DateTime**](\DateTime.md) | &#x60;Format: YYYY-MM-DD&#x60; Example 2016-08-11 equals August 11, 2016 | [optional] 

@@ -84,6 +84,20 @@ class Boardingv1registrationsOrganizationInformationBusinessInformationTest exte
     }
 
     /**
+     * Test attribute "locale"
+     */
+    public function testPropertyLocale()
+    {
+    }
+
+    /**
+     * Test attribute "localizedNames"
+     */
+    public function testPropertyLocalizedNames()
+    {
+    }
+
+    /**
      * Test attribute "doingBusinessAs"
      */
     public function testPropertyDoingBusinessAs()

@@ -60,7 +60,7 @@ class Upv1capturecontextsData implements ArrayAccess
         'merchantInformation' => '\CyberSource\Model\Upv1capturecontextsDataMerchantInformation',
         'processingInformation' => '\CyberSource\Model\Upv1capturecontextsDataProcessingInformation',
         'recipientInformation' => '\CyberSource\Model\Upv1capturecontextsDataRecipientInformation',
-        'merchantDefinedInformation' => '\CyberSource\Model\Upv1capturecontextsDataMerchantDefinedInformation',
+        'merchantDefinedInformation' => '\CyberSource\Model\Upv1capturecontextsDataMerchantDefinedInformation[]',
         'deviceInformation' => '\CyberSource\Model\Upv1capturecontextsDataDeviceInformation',
         'paymentInformation' => '\CyberSource\Model\Upv1capturecontextsDataPaymentInformation'
     ];
@@ -362,7 +362,7 @@ class Upv1capturecontextsData implements ArrayAccess
 
     /**
      * Gets merchantDefinedInformation
-     * @return \CyberSource\Model\Upv1capturecontextsDataMerchantDefinedInformation
+     * @return \CyberSource\Model\Upv1capturecontextsDataMerchantDefinedInformation[]
      */
     public function getMerchantDefinedInformation()
     {
@@ -371,7 +371,7 @@ class Upv1capturecontextsData implements ArrayAccess
 
     /**
      * Sets merchantDefinedInformation
-     * @param \CyberSource\Model\Upv1capturecontextsDataMerchantDefinedInformation $merchantDefinedInformation
+     * @param \CyberSource\Model\Upv1capturecontextsDataMerchantDefinedInformation[] $merchantDefinedInformation
      * @return $this
      */
     public function setMerchantDefinedInformation($merchantDefinedInformation)

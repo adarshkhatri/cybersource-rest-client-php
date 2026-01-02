@@ -110,4 +110,11 @@ class Ptsv2paymentsTravelInformationTransitAirlineAncillaryInformationTest exten
     public function testPropertyService()
     {
     }
+
+    /**
+     * Test attribute "feeDescription"
+     */
+    public function testPropertyFeeDescription()
+    {
+    }
 }

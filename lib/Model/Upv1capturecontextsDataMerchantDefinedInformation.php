@@ -34,6 +34,7 @@ use \ArrayAccess;
  * Upv1capturecontextsDataMerchantDefinedInformation Class Doc Comment
  *
  * @category    Class
+ * @description Contains merchant-defined key-value pairs
  * @package     CyberSource
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
@@ -176,7 +177,7 @@ class Upv1capturecontextsDataMerchantDefinedInformation implements ArrayAccess
 
     /**
      * Sets key
-     * @param string $key The key or identifier for the merchant-defined data field
+     * @param string $key The key or identifier for the merchant-defined data field.  Valid values are 1 to 100.
      * @return $this
      */
     public function setKey($key)
@@ -197,7 +198,7 @@ class Upv1capturecontextsDataMerchantDefinedInformation implements ArrayAccess
 
     /**
      * Sets value
-     * @param string $value The value associated with the merchant-defined data field
+     * @param string $value The value you assign for your merchant-defined data field.
      * @return $this
      */
     public function setValue($value)

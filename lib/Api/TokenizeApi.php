@@ -193,6 +193,10 @@ class TokenizeApi
         }
 
         self::$logger->debug("Return Type : \CyberSource\Model\InlineResponse200");
+        
+        // Response MLE check
+        $isResponseMLEForAPI = MLEUtility::checkIsResponseMLEForAPI($this->apiClient->merchantConfig, "tokenize,tokenizeWithHttpInfo");
+        
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
@@ -202,7 +206,8 @@ class TokenizeApi
                 $httpBody,
                 $headerParams,
                 '\CyberSource\Model\InlineResponse200',
-                '/tms/v2/tokenize'
+                '/tms/v2/tokenize',
+                $isResponseMLEForAPI
             );
             
             self::$logger->debug("Response Headers :\n" . \CyberSource\Utilities\Helpers\ListHelper::toString($httpHeader));
