@@ -32,7 +32,7 @@ namespace CyberSource;
  * Tmsv2TokenizedCardMetadataTest Class Doc Comment
  *
  * @category    Class */
-// * @description Metadata associated with the tokenized card.
+// * @description Tmsv2TokenizedCardMetadata
 /**
  * @package     CyberSource
  * @author      Swagger Codegen team

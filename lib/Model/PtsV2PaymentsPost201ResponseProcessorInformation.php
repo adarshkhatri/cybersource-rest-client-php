@@ -62,6 +62,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformation implements ArrayAccess
         'responseCodeSource' => 'string',
         'responseDetails' => 'string',
         'responseCategoryCode' => 'string',
+        'responseSourceCode' => 'string',
         'forwardedAcquirerCode' => 'string',
         'settlementDate' => 'string',
         'sequenceNumber' => 'string',
@@ -115,6 +116,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformation implements ArrayAccess
         'responseCodeSource' => null,
         'responseDetails' => null,
         'responseCategoryCode' => null,
+        'responseSourceCode' => null,
         'forwardedAcquirerCode' => null,
         'settlementDate' => null,
         'sequenceNumber' => null,
@@ -178,6 +180,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformation implements ArrayAccess
         'responseCodeSource' => 'responseCodeSource',
         'responseDetails' => 'responseDetails',
         'responseCategoryCode' => 'responseCategoryCode',
+        'responseSourceCode' => 'responseSourceCode',
         'forwardedAcquirerCode' => 'forwardedAcquirerCode',
         'settlementDate' => 'settlementDate',
         'sequenceNumber' => 'sequenceNumber',
@@ -232,6 +235,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformation implements ArrayAccess
         'responseCodeSource' => 'setResponseCodeSource',
         'responseDetails' => 'setResponseDetails',
         'responseCategoryCode' => 'setResponseCategoryCode',
+        'responseSourceCode' => 'setResponseSourceCode',
         'forwardedAcquirerCode' => 'setForwardedAcquirerCode',
         'settlementDate' => 'setSettlementDate',
         'sequenceNumber' => 'setSequenceNumber',
@@ -286,6 +290,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformation implements ArrayAccess
         'responseCodeSource' => 'getResponseCodeSource',
         'responseDetails' => 'getResponseDetails',
         'responseCategoryCode' => 'getResponseCategoryCode',
+        'responseSourceCode' => 'getResponseSourceCode',
         'forwardedAcquirerCode' => 'getForwardedAcquirerCode',
         'settlementDate' => 'getSettlementDate',
         'sequenceNumber' => 'getSequenceNumber',
@@ -365,6 +370,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformation implements ArrayAccess
         $this->container['responseCodeSource'] = isset($data['responseCodeSource']) ? $data['responseCodeSource'] : null;
         $this->container['responseDetails'] = isset($data['responseDetails']) ? $data['responseDetails'] : null;
         $this->container['responseCategoryCode'] = isset($data['responseCategoryCode']) ? $data['responseCategoryCode'] : null;
+        $this->container['responseSourceCode'] = isset($data['responseSourceCode']) ? $data['responseSourceCode'] : null;
         $this->container['forwardedAcquirerCode'] = isset($data['forwardedAcquirerCode']) ? $data['forwardedAcquirerCode'] : null;
         $this->container['settlementDate'] = isset($data['settlementDate']) ? $data['settlementDate'] : null;
         $this->container['sequenceNumber'] = isset($data['sequenceNumber']) ? $data['sequenceNumber'] : null;
@@ -614,6 +620,27 @@ class PtsV2PaymentsPost201ResponseProcessorInformation implements ArrayAccess
     public function setResponseCategoryCode($responseCategoryCode)
     {
         $this->container['responseCategoryCode'] = $responseCategoryCode;
+
+        return $this;
+    }
+
+    /**
+     * Gets responseSourceCode
+     * @return string
+     */
+    public function getResponseSourceCode()
+    {
+        return $this->container['responseSourceCode'];
+    }
+
+    /**
+     * Sets responseSourceCode
+     * @param string $responseSourceCode This field is used by Visa only and contains the response source/reason code that identifies the source of the response decision. Use this field only for clearing with your acquirer.
+     * @return $this
+     */
+    public function setResponseSourceCode($responseSourceCode)
+    {
+        $this->container['responseSourceCode'] = $responseSourceCode;
 
         return $this;
     }

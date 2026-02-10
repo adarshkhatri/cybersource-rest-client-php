@@ -231,6 +231,13 @@ class PtsV2PaymentsPost201ResponseTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "clearingInformation"
+     */
+    public function testPropertyClearingInformation()
+    {
+    }
+
+    /**
      * Test attribute "embeddedActions"
      */
     public function testPropertyEmbeddedActions()

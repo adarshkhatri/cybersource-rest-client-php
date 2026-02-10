@@ -56,10 +56,10 @@ class PostPaymentCredentialsRequest implements ArrayAccess
         'paymentCredentialType' => 'string',
         'transactionType' => 'string',
         'clientCorrelationId' => 'string',
-        'orderInformation' => '\CyberSource\Model\Tmsv2tokenstokenIdpaymentcredentialsOrderInformation',
-        'merchantInformation' => '\CyberSource\Model\Tmsv2tokenstokenIdpaymentcredentialsMerchantInformation',
-        'deviceInformation' => '\CyberSource\Model\Tmsv2tokenstokenIdpaymentcredentialsDeviceInformation',
-        'authenticatedIdentities' => '\CyberSource\Model\Tmsv2tokenstokenIdpaymentcredentialsAuthenticatedIdentities[]'
+        'orderInformation' => '\CyberSource\Model\Tmsv3tokenstokenIdpaymentcredentialsOrderInformation',
+        'merchantInformation' => '\CyberSource\Model\Tmsv3tokenstokenIdpaymentcredentialsMerchantInformation',
+        'deviceInformation' => '\CyberSource\Model\Tmsv3tokenstokenIdpaymentcredentialsDeviceInformation',
+        'authenticatedIdentities' => '\CyberSource\Model\Tmsv3tokenstokenIdpaymentcredentialsAuthenticatedIdentities[]'
     ];
 
     /**
@@ -260,7 +260,7 @@ class PostPaymentCredentialsRequest implements ArrayAccess
 
     /**
      * Gets orderInformation
-     * @return \CyberSource\Model\Tmsv2tokenstokenIdpaymentcredentialsOrderInformation
+     * @return \CyberSource\Model\Tmsv3tokenstokenIdpaymentcredentialsOrderInformation
      */
     public function getOrderInformation()
     {
@@ -269,7 +269,7 @@ class PostPaymentCredentialsRequest implements ArrayAccess
 
     /**
      * Sets orderInformation
-     * @param \CyberSource\Model\Tmsv2tokenstokenIdpaymentcredentialsOrderInformation $orderInformation
+     * @param \CyberSource\Model\Tmsv3tokenstokenIdpaymentcredentialsOrderInformation $orderInformation
      * @return $this
      */
     public function setOrderInformation($orderInformation)
@@ -281,7 +281,7 @@ class PostPaymentCredentialsRequest implements ArrayAccess
 
     /**
      * Gets merchantInformation
-     * @return \CyberSource\Model\Tmsv2tokenstokenIdpaymentcredentialsMerchantInformation
+     * @return \CyberSource\Model\Tmsv3tokenstokenIdpaymentcredentialsMerchantInformation
      */
     public function getMerchantInformation()
     {
@@ -290,7 +290,7 @@ class PostPaymentCredentialsRequest implements ArrayAccess
 
     /**
      * Sets merchantInformation
-     * @param \CyberSource\Model\Tmsv2tokenstokenIdpaymentcredentialsMerchantInformation $merchantInformation
+     * @param \CyberSource\Model\Tmsv3tokenstokenIdpaymentcredentialsMerchantInformation $merchantInformation
      * @return $this
      */
     public function setMerchantInformation($merchantInformation)
@@ -302,7 +302,7 @@ class PostPaymentCredentialsRequest implements ArrayAccess
 
     /**
      * Gets deviceInformation
-     * @return \CyberSource\Model\Tmsv2tokenstokenIdpaymentcredentialsDeviceInformation
+     * @return \CyberSource\Model\Tmsv3tokenstokenIdpaymentcredentialsDeviceInformation
      */
     public function getDeviceInformation()
     {
@@ -311,7 +311,7 @@ class PostPaymentCredentialsRequest implements ArrayAccess
 
     /**
      * Sets deviceInformation
-     * @param \CyberSource\Model\Tmsv2tokenstokenIdpaymentcredentialsDeviceInformation $deviceInformation
+     * @param \CyberSource\Model\Tmsv3tokenstokenIdpaymentcredentialsDeviceInformation $deviceInformation
      * @return $this
      */
     public function setDeviceInformation($deviceInformation)
@@ -323,7 +323,7 @@ class PostPaymentCredentialsRequest implements ArrayAccess
 
     /**
      * Gets authenticatedIdentities
-     * @return \CyberSource\Model\Tmsv2tokenstokenIdpaymentcredentialsAuthenticatedIdentities[]
+     * @return \CyberSource\Model\Tmsv3tokenstokenIdpaymentcredentialsAuthenticatedIdentities[]
      */
     public function getAuthenticatedIdentities()
     {
@@ -332,7 +332,7 @@ class PostPaymentCredentialsRequest implements ArrayAccess
 
     /**
      * Sets authenticatedIdentities
-     * @param \CyberSource\Model\Tmsv2tokenstokenIdpaymentcredentialsAuthenticatedIdentities[] $authenticatedIdentities
+     * @param \CyberSource\Model\Tmsv3tokenstokenIdpaymentcredentialsAuthenticatedIdentities[] $authenticatedIdentities
      * @return $this
      */
     public function setAuthenticatedIdentities($authenticatedIdentities)

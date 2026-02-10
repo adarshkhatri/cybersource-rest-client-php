@@ -91,6 +91,13 @@ class PtsV2PaymentsPost201ResponseMerchantInformationTest extends \PHPUnit_Frame
     }
 
     /**
+     * Test attribute "categoryCode"
+     */
+    public function testPropertyCategoryCode()
+    {
+    }
+
+    /**
      * Test attribute "returnUrl"
      */
     public function testPropertyReturnUrl()

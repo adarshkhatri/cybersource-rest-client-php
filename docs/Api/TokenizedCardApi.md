@@ -57,7 +57,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getTokenizedCard**
-> \CyberSource\Model\TokenizedcardRequest getTokenizedCard($tokenizedCardId, $profileId)
+> \CyberSource\Model\InlineResponse2001 getTokenizedCard($tokenizedCardId, $profileId)
 
 Retrieve a Tokenized Card
 
@@ -90,7 +90,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CyberSource\Model\TokenizedcardRequest**](../Model/TokenizedcardRequest.md)
+[**\CyberSource\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -152,7 +152,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postTokenizedCard**
-> \CyberSource\Model\TokenizedcardRequest postTokenizedCard($tokenizedcardRequest, $profileId)
+> \CyberSource\Model\InlineResponse2001 postTokenizedCard($postTokenizedCardRequest, $profileId)
 
 Create a Tokenized Card
 
@@ -164,11 +164,11 @@ Create a Tokenized Card
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new CyberSource\Api\TokenizedCardApi();
-$tokenizedcardRequest = new \CyberSource\Model\TokenizedcardRequest(); // \CyberSource\Model\TokenizedcardRequest | 
+$postTokenizedCardRequest = new \CyberSource\Model\PostTokenizedCardRequest(); // \CyberSource\Model\PostTokenizedCardRequest | 
 $profileId = "profileId_example"; // string | The Id of a profile containing user specific TMS configuration.
 
 try {
-    $result = $api_instance->postTokenizedCard($tokenizedcardRequest, $profileId);
+    $result = $api_instance->postTokenizedCard($postTokenizedCardRequest, $profileId);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling TokenizedCardApi->postTokenizedCard: ', $e->getMessage(), PHP_EOL;
@@ -180,12 +180,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **tokenizedcardRequest** | [**\CyberSource\Model\TokenizedcardRequest**](../Model/TokenizedcardRequest.md)|  |
+ **postTokenizedCardRequest** | [**\CyberSource\Model\PostTokenizedCardRequest**](../Model/PostTokenizedCardRequest.md)|  |
  **profileId** | **string**| The Id of a profile containing user specific TMS configuration. | [optional]
 
 ### Return type
 
-[**\CyberSource\Model\TokenizedcardRequest**](../Model/TokenizedcardRequest.md)
+[**\CyberSource\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 

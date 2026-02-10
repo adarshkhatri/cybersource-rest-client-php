@@ -103,7 +103,7 @@ class MerchantBoardingApi
      *
      * @param string $registrationId Identifies the boarding registration to be updated (required)
      * @throws \CyberSource\ApiException on non-2xx response
-     * @return array of \CyberSource\Model\InlineResponse2004, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CyberSource\Model\InlineResponse2005, HTTP status code, HTTP response headers (array of strings)
      */
     public function getRegistration($registrationId)
     {
@@ -121,7 +121,7 @@ class MerchantBoardingApi
      *
      * @param string $registrationId Identifies the boarding registration to be updated (required)
      * @throws \CyberSource\ApiException on non-2xx response
-     * @return array of \CyberSource\Model\InlineResponse2004, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CyberSource\Model\InlineResponse2005, HTTP status code, HTTP response headers (array of strings)
      */
     public function getRegistrationWithHttpInfo($registrationId)
     {
@@ -187,7 +187,7 @@ class MerchantBoardingApi
             self::$logger->debug("Body Parameter :\n" . $printHttpBody); 
         }
 
-        self::$logger->debug("Return Type : \CyberSource\Model\InlineResponse2004");
+        self::$logger->debug("Return Type : \CyberSource\Model\InlineResponse2005");
         
         // Response MLE check
         $isResponseMLEForAPI = MLEUtility::checkIsResponseMLEForAPI($this->apiClient->merchantConfig, "getRegistration,getRegistrationWithHttpInfo");
@@ -200,18 +200,18 @@ class MerchantBoardingApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\CyberSource\Model\InlineResponse2004',
+                '\CyberSource\Model\InlineResponse2005',
                 '/boarding/v1/registrations/{registrationId}',
                 $isResponseMLEForAPI
             );
             
             self::$logger->debug("Response Headers :\n" . \CyberSource\Utilities\Helpers\ListHelper::toString($httpHeader));
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\CyberSource\Model\InlineResponse2004', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\CyberSource\Model\InlineResponse2005', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse2004', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse2005', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
@@ -241,7 +241,7 @@ class MerchantBoardingApi
      * @param \CyberSource\Model\PostRegistrationBody $postRegistrationBody Boarding registration data (required)
      * @param string $vCIdempotencyId defines idempotency of the request (optional)
      * @throws \CyberSource\ApiException on non-2xx response
-     * @return array of \CyberSource\Model\InlineResponse2013, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CyberSource\Model\InlineResponse2014, HTTP status code, HTTP response headers (array of strings)
      */
     public function postRegistration($postRegistrationBody, $vCIdempotencyId = null)
     {
@@ -260,7 +260,7 @@ class MerchantBoardingApi
      * @param \CyberSource\Model\PostRegistrationBody $postRegistrationBody Boarding registration data (required)
      * @param string $vCIdempotencyId defines idempotency of the request (optional)
      * @throws \CyberSource\ApiException on non-2xx response
-     * @return array of \CyberSource\Model\InlineResponse2013, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CyberSource\Model\InlineResponse2014, HTTP status code, HTTP response headers (array of strings)
      */
     public function postRegistrationWithHttpInfo($postRegistrationBody, $vCIdempotencyId = null)
     {
@@ -329,7 +329,7 @@ class MerchantBoardingApi
             self::$logger->debug("Body Parameter :\n" . $printHttpBody); 
         }
 
-        self::$logger->debug("Return Type : \CyberSource\Model\InlineResponse2013");
+        self::$logger->debug("Return Type : \CyberSource\Model\InlineResponse2014");
         
         // Response MLE check
         $isResponseMLEForAPI = MLEUtility::checkIsResponseMLEForAPI($this->apiClient->merchantConfig, "postRegistration,postRegistrationWithHttpInfo");
@@ -342,18 +342,18 @@ class MerchantBoardingApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\CyberSource\Model\InlineResponse2013',
+                '\CyberSource\Model\InlineResponse2014',
                 '/boarding/v1/registrations',
                 $isResponseMLEForAPI
             );
             
             self::$logger->debug("Response Headers :\n" . \CyberSource\Utilities\Helpers\ListHelper::toString($httpHeader));
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\CyberSource\Model\InlineResponse2013', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\CyberSource\Model\InlineResponse2014', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 201:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse2013', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse2014', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:

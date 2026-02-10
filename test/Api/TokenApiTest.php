@@ -84,10 +84,20 @@ class TokenApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for postTokenPaymentCredentials
      *
-     * Generate Payment Credentials for a TMS Token.
+     * Generate Payment Credentials v2.
      *
      */
     public function testPostTokenPaymentCredentials()
+    {
+    }
+
+    /**
+     * Test case for postTokenPaymentCredentialsV3
+     *
+     * Generate Payment Credentials Latest Version v3.
+     *
+     */
+    public function testPostTokenPaymentCredentialsV3()
     {
     }
 }

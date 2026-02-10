@@ -76,7 +76,8 @@ class TmsBinLookupPaymentAccountInformationFeatures implements ArrayAccess
         'productIdSubtype' => 'string',
         'threeDSSupport' => 'bool',
         'siEligible' => 'bool',
-        'emiEligible' => 'bool'
+        'emiEligible' => 'bool',
+        'fleetCard' => 'bool'
     ];
 
     /**
@@ -107,7 +108,8 @@ class TmsBinLookupPaymentAccountInformationFeatures implements ArrayAccess
         'productIdSubtype' => null,
         'threeDSSupport' => null,
         'siEligible' => null,
-        'emiEligible' => null
+        'emiEligible' => null,
+        'fleetCard' => null
     ];
 
     public static function swaggerTypes()
@@ -148,7 +150,8 @@ class TmsBinLookupPaymentAccountInformationFeatures implements ArrayAccess
         'productIdSubtype' => 'productIdSubtype',
         'threeDSSupport' => 'threeDSSupport',
         'siEligible' => 'siEligible',
-        'emiEligible' => 'emiEligible'
+        'emiEligible' => 'emiEligible',
+        'fleetCard' => 'fleetCard'
     ];
 
 
@@ -180,7 +183,8 @@ class TmsBinLookupPaymentAccountInformationFeatures implements ArrayAccess
         'productIdSubtype' => 'setProductIdSubtype',
         'threeDSSupport' => 'setThreeDSSupport',
         'siEligible' => 'setSiEligible',
-        'emiEligible' => 'setEmiEligible'
+        'emiEligible' => 'setEmiEligible',
+        'fleetCard' => 'setFleetCard'
     ];
 
 
@@ -212,7 +216,8 @@ class TmsBinLookupPaymentAccountInformationFeatures implements ArrayAccess
         'productIdSubtype' => 'getProductIdSubtype',
         'threeDSSupport' => 'getThreeDSSupport',
         'siEligible' => 'getSiEligible',
-        'emiEligible' => 'getEmiEligible'
+        'emiEligible' => 'getEmiEligible',
+        'fleetCard' => 'getFleetCard'
     ];
 
     public static function attributeMap()
@@ -270,6 +275,7 @@ class TmsBinLookupPaymentAccountInformationFeatures implements ArrayAccess
         $this->container['threeDSSupport'] = isset($data['threeDSSupport']) ? $data['threeDSSupport'] : null;
         $this->container['siEligible'] = isset($data['siEligible']) ? $data['siEligible'] : null;
         $this->container['emiEligible'] = isset($data['emiEligible']) ? $data['emiEligible'] : null;
+        $this->container['fleetCard'] = isset($data['fleetCard']) ? $data['fleetCard'] : null;
     }
 
     /**
@@ -797,6 +803,27 @@ class TmsBinLookupPaymentAccountInformationFeatures implements ArrayAccess
     public function setEmiEligible($emiEligible)
     {
         $this->container['emiEligible'] = $emiEligible;
+
+        return $this;
+    }
+
+    /**
+     * Gets fleetCard
+     * @return bool
+     */
+    public function getFleetCard()
+    {
+        return $this->container['fleetCard'];
+    }
+
+    /**
+     * Sets fleetCard
+     * @param bool $fleetCard This field indicates if the BIN is designated for fuel/fleet usage. These specialized BINs support additional Level2/Level 3 transaction data. Possible values:     - `true`     - `false`
+     * @return $this
+     */
+    public function setFleetCard($fleetCard)
+    {
+        $this->container['fleetCard'] = $fleetCard;
 
         return $this;
     }

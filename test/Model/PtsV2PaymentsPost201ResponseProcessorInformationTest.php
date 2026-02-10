@@ -140,6 +140,13 @@ class PtsV2PaymentsPost201ResponseProcessorInformationTest extends \PHPUnit_Fram
     }
 
     /**
+     * Test attribute "responseSourceCode"
+     */
+    public function testPropertyResponseSourceCode()
+    {
+    }
+
+    /**
      * Test attribute "forwardedAcquirerCode"
      */
     public function testPropertyForwardedAcquirerCode()

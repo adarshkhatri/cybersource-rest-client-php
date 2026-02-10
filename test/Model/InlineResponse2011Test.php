@@ -77,23 +77,23 @@ class InlineResponse2011Test extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "id"
+     * Test attribute "links"
      */
-    public function testPropertyId()
+    public function testPropertyLinks()
     {
     }
 
     /**
-     * Test attribute "submitTimeUtc"
+     * Test attribute "card"
      */
-    public function testPropertySubmitTimeUtc()
+    public function testPropertyCard()
     {
     }
 
     /**
-     * Test attribute "status"
+     * Test attribute "tokenizedCard"
      */
-    public function testPropertyStatus()
+    public function testPropertyTokenizedCard()
     {
     }
 }
