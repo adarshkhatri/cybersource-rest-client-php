@@ -67,7 +67,8 @@ class Invoicingv2invoiceSettingsInvoiceSettingsInformation implements ArrayAcces
         'phoneNumber' => 'bool',
         'email' => 'bool',
         'enableMerchantEmailNotifications' => 'bool',
-        'customLabels' => '\CyberSource\Model\InvoicingV2InvoicesPost201ResponseInvoiceInformationCustomLabels[]'
+        'customLabels' => '\CyberSource\Model\InvoicingV2InvoicesPost201ResponseInvoiceInformationCustomLabels[]',
+        'customRedirectUrls' => '\CyberSource\Model\InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformationCustomRedirectUrls'
     ];
 
     /**
@@ -89,7 +90,8 @@ class Invoicingv2invoiceSettingsInvoiceSettingsInformation implements ArrayAcces
         'phoneNumber' => null,
         'email' => null,
         'enableMerchantEmailNotifications' => null,
-        'customLabels' => null
+        'customLabels' => null,
+        'customRedirectUrls' => null
     ];
 
     public static function swaggerTypes()
@@ -121,7 +123,8 @@ class Invoicingv2invoiceSettingsInvoiceSettingsInformation implements ArrayAcces
         'phoneNumber' => 'phoneNumber',
         'email' => 'email',
         'enableMerchantEmailNotifications' => 'enableMerchantEmailNotifications',
-        'customLabels' => 'customLabels'
+        'customLabels' => 'customLabels',
+        'customRedirectUrls' => 'customRedirectUrls'
     ];
 
 
@@ -144,7 +147,8 @@ class Invoicingv2invoiceSettingsInvoiceSettingsInformation implements ArrayAcces
         'phoneNumber' => 'setPhoneNumber',
         'email' => 'setEmail',
         'enableMerchantEmailNotifications' => 'setEnableMerchantEmailNotifications',
-        'customLabels' => 'setCustomLabels'
+        'customLabels' => 'setCustomLabels',
+        'customRedirectUrls' => 'setCustomRedirectUrls'
     ];
 
 
@@ -167,7 +171,8 @@ class Invoicingv2invoiceSettingsInvoiceSettingsInformation implements ArrayAcces
         'phoneNumber' => 'getPhoneNumber',
         'email' => 'getEmail',
         'enableMerchantEmailNotifications' => 'getEnableMerchantEmailNotifications',
-        'customLabels' => 'getCustomLabels'
+        'customLabels' => 'getCustomLabels',
+        'customRedirectUrls' => 'getCustomRedirectUrls'
     ];
 
     public static function attributeMap()
@@ -216,6 +221,7 @@ class Invoicingv2invoiceSettingsInvoiceSettingsInformation implements ArrayAcces
         $this->container['email'] = isset($data['email']) ? $data['email'] : false;
         $this->container['enableMerchantEmailNotifications'] = isset($data['enableMerchantEmailNotifications']) ? $data['enableMerchantEmailNotifications'] : false;
         $this->container['customLabels'] = isset($data['customLabels']) ? $data['customLabels'] : null;
+        $this->container['customRedirectUrls'] = isset($data['customRedirectUrls']) ? $data['customRedirectUrls'] : null;
     }
 
     /**
@@ -554,6 +560,27 @@ class Invoicingv2invoiceSettingsInvoiceSettingsInformation implements ArrayAcces
     public function setCustomLabels($customLabels)
     {
         $this->container['customLabels'] = $customLabels;
+
+        return $this;
+    }
+
+    /**
+     * Gets customRedirectUrls
+     * @return \CyberSource\Model\InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformationCustomRedirectUrls
+     */
+    public function getCustomRedirectUrls()
+    {
+        return $this->container['customRedirectUrls'];
+    }
+
+    /**
+     * Sets customRedirectUrls
+     * @param \CyberSource\Model\InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformationCustomRedirectUrls $customRedirectUrls
+     * @return $this
+     */
+    public function setCustomRedirectUrls($customRedirectUrls)
+    {
+        $this->container['customRedirectUrls'] = $customRedirectUrls;
 
         return $this;
     }

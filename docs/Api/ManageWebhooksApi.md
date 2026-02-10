@@ -58,7 +58,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getWebhookSubscriptionById**
-> \CyberSource\Model\InlineResponse2015 getWebhookSubscriptionById($webhookId)
+> \CyberSource\Model\InlineResponse2016 getWebhookSubscriptionById($webhookId)
 
 Get Details On a Single Webhook
 
@@ -89,7 +89,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CyberSource\Model\InlineResponse2015**](../Model/InlineResponse2015.md)
+[**\CyberSource\Model\InlineResponse2016**](../Model/InlineResponse2016.md)
 
 ### Authorization
 
@@ -103,7 +103,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getWebhookSubscriptionsByOrg**
-> \CyberSource\Model\InlineResponse2006[] getWebhookSubscriptionsByOrg($organizationId, $productId, $eventType)
+> \CyberSource\Model\InlineResponse2007[] getWebhookSubscriptionsByOrg($organizationId, $productId, $eventType)
 
 Get Details On All Created Webhooks
 
@@ -138,7 +138,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CyberSource\Model\InlineResponse2006[]**](../Model/InlineResponse2006.md)
+[**\CyberSource\Model\InlineResponse2007[]**](../Model/InlineResponse2007.md)
 
 ### Authorization
 
@@ -152,7 +152,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **notificationSubscriptionsV1WebhooksWebhookIdPost**
-> \CyberSource\Model\InlineResponse2016 notificationSubscriptionsV1WebhooksWebhookIdPost($webhookId)
+> \CyberSource\Model\InlineResponse2017 notificationSubscriptionsV1WebhooksWebhookIdPost($webhookId)
 
 Test a Webhook Configuration
 
@@ -183,7 +183,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CyberSource\Model\InlineResponse2016**](../Model/InlineResponse2016.md)
+[**\CyberSource\Model\InlineResponse2017**](../Model/InlineResponse2017.md)
 
 ### Authorization
 
@@ -197,7 +197,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **notificationSubscriptionsV2WebhooksWebhookIdPatch**
-> \CyberSource\Model\InlineResponse2007 notificationSubscriptionsV2WebhooksWebhookIdPatch($webhookId, $updateWebhook)
+> \CyberSource\Model\InlineResponse2008 notificationSubscriptionsV2WebhooksWebhookIdPatch($webhookId, $updateWebhook)
 
 Update a Webhook Subscription
 
@@ -230,7 +230,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CyberSource\Model\InlineResponse2007**](../Model/InlineResponse2007.md)
+[**\CyberSource\Model\InlineResponse2008**](../Model/InlineResponse2008.md)
 
 ### Authorization
 
@@ -290,7 +290,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **saveAsymEgressKey**
-> \CyberSource\Model\InlineResponse2017 saveAsymEgressKey($vCSenderOrganizationId, $vCPermissions, $saveAsymEgressKey, $vCCorrelationId)
+> \CyberSource\Model\InlineResponse2018 saveAsymEgressKey($vCSenderOrganizationId, $vCPermissions, $saveAsymEgressKey, $vCCorrelationId)
 
 Message Level Encryption
 
@@ -327,7 +327,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CyberSource\Model\InlineResponse2017**](../Model/InlineResponse2017.md)
+[**\CyberSource\Model\InlineResponse2018**](../Model/InlineResponse2018.md)
 
 ### Authorization
 

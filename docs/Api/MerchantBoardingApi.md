@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **getRegistration**
-> \CyberSource\Model\InlineResponse2004 getRegistration($registrationId)
+> \CyberSource\Model\InlineResponse2005 getRegistration($registrationId)
 
 Gets all the information on a boarding registration
 
@@ -40,7 +40,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CyberSource\Model\InlineResponse2004**](../Model/InlineResponse2004.md)
+[**\CyberSource\Model\InlineResponse2005**](../Model/InlineResponse2005.md)
 
 ### Authorization
 
@@ -54,7 +54,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postRegistration**
-> \CyberSource\Model\InlineResponse2013 postRegistration($postRegistrationBody, $vCIdempotencyId)
+> \CyberSource\Model\InlineResponse2014 postRegistration($postRegistrationBody, $vCIdempotencyId)
 
 Create a boarding registration
 
@@ -87,7 +87,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CyberSource\Model\InlineResponse2013**](../Model/InlineResponse2013.md)
+[**\CyberSource\Model\InlineResponse2014**](../Model/InlineResponse2014.md)
 
 ### Authorization
 

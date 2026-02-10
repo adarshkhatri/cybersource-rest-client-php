@@ -77,6 +77,13 @@ class Ptsv2creditsProcessingInformationTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "actionList"
+     */
+    public function testPropertyActionList()
+    {
+    }
+
+    /**
      * Test attribute "commerceIndicator"
      */
     public function testPropertyCommerceIndicator()

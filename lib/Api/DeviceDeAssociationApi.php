@@ -243,7 +243,7 @@ class DeviceDeAssociationApi
      *
      * @param \CyberSource\Model\DeviceDeAssociateV3Request[] $deviceDeAssociateV3Request deviceId that has to be de-associated to the destination organizationId. (required)
      * @throws \CyberSource\ApiException on non-2xx response
-     * @return array of \CyberSource\Model\InlineResponse2009[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CyberSource\Model\InlineResponse20010[], HTTP status code, HTTP response headers (array of strings)
      */
     public function postDeAssociateV3Terminal($deviceDeAssociateV3Request)
     {
@@ -261,7 +261,7 @@ class DeviceDeAssociationApi
      *
      * @param \CyberSource\Model\DeviceDeAssociateV3Request[] $deviceDeAssociateV3Request deviceId that has to be de-associated to the destination organizationId. (required)
      * @throws \CyberSource\ApiException on non-2xx response
-     * @return array of \CyberSource\Model\InlineResponse2009[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CyberSource\Model\InlineResponse20010[], HTTP status code, HTTP response headers (array of strings)
      */
     public function postDeAssociateV3TerminalWithHttpInfo($deviceDeAssociateV3Request)
     {
@@ -326,7 +326,7 @@ class DeviceDeAssociationApi
             self::$logger->debug("Body Parameter :\n" . $printHttpBody); 
         }
 
-        self::$logger->debug("Return Type : \CyberSource\Model\InlineResponse2009[]");
+        self::$logger->debug("Return Type : \CyberSource\Model\InlineResponse20010[]");
         
         // Response MLE check
         $isResponseMLEForAPI = MLEUtility::checkIsResponseMLEForAPI($this->apiClient->merchantConfig, "postDeAssociateV3Terminal,postDeAssociateV3TerminalWithHttpInfo");
@@ -339,18 +339,18 @@ class DeviceDeAssociationApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\CyberSource\Model\InlineResponse2009[]',
+                '\CyberSource\Model\InlineResponse20010[]',
                 '/dms/v3/devices/deassociate',
                 $isResponseMLEForAPI
             );
             
             self::$logger->debug("Response Headers :\n" . \CyberSource\Utilities\Helpers\ListHelper::toString($httpHeader));
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\CyberSource\Model\InlineResponse2009[]', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\CyberSource\Model\InlineResponse20010[]', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse2009[]', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse20010[]', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 206:

@@ -180,4 +180,11 @@ class Invoicingv2invoiceSettingsInvoiceSettingsInformationTest extends \PHPUnit_
     public function testPropertyCustomLabels()
     {
     }
+
+    /**
+     * Test attribute "customRedirectUrls"
+     */
+    public function testPropertyCustomRedirectUrls()
+    {
+    }
 }

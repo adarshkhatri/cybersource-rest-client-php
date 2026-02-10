@@ -255,7 +255,7 @@ class TokenizedCardApi
      * @param string $tokenizedCardId The Id of a tokenized card. (required)
      * @param string $profileId The Id of a profile containing user specific TMS configuration. (optional)
      * @throws \CyberSource\ApiException on non-2xx response
-     * @return array of \CyberSource\Model\TokenizedcardRequest, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CyberSource\Model\InlineResponse2001, HTTP status code, HTTP response headers (array of strings)
      */
     public function getTokenizedCard($tokenizedCardId, $profileId = null)
     {
@@ -274,7 +274,7 @@ class TokenizedCardApi
      * @param string $tokenizedCardId The Id of a tokenized card. (required)
      * @param string $profileId The Id of a profile containing user specific TMS configuration. (optional)
      * @throws \CyberSource\ApiException on non-2xx response
-     * @return array of \CyberSource\Model\TokenizedcardRequest, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CyberSource\Model\InlineResponse2001, HTTP status code, HTTP response headers (array of strings)
      */
     public function getTokenizedCardWithHttpInfo($tokenizedCardId, $profileId = null)
     {
@@ -344,7 +344,7 @@ class TokenizedCardApi
             self::$logger->debug("Body Parameter :\n" . $printHttpBody); 
         }
 
-        self::$logger->debug("Return Type : \CyberSource\Model\TokenizedcardRequest");
+        self::$logger->debug("Return Type : \CyberSource\Model\InlineResponse2001");
         
         // Response MLE check
         $isResponseMLEForAPI = MLEUtility::checkIsResponseMLEForAPI($this->apiClient->merchantConfig, "getTokenizedCard,getTokenizedCardWithHttpInfo");
@@ -357,18 +357,18 @@ class TokenizedCardApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\CyberSource\Model\TokenizedcardRequest',
+                '\CyberSource\Model\InlineResponse2001',
                 '/tms/v2/tokenized-cards/{tokenizedCardId}',
                 $isResponseMLEForAPI
             );
             
             self::$logger->debug("Response Headers :\n" . \CyberSource\Utilities\Helpers\ListHelper::toString($httpHeader));
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\CyberSource\Model\TokenizedcardRequest', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\CyberSource\Model\InlineResponse2001', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\TokenizedcardRequest', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse2001', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
@@ -565,15 +565,15 @@ class TokenizedCardApi
      *
      * Create a Tokenized Card
      *
-     * @param \CyberSource\Model\TokenizedcardRequest $tokenizedcardRequest  (required)
+     * @param \CyberSource\Model\PostTokenizedCardRequest $postTokenizedCardRequest  (required)
      * @param string $profileId The Id of a profile containing user specific TMS configuration. (optional)
      * @throws \CyberSource\ApiException on non-2xx response
-     * @return array of \CyberSource\Model\TokenizedcardRequest, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CyberSource\Model\InlineResponse2001, HTTP status code, HTTP response headers (array of strings)
      */
-    public function postTokenizedCard($tokenizedcardRequest, $profileId = null)
+    public function postTokenizedCard($postTokenizedCardRequest, $profileId = null)
     {
         self::$logger->info('CALL TO METHOD postTokenizedCard STARTED');
-        list($response, $statusCode, $httpHeader) = $this->postTokenizedCardWithHttpInfo($tokenizedcardRequest, $profileId);
+        list($response, $statusCode, $httpHeader) = $this->postTokenizedCardWithHttpInfo($postTokenizedCardRequest, $profileId);
         self::$logger->info('CALL TO METHOD postTokenizedCard ENDED');
         self::$logger->close();
         return [$response, $statusCode, $httpHeader];
@@ -584,17 +584,17 @@ class TokenizedCardApi
      *
      * Create a Tokenized Card
      *
-     * @param \CyberSource\Model\TokenizedcardRequest $tokenizedcardRequest  (required)
+     * @param \CyberSource\Model\PostTokenizedCardRequest $postTokenizedCardRequest  (required)
      * @param string $profileId The Id of a profile containing user specific TMS configuration. (optional)
      * @throws \CyberSource\ApiException on non-2xx response
-     * @return array of \CyberSource\Model\TokenizedcardRequest, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CyberSource\Model\InlineResponse2001, HTTP status code, HTTP response headers (array of strings)
      */
-    public function postTokenizedCardWithHttpInfo($tokenizedcardRequest, $profileId = null)
+    public function postTokenizedCardWithHttpInfo($postTokenizedCardRequest, $profileId = null)
     {
-        // verify the required parameter 'tokenizedcardRequest' is set
-        if ($tokenizedcardRequest === null) {
-            self::$logger->error("InvalidArgumentException : Missing the required parameter $tokenizedcardRequest when calling postTokenizedCard");
-            throw new \InvalidArgumentException('Missing the required parameter $tokenizedcardRequest when calling postTokenizedCard');
+        // verify the required parameter 'postTokenizedCardRequest' is set
+        if ($postTokenizedCardRequest === null) {
+            self::$logger->error("InvalidArgumentException : Missing the required parameter $postTokenizedCardRequest when calling postTokenizedCard");
+            throw new \InvalidArgumentException('Missing the required parameter $postTokenizedCardRequest when calling postTokenizedCard');
         }
         // parse inputs
         $resourcePath = "/tms/v2/tokenized-cards";
@@ -616,12 +616,12 @@ class TokenizedCardApi
         }
         // body params
         $_tempBody = null;
-        if (isset($tokenizedcardRequest)) {
-            $_tempBody = $tokenizedcardRequest;
+        if (isset($postTokenizedCardRequest)) {
+            $_tempBody = $postTokenizedCardRequest;
         }
         
         $sdkTracker = new \CyberSource\Utilities\Tracking\SdkTracker();
-        $modelClassLocation = explode('\\', '\CyberSource\Model\TokenizedcardRequest');
+        $modelClassLocation = explode('\\', '\CyberSource\Model\PostTokenizedCardRequest');
 
         $_tempBody = $sdkTracker->insertDeveloperIdTracker($_tempBody, end($modelClassLocation), $this->apiClient->merchantConfig->getRunEnvironment(), $this->apiClient->merchantConfig->getDefaultDeveloperId());
 
@@ -656,7 +656,7 @@ class TokenizedCardApi
             self::$logger->debug("Body Parameter :\n" . $printHttpBody); 
         }
 
-        self::$logger->debug("Return Type : \CyberSource\Model\TokenizedcardRequest");
+        self::$logger->debug("Return Type : \CyberSource\Model\InlineResponse2001");
         
         // Response MLE check
         $isResponseMLEForAPI = MLEUtility::checkIsResponseMLEForAPI($this->apiClient->merchantConfig, "postTokenizedCard,postTokenizedCardWithHttpInfo");
@@ -669,22 +669,22 @@ class TokenizedCardApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\CyberSource\Model\TokenizedcardRequest',
+                '\CyberSource\Model\InlineResponse2001',
                 '/tms/v2/tokenized-cards',
                 $isResponseMLEForAPI
             );
             
             self::$logger->debug("Response Headers :\n" . \CyberSource\Utilities\Helpers\ListHelper::toString($httpHeader));
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\CyberSource\Model\TokenizedcardRequest', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\CyberSource\Model\InlineResponse2001', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\TokenizedcardRequest', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse2001', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 201:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\TokenizedcardRequest', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse2001', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:

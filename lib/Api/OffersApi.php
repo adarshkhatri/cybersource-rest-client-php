@@ -97,193 +97,6 @@ class OffersApi
     }
 
     /**
-     * Operation createOffer
-     *
-     * Create an Offer
-     *
-     * @param string $contentType  (required)
-     * @param string $xRequestid  (required)
-     * @param string $vCMerchantId  (required)
-     * @param string $vCCorrelationId  (required)
-     * @param string $vCOrganizationId  (required)
-     * @param \CyberSource\Model\OfferRequest $offerRequest  (required)
-     * @throws \CyberSource\ApiException on non-2xx response
-     * @return array of \CyberSource\Model\InlineResponse2018, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function createOffer($contentType, $xRequestid, $vCMerchantId, $vCCorrelationId, $vCOrganizationId, $offerRequest)
-    {
-        self::$logger->info('CALL TO METHOD createOffer STARTED');
-        list($response, $statusCode, $httpHeader) = $this->createOfferWithHttpInfo($contentType, $xRequestid, $vCMerchantId, $vCCorrelationId, $vCOrganizationId, $offerRequest);
-        self::$logger->info('CALL TO METHOD createOffer ENDED');
-        self::$logger->close();
-        return [$response, $statusCode, $httpHeader];
-    }
-
-    /**
-     * Operation createOfferWithHttpInfo
-     *
-     * Create an Offer
-     *
-     * @param string $contentType  (required)
-     * @param string $xRequestid  (required)
-     * @param string $vCMerchantId  (required)
-     * @param string $vCCorrelationId  (required)
-     * @param string $vCOrganizationId  (required)
-     * @param \CyberSource\Model\OfferRequest $offerRequest  (required)
-     * @throws \CyberSource\ApiException on non-2xx response
-     * @return array of \CyberSource\Model\InlineResponse2018, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function createOfferWithHttpInfo($contentType, $xRequestid, $vCMerchantId, $vCCorrelationId, $vCOrganizationId, $offerRequest)
-    {
-        // verify the required parameter 'contentType' is set
-        if ($contentType === null) {
-            self::$logger->error("InvalidArgumentException : Missing the required parameter $contentType when calling createOffer");
-            throw new \InvalidArgumentException('Missing the required parameter $contentType when calling createOffer');
-        }
-        // verify the required parameter 'xRequestid' is set
-        if ($xRequestid === null) {
-            self::$logger->error("InvalidArgumentException : Missing the required parameter $xRequestid when calling createOffer");
-            throw new \InvalidArgumentException('Missing the required parameter $xRequestid when calling createOffer');
-        }
-        // verify the required parameter 'vCMerchantId' is set
-        if ($vCMerchantId === null) {
-            self::$logger->error("InvalidArgumentException : Missing the required parameter $vCMerchantId when calling createOffer");
-            throw new \InvalidArgumentException('Missing the required parameter $vCMerchantId when calling createOffer');
-        }
-        // verify the required parameter 'vCCorrelationId' is set
-        if ($vCCorrelationId === null) {
-            self::$logger->error("InvalidArgumentException : Missing the required parameter $vCCorrelationId when calling createOffer");
-            throw new \InvalidArgumentException('Missing the required parameter $vCCorrelationId when calling createOffer');
-        }
-        // verify the required parameter 'vCOrganizationId' is set
-        if ($vCOrganizationId === null) {
-            self::$logger->error("InvalidArgumentException : Missing the required parameter $vCOrganizationId when calling createOffer");
-            throw new \InvalidArgumentException('Missing the required parameter $vCOrganizationId when calling createOffer');
-        }
-        // verify the required parameter 'offerRequest' is set
-        if ($offerRequest === null) {
-            self::$logger->error("InvalidArgumentException : Missing the required parameter $offerRequest when calling createOffer");
-            throw new \InvalidArgumentException('Missing the required parameter $offerRequest when calling createOffer');
-        }
-        // parse inputs
-        $resourcePath = "/vas/v1/currencyconversion";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/hal+json;charset=utf-8']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
-        
-        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json;charset=utf-8']);
-
-        // header params
-        if ($contentType !== null) {
-            $headerParams['Content-Type'] = $this->apiClient->getSerializer()->toHeaderValue($contentType);
-        }
-        // header params
-        if ($xRequestid !== null) {
-            $headerParams['x-requestid'] = $this->apiClient->getSerializer()->toHeaderValue($xRequestid);
-        }
-        // header params
-        if ($vCMerchantId !== null) {
-            $headerParams['v-c-merchant-id'] = $this->apiClient->getSerializer()->toHeaderValue($vCMerchantId);
-        }
-        // header params
-        if ($vCCorrelationId !== null) {
-            $headerParams['v-c-correlation-id'] = $this->apiClient->getSerializer()->toHeaderValue($vCCorrelationId);
-        }
-        // header params
-        if ($vCOrganizationId !== null) {
-            $headerParams['v-c-organization-id'] = $this->apiClient->getSerializer()->toHeaderValue($vCOrganizationId);
-        }
-        // body params
-        $_tempBody = null;
-        if (isset($offerRequest)) {
-            $_tempBody = $offerRequest;
-        }
-        
-        $sdkTracker = new \CyberSource\Utilities\Tracking\SdkTracker();
-        $modelClassLocation = explode('\\', '\CyberSource\Model\OfferRequest');
-
-        $_tempBody = $sdkTracker->insertDeveloperIdTracker($_tempBody, end($modelClassLocation), $this->apiClient->merchantConfig->getRunEnvironment(), $this->apiClient->merchantConfig->getDefaultDeveloperId());
-
-        // for model (json/xml)
-        if (isset($_tempBody) and count($formParams) <= 0) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = MultipartHelper::build_data_files($boundary, $formParams); // for HTTP post (form)
-        }
-
-        //MLE check and mle encryption for req body
-        $inboundMLEStatus = 'false';
-        if (MLEUtility::checkIsMLEForAPI($this->apiClient->merchantConfig, $inboundMLEStatus, "createOffer,createOfferWithHttpInfo")) {
-            try {
-                $httpBody = MLEUtility::encryptRequestPayload($this->apiClient->merchantConfig, $httpBody);
-            } catch (Exception $e) {
-                self::$logger->error("Failed to encrypt request body:  $e");
-                throw new ApiException("Failed to encrypt request body : " . $e->getMessage());
-            }
-        }
-
-        
-        // Logging
-        self::$logger->debug("Resource : POST $resourcePath");
-        if (isset($httpBody) and count($formParams) <= 0) {
-            if ($this->apiClient->merchantConfig->getLogConfiguration()->isMaskingEnabled()) {
-                $printHttpBody = \CyberSource\Utilities\Helpers\DataMasker::maskData($httpBody);
-            } else {
-                $printHttpBody = $httpBody;
-            }
-            
-            self::$logger->debug("Body Parameter :\n" . $printHttpBody); 
-        }
-
-        self::$logger->debug("Return Type : \CyberSource\Model\InlineResponse2018");
-        
-        // Response MLE check
-        $isResponseMLEForAPI = MLEUtility::checkIsResponseMLEForAPI($this->apiClient->merchantConfig, "createOffer,createOfferWithHttpInfo");
-        
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath,
-                'POST',
-                $queryParams,
-                $httpBody,
-                $headerParams,
-                '\CyberSource\Model\InlineResponse2018',
-                '/vas/v1/currencyconversion',
-                $isResponseMLEForAPI
-            );
-            
-            self::$logger->debug("Response Headers :\n" . \CyberSource\Utilities\Helpers\ListHelper::toString($httpHeader));
-
-            return [$this->apiClient->getSerializer()->deserialize($response, '\CyberSource\Model\InlineResponse2018', $httpHeader), $statusCode, $httpHeader];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 201:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse2018', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-                case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse40010', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-                case 502:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse5022', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-            }
-
-            self::$logger->error("ApiException : $e");
-            throw $e;
-        }
-    }
-
-    /**
      * Operation getOffer
      *
      * Retrieve an Offer
@@ -295,7 +108,7 @@ class OffersApi
      * @param string $vCOrganizationId  (required)
      * @param string $id Request ID generated by Cybersource. This was sent in the header on the request. Echo value from v-c-request-id (required)
      * @throws \CyberSource\ApiException on non-2xx response
-     * @return array of \CyberSource\Model\InlineResponse20015, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CyberSource\Model\InlineResponse20016, HTTP status code, HTTP response headers (array of strings)
      */
     public function getOffer($contentType, $xRequestid, $vCMerchantId, $vCCorrelationId, $vCOrganizationId, $id)
     {
@@ -318,7 +131,7 @@ class OffersApi
      * @param string $vCOrganizationId  (required)
      * @param string $id Request ID generated by Cybersource. This was sent in the header on the request. Echo value from v-c-request-id (required)
      * @throws \CyberSource\ApiException on non-2xx response
-     * @return array of \CyberSource\Model\InlineResponse20015, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CyberSource\Model\InlineResponse20016, HTTP status code, HTTP response headers (array of strings)
      */
     public function getOfferWithHttpInfo($contentType, $xRequestid, $vCMerchantId, $vCCorrelationId, $vCOrganizationId, $id)
     {
@@ -429,7 +242,7 @@ class OffersApi
             self::$logger->debug("Body Parameter :\n" . $printHttpBody); 
         }
 
-        self::$logger->debug("Return Type : \CyberSource\Model\InlineResponse20015");
+        self::$logger->debug("Return Type : \CyberSource\Model\InlineResponse20016");
         
         // Response MLE check
         $isResponseMLEForAPI = MLEUtility::checkIsResponseMLEForAPI($this->apiClient->merchantConfig, "getOffer,getOfferWithHttpInfo");
@@ -442,18 +255,18 @@ class OffersApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\CyberSource\Model\InlineResponse20015',
+                '\CyberSource\Model\InlineResponse20016',
                 '/vas/v1/currencyconversion/{id}',
                 $isResponseMLEForAPI
             );
             
             self::$logger->debug("Response Headers :\n" . \CyberSource\Utilities\Helpers\ListHelper::toString($httpHeader));
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\CyberSource\Model\InlineResponse20015', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\CyberSource\Model\InlineResponse20016', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse20015', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse20016', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 404:
@@ -461,7 +274,7 @@ class OffersApi
                     $e->setResponseObject($data);
                     break;
                 case 500:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse5022', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse5004', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

@@ -32,7 +32,7 @@ namespace CyberSource;
  * Tmsv2TokenizedCardCardTest Class Doc Comment
  *
  * @category    Class */
-// * @description Card object used to create a network token
+// * @description Tmsv2TokenizedCardCard
 /**
  * @package     CyberSource
  * @author      Swagger Codegen team

@@ -180,4 +180,11 @@ class InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformationTest ext
     public function testPropertyCustomLabels()
     {
     }
+
+    /**
+     * Test attribute "customRedirectUrls"
+     */
+    public function testPropertyCustomRedirectUrls()
+    {
+    }
 }

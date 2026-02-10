@@ -55,6 +55,7 @@ class PaymentsProductsPayoutsConfigurationInformationConfigurationsCommon implem
     protected static $swaggerTypes = [
         'paymentTypes' => 'string[]',
         'businessApplicationId' => 'string[]',
+        'defaultBusinessApplicationId' => 'string',
         'aggregator' => '\CyberSource\Model\PaymentsProductsPayoutsConfigurationInformationConfigurationsCommonAggregator'
     ];
 
@@ -65,6 +66,7 @@ class PaymentsProductsPayoutsConfigurationInformationConfigurationsCommon implem
     protected static $swaggerFormats = [
         'paymentTypes' => null,
         'businessApplicationId' => null,
+        'defaultBusinessApplicationId' => null,
         'aggregator' => null
     ];
 
@@ -85,6 +87,7 @@ class PaymentsProductsPayoutsConfigurationInformationConfigurationsCommon implem
     protected static $attributeMap = [
         'paymentTypes' => 'paymentTypes',
         'businessApplicationId' => 'businessApplicationId',
+        'defaultBusinessApplicationId' => 'defaultBusinessApplicationId',
         'aggregator' => 'aggregator'
     ];
 
@@ -96,6 +99,7 @@ class PaymentsProductsPayoutsConfigurationInformationConfigurationsCommon implem
     protected static $setters = [
         'paymentTypes' => 'setPaymentTypes',
         'businessApplicationId' => 'setBusinessApplicationId',
+        'defaultBusinessApplicationId' => 'setDefaultBusinessApplicationId',
         'aggregator' => 'setAggregator'
     ];
 
@@ -107,6 +111,7 @@ class PaymentsProductsPayoutsConfigurationInformationConfigurationsCommon implem
     protected static $getters = [
         'paymentTypes' => 'getPaymentTypes',
         'businessApplicationId' => 'getBusinessApplicationId',
+        'defaultBusinessApplicationId' => 'getDefaultBusinessApplicationId',
         'aggregator' => 'getAggregator'
     ];
 
@@ -143,6 +148,7 @@ class PaymentsProductsPayoutsConfigurationInformationConfigurationsCommon implem
     {
         $this->container['paymentTypes'] = isset($data['paymentTypes']) ? $data['paymentTypes'] : null;
         $this->container['businessApplicationId'] = isset($data['businessApplicationId']) ? $data['businessApplicationId'] : null;
+        $this->container['defaultBusinessApplicationId'] = isset($data['defaultBusinessApplicationId']) ? $data['defaultBusinessApplicationId'] : null;
         $this->container['aggregator'] = isset($data['aggregator']) ? $data['aggregator'] : null;
     }
 
@@ -209,6 +215,27 @@ class PaymentsProductsPayoutsConfigurationInformationConfigurationsCommon implem
     public function setBusinessApplicationId($businessApplicationId)
     {
         $this->container['businessApplicationId'] = $businessApplicationId;
+
+        return $this;
+    }
+
+    /**
+     * Gets defaultBusinessApplicationId
+     * @return string
+     */
+    public function getDefaultBusinessApplicationId()
+    {
+        return $this->container['defaultBusinessApplicationId'];
+    }
+
+    /**
+     * Sets defaultBusinessApplicationId
+     * @param string $defaultBusinessApplicationId Default Business Application Indicator. Must match one of the values in businessApplicationId array.   Possible values: - AA - BB - BI - BP - CB - CD - CI - CO - CP - FD - FT - GD - GP - LA - LO - MD - MI - MP - OG - PD - PG - PP - PS - RP - TU - WT
+     * @return $this
+     */
+    public function setDefaultBusinessApplicationId($defaultBusinessApplicationId)
+    {
+        $this->container['defaultBusinessApplicationId'] = $defaultBusinessApplicationId;
 
         return $this;
     }

@@ -91,6 +91,13 @@ class PaymentsProductsPayoutsConfigurationInformationConfigurationsCommonTest ex
     }
 
     /**
+     * Test attribute "defaultBusinessApplicationId"
+     */
+    public function testPropertyDefaultBusinessApplicationId()
+    {
+    }
+
+    /**
      * Test attribute "aggregator"
      */
     public function testPropertyAggregator()

@@ -89,4 +89,11 @@ class TmsEmbeddedInstrumentIdentifierLinksTest extends \PHPUnit_Framework_TestCa
     public function testPropertyPaymentInstruments()
     {
     }
+
+    /**
+     * Test attribute "tokenizedCards"
+     */
+    public function testPropertyTokenizedCards()
+    {
+    }
 }

@@ -77,13 +77,6 @@ class Tmsv2TokenizedCardTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "links"
-     */
-    public function testPropertyLinks()
-    {
-    }
-
-    /**
      * Test attribute "id"
      */
     public function testPropertyId()
@@ -94,27 +87,6 @@ class Tmsv2TokenizedCardTest extends \PHPUnit_Framework_TestCase
      * Test attribute "object"
      */
     public function testPropertyObject()
-    {
-    }
-
-    /**
-     * Test attribute "accountReferenceId"
-     */
-    public function testPropertyAccountReferenceId()
-    {
-    }
-
-    /**
-     * Test attribute "consumerId"
-     */
-    public function testPropertyConsumerId()
-    {
-    }
-
-    /**
-     * Test attribute "createInstrumentIdentifier"
-     */
-    public function testPropertyCreateInstrumentIdentifier()
     {
     }
 
@@ -133,9 +105,16 @@ class Tmsv2TokenizedCardTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "reason"
+     * Test attribute "enrollmentId"
      */
-    public function testPropertyReason()
+    public function testPropertyEnrollmentId()
+    {
+    }
+
+    /**
+     * Test attribute "tokenReferenceId"
+     */
+    public function testPropertyTokenReferenceId()
     {
     }
 
@@ -168,6 +147,13 @@ class Tmsv2TokenizedCardTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "reason"
+     */
+    public function testPropertyReason()
+    {
+    }
+
+    /**
      * Test attribute "cryptogram"
      */
     public function testPropertyCryptogram()
@@ -196,20 +182,6 @@ class Tmsv2TokenizedCardTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "enrollmentId"
-     */
-    public function testPropertyEnrollmentId()
-    {
-    }
-
-    /**
-     * Test attribute "tokenReferenceId"
-     */
-    public function testPropertyTokenReferenceId()
-    {
-    }
-
-    /**
      * Test attribute "paymentAccountReference"
      */
     public function testPropertyPaymentAccountReference()
@@ -220,13 +192,6 @@ class Tmsv2TokenizedCardTest extends \PHPUnit_Framework_TestCase
      * Test attribute "card"
      */
     public function testPropertyCard()
-    {
-    }
-
-    /**
-     * Test attribute "passcode"
-     */
-    public function testPropertyPasscode()
     {
     }
 

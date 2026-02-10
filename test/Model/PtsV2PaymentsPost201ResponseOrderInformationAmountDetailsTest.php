@@ -91,6 +91,13 @@ class PtsV2PaymentsPost201ResponseOrderInformationAmountDetailsTest extends \PHP
     }
 
     /**
+     * Test attribute "cashbackAmount"
+     */
+    public function testPropertyCashbackAmount()
+    {
+    }
+
+    /**
      * Test attribute "currency"
      */
     public function testPropertyCurrency()

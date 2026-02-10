@@ -34,7 +34,6 @@ use \ArrayAccess;
  * InlineResponse2001 Class Doc Comment
  *
  * @category    Class
- * @description Represents the Card Art Asset associated to the Network Token.
  * @package     CyberSource
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
@@ -54,10 +53,8 @@ class InlineResponse2001 implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'id' => 'string',
-        'type' => 'string',
-        'provider' => 'string',
-        'content' => '\CyberSource\Model\InlineResponse2001Content[]'
+        'links' => '\CyberSource\Model\InlineResponse2001Links',
+        'tokenizedCard' => '\CyberSource\Model\Tmsv2TokenizedCard'
     ];
 
     /**
@@ -65,10 +62,8 @@ class InlineResponse2001 implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'id' => null,
-        'type' => null,
-        'provider' => null,
-        'content' => null
+        'links' => null,
+        'tokenizedCard' => null
     ];
 
     public static function swaggerTypes()
@@ -86,10 +81,8 @@ class InlineResponse2001 implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id',
-        'type' => 'type',
-        'provider' => 'provider',
-        'content' => 'content'
+        'links' => '_links',
+        'tokenizedCard' => 'tokenizedCard'
     ];
 
 
@@ -98,10 +91,8 @@ class InlineResponse2001 implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'type' => 'setType',
-        'provider' => 'setProvider',
-        'content' => 'setContent'
+        'links' => 'setLinks',
+        'tokenizedCard' => 'setTokenizedCard'
     ];
 
 
@@ -110,10 +101,8 @@ class InlineResponse2001 implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'type' => 'getType',
-        'provider' => 'getProvider',
-        'content' => 'getContent'
+        'links' => 'getLinks',
+        'tokenizedCard' => 'getTokenizedCard'
     ];
 
     public static function attributeMap()
@@ -147,10 +136,8 @@ class InlineResponse2001 implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
-        $this->container['provider'] = isset($data['provider']) ? $data['provider'] : null;
-        $this->container['content'] = isset($data['content']) ? $data['content'] : null;
+        $this->container['links'] = isset($data['links']) ? $data['links'] : null;
+        $this->container['tokenizedCard'] = isset($data['tokenizedCard']) ? $data['tokenizedCard'] : null;
     }
 
     /**
@@ -179,85 +166,43 @@ class InlineResponse2001 implements ArrayAccess
 
 
     /**
-     * Gets id
-     * @return string
+     * Gets links
+     * @return \CyberSource\Model\InlineResponse2001Links
      */
-    public function getId()
+    public function getLinks()
     {
-        return $this->container['id'];
+        return $this->container['links'];
     }
 
     /**
-     * Sets id
-     * @param string $id Unique identifier for the Card Art Asset.
+     * Sets links
+     * @param \CyberSource\Model\InlineResponse2001Links $links
      * @return $this
      */
-    public function setId($id)
+    public function setLinks($links)
     {
-        $this->container['id'] = $id;
+        $this->container['links'] = $links;
 
         return $this;
     }
 
     /**
-     * Gets type
-     * @return string
+     * Gets tokenizedCard
+     * @return \CyberSource\Model\Tmsv2TokenizedCard
      */
-    public function getType()
+    public function getTokenizedCard()
     {
-        return $this->container['type'];
+        return $this->container['tokenizedCard'];
     }
 
     /**
-     * Sets type
-     * @param string $type The type of Card Art Asset.
+     * Sets tokenizedCard
+     * @param \CyberSource\Model\Tmsv2TokenizedCard $tokenizedCard
      * @return $this
      */
-    public function setType($type)
+    public function setTokenizedCard($tokenizedCard)
     {
-        $this->container['type'] = $type;
-
-        return $this;
-    }
-
-    /**
-     * Gets provider
-     * @return string
-     */
-    public function getProvider()
-    {
-        return $this->container['provider'];
-    }
-
-    /**
-     * Sets provider
-     * @param string $provider The provider of the Card Art Asset.
-     * @return $this
-     */
-    public function setProvider($provider)
-    {
-        $this->container['provider'] = $provider;
-
-        return $this;
-    }
-
-    /**
-     * Gets content
-     * @return \CyberSource\Model\InlineResponse2001Content[]
-     */
-    public function getContent()
-    {
-        return $this->container['content'];
-    }
-
-    /**
-     * Sets content
-     * @param \CyberSource\Model\InlineResponse2001Content[] $content Array of content objects representing the Card Art Asset.
-     * @return $this
-     */
-    public function setContent($content)
-    {
-        $this->container['content'] = $content;
+        $this->container['tokenizedCard'] = $tokenizedCard;
 
         return $this;
     }

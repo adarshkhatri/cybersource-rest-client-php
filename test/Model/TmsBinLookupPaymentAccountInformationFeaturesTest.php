@@ -243,4 +243,11 @@ class TmsBinLookupPaymentAccountInformationFeaturesTest extends \PHPUnit_Framewo
     public function testPropertyEmiEligible()
     {
     }
+
+    /**
+     * Test attribute "fleetCard"
+     */
+    public function testPropertyFleetCard()
+    {
+    }
 }

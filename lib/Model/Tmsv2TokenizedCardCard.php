@@ -34,7 +34,6 @@ use \ArrayAccess;
  * Tmsv2TokenizedCardCard Class Doc Comment
  *
  * @category    Class
- * @description Card object used to create a network token
  * @package     CyberSource
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
@@ -225,7 +224,7 @@ class Tmsv2TokenizedCardCard implements ArrayAccess
 
     /**
      * Sets number
-     * @param string $number The customer's payment card number, also known as the Primary Account Number (PAN).
+     * @param string $number The latest customer's payment card number associated to the network token.
      * @return $this
      */
     public function setNumber($number)

@@ -53,9 +53,9 @@ class InlineResponse2011 implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'id' => 'string',
-        'submitTimeUtc' => 'string',
-        'status' => 'string'
+        'links' => '\CyberSource\Model\InlineResponse2011Links',
+        'card' => '\CyberSource\Model\InlineResponse2011Card',
+        'tokenizedCard' => '\CyberSource\Model\InlineResponse2011TokenizedCard'
     ];
 
     /**
@@ -63,9 +63,9 @@ class InlineResponse2011 implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'id' => null,
-        'submitTimeUtc' => null,
-        'status' => null
+        'links' => null,
+        'card' => null,
+        'tokenizedCard' => null
     ];
 
     public static function swaggerTypes()
@@ -83,9 +83,9 @@ class InlineResponse2011 implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id',
-        'submitTimeUtc' => 'submitTimeUtc',
-        'status' => 'status'
+        'links' => '_links',
+        'card' => 'card',
+        'tokenizedCard' => 'tokenizedCard'
     ];
 
 
@@ -94,9 +94,9 @@ class InlineResponse2011 implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'submitTimeUtc' => 'setSubmitTimeUtc',
-        'status' => 'setStatus'
+        'links' => 'setLinks',
+        'card' => 'setCard',
+        'tokenizedCard' => 'setTokenizedCard'
     ];
 
 
@@ -105,9 +105,9 @@ class InlineResponse2011 implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'submitTimeUtc' => 'getSubmitTimeUtc',
-        'status' => 'getStatus'
+        'links' => 'getLinks',
+        'card' => 'getCard',
+        'tokenizedCard' => 'getTokenizedCard'
     ];
 
     public static function attributeMap()
@@ -141,9 +141,9 @@ class InlineResponse2011 implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['submitTimeUtc'] = isset($data['submitTimeUtc']) ? $data['submitTimeUtc'] : null;
-        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['links'] = isset($data['links']) ? $data['links'] : null;
+        $this->container['card'] = isset($data['card']) ? $data['card'] : null;
+        $this->container['tokenizedCard'] = isset($data['tokenizedCard']) ? $data['tokenizedCard'] : null;
     }
 
     /**
@@ -172,64 +172,64 @@ class InlineResponse2011 implements ArrayAccess
 
 
     /**
-     * Gets id
-     * @return string
+     * Gets links
+     * @return \CyberSource\Model\InlineResponse2011Links
      */
-    public function getId()
+    public function getLinks()
     {
-        return $this->container['id'];
+        return $this->container['links'];
     }
 
     /**
-     * Sets id
-     * @param string $id UUID uniquely generated for this comments.
+     * Sets links
+     * @param \CyberSource\Model\InlineResponse2011Links $links
      * @return $this
      */
-    public function setId($id)
+    public function setLinks($links)
     {
-        $this->container['id'] = $id;
+        $this->container['links'] = $links;
 
         return $this;
     }
 
     /**
-     * Gets submitTimeUtc
-     * @return string
+     * Gets card
+     * @return \CyberSource\Model\InlineResponse2011Card
      */
-    public function getSubmitTimeUtc()
+    public function getCard()
     {
-        return $this->container['submitTimeUtc'];
+        return $this->container['card'];
     }
 
     /**
-     * Sets submitTimeUtc
-     * @param string $submitTimeUtc Time of request in UTC. Format: `YYYY-MM-DDThh:mm:ssZ` **Example** `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The `T` separates the date and the time. The `Z` indicates UTC.  Returned by Cybersource for all services.
+     * Sets card
+     * @param \CyberSource\Model\InlineResponse2011Card $card
      * @return $this
      */
-    public function setSubmitTimeUtc($submitTimeUtc)
+    public function setCard($card)
     {
-        $this->container['submitTimeUtc'] = $submitTimeUtc;
+        $this->container['card'] = $card;
 
         return $this;
     }
 
     /**
-     * Gets status
-     * @return string
+     * Gets tokenizedCard
+     * @return \CyberSource\Model\InlineResponse2011TokenizedCard
      */
-    public function getStatus()
+    public function getTokenizedCard()
     {
-        return $this->container['status'];
+        return $this->container['tokenizedCard'];
     }
 
     /**
-     * Sets status
-     * @param string $status Status of the comment creation. Possible values are: - `COMPLETED`
+     * Sets tokenizedCard
+     * @param \CyberSource\Model\InlineResponse2011TokenizedCard $tokenizedCard
      * @return $this
      */
-    public function setStatus($status)
+    public function setTokenizedCard($tokenizedCard)
     {
-        $this->container['status'] = $status;
+        $this->container['tokenizedCard'] = $tokenizedCard;
 
         return $this;
     }

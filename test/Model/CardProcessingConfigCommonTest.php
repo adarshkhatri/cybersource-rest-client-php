@@ -224,6 +224,13 @@ class CardProcessingConfigCommonTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "acquirerAgreement"
+     */
+    public function testPropertyAcquirerAgreement()
+    {
+    }
+
+    /**
      * Test attribute "governmentControlled"
      */
     public function testPropertyGovernmentControlled()

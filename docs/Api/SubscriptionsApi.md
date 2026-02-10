@@ -152,7 +152,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getAllSubscriptions**
-> \CyberSource\Model\GetAllSubscriptionsResponse getAllSubscriptions($offset, $limit, $code, $status)
+> \CyberSource\Model\GetAllSubscriptionsResponse getAllSubscriptions($offset, $limit, $code, $status, $customerId)
 
 Get a List of Subscriptions
 
@@ -168,9 +168,10 @@ $offset = 56; // int | Page offset number.
 $limit = 56; // int | Number of items to be returned. Default - `20`, Max - `100`
 $code = "code_example"; // string | Filter by Subscription Code
 $status = "status_example"; // string | Filter by Subscription Status
+$customerId = "customerId_example"; // string | Filter by Customer Id
 
 try {
-    $result = $api_instance->getAllSubscriptions($offset, $limit, $code, $status);
+    $result = $api_instance->getAllSubscriptions($offset, $limit, $code, $status, $customerId);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SubscriptionsApi->getAllSubscriptions: ', $e->getMessage(), PHP_EOL;
@@ -186,6 +187,7 @@ Name | Type | Description  | Notes
  **limit** | **int**| Number of items to be returned. Default - &#x60;20&#x60;, Max - &#x60;100&#x60; | [optional]
  **code** | **string**| Filter by Subscription Code | [optional]
  **status** | **string**| Filter by Subscription Status | [optional]
+ **customerId** | **string**| Filter by Customer Id | [optional]
 
 ### Return type
 

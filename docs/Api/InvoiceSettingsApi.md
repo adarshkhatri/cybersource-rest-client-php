@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **getInvoiceSettings**
-> \CyberSource\Model\InvoicingV2InvoiceSettingsGet200Response getInvoiceSettings()
+> \CyberSource\Model\InvoicingV2InvoiceSettingsGet200Response getInvoiceSettings($productType)
 
 Get Invoice Settings
 
@@ -21,9 +21,10 @@ Allows you to retrieve the invoice settings for the payment page.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new CyberSource\Api\InvoiceSettingsApi();
+$productType = "productType_example"; // string | Allows you to choose which product type settings you want to update.
 
 try {
-    $result = $api_instance->getInvoiceSettings();
+    $result = $api_instance->getInvoiceSettings($productType);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling InvoiceSettingsApi->getInvoiceSettings: ', $e->getMessage(), PHP_EOL;
@@ -32,7 +33,10 @@ try {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **productType** | **string**| Allows you to choose which product type settings you want to update. | [optional]
 
 ### Return type
 
@@ -50,7 +54,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateInvoiceSettings**
-> \CyberSource\Model\InvoicingV2InvoiceSettingsGet200Response updateInvoiceSettings($invoiceSettingsRequest)
+> \CyberSource\Model\InvoicingV2InvoiceSettingsGet200Response updateInvoiceSettings($invoiceSettingsRequest, $productType)
 
 Update Invoice Settings
 
@@ -63,9 +67,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new CyberSource\Api\InvoiceSettingsApi();
 $invoiceSettingsRequest = new \CyberSource\Model\InvoiceSettingsRequest(); // \CyberSource\Model\InvoiceSettingsRequest | 
+$productType = "productType_example"; // string | Allows you to choose which product type settings you want to update.
 
 try {
-    $result = $api_instance->updateInvoiceSettings($invoiceSettingsRequest);
+    $result = $api_instance->updateInvoiceSettings($invoiceSettingsRequest, $productType);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling InvoiceSettingsApi->updateInvoiceSettings: ', $e->getMessage(), PHP_EOL;
@@ -78,6 +83,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **invoiceSettingsRequest** | [**\CyberSource\Model\InvoiceSettingsRequest**](../Model/InvoiceSettingsRequest.md)|  |
+ **productType** | **string**| Allows you to choose which product type settings you want to update. | [optional]
 
 ### Return type
 

@@ -518,13 +518,14 @@ class SubscriptionsApi
      * @param int $limit Number of items to be returned. Default - &#x60;20&#x60;, Max - &#x60;100&#x60; (optional)
      * @param string $code Filter by Subscription Code (optional)
      * @param string $status Filter by Subscription Status (optional)
+     * @param string $customerId Filter by Customer Id (optional)
      * @throws \CyberSource\ApiException on non-2xx response
      * @return array of \CyberSource\Model\GetAllSubscriptionsResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getAllSubscriptions($offset = null, $limit = null, $code = null, $status = null)
+    public function getAllSubscriptions($offset = null, $limit = null, $code = null, $status = null, $customerId = null)
     {
         self::$logger->info('CALL TO METHOD getAllSubscriptions STARTED');
-        list($response, $statusCode, $httpHeader) = $this->getAllSubscriptionsWithHttpInfo($offset, $limit, $code, $status);
+        list($response, $statusCode, $httpHeader) = $this->getAllSubscriptionsWithHttpInfo($offset, $limit, $code, $status, $customerId);
         self::$logger->info('CALL TO METHOD getAllSubscriptions ENDED');
         self::$logger->close();
         return [$response, $statusCode, $httpHeader];
@@ -539,10 +540,11 @@ class SubscriptionsApi
      * @param int $limit Number of items to be returned. Default - &#x60;20&#x60;, Max - &#x60;100&#x60; (optional)
      * @param string $code Filter by Subscription Code (optional)
      * @param string $status Filter by Subscription Status (optional)
+     * @param string $customerId Filter by Customer Id (optional)
      * @throws \CyberSource\ApiException on non-2xx response
      * @return array of \CyberSource\Model\GetAllSubscriptionsResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getAllSubscriptionsWithHttpInfo($offset = null, $limit = null, $code = null, $status = null)
+    public function getAllSubscriptionsWithHttpInfo($offset = null, $limit = null, $code = null, $status = null, $customerId = null)
     {
         // parse inputs
         $resourcePath = "/rbs/v1/subscriptions";
@@ -574,6 +576,10 @@ class SubscriptionsApi
         if ($status !== null) {
             $queryParams['status'] = $this->apiClient->getSerializer()->toQueryValue($status);
         }
+        // query params
+        if ($customerId !== null) {
+            $queryParams['customerId'] = $this->apiClient->getSerializer()->toQueryValue($customerId);
+        }
         if ('GET' == 'POST') {
             $_tempBody = '{}';
         }
@@ -599,6 +605,7 @@ class SubscriptionsApi
         
         // Logging
         self::$logger->debug("Resource : GET $resourcePath");
+        self::$logger->debug("Query Parameters :\n" . \CyberSource\Utilities\Helpers\ListHelper::toString($queryParams));
         self::$logger->debug("Query Parameters :\n" . \CyberSource\Utilities\Helpers\ListHelper::toString($queryParams));
         self::$logger->debug("Query Parameters :\n" . \CyberSource\Utilities\Helpers\ListHelper::toString($queryParams));
         self::$logger->debug("Query Parameters :\n" . \CyberSource\Utilities\Helpers\ListHelper::toString($queryParams));

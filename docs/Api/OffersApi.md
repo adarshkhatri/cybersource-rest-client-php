@@ -4,67 +4,11 @@ All URIs are relative to *https://apitest.cybersource.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createOffer**](OffersApi.md#createOffer) | **POST** /vas/v1/currencyconversion | Create an Offer
 [**getOffer**](OffersApi.md#getOffer) | **GET** /vas/v1/currencyconversion/{id} | Retrieve an Offer
 
 
-# **createOffer**
-> \CyberSource\Model\InlineResponse2018 createOffer($contentType, $xRequestid, $vCMerchantId, $vCCorrelationId, $vCOrganizationId, $offerRequest)
-
-Create an Offer
-
-Creates an offer record on the provider system.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-$api_instance = new CyberSource\Api\OffersApi();
-$contentType = "contentType_example"; // string | 
-$xRequestid = "xRequestid_example"; // string | 
-$vCMerchantId = "vCMerchantId_example"; // string | 
-$vCCorrelationId = "vCCorrelationId_example"; // string | 
-$vCOrganizationId = "vCOrganizationId_example"; // string | 
-$offerRequest = new \CyberSource\Model\OfferRequest(); // \CyberSource\Model\OfferRequest | 
-
-try {
-    $result = $api_instance->createOffer($contentType, $xRequestid, $vCMerchantId, $vCCorrelationId, $vCOrganizationId, $offerRequest);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling OffersApi->createOffer: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **contentType** | **string**|  |
- **xRequestid** | **string**|  |
- **vCMerchantId** | **string**|  |
- **vCCorrelationId** | **string**|  |
- **vCOrganizationId** | **string**|  |
- **offerRequest** | [**\CyberSource\Model\OfferRequest**](../Model/OfferRequest.md)|  |
-
-### Return type
-
-[**\CyberSource\Model\InlineResponse2018**](../Model/InlineResponse2018.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json;charset=utf-8
- - **Accept**: application/hal+json;charset=utf-8
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
 # **getOffer**
-> \CyberSource\Model\InlineResponse20015 getOffer($contentType, $xRequestid, $vCMerchantId, $vCCorrelationId, $vCOrganizationId, $id)
+> \CyberSource\Model\InlineResponse20016 getOffer($contentType, $xRequestid, $vCMerchantId, $vCCorrelationId, $vCOrganizationId, $id)
 
 Retrieve an Offer
 
@@ -105,7 +49,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CyberSource\Model\InlineResponse20015**](../Model/InlineResponse20015.md)
+[**\CyberSource\Model\InlineResponse20016**](../Model/InlineResponse20016.md)
 
 ### Authorization
 
