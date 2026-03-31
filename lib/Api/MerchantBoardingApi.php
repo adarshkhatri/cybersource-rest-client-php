@@ -219,7 +219,7 @@ class MerchantBoardingApi
                     $e->setResponseObject($data);
                     break;
                 case 404:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse4042', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse4043', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 500:

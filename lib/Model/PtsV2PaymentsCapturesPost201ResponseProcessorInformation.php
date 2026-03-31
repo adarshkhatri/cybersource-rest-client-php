@@ -227,7 +227,7 @@ class PtsV2PaymentsCapturesPost201ResponseProcessorInformation implements ArrayA
 
     /**
      * Sets networkTransactionId
-     * @param string $networkTransactionId Network Transaction Identifier Applicable for online capture transactions only.
+     * @param string $networkTransactionId Same value as `processorInformation.transactionId`
      * @return $this
      */
     public function setNetworkTransactionId($networkTransactionId)

@@ -250,4 +250,25 @@ class TmsBinLookupPaymentAccountInformationFeaturesTest extends \PHPUnit_Framewo
     public function testPropertyFleetCard()
     {
     }
+
+    /**
+     * Test attribute "atmEnabled"
+     */
+    public function testPropertyAtmEnabled()
+    {
+    }
+
+    /**
+     * Test attribute "posEnabled"
+     */
+    public function testPropertyPosEnabled()
+    {
+    }
+
+    /**
+     * Test attribute "ecomEnabled"
+     */
+    public function testPropertyEcomEnabled()
+    {
+    }
 }

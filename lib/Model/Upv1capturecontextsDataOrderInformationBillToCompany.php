@@ -59,8 +59,8 @@ class Upv1capturecontextsDataOrderInformationBillToCompany implements ArrayAcces
         'address3' => 'string',
         'address4' => 'string',
         'administrativeArea' => 'string',
-        'buildingNumber' => 'string',
         'country' => 'string',
+        'buildingNumber' => 'string',
         'district' => 'string',
         'locality' => 'string',
         'postalCode' => 'string'
@@ -77,8 +77,8 @@ class Upv1capturecontextsDataOrderInformationBillToCompany implements ArrayAcces
         'address3' => null,
         'address4' => null,
         'administrativeArea' => null,
-        'buildingNumber' => null,
         'country' => null,
+        'buildingNumber' => null,
         'district' => null,
         'locality' => null,
         'postalCode' => null
@@ -105,8 +105,8 @@ class Upv1capturecontextsDataOrderInformationBillToCompany implements ArrayAcces
         'address3' => 'address3',
         'address4' => 'address4',
         'administrativeArea' => 'administrativeArea',
-        'buildingNumber' => 'buildingNumber',
         'country' => 'country',
+        'buildingNumber' => 'buildingNumber',
         'district' => 'district',
         'locality' => 'locality',
         'postalCode' => 'postalCode'
@@ -124,8 +124,8 @@ class Upv1capturecontextsDataOrderInformationBillToCompany implements ArrayAcces
         'address3' => 'setAddress3',
         'address4' => 'setAddress4',
         'administrativeArea' => 'setAdministrativeArea',
-        'buildingNumber' => 'setBuildingNumber',
         'country' => 'setCountry',
+        'buildingNumber' => 'setBuildingNumber',
         'district' => 'setDistrict',
         'locality' => 'setLocality',
         'postalCode' => 'setPostalCode'
@@ -143,8 +143,8 @@ class Upv1capturecontextsDataOrderInformationBillToCompany implements ArrayAcces
         'address3' => 'getAddress3',
         'address4' => 'getAddress4',
         'administrativeArea' => 'getAdministrativeArea',
-        'buildingNumber' => 'getBuildingNumber',
         'country' => 'getCountry',
+        'buildingNumber' => 'getBuildingNumber',
         'district' => 'getDistrict',
         'locality' => 'getLocality',
         'postalCode' => 'getPostalCode'
@@ -187,8 +187,8 @@ class Upv1capturecontextsDataOrderInformationBillToCompany implements ArrayAcces
         $this->container['address3'] = isset($data['address3']) ? $data['address3'] : null;
         $this->container['address4'] = isset($data['address4']) ? $data['address4'] : null;
         $this->container['administrativeArea'] = isset($data['administrativeArea']) ? $data['administrativeArea'] : null;
-        $this->container['buildingNumber'] = isset($data['buildingNumber']) ? $data['buildingNumber'] : null;
         $this->container['country'] = isset($data['country']) ? $data['country'] : null;
+        $this->container['buildingNumber'] = isset($data['buildingNumber']) ? $data['buildingNumber'] : null;
         $this->container['district'] = isset($data['district']) ? $data['district'] : null;
         $this->container['locality'] = isset($data['locality']) ? $data['locality'] : null;
         $this->container['postalCode'] = isset($data['postalCode']) ? $data['postalCode'] : null;
@@ -293,7 +293,7 @@ class Upv1capturecontextsDataOrderInformationBillToCompany implements ArrayAcces
 
     /**
      * Sets address3
-     * @param string $address3 Additional address information (third line of the billing address)
+     * @param string $address3 Additional address information (third line of the billing address) Optional field.
      * @return $this
      */
     public function setAddress3($address3)
@@ -314,7 +314,7 @@ class Upv1capturecontextsDataOrderInformationBillToCompany implements ArrayAcces
 
     /**
      * Sets address4
-     * @param string $address4 Additional address information (fourth line of the billing address)
+     * @param string $address4 Additional address information (fourth line of the billing address) Optional field
      * @return $this
      */
     public function setAddress4($address4)
@@ -346,27 +346,6 @@ class Upv1capturecontextsDataOrderInformationBillToCompany implements ArrayAcces
     }
 
     /**
-     * Gets buildingNumber
-     * @return string
-     */
-    public function getBuildingNumber()
-    {
-        return $this->container['buildingNumber'];
-    }
-
-    /**
-     * Sets buildingNumber
-     * @param string $buildingNumber Building number in the street address.
-     * @return $this
-     */
-    public function setBuildingNumber($buildingNumber)
-    {
-        $this->container['buildingNumber'] = $buildingNumber;
-
-        return $this;
-    }
-
-    /**
      * Gets country
      * @return string
      */
@@ -383,6 +362,27 @@ class Upv1capturecontextsDataOrderInformationBillToCompany implements ArrayAcces
     public function setCountry($country)
     {
         $this->container['country'] = $country;
+
+        return $this;
+    }
+
+    /**
+     * Gets buildingNumber
+     * @return string
+     */
+    public function getBuildingNumber()
+    {
+        return $this->container['buildingNumber'];
+    }
+
+    /**
+     * Sets buildingNumber
+     * @param string $buildingNumber Building number in the street address.
+     * @return $this
+     */
+    public function setBuildingNumber($buildingNumber)
+    {
+        $this->container['buildingNumber'] = $buildingNumber;
 
         return $this;
     }

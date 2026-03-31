@@ -53,8 +53,7 @@ class InlineResponse404 implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'submitTimeUtc' => 'string',
-        'status' => 'string'
+        'errors' => '\CyberSource\Model\InlineResponse404Errors[]'
     ];
 
     /**
@@ -62,8 +61,7 @@ class InlineResponse404 implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'submitTimeUtc' => null,
-        'status' => null
+        'errors' => null
     ];
 
     public static function swaggerTypes()
@@ -81,8 +79,7 @@ class InlineResponse404 implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'submitTimeUtc' => 'submitTimeUtc',
-        'status' => 'status'
+        'errors' => 'errors'
     ];
 
 
@@ -91,8 +88,7 @@ class InlineResponse404 implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'submitTimeUtc' => 'setSubmitTimeUtc',
-        'status' => 'setStatus'
+        'errors' => 'setErrors'
     ];
 
 
@@ -101,8 +97,7 @@ class InlineResponse404 implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'submitTimeUtc' => 'getSubmitTimeUtc',
-        'status' => 'getStatus'
+        'errors' => 'getErrors'
     ];
 
     public static function attributeMap()
@@ -136,8 +131,7 @@ class InlineResponse404 implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['submitTimeUtc'] = isset($data['submitTimeUtc']) ? $data['submitTimeUtc'] : null;
-        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['errors'] = isset($data['errors']) ? $data['errors'] : null;
     }
 
     /**
@@ -166,43 +160,22 @@ class InlineResponse404 implements ArrayAccess
 
 
     /**
-     * Gets submitTimeUtc
-     * @return string
+     * Gets errors
+     * @return \CyberSource\Model\InlineResponse404Errors[]
      */
-    public function getSubmitTimeUtc()
+    public function getErrors()
     {
-        return $this->container['submitTimeUtc'];
+        return $this->container['errors'];
     }
 
     /**
-     * Sets submitTimeUtc
-     * @param string $submitTimeUtc Time of request in UTC. Format: `YYYY-MM-DDThh:mm:ssZ` **Example** `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The `T` separates the date and the time. The `Z` indicates UTC.  Returned by Cybersource for all services.
+     * Sets errors
+     * @param \CyberSource\Model\InlineResponse404Errors[] $errors
      * @return $this
      */
-    public function setSubmitTimeUtc($submitTimeUtc)
+    public function setErrors($errors)
     {
-        $this->container['submitTimeUtc'] = $submitTimeUtc;
-
-        return $this;
-    }
-
-    /**
-     * Gets status
-     * @return string
-     */
-    public function getStatus()
-    {
-        return $this->container['status'];
-    }
-
-    /**
-     * Sets status
-     * @param string $status The status of the submitted transaction.  Possible values:  - NOT_FOUND
-     * @return $this
-     */
-    public function setStatus($status)
-    {
-        $this->container['status'] = $status;
+        $this->container['errors'] = $errors;
 
         return $this;
     }

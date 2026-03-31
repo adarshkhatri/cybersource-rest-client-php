@@ -215,4 +215,11 @@ class Ptsv2creditsProcessingInformationTest extends \PHPUnit_Framework_TestCase
     public function testPropertyRefundOptions()
     {
     }
+
+    /**
+     * Test attribute "merchantVerificationValue"
+     */
+    public function testPropertyMerchantVerificationValue()
+    {
+    }
 }

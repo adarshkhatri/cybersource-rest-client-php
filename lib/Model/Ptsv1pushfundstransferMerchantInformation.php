@@ -53,7 +53,8 @@ class Ptsv1pushfundstransferMerchantInformation implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'categoryCode' => 'string'
+        'categoryCode' => 'int',
+        'merchantDescriptor' => '\CyberSource\Model\Ptsv1pushfundstransferMerchantInformationMerchantDescriptor'
     ];
 
     /**
@@ -61,7 +62,8 @@ class Ptsv1pushfundstransferMerchantInformation implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'categoryCode' => null
+        'categoryCode' => null,
+        'merchantDescriptor' => null
     ];
 
     public static function swaggerTypes()
@@ -79,7 +81,8 @@ class Ptsv1pushfundstransferMerchantInformation implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'categoryCode' => 'categoryCode'
+        'categoryCode' => 'categoryCode',
+        'merchantDescriptor' => 'merchantDescriptor'
     ];
 
 
@@ -88,7 +91,8 @@ class Ptsv1pushfundstransferMerchantInformation implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'categoryCode' => 'setCategoryCode'
+        'categoryCode' => 'setCategoryCode',
+        'merchantDescriptor' => 'setMerchantDescriptor'
     ];
 
 
@@ -97,7 +101,8 @@ class Ptsv1pushfundstransferMerchantInformation implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'categoryCode' => 'getCategoryCode'
+        'categoryCode' => 'getCategoryCode',
+        'merchantDescriptor' => 'getMerchantDescriptor'
     ];
 
     public static function attributeMap()
@@ -132,6 +137,7 @@ class Ptsv1pushfundstransferMerchantInformation implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['categoryCode'] = isset($data['categoryCode']) ? $data['categoryCode'] : null;
+        $this->container['merchantDescriptor'] = isset($data['merchantDescriptor']) ? $data['merchantDescriptor'] : null;
     }
 
     /**
@@ -161,7 +167,7 @@ class Ptsv1pushfundstransferMerchantInformation implements ArrayAccess
 
     /**
      * Gets categoryCode
-     * @return string
+     * @return int
      */
     public function getCategoryCode()
     {
@@ -170,12 +176,33 @@ class Ptsv1pushfundstransferMerchantInformation implements ArrayAccess
 
     /**
      * Sets categoryCode
-     * @param string $categoryCode The value for this field is a four-digit number that the payment card industry uses to  classify merchants into market segments. A payment card company assigned one or more of  these values to your business when you started accepting the payment card company's cards.  When you do not include this field in your request, CyberSource uses the value in your CyberSource account.
+     * @param int $categoryCode The value for this field is a four-digit number that the payment card industry uses to  classify merchants into market segments. A payment card company assigned one or more of  these values to your business when you started accepting the payment card company's cards.  When you do not include this field in your request, CyberSource uses the value in your CyberSource account.
      * @return $this
      */
     public function setCategoryCode($categoryCode)
     {
         $this->container['categoryCode'] = $categoryCode;
+
+        return $this;
+    }
+
+    /**
+     * Gets merchantDescriptor
+     * @return \CyberSource\Model\Ptsv1pushfundstransferMerchantInformationMerchantDescriptor
+     */
+    public function getMerchantDescriptor()
+    {
+        return $this->container['merchantDescriptor'];
+    }
+
+    /**
+     * Sets merchantDescriptor
+     * @param \CyberSource\Model\Ptsv1pushfundstransferMerchantInformationMerchantDescriptor $merchantDescriptor
+     * @return $this
+     */
+    public function setMerchantDescriptor($merchantDescriptor)
+    {
+        $this->container['merchantDescriptor'] = $merchantDescriptor;
 
         return $this;
     }

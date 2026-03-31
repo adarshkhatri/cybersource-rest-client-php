@@ -72,7 +72,8 @@ class Ptsv2creditsProcessingInformation implements ArrayAccess
         'electronicBenefitsTransfer' => '\CyberSource\Model\Ptsv2creditsProcessingInformationElectronicBenefitsTransfer',
         'loanOptions' => '\CyberSource\Model\Ptsv2paymentsProcessingInformationLoanOptions',
         'japanPaymentOptions' => '\CyberSource\Model\Ptsv2creditsProcessingInformationJapanPaymentOptions',
-        'refundOptions' => '\CyberSource\Model\Ptsv2creditsProcessingInformationRefundOptions'
+        'refundOptions' => '\CyberSource\Model\Ptsv2creditsProcessingInformationRefundOptions',
+        'merchantVerificationValue' => 'string'
     ];
 
     /**
@@ -99,7 +100,8 @@ class Ptsv2creditsProcessingInformation implements ArrayAccess
         'electronicBenefitsTransfer' => null,
         'loanOptions' => null,
         'japanPaymentOptions' => null,
-        'refundOptions' => null
+        'refundOptions' => null,
+        'merchantVerificationValue' => null
     ];
 
     public static function swaggerTypes()
@@ -136,7 +138,8 @@ class Ptsv2creditsProcessingInformation implements ArrayAccess
         'electronicBenefitsTransfer' => 'electronicBenefitsTransfer',
         'loanOptions' => 'loanOptions',
         'japanPaymentOptions' => 'japanPaymentOptions',
-        'refundOptions' => 'refundOptions'
+        'refundOptions' => 'refundOptions',
+        'merchantVerificationValue' => 'merchantVerificationValue'
     ];
 
 
@@ -164,7 +167,8 @@ class Ptsv2creditsProcessingInformation implements ArrayAccess
         'electronicBenefitsTransfer' => 'setElectronicBenefitsTransfer',
         'loanOptions' => 'setLoanOptions',
         'japanPaymentOptions' => 'setJapanPaymentOptions',
-        'refundOptions' => 'setRefundOptions'
+        'refundOptions' => 'setRefundOptions',
+        'merchantVerificationValue' => 'setMerchantVerificationValue'
     ];
 
 
@@ -192,7 +196,8 @@ class Ptsv2creditsProcessingInformation implements ArrayAccess
         'electronicBenefitsTransfer' => 'getElectronicBenefitsTransfer',
         'loanOptions' => 'getLoanOptions',
         'japanPaymentOptions' => 'getJapanPaymentOptions',
-        'refundOptions' => 'getRefundOptions'
+        'refundOptions' => 'getRefundOptions',
+        'merchantVerificationValue' => 'getMerchantVerificationValue'
     ];
 
     public static function attributeMap()
@@ -246,6 +251,7 @@ class Ptsv2creditsProcessingInformation implements ArrayAccess
         $this->container['loanOptions'] = isset($data['loanOptions']) ? $data['loanOptions'] : null;
         $this->container['japanPaymentOptions'] = isset($data['japanPaymentOptions']) ? $data['japanPaymentOptions'] : null;
         $this->container['refundOptions'] = isset($data['refundOptions']) ? $data['refundOptions'] : null;
+        $this->container['merchantVerificationValue'] = isset($data['merchantVerificationValue']) ? $data['merchantVerificationValue'] : null;
     }
 
     /**
@@ -689,6 +695,27 @@ class Ptsv2creditsProcessingInformation implements ArrayAccess
     public function setRefundOptions($refundOptions)
     {
         $this->container['refundOptions'] = $refundOptions;
+
+        return $this;
+    }
+
+    /**
+     * Gets merchantVerificationValue
+     * @return string
+     */
+    public function getMerchantVerificationValue()
+    {
+        return $this->container['merchantVerificationValue'];
+    }
+
+    /**
+     * Sets merchantVerificationValue
+     * @param string $merchantVerificationValue The override value of the Merchant Verification Value (MVV) received by various card brands. MVV refers to the value assigned by the card brand/network to identify participation in select merchant programs.  Sample value for Visa: `101010`
+     * @return $this
+     */
+    public function setMerchantVerificationValue($merchantVerificationValue)
+    {
+        $this->container['merchantVerificationValue'] = $merchantVerificationValue;
 
         return $this;
     }

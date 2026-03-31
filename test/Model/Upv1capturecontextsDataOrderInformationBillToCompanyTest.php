@@ -119,16 +119,16 @@ class Upv1capturecontextsDataOrderInformationBillToCompanyTest extends \PHPUnit_
     }
 
     /**
-     * Test attribute "buildingNumber"
+     * Test attribute "country"
      */
-    public function testPropertyBuildingNumber()
+    public function testPropertyCountry()
     {
     }
 
     /**
-     * Test attribute "country"
+     * Test attribute "buildingNumber"
      */
-    public function testPropertyCountry()
+    public function testPropertyBuildingNumber()
     {
     }
 

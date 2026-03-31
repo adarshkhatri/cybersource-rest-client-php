@@ -145,4 +145,11 @@ class PushFunds201ResponseProcessorInformationTest extends \PHPUnit_Framework_Te
     public function testPropertySettlement()
     {
     }
+
+    /**
+     * Test attribute "merchantAdvice"
+     */
+    public function testPropertyMerchantAdvice()
+    {
+    }
 }

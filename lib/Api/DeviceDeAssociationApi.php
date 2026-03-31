@@ -222,7 +222,7 @@ class DeviceDeAssociationApi
                     $e->setResponseObject($data);
                     break;
                 case 404:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse4044', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse4045', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 500:
@@ -370,7 +370,7 @@ class DeviceDeAssociationApi
                     $e->setResponseObject($data);
                     break;
                 case 404:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse4044', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse4045', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 500:

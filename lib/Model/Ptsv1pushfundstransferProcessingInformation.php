@@ -59,7 +59,8 @@ class Ptsv1pushfundstransferProcessingInformation implements ArrayAccess
         'networkPartnerId' => 'string',
         'processingCode' => 'string',
         'sharingGroupCode' => 'string',
-        'purposeOfPayment' => 'string'
+        'purposeOfPayment' => 'string',
+        'reconciliationId' => 'string'
     ];
 
     /**
@@ -73,7 +74,8 @@ class Ptsv1pushfundstransferProcessingInformation implements ArrayAccess
         'networkPartnerId' => null,
         'processingCode' => null,
         'sharingGroupCode' => null,
-        'purposeOfPayment' => null
+        'purposeOfPayment' => null,
+        'reconciliationId' => null
     ];
 
     public static function swaggerTypes()
@@ -97,7 +99,8 @@ class Ptsv1pushfundstransferProcessingInformation implements ArrayAccess
         'networkPartnerId' => 'networkPartnerId',
         'processingCode' => 'processingCode',
         'sharingGroupCode' => 'sharingGroupCode',
-        'purposeOfPayment' => 'purposeOfPayment'
+        'purposeOfPayment' => 'purposeOfPayment',
+        'reconciliationId' => 'reconciliationId'
     ];
 
 
@@ -112,7 +115,8 @@ class Ptsv1pushfundstransferProcessingInformation implements ArrayAccess
         'networkPartnerId' => 'setNetworkPartnerId',
         'processingCode' => 'setProcessingCode',
         'sharingGroupCode' => 'setSharingGroupCode',
-        'purposeOfPayment' => 'setPurposeOfPayment'
+        'purposeOfPayment' => 'setPurposeOfPayment',
+        'reconciliationId' => 'setReconciliationId'
     ];
 
 
@@ -127,7 +131,8 @@ class Ptsv1pushfundstransferProcessingInformation implements ArrayAccess
         'networkPartnerId' => 'getNetworkPartnerId',
         'processingCode' => 'getProcessingCode',
         'sharingGroupCode' => 'getSharingGroupCode',
-        'purposeOfPayment' => 'getPurposeOfPayment'
+        'purposeOfPayment' => 'getPurposeOfPayment',
+        'reconciliationId' => 'getReconciliationId'
     ];
 
     public static function attributeMap()
@@ -168,6 +173,7 @@ class Ptsv1pushfundstransferProcessingInformation implements ArrayAccess
         $this->container['processingCode'] = isset($data['processingCode']) ? $data['processingCode'] : null;
         $this->container['sharingGroupCode'] = isset($data['sharingGroupCode']) ? $data['sharingGroupCode'] : null;
         $this->container['purposeOfPayment'] = isset($data['purposeOfPayment']) ? $data['purposeOfPayment'] : null;
+        $this->container['reconciliationId'] = isset($data['reconciliationId']) ? $data['reconciliationId'] : null;
     }
 
     /**
@@ -338,6 +344,27 @@ class Ptsv1pushfundstransferProcessingInformation implements ArrayAccess
     public function setPurposeOfPayment($purposeOfPayment)
     {
         $this->container['purposeOfPayment'] = $purposeOfPayment;
+
+        return $this;
+    }
+
+    /**
+     * Gets reconciliationId
+     * @return string
+     */
+    public function getReconciliationId()
+    {
+        return $this->container['reconciliationId'];
+    }
+
+    /**
+     * Sets reconciliationId
+     * @param string $reconciliationId Transaction's reference number.
+     * @return $this
+     */
+    public function setReconciliationId($reconciliationId)
+    {
+        $this->container['reconciliationId'] = $reconciliationId;
 
         return $this;
     }

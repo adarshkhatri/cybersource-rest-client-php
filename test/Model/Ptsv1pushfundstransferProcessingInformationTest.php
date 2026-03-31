@@ -124,4 +124,11 @@ class Ptsv1pushfundstransferProcessingInformationTest extends \PHPUnit_Framework
     public function testPropertyPurposeOfPayment()
     {
     }
+
+    /**
+     * Test attribute "reconciliationId"
+     */
+    public function testPropertyReconciliationId()
+    {
+    }
 }

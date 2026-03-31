@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **processorInformation** | [**\CyberSource\Model\PtsV2PaymentsRefundPost201ResponseProcessorInformation**](PtsV2PaymentsRefundPost201ResponseProcessorInformation.md) |  | [optional] 
 **orderInformation** | [**\CyberSource\Model\PtsV2PaymentsRefundPost201ResponseOrderInformation**](PtsV2PaymentsRefundPost201ResponseOrderInformation.md) |  | [optional] 
 **pointOfSaleInformation** | [**\CyberSource\Model\PtsV2PaymentsCapturesPost201ResponsePointOfSaleInformation**](PtsV2PaymentsCapturesPost201ResponsePointOfSaleInformation.md) |  | [optional] 
+**errorInformation** | [**\CyberSource\Model\PtsV2PaymentsRefundPost201ResponseErrorInformation**](PtsV2PaymentsRefundPost201ResponseErrorInformation.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

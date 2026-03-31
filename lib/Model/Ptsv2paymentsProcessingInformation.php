@@ -80,6 +80,7 @@ class Ptsv2paymentsProcessingInformation implements ArrayAccess
         'loanOptions' => '\CyberSource\Model\Ptsv2paymentsProcessingInformationLoanOptions',
         'walletType' => 'string',
         'nationalNetDomesticData' => 'string',
+        'merchantVerificationValue' => 'string',
         'japanPaymentOptions' => '\CyberSource\Model\Ptsv2paymentsProcessingInformationJapanPaymentOptions',
         'mobileRemotePaymentType' => 'string',
         'extendedCreditTotalCount' => 'string',
@@ -129,6 +130,7 @@ class Ptsv2paymentsProcessingInformation implements ArrayAccess
         'loanOptions' => null,
         'walletType' => null,
         'nationalNetDomesticData' => null,
+        'merchantVerificationValue' => null,
         'japanPaymentOptions' => null,
         'mobileRemotePaymentType' => null,
         'extendedCreditTotalCount' => null,
@@ -188,6 +190,7 @@ class Ptsv2paymentsProcessingInformation implements ArrayAccess
         'loanOptions' => 'loanOptions',
         'walletType' => 'walletType',
         'nationalNetDomesticData' => 'nationalNetDomesticData',
+        'merchantVerificationValue' => 'merchantVerificationValue',
         'japanPaymentOptions' => 'japanPaymentOptions',
         'mobileRemotePaymentType' => 'mobileRemotePaymentType',
         'extendedCreditTotalCount' => 'extendedCreditTotalCount',
@@ -238,6 +241,7 @@ class Ptsv2paymentsProcessingInformation implements ArrayAccess
         'loanOptions' => 'setLoanOptions',
         'walletType' => 'setWalletType',
         'nationalNetDomesticData' => 'setNationalNetDomesticData',
+        'merchantVerificationValue' => 'setMerchantVerificationValue',
         'japanPaymentOptions' => 'setJapanPaymentOptions',
         'mobileRemotePaymentType' => 'setMobileRemotePaymentType',
         'extendedCreditTotalCount' => 'setExtendedCreditTotalCount',
@@ -288,6 +292,7 @@ class Ptsv2paymentsProcessingInformation implements ArrayAccess
         'loanOptions' => 'getLoanOptions',
         'walletType' => 'getWalletType',
         'nationalNetDomesticData' => 'getNationalNetDomesticData',
+        'merchantVerificationValue' => 'getMerchantVerificationValue',
         'japanPaymentOptions' => 'getJapanPaymentOptions',
         'mobileRemotePaymentType' => 'getMobileRemotePaymentType',
         'extendedCreditTotalCount' => 'getExtendedCreditTotalCount',
@@ -363,6 +368,7 @@ class Ptsv2paymentsProcessingInformation implements ArrayAccess
         $this->container['loanOptions'] = isset($data['loanOptions']) ? $data['loanOptions'] : null;
         $this->container['walletType'] = isset($data['walletType']) ? $data['walletType'] : null;
         $this->container['nationalNetDomesticData'] = isset($data['nationalNetDomesticData']) ? $data['nationalNetDomesticData'] : null;
+        $this->container['merchantVerificationValue'] = isset($data['merchantVerificationValue']) ? $data['merchantVerificationValue'] : null;
         $this->container['japanPaymentOptions'] = isset($data['japanPaymentOptions']) ? $data['japanPaymentOptions'] : null;
         $this->container['mobileRemotePaymentType'] = isset($data['mobileRemotePaymentType']) ? $data['mobileRemotePaymentType'] : null;
         $this->container['extendedCreditTotalCount'] = isset($data['extendedCreditTotalCount']) ? $data['extendedCreditTotalCount'] : null;
@@ -968,6 +974,27 @@ class Ptsv2paymentsProcessingInformation implements ArrayAccess
     public function setNationalNetDomesticData($nationalNetDomesticData)
     {
         $this->container['nationalNetDomesticData'] = $nationalNetDomesticData;
+
+        return $this;
+    }
+
+    /**
+     * Gets merchantVerificationValue
+     * @return string
+     */
+    public function getMerchantVerificationValue()
+    {
+        return $this->container['merchantVerificationValue'];
+    }
+
+    /**
+     * Sets merchantVerificationValue
+     * @param string $merchantVerificationValue The override value of the Merchant Verification Value (MVV) received by various card brands. MVV refers to the value assigned by the card brand/network to identify participation in select merchant programs.  Sample value for Visa: `101010`
+     * @return $this
+     */
+    public function setMerchantVerificationValue($merchantVerificationValue)
+    {
+        $this->container['merchantVerificationValue'] = $merchantVerificationValue;
 
         return $this;
     }

@@ -278,7 +278,7 @@ class Ptsv1pushfundstransferProcessingInformationPayoutsOptions implements Array
 
     /**
      * Sets accountFundingReferenceId
-     * @param string $accountFundingReferenceId Visa-generated transaction identifier (TID) that is unique for each original authorization and financial request.
+     * @param string $accountFundingReferenceId Visa (maxLength of 15) or MasterCard (maxLength of 40) generated transaction identifier (TID) that is unique for each original authorization and financial request.
      * @return $this
      */
     public function setAccountFundingReferenceId($accountFundingReferenceId)

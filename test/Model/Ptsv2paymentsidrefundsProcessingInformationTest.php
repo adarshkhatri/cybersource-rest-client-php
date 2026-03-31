@@ -159,4 +159,11 @@ class Ptsv2paymentsidrefundsProcessingInformationTest extends \PHPUnit_Framework
     public function testPropertyTransactionTypeIndicator()
     {
     }
+
+    /**
+     * Test attribute "merchantVerificationValue"
+     */
+    public function testPropertyMerchantVerificationValue()
+    {
+    }
 }

@@ -82,4 +82,11 @@ class Ptsv1pushfundstransferMerchantInformationTest extends \PHPUnit_Framework_T
     public function testPropertyCategoryCode()
     {
     }
+
+    /**
+     * Test attribute "merchantDescriptor"
+     */
+    public function testPropertyMerchantDescriptor()
+    {
+    }
 }

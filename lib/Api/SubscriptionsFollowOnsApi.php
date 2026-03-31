@@ -366,7 +366,7 @@ class SubscriptionsFollowOnsApi
                     $e->setResponseObject($data);
                     break;
                 case 404:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse404', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse4041', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 502:

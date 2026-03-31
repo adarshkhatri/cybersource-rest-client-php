@@ -89,25 +89,4 @@ class InlineResponse4041Test extends \PHPUnit_Framework_TestCase
     public function testPropertyStatus()
     {
     }
-
-    /**
-     * Test attribute "reason"
-     */
-    public function testPropertyReason()
-    {
-    }
-
-    /**
-     * Test attribute "message"
-     */
-    public function testPropertyMessage()
-    {
-    }
-
-    /**
-     * Test attribute "details"
-     */
-    public function testPropertyDetails()
-    {
-    }
 }

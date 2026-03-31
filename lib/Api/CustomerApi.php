@@ -225,7 +225,7 @@ class CustomerApi
                     $e->setResponseObject($data);
                     break;
                 case 404:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse424', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse404', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 410:
@@ -380,7 +380,7 @@ class CustomerApi
                     $e->setResponseObject($data);
                     break;
                 case 404:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse424', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse404', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 410:
@@ -555,7 +555,7 @@ class CustomerApi
                     $e->setResponseObject($data);
                     break;
                 case 404:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse424', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse404', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 410:

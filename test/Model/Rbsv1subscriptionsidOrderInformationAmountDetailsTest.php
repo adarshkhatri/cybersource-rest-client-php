@@ -89,4 +89,11 @@ class Rbsv1subscriptionsidOrderInformationAmountDetailsTest extends \PHPUnit_Fra
     public function testPropertySetupFee()
     {
     }
+
+    /**
+     * Test attribute "surcharge"
+     */
+    public function testPropertySurcharge()
+    {
+    }
 }

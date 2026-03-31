@@ -54,7 +54,8 @@ class Boardingv1registrationsIntegrationInformation implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'oauth2' => '\CyberSource\Model\Boardingv1registrationsIntegrationInformationOauth2[]',
-        'tenantConfigurations' => '\CyberSource\Model\Boardingv1registrationsIntegrationInformationTenantConfigurations[]'
+        'tenantConfigurations' => '\CyberSource\Model\Boardingv1registrationsIntegrationInformationTenantConfigurations[]',
+        'msd' => '\CyberSource\Model\Boardingv1registrationsIntegrationInformationMsd'
     ];
 
     /**
@@ -63,7 +64,8 @@ class Boardingv1registrationsIntegrationInformation implements ArrayAccess
       */
     protected static $swaggerFormats = [
         'oauth2' => null,
-        'tenantConfigurations' => null
+        'tenantConfigurations' => null,
+        'msd' => null
     ];
 
     public static function swaggerTypes()
@@ -82,7 +84,8 @@ class Boardingv1registrationsIntegrationInformation implements ArrayAccess
      */
     protected static $attributeMap = [
         'oauth2' => 'oauth2',
-        'tenantConfigurations' => 'tenantConfigurations'
+        'tenantConfigurations' => 'tenantConfigurations',
+        'msd' => 'msd'
     ];
 
 
@@ -92,7 +95,8 @@ class Boardingv1registrationsIntegrationInformation implements ArrayAccess
      */
     protected static $setters = [
         'oauth2' => 'setOauth2',
-        'tenantConfigurations' => 'setTenantConfigurations'
+        'tenantConfigurations' => 'setTenantConfigurations',
+        'msd' => 'setMsd'
     ];
 
 
@@ -102,7 +106,8 @@ class Boardingv1registrationsIntegrationInformation implements ArrayAccess
      */
     protected static $getters = [
         'oauth2' => 'getOauth2',
-        'tenantConfigurations' => 'getTenantConfigurations'
+        'tenantConfigurations' => 'getTenantConfigurations',
+        'msd' => 'getMsd'
     ];
 
     public static function attributeMap()
@@ -138,6 +143,7 @@ class Boardingv1registrationsIntegrationInformation implements ArrayAccess
     {
         $this->container['oauth2'] = isset($data['oauth2']) ? $data['oauth2'] : null;
         $this->container['tenantConfigurations'] = isset($data['tenantConfigurations']) ? $data['tenantConfigurations'] : null;
+        $this->container['msd'] = isset($data['msd']) ? $data['msd'] : null;
     }
 
     /**
@@ -203,6 +209,27 @@ class Boardingv1registrationsIntegrationInformation implements ArrayAccess
     public function setTenantConfigurations($tenantConfigurations)
     {
         $this->container['tenantConfigurations'] = $tenantConfigurations;
+
+        return $this;
+    }
+
+    /**
+     * Gets msd
+     * @return \CyberSource\Model\Boardingv1registrationsIntegrationInformationMsd
+     */
+    public function getMsd()
+    {
+        return $this->container['msd'];
+    }
+
+    /**
+     * Sets msd
+     * @param \CyberSource\Model\Boardingv1registrationsIntegrationInformationMsd $msd
+     * @return $this
+     */
+    public function setMsd($msd)
+    {
+        $this->container['msd'] = $msd;
 
         return $this;
     }

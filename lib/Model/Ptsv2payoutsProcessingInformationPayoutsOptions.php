@@ -257,7 +257,7 @@ class Ptsv2payoutsProcessingInformationPayoutsOptions implements ArrayAccess
 
     /**
      * Sets accountFundingReferenceId
-     * @param string $accountFundingReferenceId Visa-generated transaction identifier (TID) that is unique for each original authorization and financial request. * Applicable only for CTV for Payouts.
+     * @param string $accountFundingReferenceId Visa (maxLength of 15) or MasterCard (maxLength of 40) generated transaction identifier (TID) that is unique for each original authorization and financial request. * Applicable only for CTV for Payouts.
      * @return $this
      */
     public function setAccountFundingReferenceId($accountFundingReferenceId)

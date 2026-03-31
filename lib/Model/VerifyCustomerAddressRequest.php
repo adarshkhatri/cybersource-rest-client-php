@@ -53,7 +53,7 @@ class VerifyCustomerAddressRequest implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'clientReferenceInformation' => '\CyberSource\Model\Riskv1liststypeentriesClientReferenceInformation',
+        'clientReferenceInformation' => '\CyberSource\Model\RiskV1DecisionsPost201ResponseClientReferenceInformation',
         'orderInformation' => '\CyberSource\Model\Riskv1addressverificationsOrderInformation',
         'buyerInformation' => '\CyberSource\Model\Riskv1addressverificationsBuyerInformation'
     ];
@@ -173,7 +173,7 @@ class VerifyCustomerAddressRequest implements ArrayAccess
 
     /**
      * Gets clientReferenceInformation
-     * @return \CyberSource\Model\Riskv1liststypeentriesClientReferenceInformation
+     * @return \CyberSource\Model\RiskV1DecisionsPost201ResponseClientReferenceInformation
      */
     public function getClientReferenceInformation()
     {
@@ -182,7 +182,7 @@ class VerifyCustomerAddressRequest implements ArrayAccess
 
     /**
      * Sets clientReferenceInformation
-     * @param \CyberSource\Model\Riskv1liststypeentriesClientReferenceInformation $clientReferenceInformation
+     * @param \CyberSource\Model\RiskV1DecisionsPost201ResponseClientReferenceInformation $clientReferenceInformation
      * @return $this
      */
     public function setClientReferenceInformation($clientReferenceInformation)

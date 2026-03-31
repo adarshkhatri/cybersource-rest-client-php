@@ -731,7 +731,7 @@ class ManageWebhooksApi
                     $e->setResponseObject($data);
                     break;
                 case 404:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse4043', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse4044', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -865,7 +865,7 @@ class ManageWebhooksApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 404:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse4043', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse4044', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

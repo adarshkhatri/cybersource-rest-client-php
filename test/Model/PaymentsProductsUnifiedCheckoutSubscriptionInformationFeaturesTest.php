@@ -82,4 +82,144 @@ class PaymentsProductsUnifiedCheckoutSubscriptionInformationFeaturesTest extends
     public function testPropertyPazeForUnifiedCheckout()
     {
     }
+
+    /**
+     * Test attribute "tokenManagement"
+     */
+    public function testPropertyTokenManagement()
+    {
+    }
+
+    /**
+     * Test attribute "payPal"
+     */
+    public function testPropertyPayPal()
+    {
+    }
+
+    /**
+     * Test attribute "venmo"
+     */
+    public function testPropertyVenmo()
+    {
+    }
+
+    /**
+     * Test attribute "applePay"
+     */
+    public function testPropertyApplePay()
+    {
+    }
+
+    /**
+     * Test attribute "googlePay"
+     */
+    public function testPropertyGooglePay()
+    {
+    }
+
+    /**
+     * Test attribute "tinkPayByBank"
+     */
+    public function testPropertyTinkPayByBank()
+    {
+    }
+
+    /**
+     * Test attribute "eCheck"
+     */
+    public function testPropertyECheck()
+    {
+    }
+
+    /**
+     * Test attribute "p24"
+     */
+    public function testPropertyP24()
+    {
+    }
+
+    /**
+     * Test attribute "myBank"
+     */
+    public function testPropertyMyBank()
+    {
+    }
+
+    /**
+     * Test attribute "konbini"
+     */
+    public function testPropertyKonbini()
+    {
+    }
+
+    /**
+     * Test attribute "dragonPay"
+     */
+    public function testPropertyDragonPay()
+    {
+    }
+
+    /**
+     * Test attribute "decisionManager"
+     */
+    public function testPropertyDecisionManager()
+    {
+    }
+
+    /**
+     * Test attribute "payerAuthentication"
+     */
+    public function testPropertyPayerAuthentication()
+    {
+    }
+
+    /**
+     * Test attribute "afterPay"
+     */
+    public function testPropertyAfterPay()
+    {
+    }
+
+    /**
+     * Test attribute "ideal"
+     */
+    public function testPropertyIdeal()
+    {
+    }
+
+    /**
+     * Test attribute "multibanco"
+     */
+    public function testPropertyMultibanco()
+    {
+    }
+
+    /**
+     * Test attribute "bancontact"
+     */
+    public function testPropertyBancontact()
+    {
+    }
+
+    /**
+     * Test attribute "clickToPay"
+     */
+    public function testPropertyClickToPay()
+    {
+    }
+
+    /**
+     * Test attribute "unifiedClickToPaySDK"
+     */
+    public function testPropertyUnifiedClickToPaySDK()
+    {
+    }
+
+    /**
+     * Test attribute "portfolioAccessofSensitiveData"
+     */
+    public function testPropertyPortfolioAccessofSensitiveData()
+    {
+    }
 }

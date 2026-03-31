@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **recipientInformation** | [**\CyberSource\Model\Ptsv1pushfundstransferRecipientInformation**](Ptsv1pushfundstransferRecipientInformation.md) |  | [optional] 
 **senderInformation** | [**\CyberSource\Model\Ptsv1pushfundstransferSenderInformation**](Ptsv1pushfundstransferSenderInformation.md) |  | [optional] 
 **merchantInformation** | [**\CyberSource\Model\Ptsv1pushfundstransferMerchantInformation**](Ptsv1pushfundstransferMerchantInformation.md) |  | [optional] 
+**paymentInformation** | [**\CyberSource\Model\Ptsv1pushfundstransferPaymentInformation**](Ptsv1pushfundstransferPaymentInformation.md) |  | [optional] 
 **pointOfServiceInformation** | [**\CyberSource\Model\Ptsv1pushfundstransferPointOfServiceInformation**](Ptsv1pushfundstransferPointOfServiceInformation.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
