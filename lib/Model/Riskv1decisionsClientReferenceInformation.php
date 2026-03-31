@@ -161,9 +161,6 @@ class Riskv1decisionsClientReferenceInformation implements ArrayAccess
     {
         $invalid_properties = [];
 
-        if ($this->container['code'] === null) {
-            $invalid_properties[] = "'code' can't be null";
-        }
         return $invalid_properties;
     }
 
@@ -176,9 +173,6 @@ class Riskv1decisionsClientReferenceInformation implements ArrayAccess
     public function valid()
     {
 
-        if ($this->container['code'] === null) {
-            return false;
-        }
         return true;
     }
 

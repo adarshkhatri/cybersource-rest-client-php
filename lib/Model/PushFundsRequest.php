@@ -60,6 +60,7 @@ class PushFundsRequest implements ArrayAccess
         'recipientInformation' => '\CyberSource\Model\Ptsv1pushfundstransferRecipientInformation',
         'senderInformation' => '\CyberSource\Model\Ptsv1pushfundstransferSenderInformation',
         'merchantInformation' => '\CyberSource\Model\Ptsv1pushfundstransferMerchantInformation',
+        'paymentInformation' => '\CyberSource\Model\Ptsv1pushfundstransferPaymentInformation',
         'pointOfServiceInformation' => '\CyberSource\Model\Ptsv1pushfundstransferPointOfServiceInformation'
     ];
 
@@ -75,6 +76,7 @@ class PushFundsRequest implements ArrayAccess
         'recipientInformation' => null,
         'senderInformation' => null,
         'merchantInformation' => null,
+        'paymentInformation' => null,
         'pointOfServiceInformation' => null
     ];
 
@@ -100,6 +102,7 @@ class PushFundsRequest implements ArrayAccess
         'recipientInformation' => 'recipientInformation',
         'senderInformation' => 'senderInformation',
         'merchantInformation' => 'merchantInformation',
+        'paymentInformation' => 'paymentInformation',
         'pointOfServiceInformation' => 'pointOfServiceInformation'
     ];
 
@@ -116,6 +119,7 @@ class PushFundsRequest implements ArrayAccess
         'recipientInformation' => 'setRecipientInformation',
         'senderInformation' => 'setSenderInformation',
         'merchantInformation' => 'setMerchantInformation',
+        'paymentInformation' => 'setPaymentInformation',
         'pointOfServiceInformation' => 'setPointOfServiceInformation'
     ];
 
@@ -132,6 +136,7 @@ class PushFundsRequest implements ArrayAccess
         'recipientInformation' => 'getRecipientInformation',
         'senderInformation' => 'getSenderInformation',
         'merchantInformation' => 'getMerchantInformation',
+        'paymentInformation' => 'getPaymentInformation',
         'pointOfServiceInformation' => 'getPointOfServiceInformation'
     ];
 
@@ -173,6 +178,7 @@ class PushFundsRequest implements ArrayAccess
         $this->container['recipientInformation'] = isset($data['recipientInformation']) ? $data['recipientInformation'] : null;
         $this->container['senderInformation'] = isset($data['senderInformation']) ? $data['senderInformation'] : null;
         $this->container['merchantInformation'] = isset($data['merchantInformation']) ? $data['merchantInformation'] : null;
+        $this->container['paymentInformation'] = isset($data['paymentInformation']) ? $data['paymentInformation'] : null;
         $this->container['pointOfServiceInformation'] = isset($data['pointOfServiceInformation']) ? $data['pointOfServiceInformation'] : null;
     }
 
@@ -350,6 +356,27 @@ class PushFundsRequest implements ArrayAccess
     public function setMerchantInformation($merchantInformation)
     {
         $this->container['merchantInformation'] = $merchantInformation;
+
+        return $this;
+    }
+
+    /**
+     * Gets paymentInformation
+     * @return \CyberSource\Model\Ptsv1pushfundstransferPaymentInformation
+     */
+    public function getPaymentInformation()
+    {
+        return $this->container['paymentInformation'];
+    }
+
+    /**
+     * Sets paymentInformation
+     * @param \CyberSource\Model\Ptsv1pushfundstransferPaymentInformation $paymentInformation
+     * @return $this
+     */
+    public function setPaymentInformation($paymentInformation)
+    {
+        $this->container['paymentInformation'] = $paymentInformation;
 
         return $this;
     }

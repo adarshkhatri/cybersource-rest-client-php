@@ -53,7 +53,27 @@ class PaymentsProductsUnifiedCheckoutSubscriptionInformationFeatures implements 
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'pazeForUnifiedCheckout' => '\CyberSource\Model\PaymentsProductsUnifiedCheckoutSubscriptionInformationFeaturesPazeForUnifiedCheckout'
+        'pazeForUnifiedCheckout' => '\CyberSource\Model\PaymentsProductsUnifiedCheckoutSubscriptionInformationFeaturesPazeForUnifiedCheckout',
+        'tokenManagement' => '\CyberSource\Model\PaymentsProductsUnifiedCheckoutSubscriptionInformationFeaturesTokenManagement',
+        'payPal' => '\CyberSource\Model\PaymentsProductsUnifiedCheckoutSubscriptionInformationFeaturesPayPal',
+        'venmo' => '\CyberSource\Model\PaymentsProductsUnifiedCheckoutSubscriptionInformationFeaturesVenmo',
+        'applePay' => '\CyberSource\Model\PaymentsProductsUnifiedCheckoutSubscriptionInformationFeaturesApplePay',
+        'googlePay' => '\CyberSource\Model\PaymentsProductsUnifiedCheckoutSubscriptionInformationFeaturesGooglePay',
+        'tinkPayByBank' => '\CyberSource\Model\PaymentsProductsUnifiedCheckoutSubscriptionInformationFeaturesTinkPayByBank',
+        'eCheck' => '\CyberSource\Model\PaymentsProductsUnifiedCheckoutSubscriptionInformationFeaturesECheck',
+        'p24' => '\CyberSource\Model\PaymentsProductsUnifiedCheckoutSubscriptionInformationFeaturesP24',
+        'myBank' => '\CyberSource\Model\PaymentsProductsUnifiedCheckoutSubscriptionInformationFeaturesMyBank',
+        'konbini' => '\CyberSource\Model\PaymentsProductsUnifiedCheckoutSubscriptionInformationFeaturesKonbini',
+        'dragonPay' => '\CyberSource\Model\PaymentsProductsUnifiedCheckoutSubscriptionInformationFeaturesDragonPay',
+        'decisionManager' => '\CyberSource\Model\PaymentsProductsUnifiedCheckoutSubscriptionInformationFeaturesDecisionManager',
+        'payerAuthentication' => '\CyberSource\Model\PaymentsProductsUnifiedCheckoutSubscriptionInformationFeaturesPayerAuthentication',
+        'afterPay' => '\CyberSource\Model\PaymentsProductsUnifiedCheckoutSubscriptionInformationFeaturesAfterPay',
+        'ideal' => '\CyberSource\Model\PaymentsProductsUnifiedCheckoutSubscriptionInformationFeaturesIdeal',
+        'multibanco' => '\CyberSource\Model\PaymentsProductsUnifiedCheckoutSubscriptionInformationFeaturesMultibanco',
+        'bancontact' => '\CyberSource\Model\PaymentsProductsUnifiedCheckoutSubscriptionInformationFeaturesBancontact',
+        'clickToPay' => '\CyberSource\Model\PaymentsProductsUnifiedCheckoutSubscriptionInformationFeaturesClickToPay',
+        'unifiedClickToPaySDK' => '\CyberSource\Model\PaymentsProductsUnifiedCheckoutSubscriptionInformationFeaturesUnifiedClickToPaySDK',
+        'portfolioAccessofSensitiveData' => '\CyberSource\Model\PaymentsProductsUnifiedCheckoutSubscriptionInformationFeaturesPortfolioAccessofSensitiveData'
     ];
 
     /**
@@ -61,7 +81,27 @@ class PaymentsProductsUnifiedCheckoutSubscriptionInformationFeatures implements 
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'pazeForUnifiedCheckout' => null
+        'pazeForUnifiedCheckout' => null,
+        'tokenManagement' => null,
+        'payPal' => null,
+        'venmo' => null,
+        'applePay' => null,
+        'googlePay' => null,
+        'tinkPayByBank' => null,
+        'eCheck' => null,
+        'p24' => null,
+        'myBank' => null,
+        'konbini' => null,
+        'dragonPay' => null,
+        'decisionManager' => null,
+        'payerAuthentication' => null,
+        'afterPay' => null,
+        'ideal' => null,
+        'multibanco' => null,
+        'bancontact' => null,
+        'clickToPay' => null,
+        'unifiedClickToPaySDK' => null,
+        'portfolioAccessofSensitiveData' => null
     ];
 
     public static function swaggerTypes()
@@ -79,7 +119,27 @@ class PaymentsProductsUnifiedCheckoutSubscriptionInformationFeatures implements 
      * @var string[]
      */
     protected static $attributeMap = [
-        'pazeForUnifiedCheckout' => 'pazeForUnifiedCheckout'
+        'pazeForUnifiedCheckout' => 'pazeForUnifiedCheckout',
+        'tokenManagement' => 'tokenManagement',
+        'payPal' => 'payPal',
+        'venmo' => 'venmo',
+        'applePay' => 'applePay',
+        'googlePay' => 'googlePay',
+        'tinkPayByBank' => 'tinkPayByBank',
+        'eCheck' => 'eCheck',
+        'p24' => 'p24',
+        'myBank' => 'myBank',
+        'konbini' => 'konbini',
+        'dragonPay' => 'dragonPay',
+        'decisionManager' => 'decisionManager',
+        'payerAuthentication' => 'payerAuthentication',
+        'afterPay' => 'afterPay',
+        'ideal' => 'ideal',
+        'multibanco' => 'multibanco',
+        'bancontact' => 'bancontact',
+        'clickToPay' => 'clickToPay',
+        'unifiedClickToPaySDK' => 'unifiedClickToPaySDK',
+        'portfolioAccessofSensitiveData' => 'portfolioAccessofSensitiveData'
     ];
 
 
@@ -88,7 +148,27 @@ class PaymentsProductsUnifiedCheckoutSubscriptionInformationFeatures implements 
      * @var string[]
      */
     protected static $setters = [
-        'pazeForUnifiedCheckout' => 'setPazeForUnifiedCheckout'
+        'pazeForUnifiedCheckout' => 'setPazeForUnifiedCheckout',
+        'tokenManagement' => 'setTokenManagement',
+        'payPal' => 'setPayPal',
+        'venmo' => 'setVenmo',
+        'applePay' => 'setApplePay',
+        'googlePay' => 'setGooglePay',
+        'tinkPayByBank' => 'setTinkPayByBank',
+        'eCheck' => 'setECheck',
+        'p24' => 'setP24',
+        'myBank' => 'setMyBank',
+        'konbini' => 'setKonbini',
+        'dragonPay' => 'setDragonPay',
+        'decisionManager' => 'setDecisionManager',
+        'payerAuthentication' => 'setPayerAuthentication',
+        'afterPay' => 'setAfterPay',
+        'ideal' => 'setIdeal',
+        'multibanco' => 'setMultibanco',
+        'bancontact' => 'setBancontact',
+        'clickToPay' => 'setClickToPay',
+        'unifiedClickToPaySDK' => 'setUnifiedClickToPaySDK',
+        'portfolioAccessofSensitiveData' => 'setPortfolioAccessofSensitiveData'
     ];
 
 
@@ -97,7 +177,27 @@ class PaymentsProductsUnifiedCheckoutSubscriptionInformationFeatures implements 
      * @var string[]
      */
     protected static $getters = [
-        'pazeForUnifiedCheckout' => 'getPazeForUnifiedCheckout'
+        'pazeForUnifiedCheckout' => 'getPazeForUnifiedCheckout',
+        'tokenManagement' => 'getTokenManagement',
+        'payPal' => 'getPayPal',
+        'venmo' => 'getVenmo',
+        'applePay' => 'getApplePay',
+        'googlePay' => 'getGooglePay',
+        'tinkPayByBank' => 'getTinkPayByBank',
+        'eCheck' => 'getECheck',
+        'p24' => 'getP24',
+        'myBank' => 'getMyBank',
+        'konbini' => 'getKonbini',
+        'dragonPay' => 'getDragonPay',
+        'decisionManager' => 'getDecisionManager',
+        'payerAuthentication' => 'getPayerAuthentication',
+        'afterPay' => 'getAfterPay',
+        'ideal' => 'getIdeal',
+        'multibanco' => 'getMultibanco',
+        'bancontact' => 'getBancontact',
+        'clickToPay' => 'getClickToPay',
+        'unifiedClickToPaySDK' => 'getUnifiedClickToPaySDK',
+        'portfolioAccessofSensitiveData' => 'getPortfolioAccessofSensitiveData'
     ];
 
     public static function attributeMap()
@@ -132,6 +232,26 @@ class PaymentsProductsUnifiedCheckoutSubscriptionInformationFeatures implements 
     public function __construct(array $data = null)
     {
         $this->container['pazeForUnifiedCheckout'] = isset($data['pazeForUnifiedCheckout']) ? $data['pazeForUnifiedCheckout'] : null;
+        $this->container['tokenManagement'] = isset($data['tokenManagement']) ? $data['tokenManagement'] : null;
+        $this->container['payPal'] = isset($data['payPal']) ? $data['payPal'] : null;
+        $this->container['venmo'] = isset($data['venmo']) ? $data['venmo'] : null;
+        $this->container['applePay'] = isset($data['applePay']) ? $data['applePay'] : null;
+        $this->container['googlePay'] = isset($data['googlePay']) ? $data['googlePay'] : null;
+        $this->container['tinkPayByBank'] = isset($data['tinkPayByBank']) ? $data['tinkPayByBank'] : null;
+        $this->container['eCheck'] = isset($data['eCheck']) ? $data['eCheck'] : null;
+        $this->container['p24'] = isset($data['p24']) ? $data['p24'] : null;
+        $this->container['myBank'] = isset($data['myBank']) ? $data['myBank'] : null;
+        $this->container['konbini'] = isset($data['konbini']) ? $data['konbini'] : null;
+        $this->container['dragonPay'] = isset($data['dragonPay']) ? $data['dragonPay'] : null;
+        $this->container['decisionManager'] = isset($data['decisionManager']) ? $data['decisionManager'] : null;
+        $this->container['payerAuthentication'] = isset($data['payerAuthentication']) ? $data['payerAuthentication'] : null;
+        $this->container['afterPay'] = isset($data['afterPay']) ? $data['afterPay'] : null;
+        $this->container['ideal'] = isset($data['ideal']) ? $data['ideal'] : null;
+        $this->container['multibanco'] = isset($data['multibanco']) ? $data['multibanco'] : null;
+        $this->container['bancontact'] = isset($data['bancontact']) ? $data['bancontact'] : null;
+        $this->container['clickToPay'] = isset($data['clickToPay']) ? $data['clickToPay'] : null;
+        $this->container['unifiedClickToPaySDK'] = isset($data['unifiedClickToPaySDK']) ? $data['unifiedClickToPaySDK'] : null;
+        $this->container['portfolioAccessofSensitiveData'] = isset($data['portfolioAccessofSensitiveData']) ? $data['portfolioAccessofSensitiveData'] : null;
     }
 
     /**
@@ -176,6 +296,426 @@ class PaymentsProductsUnifiedCheckoutSubscriptionInformationFeatures implements 
     public function setPazeForUnifiedCheckout($pazeForUnifiedCheckout)
     {
         $this->container['pazeForUnifiedCheckout'] = $pazeForUnifiedCheckout;
+
+        return $this;
+    }
+
+    /**
+     * Gets tokenManagement
+     * @return \CyberSource\Model\PaymentsProductsUnifiedCheckoutSubscriptionInformationFeaturesTokenManagement
+     */
+    public function getTokenManagement()
+    {
+        return $this->container['tokenManagement'];
+    }
+
+    /**
+     * Sets tokenManagement
+     * @param \CyberSource\Model\PaymentsProductsUnifiedCheckoutSubscriptionInformationFeaturesTokenManagement $tokenManagement
+     * @return $this
+     */
+    public function setTokenManagement($tokenManagement)
+    {
+        $this->container['tokenManagement'] = $tokenManagement;
+
+        return $this;
+    }
+
+    /**
+     * Gets payPal
+     * @return \CyberSource\Model\PaymentsProductsUnifiedCheckoutSubscriptionInformationFeaturesPayPal
+     */
+    public function getPayPal()
+    {
+        return $this->container['payPal'];
+    }
+
+    /**
+     * Sets payPal
+     * @param \CyberSource\Model\PaymentsProductsUnifiedCheckoutSubscriptionInformationFeaturesPayPal $payPal
+     * @return $this
+     */
+    public function setPayPal($payPal)
+    {
+        $this->container['payPal'] = $payPal;
+
+        return $this;
+    }
+
+    /**
+     * Gets venmo
+     * @return \CyberSource\Model\PaymentsProductsUnifiedCheckoutSubscriptionInformationFeaturesVenmo
+     */
+    public function getVenmo()
+    {
+        return $this->container['venmo'];
+    }
+
+    /**
+     * Sets venmo
+     * @param \CyberSource\Model\PaymentsProductsUnifiedCheckoutSubscriptionInformationFeaturesVenmo $venmo
+     * @return $this
+     */
+    public function setVenmo($venmo)
+    {
+        $this->container['venmo'] = $venmo;
+
+        return $this;
+    }
+
+    /**
+     * Gets applePay
+     * @return \CyberSource\Model\PaymentsProductsUnifiedCheckoutSubscriptionInformationFeaturesApplePay
+     */
+    public function getApplePay()
+    {
+        return $this->container['applePay'];
+    }
+
+    /**
+     * Sets applePay
+     * @param \CyberSource\Model\PaymentsProductsUnifiedCheckoutSubscriptionInformationFeaturesApplePay $applePay
+     * @return $this
+     */
+    public function setApplePay($applePay)
+    {
+        $this->container['applePay'] = $applePay;
+
+        return $this;
+    }
+
+    /**
+     * Gets googlePay
+     * @return \CyberSource\Model\PaymentsProductsUnifiedCheckoutSubscriptionInformationFeaturesGooglePay
+     */
+    public function getGooglePay()
+    {
+        return $this->container['googlePay'];
+    }
+
+    /**
+     * Sets googlePay
+     * @param \CyberSource\Model\PaymentsProductsUnifiedCheckoutSubscriptionInformationFeaturesGooglePay $googlePay
+     * @return $this
+     */
+    public function setGooglePay($googlePay)
+    {
+        $this->container['googlePay'] = $googlePay;
+
+        return $this;
+    }
+
+    /**
+     * Gets tinkPayByBank
+     * @return \CyberSource\Model\PaymentsProductsUnifiedCheckoutSubscriptionInformationFeaturesTinkPayByBank
+     */
+    public function getTinkPayByBank()
+    {
+        return $this->container['tinkPayByBank'];
+    }
+
+    /**
+     * Sets tinkPayByBank
+     * @param \CyberSource\Model\PaymentsProductsUnifiedCheckoutSubscriptionInformationFeaturesTinkPayByBank $tinkPayByBank
+     * @return $this
+     */
+    public function setTinkPayByBank($tinkPayByBank)
+    {
+        $this->container['tinkPayByBank'] = $tinkPayByBank;
+
+        return $this;
+    }
+
+    /**
+     * Gets eCheck
+     * @return \CyberSource\Model\PaymentsProductsUnifiedCheckoutSubscriptionInformationFeaturesECheck
+     */
+    public function getECheck()
+    {
+        return $this->container['eCheck'];
+    }
+
+    /**
+     * Sets eCheck
+     * @param \CyberSource\Model\PaymentsProductsUnifiedCheckoutSubscriptionInformationFeaturesECheck $eCheck
+     * @return $this
+     */
+    public function setECheck($eCheck)
+    {
+        $this->container['eCheck'] = $eCheck;
+
+        return $this;
+    }
+
+    /**
+     * Gets p24
+     * @return \CyberSource\Model\PaymentsProductsUnifiedCheckoutSubscriptionInformationFeaturesP24
+     */
+    public function getP24()
+    {
+        return $this->container['p24'];
+    }
+
+    /**
+     * Sets p24
+     * @param \CyberSource\Model\PaymentsProductsUnifiedCheckoutSubscriptionInformationFeaturesP24 $p24
+     * @return $this
+     */
+    public function setP24($p24)
+    {
+        $this->container['p24'] = $p24;
+
+        return $this;
+    }
+
+    /**
+     * Gets myBank
+     * @return \CyberSource\Model\PaymentsProductsUnifiedCheckoutSubscriptionInformationFeaturesMyBank
+     */
+    public function getMyBank()
+    {
+        return $this->container['myBank'];
+    }
+
+    /**
+     * Sets myBank
+     * @param \CyberSource\Model\PaymentsProductsUnifiedCheckoutSubscriptionInformationFeaturesMyBank $myBank
+     * @return $this
+     */
+    public function setMyBank($myBank)
+    {
+        $this->container['myBank'] = $myBank;
+
+        return $this;
+    }
+
+    /**
+     * Gets konbini
+     * @return \CyberSource\Model\PaymentsProductsUnifiedCheckoutSubscriptionInformationFeaturesKonbini
+     */
+    public function getKonbini()
+    {
+        return $this->container['konbini'];
+    }
+
+    /**
+     * Sets konbini
+     * @param \CyberSource\Model\PaymentsProductsUnifiedCheckoutSubscriptionInformationFeaturesKonbini $konbini
+     * @return $this
+     */
+    public function setKonbini($konbini)
+    {
+        $this->container['konbini'] = $konbini;
+
+        return $this;
+    }
+
+    /**
+     * Gets dragonPay
+     * @return \CyberSource\Model\PaymentsProductsUnifiedCheckoutSubscriptionInformationFeaturesDragonPay
+     */
+    public function getDragonPay()
+    {
+        return $this->container['dragonPay'];
+    }
+
+    /**
+     * Sets dragonPay
+     * @param \CyberSource\Model\PaymentsProductsUnifiedCheckoutSubscriptionInformationFeaturesDragonPay $dragonPay
+     * @return $this
+     */
+    public function setDragonPay($dragonPay)
+    {
+        $this->container['dragonPay'] = $dragonPay;
+
+        return $this;
+    }
+
+    /**
+     * Gets decisionManager
+     * @return \CyberSource\Model\PaymentsProductsUnifiedCheckoutSubscriptionInformationFeaturesDecisionManager
+     */
+    public function getDecisionManager()
+    {
+        return $this->container['decisionManager'];
+    }
+
+    /**
+     * Sets decisionManager
+     * @param \CyberSource\Model\PaymentsProductsUnifiedCheckoutSubscriptionInformationFeaturesDecisionManager $decisionManager
+     * @return $this
+     */
+    public function setDecisionManager($decisionManager)
+    {
+        $this->container['decisionManager'] = $decisionManager;
+
+        return $this;
+    }
+
+    /**
+     * Gets payerAuthentication
+     * @return \CyberSource\Model\PaymentsProductsUnifiedCheckoutSubscriptionInformationFeaturesPayerAuthentication
+     */
+    public function getPayerAuthentication()
+    {
+        return $this->container['payerAuthentication'];
+    }
+
+    /**
+     * Sets payerAuthentication
+     * @param \CyberSource\Model\PaymentsProductsUnifiedCheckoutSubscriptionInformationFeaturesPayerAuthentication $payerAuthentication
+     * @return $this
+     */
+    public function setPayerAuthentication($payerAuthentication)
+    {
+        $this->container['payerAuthentication'] = $payerAuthentication;
+
+        return $this;
+    }
+
+    /**
+     * Gets afterPay
+     * @return \CyberSource\Model\PaymentsProductsUnifiedCheckoutSubscriptionInformationFeaturesAfterPay
+     */
+    public function getAfterPay()
+    {
+        return $this->container['afterPay'];
+    }
+
+    /**
+     * Sets afterPay
+     * @param \CyberSource\Model\PaymentsProductsUnifiedCheckoutSubscriptionInformationFeaturesAfterPay $afterPay
+     * @return $this
+     */
+    public function setAfterPay($afterPay)
+    {
+        $this->container['afterPay'] = $afterPay;
+
+        return $this;
+    }
+
+    /**
+     * Gets ideal
+     * @return \CyberSource\Model\PaymentsProductsUnifiedCheckoutSubscriptionInformationFeaturesIdeal
+     */
+    public function getIdeal()
+    {
+        return $this->container['ideal'];
+    }
+
+    /**
+     * Sets ideal
+     * @param \CyberSource\Model\PaymentsProductsUnifiedCheckoutSubscriptionInformationFeaturesIdeal $ideal
+     * @return $this
+     */
+    public function setIdeal($ideal)
+    {
+        $this->container['ideal'] = $ideal;
+
+        return $this;
+    }
+
+    /**
+     * Gets multibanco
+     * @return \CyberSource\Model\PaymentsProductsUnifiedCheckoutSubscriptionInformationFeaturesMultibanco
+     */
+    public function getMultibanco()
+    {
+        return $this->container['multibanco'];
+    }
+
+    /**
+     * Sets multibanco
+     * @param \CyberSource\Model\PaymentsProductsUnifiedCheckoutSubscriptionInformationFeaturesMultibanco $multibanco
+     * @return $this
+     */
+    public function setMultibanco($multibanco)
+    {
+        $this->container['multibanco'] = $multibanco;
+
+        return $this;
+    }
+
+    /**
+     * Gets bancontact
+     * @return \CyberSource\Model\PaymentsProductsUnifiedCheckoutSubscriptionInformationFeaturesBancontact
+     */
+    public function getBancontact()
+    {
+        return $this->container['bancontact'];
+    }
+
+    /**
+     * Sets bancontact
+     * @param \CyberSource\Model\PaymentsProductsUnifiedCheckoutSubscriptionInformationFeaturesBancontact $bancontact
+     * @return $this
+     */
+    public function setBancontact($bancontact)
+    {
+        $this->container['bancontact'] = $bancontact;
+
+        return $this;
+    }
+
+    /**
+     * Gets clickToPay
+     * @return \CyberSource\Model\PaymentsProductsUnifiedCheckoutSubscriptionInformationFeaturesClickToPay
+     */
+    public function getClickToPay()
+    {
+        return $this->container['clickToPay'];
+    }
+
+    /**
+     * Sets clickToPay
+     * @param \CyberSource\Model\PaymentsProductsUnifiedCheckoutSubscriptionInformationFeaturesClickToPay $clickToPay
+     * @return $this
+     */
+    public function setClickToPay($clickToPay)
+    {
+        $this->container['clickToPay'] = $clickToPay;
+
+        return $this;
+    }
+
+    /**
+     * Gets unifiedClickToPaySDK
+     * @return \CyberSource\Model\PaymentsProductsUnifiedCheckoutSubscriptionInformationFeaturesUnifiedClickToPaySDK
+     */
+    public function getUnifiedClickToPaySDK()
+    {
+        return $this->container['unifiedClickToPaySDK'];
+    }
+
+    /**
+     * Sets unifiedClickToPaySDK
+     * @param \CyberSource\Model\PaymentsProductsUnifiedCheckoutSubscriptionInformationFeaturesUnifiedClickToPaySDK $unifiedClickToPaySDK
+     * @return $this
+     */
+    public function setUnifiedClickToPaySDK($unifiedClickToPaySDK)
+    {
+        $this->container['unifiedClickToPaySDK'] = $unifiedClickToPaySDK;
+
+        return $this;
+    }
+
+    /**
+     * Gets portfolioAccessofSensitiveData
+     * @return \CyberSource\Model\PaymentsProductsUnifiedCheckoutSubscriptionInformationFeaturesPortfolioAccessofSensitiveData
+     */
+    public function getPortfolioAccessofSensitiveData()
+    {
+        return $this->container['portfolioAccessofSensitiveData'];
+    }
+
+    /**
+     * Sets portfolioAccessofSensitiveData
+     * @param \CyberSource\Model\PaymentsProductsUnifiedCheckoutSubscriptionInformationFeaturesPortfolioAccessofSensitiveData $portfolioAccessofSensitiveData
+     * @return $this
+     */
+    public function setPortfolioAccessofSensitiveData($portfolioAccessofSensitiveData)
+    {
+        $this->container['portfolioAccessofSensitiveData'] = $portfolioAccessofSensitiveData;
 
         return $this;
     }

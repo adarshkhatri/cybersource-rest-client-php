@@ -54,7 +54,8 @@ class Rbsv1subscriptionsidOrderInformationAmountDetails implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'billingAmount' => 'string',
-        'setupFee' => 'string'
+        'setupFee' => 'string',
+        'surcharge' => '\CyberSource\Model\GetAllSubscriptionsResponseOrderInformationAmountDetailsSurcharge'
     ];
 
     /**
@@ -63,7 +64,8 @@ class Rbsv1subscriptionsidOrderInformationAmountDetails implements ArrayAccess
       */
     protected static $swaggerFormats = [
         'billingAmount' => null,
-        'setupFee' => null
+        'setupFee' => null,
+        'surcharge' => null
     ];
 
     public static function swaggerTypes()
@@ -82,7 +84,8 @@ class Rbsv1subscriptionsidOrderInformationAmountDetails implements ArrayAccess
      */
     protected static $attributeMap = [
         'billingAmount' => 'billingAmount',
-        'setupFee' => 'setupFee'
+        'setupFee' => 'setupFee',
+        'surcharge' => 'surcharge'
     ];
 
 
@@ -92,7 +95,8 @@ class Rbsv1subscriptionsidOrderInformationAmountDetails implements ArrayAccess
      */
     protected static $setters = [
         'billingAmount' => 'setBillingAmount',
-        'setupFee' => 'setSetupFee'
+        'setupFee' => 'setSetupFee',
+        'surcharge' => 'setSurcharge'
     ];
 
 
@@ -102,7 +106,8 @@ class Rbsv1subscriptionsidOrderInformationAmountDetails implements ArrayAccess
      */
     protected static $getters = [
         'billingAmount' => 'getBillingAmount',
-        'setupFee' => 'getSetupFee'
+        'setupFee' => 'getSetupFee',
+        'surcharge' => 'getSurcharge'
     ];
 
     public static function attributeMap()
@@ -138,6 +143,7 @@ class Rbsv1subscriptionsidOrderInformationAmountDetails implements ArrayAccess
     {
         $this->container['billingAmount'] = isset($data['billingAmount']) ? $data['billingAmount'] : null;
         $this->container['setupFee'] = isset($data['setupFee']) ? $data['setupFee'] : null;
+        $this->container['surcharge'] = isset($data['surcharge']) ? $data['surcharge'] : null;
     }
 
     /**
@@ -203,6 +209,27 @@ class Rbsv1subscriptionsidOrderInformationAmountDetails implements ArrayAccess
     public function setSetupFee($setupFee)
     {
         $this->container['setupFee'] = $setupFee;
+
+        return $this;
+    }
+
+    /**
+     * Gets surcharge
+     * @return \CyberSource\Model\GetAllSubscriptionsResponseOrderInformationAmountDetailsSurcharge
+     */
+    public function getSurcharge()
+    {
+        return $this->container['surcharge'];
+    }
+
+    /**
+     * Sets surcharge
+     * @param \CyberSource\Model\GetAllSubscriptionsResponseOrderInformationAmountDetailsSurcharge $surcharge
+     * @return $this
+     */
+    public function setSurcharge($surcharge)
+    {
+        $this->container['surcharge'] = $surcharge;
 
         return $this;
     }

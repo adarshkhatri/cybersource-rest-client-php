@@ -126,6 +126,13 @@ class PushFundsRequestTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "paymentInformation"
+     */
+    public function testPropertyPaymentInformation()
+    {
+    }
+
+    /**
      * Test attribute "pointOfServiceInformation"
      */
     public function testPropertyPointOfServiceInformation()

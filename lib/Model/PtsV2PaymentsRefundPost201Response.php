@@ -63,7 +63,8 @@ class PtsV2PaymentsRefundPost201Response implements ArrayAccess
         'processingInformation' => '\CyberSource\Model\PtsV2PaymentsCapturesPost201ResponseProcessingInformation',
         'processorInformation' => '\CyberSource\Model\PtsV2PaymentsRefundPost201ResponseProcessorInformation',
         'orderInformation' => '\CyberSource\Model\PtsV2PaymentsRefundPost201ResponseOrderInformation',
-        'pointOfSaleInformation' => '\CyberSource\Model\PtsV2PaymentsCapturesPost201ResponsePointOfSaleInformation'
+        'pointOfSaleInformation' => '\CyberSource\Model\PtsV2PaymentsCapturesPost201ResponsePointOfSaleInformation',
+        'errorInformation' => '\CyberSource\Model\PtsV2PaymentsRefundPost201ResponseErrorInformation'
     ];
 
     /**
@@ -81,7 +82,8 @@ class PtsV2PaymentsRefundPost201Response implements ArrayAccess
         'processingInformation' => null,
         'processorInformation' => null,
         'orderInformation' => null,
-        'pointOfSaleInformation' => null
+        'pointOfSaleInformation' => null,
+        'errorInformation' => null
     ];
 
     public static function swaggerTypes()
@@ -109,7 +111,8 @@ class PtsV2PaymentsRefundPost201Response implements ArrayAccess
         'processingInformation' => 'processingInformation',
         'processorInformation' => 'processorInformation',
         'orderInformation' => 'orderInformation',
-        'pointOfSaleInformation' => 'pointOfSaleInformation'
+        'pointOfSaleInformation' => 'pointOfSaleInformation',
+        'errorInformation' => 'errorInformation'
     ];
 
 
@@ -128,7 +131,8 @@ class PtsV2PaymentsRefundPost201Response implements ArrayAccess
         'processingInformation' => 'setProcessingInformation',
         'processorInformation' => 'setProcessorInformation',
         'orderInformation' => 'setOrderInformation',
-        'pointOfSaleInformation' => 'setPointOfSaleInformation'
+        'pointOfSaleInformation' => 'setPointOfSaleInformation',
+        'errorInformation' => 'setErrorInformation'
     ];
 
 
@@ -147,7 +151,8 @@ class PtsV2PaymentsRefundPost201Response implements ArrayAccess
         'processingInformation' => 'getProcessingInformation',
         'processorInformation' => 'getProcessorInformation',
         'orderInformation' => 'getOrderInformation',
-        'pointOfSaleInformation' => 'getPointOfSaleInformation'
+        'pointOfSaleInformation' => 'getPointOfSaleInformation',
+        'errorInformation' => 'getErrorInformation'
     ];
 
     public static function attributeMap()
@@ -192,6 +197,7 @@ class PtsV2PaymentsRefundPost201Response implements ArrayAccess
         $this->container['processorInformation'] = isset($data['processorInformation']) ? $data['processorInformation'] : null;
         $this->container['orderInformation'] = isset($data['orderInformation']) ? $data['orderInformation'] : null;
         $this->container['pointOfSaleInformation'] = isset($data['pointOfSaleInformation']) ? $data['pointOfSaleInformation'] : null;
+        $this->container['errorInformation'] = isset($data['errorInformation']) ? $data['errorInformation'] : null;
     }
 
     /**
@@ -446,6 +452,27 @@ class PtsV2PaymentsRefundPost201Response implements ArrayAccess
     public function setPointOfSaleInformation($pointOfSaleInformation)
     {
         $this->container['pointOfSaleInformation'] = $pointOfSaleInformation;
+
+        return $this;
+    }
+
+    /**
+     * Gets errorInformation
+     * @return \CyberSource\Model\PtsV2PaymentsRefundPost201ResponseErrorInformation
+     */
+    public function getErrorInformation()
+    {
+        return $this->container['errorInformation'];
+    }
+
+    /**
+     * Sets errorInformation
+     * @param \CyberSource\Model\PtsV2PaymentsRefundPost201ResponseErrorInformation $errorInformation
+     * @return $this
+     */
+    public function setErrorInformation($errorInformation)
+    {
+        $this->container['errorInformation'] = $errorInformation;
 
         return $this;
     }

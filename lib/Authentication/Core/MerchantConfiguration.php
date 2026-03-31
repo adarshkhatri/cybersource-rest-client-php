@@ -1599,6 +1599,21 @@ class MerchantConfiguration
             $warning_message .= GlobalParameter::KEY_ALIAS_NULL_EMPTY . PHP_EOL;
         }
 
+        // Only enforce KeyAlias = MerchantId when UseMetaKey is false
+        if($this->getAuthenticationType() == GlobalParameter::JWT && !$this->getUseMetaKey()){
+            if(!empty($this->getKeyAlias()) && ($this->getKeyAlias() != $this->getMerchantID())){
+                $this->setKeyAlias($this->getMerchantID());
+                $warning_message .= GlobalParameter::KEY_ALIAS_INCORRECT . PHP_EOL;
+            }
+        }
+
+        if($this->getAuthenticationType() == GlobalParameter::JWT && $this->getUseMetaKey()){
+            if(!empty($this->getKeyAlias()) && ($this->getKeyAlias() != $this->getPortfolioID())){
+                $this->setKeyAlias($this->getPortfolioID());
+                $warning_message .= GlobalParameter::INCORRECT_KEY_ALIAS_FOR_METAKEY . PHP_EOL;
+            }
+        }
+
         if(empty($this->getKeyFileName()) && $this->getAuthenticationType() == GlobalParameter::JWT){
             $warning_message .= GlobalParameter::KEY_FILE_NULL_EMPTY . PHP_EOL;
         }

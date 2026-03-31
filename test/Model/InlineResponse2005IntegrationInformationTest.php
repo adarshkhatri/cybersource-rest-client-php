@@ -89,4 +89,11 @@ class InlineResponse2005IntegrationInformationTest extends \PHPUnit_Framework_Te
     public function testPropertyTenantConfigurations()
     {
     }
+
+    /**
+     * Test attribute "msd"
+     */
+    public function testPropertyMsd()
+    {
+    }
 }

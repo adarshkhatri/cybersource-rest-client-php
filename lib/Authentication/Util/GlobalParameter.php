@@ -48,6 +48,7 @@ class GlobalParameter
     const ERROR_LOG_FILE_NULL = "Error Log File path is null or empty. Defaulting to : ";
     const KEY_ALIAS_NULL_EMPTY = "KeyAlias Empty/Null. Assigining merchantID value\n";
     const KEY_ALIAS_INCORRECT = "KeyAlias is Incorrect. Assigining merchantID value\n";
+    const INCORRECT_KEY_ALIAS_FOR_METAKEY = "The Entered key_alias is Incorrect for MetaKey, Assigining portfolioID value\n";
     const KEY_FILE_NULL_EMPTY = "KeyFileName Empty/Null. Assigining merchantID value\n";
     const REQUEST_JSON_ERROR = "[ERROR] : Request Json File missing. So, Static payload data have been taking from PayloadData.php";
     const KEY_FILE_INCORRECT = "[ERROR] : KeyFileName/Directory is Incorrect! Unable to read the Certificate!\n";

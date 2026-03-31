@@ -329,7 +329,7 @@ class InlineResponse2011TokenizedCard implements ArrayAccess
 
     /**
      * Sets state
-     * @param string $state State of the network token or network token provision. Possible Values:   ACTIVE : Network token is active.   SUSPENDED : Network token is suspended. This state can change back to ACTIVE.   DELETED : This is a final state for a network token instance.   UNPROVISIONED : A previous network token.
+     * @param string $state State of the network token or network token provision. Possible Values:   - ACTIVE : Network token is active.   - SUSPENDED : Network token is suspended. This state can change back to ACTIVE.   - DELETED : This is a final state for a network token instance.   - UNPROVISIONED : A previous network token.
      * @return $this
      */
     public function setState($state)

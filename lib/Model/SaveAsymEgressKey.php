@@ -53,7 +53,7 @@ class SaveAsymEgressKey implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'clientReferenceInformation' => '\CyberSource\Model\Kmsegressv2keysasymClientReferenceInformation',
+        'clientReferenceInformation' => '\CyberSource\Model\Kmsegressv2keyssymClientReferenceInformation',
         'clientRequestAction' => 'string',
         'keyInformation' => '\CyberSource\Model\Kmsegressv2keysasymKeyInformation'
     ];
@@ -173,7 +173,7 @@ class SaveAsymEgressKey implements ArrayAccess
 
     /**
      * Gets clientReferenceInformation
-     * @return \CyberSource\Model\Kmsegressv2keysasymClientReferenceInformation
+     * @return \CyberSource\Model\Kmsegressv2keyssymClientReferenceInformation
      */
     public function getClientReferenceInformation()
     {
@@ -182,7 +182,7 @@ class SaveAsymEgressKey implements ArrayAccess
 
     /**
      * Sets clientReferenceInformation
-     * @param \CyberSource\Model\Kmsegressv2keysasymClientReferenceInformation $clientReferenceInformation
+     * @param \CyberSource\Model\Kmsegressv2keyssymClientReferenceInformation $clientReferenceInformation
      * @return $this
      */
     public function setClientReferenceInformation($clientReferenceInformation)

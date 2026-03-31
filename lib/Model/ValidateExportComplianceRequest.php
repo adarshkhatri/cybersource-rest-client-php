@@ -53,7 +53,7 @@ class ValidateExportComplianceRequest implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'clientReferenceInformation' => '\CyberSource\Model\Riskv1liststypeentriesClientReferenceInformation',
+        'clientReferenceInformation' => '\CyberSource\Model\RiskV1DecisionsPost201ResponseClientReferenceInformation',
         'orderInformation' => '\CyberSource\Model\Riskv1exportcomplianceinquiriesOrderInformation',
         'buyerInformation' => '\CyberSource\Model\Riskv1addressverificationsBuyerInformation',
         'deviceInformation' => '\CyberSource\Model\Riskv1exportcomplianceinquiriesDeviceInformation',
@@ -185,7 +185,7 @@ class ValidateExportComplianceRequest implements ArrayAccess
 
     /**
      * Gets clientReferenceInformation
-     * @return \CyberSource\Model\Riskv1liststypeentriesClientReferenceInformation
+     * @return \CyberSource\Model\RiskV1DecisionsPost201ResponseClientReferenceInformation
      */
     public function getClientReferenceInformation()
     {
@@ -194,7 +194,7 @@ class ValidateExportComplianceRequest implements ArrayAccess
 
     /**
      * Sets clientReferenceInformation
-     * @param \CyberSource\Model\Riskv1liststypeentriesClientReferenceInformation $clientReferenceInformation
+     * @param \CyberSource\Model\RiskV1DecisionsPost201ResponseClientReferenceInformation $clientReferenceInformation
      * @return $this
      */
     public function setClientReferenceInformation($clientReferenceInformation)

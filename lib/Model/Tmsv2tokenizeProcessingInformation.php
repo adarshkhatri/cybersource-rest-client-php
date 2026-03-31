@@ -176,7 +176,7 @@ class Tmsv2tokenizeProcessingInformation implements ArrayAccess
 
     /**
      * Sets actionList
-     * @param string[] $actionList Array of actions (one or more) to be included in the tokenize request.  Possible Values:   - `TOKEN_CREATE`: Use this when you want to create a token from the card/bank data in your tokenize request.
+     * @param string[] $actionList Array of actions (one or more) to be included in the tokenize request.  Possible Values:  - `TOKEN_CREATE`: Use this when you want to create a token from the card/bank data in your tokenize request.
      * @return $this
      */
     public function setActionList($actionList)

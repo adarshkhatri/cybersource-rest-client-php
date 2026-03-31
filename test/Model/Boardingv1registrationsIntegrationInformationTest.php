@@ -89,4 +89,11 @@ class Boardingv1registrationsIntegrationInformationTest extends \PHPUnit_Framewo
     public function testPropertyTenantConfigurations()
     {
     }
+
+    /**
+     * Test attribute "msd"
+     */
+    public function testPropertyMsd()
+    {
+    }
 }

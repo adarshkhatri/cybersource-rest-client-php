@@ -64,7 +64,8 @@ class Ptsv2paymentsidrefundsProcessingInformation implements ArrayAccess
         'industryDataType' => 'string',
         'paymentType' => 'string',
         'refundOptions' => '\CyberSource\Model\Ptsv2paymentsidrefundsProcessingInformationRefundOptions',
-        'transactionTypeIndicator' => 'string'
+        'transactionTypeIndicator' => 'string',
+        'merchantVerificationValue' => 'string'
     ];
 
     /**
@@ -83,7 +84,8 @@ class Ptsv2paymentsidrefundsProcessingInformation implements ArrayAccess
         'industryDataType' => null,
         'paymentType' => null,
         'refundOptions' => null,
-        'transactionTypeIndicator' => null
+        'transactionTypeIndicator' => null,
+        'merchantVerificationValue' => null
     ];
 
     public static function swaggerTypes()
@@ -112,7 +114,8 @@ class Ptsv2paymentsidrefundsProcessingInformation implements ArrayAccess
         'industryDataType' => 'industryDataType',
         'paymentType' => 'paymentType',
         'refundOptions' => 'refundOptions',
-        'transactionTypeIndicator' => 'transactionTypeIndicator'
+        'transactionTypeIndicator' => 'transactionTypeIndicator',
+        'merchantVerificationValue' => 'merchantVerificationValue'
     ];
 
 
@@ -132,7 +135,8 @@ class Ptsv2paymentsidrefundsProcessingInformation implements ArrayAccess
         'industryDataType' => 'setIndustryDataType',
         'paymentType' => 'setPaymentType',
         'refundOptions' => 'setRefundOptions',
-        'transactionTypeIndicator' => 'setTransactionTypeIndicator'
+        'transactionTypeIndicator' => 'setTransactionTypeIndicator',
+        'merchantVerificationValue' => 'setMerchantVerificationValue'
     ];
 
 
@@ -152,7 +156,8 @@ class Ptsv2paymentsidrefundsProcessingInformation implements ArrayAccess
         'industryDataType' => 'getIndustryDataType',
         'paymentType' => 'getPaymentType',
         'refundOptions' => 'getRefundOptions',
-        'transactionTypeIndicator' => 'getTransactionTypeIndicator'
+        'transactionTypeIndicator' => 'getTransactionTypeIndicator',
+        'merchantVerificationValue' => 'getMerchantVerificationValue'
     ];
 
     public static function attributeMap()
@@ -198,6 +203,7 @@ class Ptsv2paymentsidrefundsProcessingInformation implements ArrayAccess
         $this->container['paymentType'] = isset($data['paymentType']) ? $data['paymentType'] : null;
         $this->container['refundOptions'] = isset($data['refundOptions']) ? $data['refundOptions'] : null;
         $this->container['transactionTypeIndicator'] = isset($data['transactionTypeIndicator']) ? $data['transactionTypeIndicator'] : null;
+        $this->container['merchantVerificationValue'] = isset($data['merchantVerificationValue']) ? $data['merchantVerificationValue'] : null;
     }
 
     /**
@@ -473,6 +479,27 @@ class Ptsv2paymentsidrefundsProcessingInformation implements ArrayAccess
     public function setTransactionTypeIndicator($transactionTypeIndicator)
     {
         $this->container['transactionTypeIndicator'] = $transactionTypeIndicator;
+
+        return $this;
+    }
+
+    /**
+     * Gets merchantVerificationValue
+     * @return string
+     */
+    public function getMerchantVerificationValue()
+    {
+        return $this->container['merchantVerificationValue'];
+    }
+
+    /**
+     * Sets merchantVerificationValue
+     * @param string $merchantVerificationValue The override value of the Merchant Verification Value (MVV) received by various card brands. MVV refers to the value assigned by the card brand/network to identify participation in select merchant programs.  Sample value for Visa: `101010`
+     * @return $this
+     */
+    public function setMerchantVerificationValue($merchantVerificationValue)
+    {
+        $this->container['merchantVerificationValue'] = $merchantVerificationValue;
 
         return $this;
     }

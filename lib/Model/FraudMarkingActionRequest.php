@@ -54,7 +54,7 @@ class FraudMarkingActionRequest implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'riskInformation' => '\CyberSource\Model\Riskv1decisionsidmarkingRiskInformation',
-        'clientReferenceInformation' => '\CyberSource\Model\Riskv1liststypeentriesClientReferenceInformation'
+        'clientReferenceInformation' => '\CyberSource\Model\RiskV1DecisionsPost201ResponseClientReferenceInformation'
     ];
 
     /**
@@ -194,7 +194,7 @@ class FraudMarkingActionRequest implements ArrayAccess
 
     /**
      * Gets clientReferenceInformation
-     * @return \CyberSource\Model\Riskv1liststypeentriesClientReferenceInformation
+     * @return \CyberSource\Model\RiskV1DecisionsPost201ResponseClientReferenceInformation
      */
     public function getClientReferenceInformation()
     {
@@ -203,7 +203,7 @@ class FraudMarkingActionRequest implements ArrayAccess
 
     /**
      * Sets clientReferenceInformation
-     * @param \CyberSource\Model\Riskv1liststypeentriesClientReferenceInformation $clientReferenceInformation
+     * @param \CyberSource\Model\RiskV1DecisionsPost201ResponseClientReferenceInformation $clientReferenceInformation
      * @return $this
      */
     public function setClientReferenceInformation($clientReferenceInformation)

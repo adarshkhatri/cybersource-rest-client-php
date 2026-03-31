@@ -53,7 +53,7 @@ class GetAllSubscriptionsResponseOrderInformation implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'amountDetails' => '\CyberSource\Model\GetAllPlansResponseOrderInformationAmountDetails',
+        'amountDetails' => '\CyberSource\Model\GetAllSubscriptionsResponseOrderInformationAmountDetails',
         'billTo' => '\CyberSource\Model\GetAllSubscriptionsResponseOrderInformationBillTo'
     ];
 
@@ -167,7 +167,7 @@ class GetAllSubscriptionsResponseOrderInformation implements ArrayAccess
 
     /**
      * Gets amountDetails
-     * @return \CyberSource\Model\GetAllPlansResponseOrderInformationAmountDetails
+     * @return \CyberSource\Model\GetAllSubscriptionsResponseOrderInformationAmountDetails
      */
     public function getAmountDetails()
     {
@@ -176,7 +176,7 @@ class GetAllSubscriptionsResponseOrderInformation implements ArrayAccess
 
     /**
      * Sets amountDetails
-     * @param \CyberSource\Model\GetAllPlansResponseOrderInformationAmountDetails $amountDetails
+     * @param \CyberSource\Model\GetAllSubscriptionsResponseOrderInformationAmountDetails $amountDetails
      * @return $this
      */
     public function setAmountDetails($amountDetails)

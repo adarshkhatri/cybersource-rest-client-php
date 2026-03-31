@@ -77,7 +77,10 @@ class TmsBinLookupPaymentAccountInformationFeatures implements ArrayAccess
         'threeDSSupport' => 'bool',
         'siEligible' => 'bool',
         'emiEligible' => 'bool',
-        'fleetCard' => 'bool'
+        'fleetCard' => 'bool',
+        'atmEnabled' => 'bool',
+        'posEnabled' => 'bool',
+        'ecomEnabled' => 'bool'
     ];
 
     /**
@@ -109,7 +112,10 @@ class TmsBinLookupPaymentAccountInformationFeatures implements ArrayAccess
         'threeDSSupport' => null,
         'siEligible' => null,
         'emiEligible' => null,
-        'fleetCard' => null
+        'fleetCard' => null,
+        'atmEnabled' => null,
+        'posEnabled' => null,
+        'ecomEnabled' => null
     ];
 
     public static function swaggerTypes()
@@ -151,7 +157,10 @@ class TmsBinLookupPaymentAccountInformationFeatures implements ArrayAccess
         'threeDSSupport' => 'threeDSSupport',
         'siEligible' => 'siEligible',
         'emiEligible' => 'emiEligible',
-        'fleetCard' => 'fleetCard'
+        'fleetCard' => 'fleetCard',
+        'atmEnabled' => 'atmEnabled',
+        'posEnabled' => 'posEnabled',
+        'ecomEnabled' => 'ecomEnabled'
     ];
 
 
@@ -184,7 +193,10 @@ class TmsBinLookupPaymentAccountInformationFeatures implements ArrayAccess
         'threeDSSupport' => 'setThreeDSSupport',
         'siEligible' => 'setSiEligible',
         'emiEligible' => 'setEmiEligible',
-        'fleetCard' => 'setFleetCard'
+        'fleetCard' => 'setFleetCard',
+        'atmEnabled' => 'setAtmEnabled',
+        'posEnabled' => 'setPosEnabled',
+        'ecomEnabled' => 'setEcomEnabled'
     ];
 
 
@@ -217,7 +229,10 @@ class TmsBinLookupPaymentAccountInformationFeatures implements ArrayAccess
         'threeDSSupport' => 'getThreeDSSupport',
         'siEligible' => 'getSiEligible',
         'emiEligible' => 'getEmiEligible',
-        'fleetCard' => 'getFleetCard'
+        'fleetCard' => 'getFleetCard',
+        'atmEnabled' => 'getAtmEnabled',
+        'posEnabled' => 'getPosEnabled',
+        'ecomEnabled' => 'getEcomEnabled'
     ];
 
     public static function attributeMap()
@@ -276,6 +291,9 @@ class TmsBinLookupPaymentAccountInformationFeatures implements ArrayAccess
         $this->container['siEligible'] = isset($data['siEligible']) ? $data['siEligible'] : null;
         $this->container['emiEligible'] = isset($data['emiEligible']) ? $data['emiEligible'] : null;
         $this->container['fleetCard'] = isset($data['fleetCard']) ? $data['fleetCard'] : null;
+        $this->container['atmEnabled'] = isset($data['atmEnabled']) ? $data['atmEnabled'] : null;
+        $this->container['posEnabled'] = isset($data['posEnabled']) ? $data['posEnabled'] : null;
+        $this->container['ecomEnabled'] = isset($data['ecomEnabled']) ? $data['ecomEnabled'] : null;
     }
 
     /**
@@ -797,7 +815,7 @@ class TmsBinLookupPaymentAccountInformationFeatures implements ArrayAccess
 
     /**
      * Sets emiEligible
-     * @param bool $emiEligible This field indicates if the card is eligible for Equated Monthly Installments (EMI). Possible values:     - `true`     - `false`
+     * @param bool $emiEligible This field indicates if the payment instrument is eligible for Equated Monthly Installments (EMI). Possible values:     - `true`     - `false`
      * @return $this
      */
     public function setEmiEligible($emiEligible)
@@ -824,6 +842,69 @@ class TmsBinLookupPaymentAccountInformationFeatures implements ArrayAccess
     public function setFleetCard($fleetCard)
     {
         $this->container['fleetCard'] = $fleetCard;
+
+        return $this;
+    }
+
+    /**
+     * Gets atmEnabled
+     * @return bool
+     */
+    public function getAtmEnabled()
+    {
+        return $this->container['atmEnabled'];
+    }
+
+    /**
+     * Sets atmEnabled
+     * @param bool $atmEnabled This field indicates if the payment instrument is enabled for ATM usage. Possible values:     - `true`     - `false`
+     * @return $this
+     */
+    public function setAtmEnabled($atmEnabled)
+    {
+        $this->container['atmEnabled'] = $atmEnabled;
+
+        return $this;
+    }
+
+    /**
+     * Gets posEnabled
+     * @return bool
+     */
+    public function getPosEnabled()
+    {
+        return $this->container['posEnabled'];
+    }
+
+    /**
+     * Sets posEnabled
+     * @param bool $posEnabled This field indicates if the payment instrument is enabled for POS usage. Possible values:     - `true`     - `false`
+     * @return $this
+     */
+    public function setPosEnabled($posEnabled)
+    {
+        $this->container['posEnabled'] = $posEnabled;
+
+        return $this;
+    }
+
+    /**
+     * Gets ecomEnabled
+     * @return bool
+     */
+    public function getEcomEnabled()
+    {
+        return $this->container['ecomEnabled'];
+    }
+
+    /**
+     * Sets ecomEnabled
+     * @param bool $ecomEnabled This field indicates if the payment instrument is enabled for ECOM usage. Possible values:     - `true`     - `false`
+     * @return $this
+     */
+    public function setEcomEnabled($ecomEnabled)
+    {
+        $this->container['ecomEnabled'] = $ecomEnabled;
 
         return $this;
     }

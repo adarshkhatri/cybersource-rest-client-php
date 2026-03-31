@@ -43,8 +43,11 @@ class Cache
             if (empty($keyAlias)) {
                 $keyAlias = $merchantConfig->getMerchantID();
             }
-            $publicKey = Utility::findCertByAlias($certs, $keyAlias);
-            $publicKey = $this->PemToDer($publicKey);
+            $publicKeyCert = Utility::findCertByAlias($certs, $keyAlias);
+            $publicKey = $this->PemToDer($publicKeyCert);
+            
+            // Store the X.509 certificate resource for serial number extraction
+            $x509Certificate = openssl_x509_read($publicKeyCert);
         } else {
             $exception = new AuthException(GlobalParameter::INCORRECT_KEY_PASSWORD, 0);
             self::$logger->error("AuthException : " . GlobalParameter::INCORRECT_KEY_PASSWORD);
@@ -54,6 +57,7 @@ class Cache
         self::$file_cache[$cacheKey] = [
             'private_key' => $privateKey,
             'publicKey' => $publicKey,
+            'x509_certificate' => $x509Certificate,
             'file_mod_time' => $fileModTime,
         ];
     }
@@ -84,7 +88,7 @@ class Cache
             $keyDir = GlobalParameter::KEY_DIR_PATH_DEFAULT;
         }
 
-        return $keyDir . $keyFileName . ".p12";
+        return rtrim($keyDir, '/\\') . DIRECTORY_SEPARATOR . $keyFileName . ".p12";
     }
 
     private function loadKeyFromPEMFile($path)
@@ -140,7 +144,7 @@ class Cache
         } elseif (GlobalParameter::JWT == $merchantConfig->getAuthenticationType()) {
             $mleCertPath = self::getFilePath($merchantConfig);
             if (!file_exists($mleCertPath) || !is_readable($mleCertPath)) {
-                self::$logger->warn("MLE certificate file not found or not readable: ". $mleCertPath);
+                self::$logger->warning("MLE certificate file not found or not readable: ". $mleCertPath);
                 return null;
             }
             $cacheKey = $merchantId . GlobalParameter::MLE_CACHE_IDENTIFIER_FOR_P12_CERT;

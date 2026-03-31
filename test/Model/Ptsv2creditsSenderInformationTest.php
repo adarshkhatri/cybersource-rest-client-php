@@ -112,6 +112,13 @@ class Ptsv2creditsSenderInformationTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "administrativeArea"
+     */
+    public function testPropertyAdministrativeArea()
+    {
+    }
+
+    /**
      * Test attribute "account"
      */
     public function testPropertyAccount()

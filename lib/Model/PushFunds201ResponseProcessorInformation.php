@@ -62,7 +62,8 @@ class PushFunds201ResponseProcessorInformation implements ArrayAccess
         'feeProgramIndicator' => 'string',
         'name' => 'string',
         'routing' => '\CyberSource\Model\PushFunds201ResponseProcessorInformationRouting',
-        'settlement' => '\CyberSource\Model\PushFunds201ResponseProcessorInformationSettlement'
+        'settlement' => '\CyberSource\Model\PushFunds201ResponseProcessorInformationSettlement',
+        'merchantAdvice' => '\CyberSource\Model\PushFunds201ResponseProcessorInformationMerchantAdvice'
     ];
 
     /**
@@ -79,7 +80,8 @@ class PushFunds201ResponseProcessorInformation implements ArrayAccess
         'feeProgramIndicator' => null,
         'name' => null,
         'routing' => null,
-        'settlement' => null
+        'settlement' => null,
+        'merchantAdvice' => null
     ];
 
     public static function swaggerTypes()
@@ -106,7 +108,8 @@ class PushFunds201ResponseProcessorInformation implements ArrayAccess
         'feeProgramIndicator' => 'feeProgramIndicator',
         'name' => 'name',
         'routing' => 'routing',
-        'settlement' => 'settlement'
+        'settlement' => 'settlement',
+        'merchantAdvice' => 'merchantAdvice'
     ];
 
 
@@ -124,7 +127,8 @@ class PushFunds201ResponseProcessorInformation implements ArrayAccess
         'feeProgramIndicator' => 'setFeeProgramIndicator',
         'name' => 'setName',
         'routing' => 'setRouting',
-        'settlement' => 'setSettlement'
+        'settlement' => 'setSettlement',
+        'merchantAdvice' => 'setMerchantAdvice'
     ];
 
 
@@ -142,7 +146,8 @@ class PushFunds201ResponseProcessorInformation implements ArrayAccess
         'feeProgramIndicator' => 'getFeeProgramIndicator',
         'name' => 'getName',
         'routing' => 'getRouting',
-        'settlement' => 'getSettlement'
+        'settlement' => 'getSettlement',
+        'merchantAdvice' => 'getMerchantAdvice'
     ];
 
     public static function attributeMap()
@@ -186,6 +191,7 @@ class PushFunds201ResponseProcessorInformation implements ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['routing'] = isset($data['routing']) ? $data['routing'] : null;
         $this->container['settlement'] = isset($data['settlement']) ? $data['settlement'] : null;
+        $this->container['merchantAdvice'] = isset($data['merchantAdvice']) ? $data['merchantAdvice'] : null;
     }
 
     /**
@@ -419,6 +425,27 @@ class PushFunds201ResponseProcessorInformation implements ArrayAccess
     public function setSettlement($settlement)
     {
         $this->container['settlement'] = $settlement;
+
+        return $this;
+    }
+
+    /**
+     * Gets merchantAdvice
+     * @return \CyberSource\Model\PushFunds201ResponseProcessorInformationMerchantAdvice
+     */
+    public function getMerchantAdvice()
+    {
+        return $this->container['merchantAdvice'];
+    }
+
+    /**
+     * Sets merchantAdvice
+     * @param \CyberSource\Model\PushFunds201ResponseProcessorInformationMerchantAdvice $merchantAdvice
+     * @return $this
+     */
+    public function setMerchantAdvice($merchantAdvice)
+    {
+        $this->container['merchantAdvice'] = $merchantAdvice;
 
         return $this;
     }

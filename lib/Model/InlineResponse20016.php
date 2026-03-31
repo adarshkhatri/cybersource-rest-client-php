@@ -57,8 +57,8 @@ class InlineResponse20016 implements ArrayAccess
         'id' => 'string',
         'submitTimeUtc' => 'string',
         'status' => 'string',
-        'errorInformation' => '\CyberSource\Model\InlineResponse20016ErrorInformation',
-        'orderInformation' => '\CyberSource\Model\InlineResponse20016OrderInformation'
+        'errorInformation' => '\CyberSource\Model\InlineResponse2019ErrorInformation',
+        'orderInformation' => '\CyberSource\Model\InlineResponse2019OrderInformation'
     ];
 
     /**
@@ -293,7 +293,7 @@ class InlineResponse20016 implements ArrayAccess
 
     /**
      * Gets errorInformation
-     * @return \CyberSource\Model\InlineResponse20016ErrorInformation
+     * @return \CyberSource\Model\InlineResponse2019ErrorInformation
      */
     public function getErrorInformation()
     {
@@ -302,7 +302,7 @@ class InlineResponse20016 implements ArrayAccess
 
     /**
      * Sets errorInformation
-     * @param \CyberSource\Model\InlineResponse20016ErrorInformation $errorInformation
+     * @param \CyberSource\Model\InlineResponse2019ErrorInformation $errorInformation
      * @return $this
      */
     public function setErrorInformation($errorInformation)
@@ -314,7 +314,7 @@ class InlineResponse20016 implements ArrayAccess
 
     /**
      * Gets orderInformation
-     * @return \CyberSource\Model\InlineResponse20016OrderInformation
+     * @return \CyberSource\Model\InlineResponse2019OrderInformation
      */
     public function getOrderInformation()
     {
@@ -323,7 +323,7 @@ class InlineResponse20016 implements ArrayAccess
 
     /**
      * Sets orderInformation
-     * @param \CyberSource\Model\InlineResponse20016OrderInformation $orderInformation
+     * @param \CyberSource\Model\InlineResponse2019OrderInformation $orderInformation
      * @return $this
      */
     public function setOrderInformation($orderInformation)

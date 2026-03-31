@@ -72,6 +72,16 @@ class OffersApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for createOffer
+     *
+     * Create an Offer.
+     *
+     */
+    public function testCreateOffer()
+    {
+    }
+
+    /**
      * Test case for getOffer
      *
      * Retrieve an Offer.

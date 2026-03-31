@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **name** | **string** | Name of the processor. | [optional] 
 **routing** | [**\CyberSource\Model\PushFunds201ResponseProcessorInformationRouting**](PushFunds201ResponseProcessorInformationRouting.md) |  | [optional] 
 **settlement** | [**\CyberSource\Model\PushFunds201ResponseProcessorInformationSettlement**](PushFunds201ResponseProcessorInformationSettlement.md) |  | [optional] 
+**merchantAdvice** | [**\CyberSource\Model\PushFunds201ResponseProcessorInformationMerchantAdvice**](PushFunds201ResponseProcessorInformationMerchantAdvice.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

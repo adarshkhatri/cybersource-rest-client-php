@@ -266,6 +266,13 @@ class Ptsv2paymentsProcessingInformationTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "merchantVerificationValue"
+     */
+    public function testPropertyMerchantVerificationValue()
+    {
+    }
+
+    /**
      * Test attribute "japanPaymentOptions"
      */
     public function testPropertyJapanPaymentOptions()

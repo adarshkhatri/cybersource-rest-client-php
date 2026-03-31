@@ -58,6 +58,7 @@ class Ptsv2creditsSenderInformation implements ArrayAccess
         'address1' => 'string',
         'locality' => 'string',
         'countryCode' => 'string',
+        'administrativeArea' => 'string',
         'account' => '\CyberSource\Model\Ptsv2creditsSenderInformationAccount'
     ];
 
@@ -71,6 +72,7 @@ class Ptsv2creditsSenderInformation implements ArrayAccess
         'address1' => null,
         'locality' => null,
         'countryCode' => null,
+        'administrativeArea' => null,
         'account' => null
     ];
 
@@ -94,6 +96,7 @@ class Ptsv2creditsSenderInformation implements ArrayAccess
         'address1' => 'address1',
         'locality' => 'locality',
         'countryCode' => 'countryCode',
+        'administrativeArea' => 'administrativeArea',
         'account' => 'account'
     ];
 
@@ -108,6 +111,7 @@ class Ptsv2creditsSenderInformation implements ArrayAccess
         'address1' => 'setAddress1',
         'locality' => 'setLocality',
         'countryCode' => 'setCountryCode',
+        'administrativeArea' => 'setAdministrativeArea',
         'account' => 'setAccount'
     ];
 
@@ -122,6 +126,7 @@ class Ptsv2creditsSenderInformation implements ArrayAccess
         'address1' => 'getAddress1',
         'locality' => 'getLocality',
         'countryCode' => 'getCountryCode',
+        'administrativeArea' => 'getAdministrativeArea',
         'account' => 'getAccount'
     ];
 
@@ -161,6 +166,7 @@ class Ptsv2creditsSenderInformation implements ArrayAccess
         $this->container['address1'] = isset($data['address1']) ? $data['address1'] : null;
         $this->container['locality'] = isset($data['locality']) ? $data['locality'] : null;
         $this->container['countryCode'] = isset($data['countryCode']) ? $data['countryCode'] : null;
+        $this->container['administrativeArea'] = isset($data['administrativeArea']) ? $data['administrativeArea'] : null;
         $this->container['account'] = isset($data['account']) ? $data['account'] : null;
     }
 
@@ -290,6 +296,27 @@ class Ptsv2creditsSenderInformation implements ArrayAccess
     public function setCountryCode($countryCode)
     {
         $this->container['countryCode'] = $countryCode;
+
+        return $this;
+    }
+
+    /**
+     * Gets administrativeArea
+     * @return string
+     */
+    public function getAdministrativeArea()
+    {
+        return $this->container['administrativeArea'];
+    }
+
+    /**
+     * Sets administrativeArea
+     * @param string $administrativeArea The state or province of the sender. This field is applicable for AFT transactions when the sender country is US or CA. Else it is optional.  Must be a two character value
+     * @return $this
+     */
+    public function setAdministrativeArea($administrativeArea)
+    {
+        $this->container['administrativeArea'] = $administrativeArea;
 
         return $this;
     }

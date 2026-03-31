@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**clientReferenceInformation** | [**\CyberSource\Model\Kmsegressv2keysasymClientReferenceInformation**](Kmsegressv2keysasymClientReferenceInformation.md) |  | [optional] 
+**clientReferenceInformation** | [**\CyberSource\Model\Kmsegressv2keyssymClientReferenceInformation**](Kmsegressv2keyssymClientReferenceInformation.md) |  | [optional] 
 **clientRequestAction** | **string** | Client request action. | [optional] 
 **keyInformation** | [**\CyberSource\Model\Kmsegressv2keysasymKeyInformation**](Kmsegressv2keysasymKeyInformation.md) |  | [optional] 
 

@@ -233,7 +233,7 @@ class Ptsv1pushfundstransferRecipientInformationPaymentInformationCard implement
 
     /**
      * Sets securityCode
-     * @param string $securityCode 3-digit value that indicates the cardCvv2Value. Values can be 0-9.
+     * @param string $securityCode 4-digit value that indicates the cardCvv2Value. Values can be 0-9.
      * @return $this
      */
     public function setSecurityCode($securityCode)
