@@ -189,9 +189,23 @@ class Tmsv2TokenizedCardTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "applicationTransactionCounter"
+     */
+    public function testPropertyApplicationTransactionCounter()
+    {
+    }
+
+    /**
      * Test attribute "card"
      */
     public function testPropertyCard()
+    {
+    }
+
+    /**
+     * Test attribute "verificationResults"
+     */
+    public function testPropertyVerificationResults()
     {
     }
 

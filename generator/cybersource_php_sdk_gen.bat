@@ -39,6 +39,8 @@ git checkout ..\lib\Model\AccessTokenResponse.php
 git checkout ..\lib\Model\CreateAccessTokenRequest.php
 git checkout ..\lib\Api\BatchUploadApi.php
 
+git checkout ..\test\Authentication
+
 pause
 
 

@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **paymentInstrument** | [**\CyberSource\Model\PtsV2PaymentsPost201ResponseTokenInformationPaymentInstrument**](PtsV2PaymentsPost201ResponseTokenInformationPaymentInstrument.md) |  | [optional] 
 **shippingAddress** | [**\CyberSource\Model\PtsV2PaymentsPost201ResponseTokenInformationShippingAddress**](PtsV2PaymentsPost201ResponseTokenInformationShippingAddress.md) |  | [optional] 
 **instrumentIdentifier** | [**\CyberSource\Model\PtsV2PaymentsPost201ResponseTokenInformationInstrumentIdentifier**](PtsV2PaymentsPost201ResponseTokenInformationInstrumentIdentifier.md) |  | [optional] 
+**thirdPartyToken** | [**\CyberSource\Model\PtsV2PaymentsPost201ResponseTokenInformationThirdPartyToken**](PtsV2PaymentsPost201ResponseTokenInformationThirdPartyToken.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

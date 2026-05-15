@@ -53,6 +53,7 @@ class Ucv1sessionsData implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
+        'aggregatorInformation' => '\CyberSource\Model\Ucv1sessionsDataAggregatorInformation',
         'orderInformation' => '\CyberSource\Model\Ucv1sessionsDataOrderInformation',
         'buyerInformation' => '\CyberSource\Model\Ucv1sessionsDataBuyerInformation',
         'clientReferenceInformation' => '\CyberSource\Model\Upv1capturecontextsDataClientReferenceInformation',
@@ -60,9 +61,11 @@ class Ucv1sessionsData implements ArrayAccess
         'merchantInformation' => '\CyberSource\Model\Ucv1sessionsDataMerchantInformation',
         'processingInformation' => '\CyberSource\Model\Ucv1sessionsDataProcessingInformation',
         'recipientInformation' => '\CyberSource\Model\Ucv1sessionsDataRecipientInformation',
-        'merchantDefinedInformation' => '\CyberSource\Model\Ucv1sessionsDataMerchantDefinedInformation[]',
+        'senderInformation' => '\CyberSource\Model\Ucv1sessionsDataSenderInformation',
         'deviceInformation' => '\CyberSource\Model\Ucv1sessionsDataDeviceInformation',
-        'paymentInformation' => '\CyberSource\Model\Ucv1sessionsDataPaymentInformation'
+        'paymentInformation' => '\CyberSource\Model\Ucv1sessionsDataPaymentInformation',
+        'installmentInformation' => '\CyberSource\Model\Ucv1sessionsDataInstallmentInformation',
+        'merchantDefinedInformation' => '\CyberSource\Model\Ucv1sessionsDataMerchantDefinedInformation[]'
     ];
 
     /**
@@ -70,6 +73,7 @@ class Ucv1sessionsData implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
+        'aggregatorInformation' => null,
         'orderInformation' => null,
         'buyerInformation' => null,
         'clientReferenceInformation' => null,
@@ -77,9 +81,11 @@ class Ucv1sessionsData implements ArrayAccess
         'merchantInformation' => null,
         'processingInformation' => null,
         'recipientInformation' => null,
-        'merchantDefinedInformation' => null,
+        'senderInformation' => null,
         'deviceInformation' => null,
-        'paymentInformation' => null
+        'paymentInformation' => null,
+        'installmentInformation' => null,
+        'merchantDefinedInformation' => null
     ];
 
     public static function swaggerTypes()
@@ -97,6 +103,7 @@ class Ucv1sessionsData implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
+        'aggregatorInformation' => 'aggregatorInformation',
         'orderInformation' => 'orderInformation',
         'buyerInformation' => 'buyerInformation',
         'clientReferenceInformation' => 'clientReferenceInformation',
@@ -104,9 +111,11 @@ class Ucv1sessionsData implements ArrayAccess
         'merchantInformation' => 'merchantInformation',
         'processingInformation' => 'processingInformation',
         'recipientInformation' => 'recipientInformation',
-        'merchantDefinedInformation' => 'merchantDefinedInformation',
+        'senderInformation' => 'senderInformation',
         'deviceInformation' => 'deviceInformation',
-        'paymentInformation' => 'paymentInformation'
+        'paymentInformation' => 'paymentInformation',
+        'installmentInformation' => 'installmentInformation',
+        'merchantDefinedInformation' => 'merchantDefinedInformation'
     ];
 
 
@@ -115,6 +124,7 @@ class Ucv1sessionsData implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
+        'aggregatorInformation' => 'setAggregatorInformation',
         'orderInformation' => 'setOrderInformation',
         'buyerInformation' => 'setBuyerInformation',
         'clientReferenceInformation' => 'setClientReferenceInformation',
@@ -122,9 +132,11 @@ class Ucv1sessionsData implements ArrayAccess
         'merchantInformation' => 'setMerchantInformation',
         'processingInformation' => 'setProcessingInformation',
         'recipientInformation' => 'setRecipientInformation',
-        'merchantDefinedInformation' => 'setMerchantDefinedInformation',
+        'senderInformation' => 'setSenderInformation',
         'deviceInformation' => 'setDeviceInformation',
-        'paymentInformation' => 'setPaymentInformation'
+        'paymentInformation' => 'setPaymentInformation',
+        'installmentInformation' => 'setInstallmentInformation',
+        'merchantDefinedInformation' => 'setMerchantDefinedInformation'
     ];
 
 
@@ -133,6 +145,7 @@ class Ucv1sessionsData implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
+        'aggregatorInformation' => 'getAggregatorInformation',
         'orderInformation' => 'getOrderInformation',
         'buyerInformation' => 'getBuyerInformation',
         'clientReferenceInformation' => 'getClientReferenceInformation',
@@ -140,9 +153,11 @@ class Ucv1sessionsData implements ArrayAccess
         'merchantInformation' => 'getMerchantInformation',
         'processingInformation' => 'getProcessingInformation',
         'recipientInformation' => 'getRecipientInformation',
-        'merchantDefinedInformation' => 'getMerchantDefinedInformation',
+        'senderInformation' => 'getSenderInformation',
         'deviceInformation' => 'getDeviceInformation',
-        'paymentInformation' => 'getPaymentInformation'
+        'paymentInformation' => 'getPaymentInformation',
+        'installmentInformation' => 'getInstallmentInformation',
+        'merchantDefinedInformation' => 'getMerchantDefinedInformation'
     ];
 
     public static function attributeMap()
@@ -176,6 +191,7 @@ class Ucv1sessionsData implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['aggregatorInformation'] = isset($data['aggregatorInformation']) ? $data['aggregatorInformation'] : null;
         $this->container['orderInformation'] = isset($data['orderInformation']) ? $data['orderInformation'] : null;
         $this->container['buyerInformation'] = isset($data['buyerInformation']) ? $data['buyerInformation'] : null;
         $this->container['clientReferenceInformation'] = isset($data['clientReferenceInformation']) ? $data['clientReferenceInformation'] : null;
@@ -183,9 +199,11 @@ class Ucv1sessionsData implements ArrayAccess
         $this->container['merchantInformation'] = isset($data['merchantInformation']) ? $data['merchantInformation'] : null;
         $this->container['processingInformation'] = isset($data['processingInformation']) ? $data['processingInformation'] : null;
         $this->container['recipientInformation'] = isset($data['recipientInformation']) ? $data['recipientInformation'] : null;
-        $this->container['merchantDefinedInformation'] = isset($data['merchantDefinedInformation']) ? $data['merchantDefinedInformation'] : null;
+        $this->container['senderInformation'] = isset($data['senderInformation']) ? $data['senderInformation'] : null;
         $this->container['deviceInformation'] = isset($data['deviceInformation']) ? $data['deviceInformation'] : null;
         $this->container['paymentInformation'] = isset($data['paymentInformation']) ? $data['paymentInformation'] : null;
+        $this->container['installmentInformation'] = isset($data['installmentInformation']) ? $data['installmentInformation'] : null;
+        $this->container['merchantDefinedInformation'] = isset($data['merchantDefinedInformation']) ? $data['merchantDefinedInformation'] : null;
     }
 
     /**
@@ -212,6 +230,27 @@ class Ucv1sessionsData implements ArrayAccess
         return true;
     }
 
+
+    /**
+     * Gets aggregatorInformation
+     * @return \CyberSource\Model\Ucv1sessionsDataAggregatorInformation
+     */
+    public function getAggregatorInformation()
+    {
+        return $this->container['aggregatorInformation'];
+    }
+
+    /**
+     * Sets aggregatorInformation
+     * @param \CyberSource\Model\Ucv1sessionsDataAggregatorInformation $aggregatorInformation
+     * @return $this
+     */
+    public function setAggregatorInformation($aggregatorInformation)
+    {
+        $this->container['aggregatorInformation'] = $aggregatorInformation;
+
+        return $this;
+    }
 
     /**
      * Gets orderInformation
@@ -361,22 +400,22 @@ class Ucv1sessionsData implements ArrayAccess
     }
 
     /**
-     * Gets merchantDefinedInformation
-     * @return \CyberSource\Model\Ucv1sessionsDataMerchantDefinedInformation[]
+     * Gets senderInformation
+     * @return \CyberSource\Model\Ucv1sessionsDataSenderInformation
      */
-    public function getMerchantDefinedInformation()
+    public function getSenderInformation()
     {
-        return $this->container['merchantDefinedInformation'];
+        return $this->container['senderInformation'];
     }
 
     /**
-     * Sets merchantDefinedInformation
-     * @param \CyberSource\Model\Ucv1sessionsDataMerchantDefinedInformation[] $merchantDefinedInformation
+     * Sets senderInformation
+     * @param \CyberSource\Model\Ucv1sessionsDataSenderInformation $senderInformation
      * @return $this
      */
-    public function setMerchantDefinedInformation($merchantDefinedInformation)
+    public function setSenderInformation($senderInformation)
     {
-        $this->container['merchantDefinedInformation'] = $merchantDefinedInformation;
+        $this->container['senderInformation'] = $senderInformation;
 
         return $this;
     }
@@ -419,6 +458,48 @@ class Ucv1sessionsData implements ArrayAccess
     public function setPaymentInformation($paymentInformation)
     {
         $this->container['paymentInformation'] = $paymentInformation;
+
+        return $this;
+    }
+
+    /**
+     * Gets installmentInformation
+     * @return \CyberSource\Model\Ucv1sessionsDataInstallmentInformation
+     */
+    public function getInstallmentInformation()
+    {
+        return $this->container['installmentInformation'];
+    }
+
+    /**
+     * Sets installmentInformation
+     * @param \CyberSource\Model\Ucv1sessionsDataInstallmentInformation $installmentInformation
+     * @return $this
+     */
+    public function setInstallmentInformation($installmentInformation)
+    {
+        $this->container['installmentInformation'] = $installmentInformation;
+
+        return $this;
+    }
+
+    /**
+     * Gets merchantDefinedInformation
+     * @return \CyberSource\Model\Ucv1sessionsDataMerchantDefinedInformation[]
+     */
+    public function getMerchantDefinedInformation()
+    {
+        return $this->container['merchantDefinedInformation'];
+    }
+
+    /**
+     * Sets merchantDefinedInformation
+     * @param \CyberSource\Model\Ucv1sessionsDataMerchantDefinedInformation[] $merchantDefinedInformation
+     * @return $this
+     */
+    public function setMerchantDefinedInformation($merchantDefinedInformation)
+    {
+        $this->container['merchantDefinedInformation'] = $merchantDefinedInformation;
 
         return $this;
     }

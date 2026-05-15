@@ -55,6 +55,8 @@ class TmsCardArt implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'foregroundColor' => 'string',
+        'backgroundColor' => 'string',
+        'labelColor' => 'string',
         'combinedAsset' => '\CyberSource\Model\TmsCardArtCombinedAsset',
         'brandLogoAsset' => '\CyberSource\Model\TmsCardArtBrandLogoAsset',
         'issuerLogoAsset' => '\CyberSource\Model\TmsCardArtIssuerLogoAsset',
@@ -67,6 +69,8 @@ class TmsCardArt implements ArrayAccess
       */
     protected static $swaggerFormats = [
         'foregroundColor' => null,
+        'backgroundColor' => null,
+        'labelColor' => null,
         'combinedAsset' => null,
         'brandLogoAsset' => null,
         'issuerLogoAsset' => null,
@@ -89,6 +93,8 @@ class TmsCardArt implements ArrayAccess
      */
     protected static $attributeMap = [
         'foregroundColor' => 'foregroundColor',
+        'backgroundColor' => 'backgroundColor',
+        'labelColor' => 'labelColor',
         'combinedAsset' => 'combinedAsset',
         'brandLogoAsset' => 'brandLogoAsset',
         'issuerLogoAsset' => 'issuerLogoAsset',
@@ -102,6 +108,8 @@ class TmsCardArt implements ArrayAccess
      */
     protected static $setters = [
         'foregroundColor' => 'setForegroundColor',
+        'backgroundColor' => 'setBackgroundColor',
+        'labelColor' => 'setLabelColor',
         'combinedAsset' => 'setCombinedAsset',
         'brandLogoAsset' => 'setBrandLogoAsset',
         'issuerLogoAsset' => 'setIssuerLogoAsset',
@@ -115,6 +123,8 @@ class TmsCardArt implements ArrayAccess
      */
     protected static $getters = [
         'foregroundColor' => 'getForegroundColor',
+        'backgroundColor' => 'getBackgroundColor',
+        'labelColor' => 'getLabelColor',
         'combinedAsset' => 'getCombinedAsset',
         'brandLogoAsset' => 'getBrandLogoAsset',
         'issuerLogoAsset' => 'getIssuerLogoAsset',
@@ -153,6 +163,8 @@ class TmsCardArt implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['foregroundColor'] = isset($data['foregroundColor']) ? $data['foregroundColor'] : null;
+        $this->container['backgroundColor'] = isset($data['backgroundColor']) ? $data['backgroundColor'] : null;
+        $this->container['labelColor'] = isset($data['labelColor']) ? $data['labelColor'] : null;
         $this->container['combinedAsset'] = isset($data['combinedAsset']) ? $data['combinedAsset'] : null;
         $this->container['brandLogoAsset'] = isset($data['brandLogoAsset']) ? $data['brandLogoAsset'] : null;
         $this->container['issuerLogoAsset'] = isset($data['issuerLogoAsset']) ? $data['issuerLogoAsset'] : null;
@@ -201,6 +213,48 @@ class TmsCardArt implements ArrayAccess
     public function setForegroundColor($foregroundColor)
     {
         $this->container['foregroundColor'] = $foregroundColor;
+
+        return $this;
+    }
+
+    /**
+     * Gets backgroundColor
+     * @return string
+     */
+    public function getBackgroundColor()
+    {
+        return $this->container['backgroundColor'];
+    }
+
+    /**
+     * Sets backgroundColor
+     * @param string $backgroundColor Card background color.
+     * @return $this
+     */
+    public function setBackgroundColor($backgroundColor)
+    {
+        $this->container['backgroundColor'] = $backgroundColor;
+
+        return $this;
+    }
+
+    /**
+     * Gets labelColor
+     * @return string
+     */
+    public function getLabelColor()
+    {
+        return $this->container['labelColor'];
+    }
+
+    /**
+     * Sets labelColor
+     * @param string $labelColor Card label color.
+     * @return $this
+     */
+    public function setLabelColor($labelColor)
+    {
+        $this->container['labelColor'] = $labelColor;
 
         return $this;
     }

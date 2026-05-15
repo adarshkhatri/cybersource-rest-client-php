@@ -34,7 +34,7 @@ use \ArrayAccess;
  * Acpv1tokensBillTo Class Doc Comment
  *
  * @category    Class
- * @description Consumer billing information.
+ * @description Consumer billing information.  Required during card enrollment to identify the cardholder.
  * @package     CyberSource
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen

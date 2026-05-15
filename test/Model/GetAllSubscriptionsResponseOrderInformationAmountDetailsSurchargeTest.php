@@ -82,4 +82,11 @@ class GetAllSubscriptionsResponseOrderInformationAmountDetailsSurchargeTest exte
     public function testPropertyAmount()
     {
     }
+
+    /**
+     * Test attribute "description"
+     */
+    public function testPropertyDescription()
+    {
+    }
 }

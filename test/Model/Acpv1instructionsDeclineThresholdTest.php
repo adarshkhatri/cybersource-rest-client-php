@@ -32,7 +32,7 @@ namespace CyberSource;
  * Acpv1instructionsDeclineThresholdTest Class Doc Comment
  *
  * @category    Class */
-// * @description Decline Threshold data.
+// * @description Decline Threshold data. Defines the maximum transaction amount the consumer is willing to authorize under this mandate.
 /**
  * @package     CyberSource
  * @author      Swagger Codegen team

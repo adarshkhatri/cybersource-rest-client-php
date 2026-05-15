@@ -77,6 +77,13 @@ class Ptsv2paymentsOrderInformationTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "extensionDays"
+     */
+    public function testPropertyExtensionDays()
+    {
+    }
+
+    /**
      * Test attribute "amountDetails"
      */
     public function testPropertyAmountDetails()
@@ -115,6 +122,13 @@ class Ptsv2paymentsOrderInformationTest extends \PHPUnit_Framework_TestCase
      * Test attribute "shippingDetails"
      */
     public function testPropertyShippingDetails()
+    {
+    }
+
+    /**
+     * Test attribute "digitalCurrency"
+     */
+    public function testPropertyDigitalCurrency()
     {
     }
 

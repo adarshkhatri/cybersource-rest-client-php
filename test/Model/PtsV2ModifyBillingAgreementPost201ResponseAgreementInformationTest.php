@@ -105,6 +105,20 @@ class PtsV2ModifyBillingAgreementPost201ResponseAgreementInformationTest extends
     }
 
     /**
+     * Test attribute "type"
+     */
+    public function testPropertyType()
+    {
+    }
+
+    /**
+     * Test attribute "frequency"
+     */
+    public function testPropertyFrequency()
+    {
+    }
+
+    /**
      * Test attribute "encodedHtml"
      */
     public function testPropertyEncodedHtml()

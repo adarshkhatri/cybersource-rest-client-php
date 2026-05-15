@@ -117,4 +117,18 @@ class Ptsv2paymentsTokenInformationTest extends \PHPUnit_Framework_TestCase
     public function testPropertyTokenProvisioningInformation()
     {
     }
+
+    /**
+     * Test attribute "clientCorrelationId"
+     */
+    public function testPropertyClientCorrelationId()
+    {
+    }
+
+    /**
+     * Test attribute "tokenAuthenticationInformation"
+     */
+    public function testPropertyTokenAuthenticationInformation()
+    {
+    }
 }

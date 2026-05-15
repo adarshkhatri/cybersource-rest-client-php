@@ -55,7 +55,8 @@ class InlineResponse2014SetupsCommerceSolutions implements ArrayAccess
     protected static $swaggerTypes = [
         'tokenManagement' => '\CyberSource\Model\InlineResponse2014SetupsPaymentsCardProcessing',
         'accountUpdater' => '\CyberSource\Model\InlineResponse2014SetupsPaymentsCardProcessing',
-        'binLookup' => '\CyberSource\Model\InlineResponse2014SetupsPaymentsCardProcessing'
+        'binLookup' => '\CyberSource\Model\InlineResponse2014SetupsPaymentsCardProcessing',
+        'agenticCommerce' => '\CyberSource\Model\InlineResponse2014SetupsPaymentsCardProcessing'
     ];
 
     /**
@@ -65,7 +66,8 @@ class InlineResponse2014SetupsCommerceSolutions implements ArrayAccess
     protected static $swaggerFormats = [
         'tokenManagement' => null,
         'accountUpdater' => null,
-        'binLookup' => null
+        'binLookup' => null,
+        'agenticCommerce' => null
     ];
 
     public static function swaggerTypes()
@@ -85,7 +87,8 @@ class InlineResponse2014SetupsCommerceSolutions implements ArrayAccess
     protected static $attributeMap = [
         'tokenManagement' => 'tokenManagement',
         'accountUpdater' => 'accountUpdater',
-        'binLookup' => 'binLookup'
+        'binLookup' => 'binLookup',
+        'agenticCommerce' => 'agenticCommerce'
     ];
 
 
@@ -96,7 +99,8 @@ class InlineResponse2014SetupsCommerceSolutions implements ArrayAccess
     protected static $setters = [
         'tokenManagement' => 'setTokenManagement',
         'accountUpdater' => 'setAccountUpdater',
-        'binLookup' => 'setBinLookup'
+        'binLookup' => 'setBinLookup',
+        'agenticCommerce' => 'setAgenticCommerce'
     ];
 
 
@@ -107,7 +111,8 @@ class InlineResponse2014SetupsCommerceSolutions implements ArrayAccess
     protected static $getters = [
         'tokenManagement' => 'getTokenManagement',
         'accountUpdater' => 'getAccountUpdater',
-        'binLookup' => 'getBinLookup'
+        'binLookup' => 'getBinLookup',
+        'agenticCommerce' => 'getAgenticCommerce'
     ];
 
     public static function attributeMap()
@@ -144,6 +149,7 @@ class InlineResponse2014SetupsCommerceSolutions implements ArrayAccess
         $this->container['tokenManagement'] = isset($data['tokenManagement']) ? $data['tokenManagement'] : null;
         $this->container['accountUpdater'] = isset($data['accountUpdater']) ? $data['accountUpdater'] : null;
         $this->container['binLookup'] = isset($data['binLookup']) ? $data['binLookup'] : null;
+        $this->container['agenticCommerce'] = isset($data['agenticCommerce']) ? $data['agenticCommerce'] : null;
     }
 
     /**
@@ -230,6 +236,27 @@ class InlineResponse2014SetupsCommerceSolutions implements ArrayAccess
     public function setBinLookup($binLookup)
     {
         $this->container['binLookup'] = $binLookup;
+
+        return $this;
+    }
+
+    /**
+     * Gets agenticCommerce
+     * @return \CyberSource\Model\InlineResponse2014SetupsPaymentsCardProcessing
+     */
+    public function getAgenticCommerce()
+    {
+        return $this->container['agenticCommerce'];
+    }
+
+    /**
+     * Sets agenticCommerce
+     * @param \CyberSource\Model\InlineResponse2014SetupsPaymentsCardProcessing $agenticCommerce
+     * @return $this
+     */
+    public function setAgenticCommerce($agenticCommerce)
+    {
+        $this->container['agenticCommerce'] = $agenticCommerce;
 
         return $this;
     }

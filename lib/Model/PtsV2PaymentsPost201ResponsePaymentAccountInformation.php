@@ -53,7 +53,8 @@ class PtsV2PaymentsPost201ResponsePaymentAccountInformation implements ArrayAcce
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'card' => '\CyberSource\Model\PtsV2PaymentsPost201ResponsePaymentAccountInformationCard'
+        'card' => '\CyberSource\Model\PtsV2PaymentsPost201ResponsePaymentAccountInformationCard',
+        'tokenizedCard' => '\CyberSource\Model\PtsV2PaymentsPost201ResponsePaymentAccountInformationTokenizedCard'
     ];
 
     /**
@@ -61,7 +62,8 @@ class PtsV2PaymentsPost201ResponsePaymentAccountInformation implements ArrayAcce
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'card' => null
+        'card' => null,
+        'tokenizedCard' => null
     ];
 
     public static function swaggerTypes()
@@ -79,7 +81,8 @@ class PtsV2PaymentsPost201ResponsePaymentAccountInformation implements ArrayAcce
      * @var string[]
      */
     protected static $attributeMap = [
-        'card' => 'card'
+        'card' => 'card',
+        'tokenizedCard' => 'tokenizedCard'
     ];
 
 
@@ -88,7 +91,8 @@ class PtsV2PaymentsPost201ResponsePaymentAccountInformation implements ArrayAcce
      * @var string[]
      */
     protected static $setters = [
-        'card' => 'setCard'
+        'card' => 'setCard',
+        'tokenizedCard' => 'setTokenizedCard'
     ];
 
 
@@ -97,7 +101,8 @@ class PtsV2PaymentsPost201ResponsePaymentAccountInformation implements ArrayAcce
      * @var string[]
      */
     protected static $getters = [
-        'card' => 'getCard'
+        'card' => 'getCard',
+        'tokenizedCard' => 'getTokenizedCard'
     ];
 
     public static function attributeMap()
@@ -132,6 +137,7 @@ class PtsV2PaymentsPost201ResponsePaymentAccountInformation implements ArrayAcce
     public function __construct(array $data = null)
     {
         $this->container['card'] = isset($data['card']) ? $data['card'] : null;
+        $this->container['tokenizedCard'] = isset($data['tokenizedCard']) ? $data['tokenizedCard'] : null;
     }
 
     /**
@@ -176,6 +182,27 @@ class PtsV2PaymentsPost201ResponsePaymentAccountInformation implements ArrayAcce
     public function setCard($card)
     {
         $this->container['card'] = $card;
+
+        return $this;
+    }
+
+    /**
+     * Gets tokenizedCard
+     * @return \CyberSource\Model\PtsV2PaymentsPost201ResponsePaymentAccountInformationTokenizedCard
+     */
+    public function getTokenizedCard()
+    {
+        return $this->container['tokenizedCard'];
+    }
+
+    /**
+     * Sets tokenizedCard
+     * @param \CyberSource\Model\PtsV2PaymentsPost201ResponsePaymentAccountInformationTokenizedCard $tokenizedCard
+     * @return $this
+     */
+    public function setTokenizedCard($tokenizedCard)
+    {
+        $this->container['tokenizedCard'] = $tokenizedCard;
 
         return $this;
     }

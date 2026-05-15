@@ -56,7 +56,8 @@ class Ptsv2billingagreementsPaymentInformationBank implements ArrayAccess
         'account' => '\CyberSource\Model\Ptsv2billingagreementsPaymentInformationBankAccount',
         'iban' => 'string',
         'swiftCode' => 'string',
-        'scheme' => 'string'
+        'scheme' => 'string',
+        'accountAlias' => '\CyberSource\Model\Ptsv2billingagreementsPaymentInformationBankAccountAlias'
     ];
 
     /**
@@ -67,7 +68,8 @@ class Ptsv2billingagreementsPaymentInformationBank implements ArrayAccess
         'account' => null,
         'iban' => null,
         'swiftCode' => null,
-        'scheme' => null
+        'scheme' => null,
+        'accountAlias' => null
     ];
 
     public static function swaggerTypes()
@@ -88,7 +90,8 @@ class Ptsv2billingagreementsPaymentInformationBank implements ArrayAccess
         'account' => 'account',
         'iban' => 'iban',
         'swiftCode' => 'swiftCode',
-        'scheme' => 'scheme'
+        'scheme' => 'scheme',
+        'accountAlias' => 'accountAlias'
     ];
 
 
@@ -100,7 +103,8 @@ class Ptsv2billingagreementsPaymentInformationBank implements ArrayAccess
         'account' => 'setAccount',
         'iban' => 'setIban',
         'swiftCode' => 'setSwiftCode',
-        'scheme' => 'setScheme'
+        'scheme' => 'setScheme',
+        'accountAlias' => 'setAccountAlias'
     ];
 
 
@@ -112,7 +116,8 @@ class Ptsv2billingagreementsPaymentInformationBank implements ArrayAccess
         'account' => 'getAccount',
         'iban' => 'getIban',
         'swiftCode' => 'getSwiftCode',
-        'scheme' => 'getScheme'
+        'scheme' => 'getScheme',
+        'accountAlias' => 'getAccountAlias'
     ];
 
     public static function attributeMap()
@@ -150,6 +155,7 @@ class Ptsv2billingagreementsPaymentInformationBank implements ArrayAccess
         $this->container['iban'] = isset($data['iban']) ? $data['iban'] : null;
         $this->container['swiftCode'] = isset($data['swiftCode']) ? $data['swiftCode'] : null;
         $this->container['scheme'] = isset($data['scheme']) ? $data['scheme'] : null;
+        $this->container['accountAlias'] = isset($data['accountAlias']) ? $data['accountAlias'] : null;
     }
 
     /**
@@ -257,6 +263,27 @@ class Ptsv2billingagreementsPaymentInformationBank implements ArrayAccess
     public function setScheme($scheme)
     {
         $this->container['scheme'] = $scheme;
+
+        return $this;
+    }
+
+    /**
+     * Gets accountAlias
+     * @return \CyberSource\Model\Ptsv2billingagreementsPaymentInformationBankAccountAlias
+     */
+    public function getAccountAlias()
+    {
+        return $this->container['accountAlias'];
+    }
+
+    /**
+     * Sets accountAlias
+     * @param \CyberSource\Model\Ptsv2billingagreementsPaymentInformationBankAccountAlias $accountAlias
+     * @return $this
+     */
+    public function setAccountAlias($accountAlias)
+    {
+        $this->container['accountAlias'] = $accountAlias;
 
         return $this;
     }

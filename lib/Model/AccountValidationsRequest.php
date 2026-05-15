@@ -55,7 +55,8 @@ class AccountValidationsRequest implements ArrayAccess
     protected static $swaggerTypes = [
         'clientReferenceInformation' => '\CyberSource\Model\Bavsv1accountvalidationsClientReferenceInformation',
         'processingInformation' => '\CyberSource\Model\Bavsv1accountvalidationsProcessingInformation',
-        'paymentInformation' => '\CyberSource\Model\Bavsv1accountvalidationsPaymentInformation'
+        'paymentInformation' => '\CyberSource\Model\Bavsv1accountvalidationsPaymentInformation',
+        'tokenInformation' => '\CyberSource\Model\Bavsv1accountvalidationsTokenInformation'
     ];
 
     /**
@@ -65,7 +66,8 @@ class AccountValidationsRequest implements ArrayAccess
     protected static $swaggerFormats = [
         'clientReferenceInformation' => null,
         'processingInformation' => null,
-        'paymentInformation' => null
+        'paymentInformation' => null,
+        'tokenInformation' => null
     ];
 
     public static function swaggerTypes()
@@ -85,7 +87,8 @@ class AccountValidationsRequest implements ArrayAccess
     protected static $attributeMap = [
         'clientReferenceInformation' => 'clientReferenceInformation',
         'processingInformation' => 'processingInformation',
-        'paymentInformation' => 'paymentInformation'
+        'paymentInformation' => 'paymentInformation',
+        'tokenInformation' => 'tokenInformation'
     ];
 
 
@@ -96,7 +99,8 @@ class AccountValidationsRequest implements ArrayAccess
     protected static $setters = [
         'clientReferenceInformation' => 'setClientReferenceInformation',
         'processingInformation' => 'setProcessingInformation',
-        'paymentInformation' => 'setPaymentInformation'
+        'paymentInformation' => 'setPaymentInformation',
+        'tokenInformation' => 'setTokenInformation'
     ];
 
 
@@ -107,7 +111,8 @@ class AccountValidationsRequest implements ArrayAccess
     protected static $getters = [
         'clientReferenceInformation' => 'getClientReferenceInformation',
         'processingInformation' => 'getProcessingInformation',
-        'paymentInformation' => 'getPaymentInformation'
+        'paymentInformation' => 'getPaymentInformation',
+        'tokenInformation' => 'getTokenInformation'
     ];
 
     public static function attributeMap()
@@ -144,6 +149,7 @@ class AccountValidationsRequest implements ArrayAccess
         $this->container['clientReferenceInformation'] = isset($data['clientReferenceInformation']) ? $data['clientReferenceInformation'] : null;
         $this->container['processingInformation'] = isset($data['processingInformation']) ? $data['processingInformation'] : null;
         $this->container['paymentInformation'] = isset($data['paymentInformation']) ? $data['paymentInformation'] : null;
+        $this->container['tokenInformation'] = isset($data['tokenInformation']) ? $data['tokenInformation'] : null;
     }
 
     /**
@@ -242,6 +248,27 @@ class AccountValidationsRequest implements ArrayAccess
     public function setPaymentInformation($paymentInformation)
     {
         $this->container['paymentInformation'] = $paymentInformation;
+
+        return $this;
+    }
+
+    /**
+     * Gets tokenInformation
+     * @return \CyberSource\Model\Bavsv1accountvalidationsTokenInformation
+     */
+    public function getTokenInformation()
+    {
+        return $this->container['tokenInformation'];
+    }
+
+    /**
+     * Sets tokenInformation
+     * @param \CyberSource\Model\Bavsv1accountvalidationsTokenInformation $tokenInformation
+     * @return $this
+     */
+    public function setTokenInformation($tokenInformation)
+    {
+        $this->container['tokenInformation'] = $tokenInformation;
 
         return $this;
     }

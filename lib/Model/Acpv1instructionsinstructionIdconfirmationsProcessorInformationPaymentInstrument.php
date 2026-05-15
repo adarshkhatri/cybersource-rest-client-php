@@ -34,7 +34,7 @@ use \ArrayAccess;
  * Acpv1instructionsinstructionIdconfirmationsProcessorInformationPaymentInstrument Class Doc Comment
  *
  * @category    Class
- * @description Details of the PAN associated with the enrolled card
+ * @description Details of the PAN associated with the enrolled card. Contains processor verification results.
  * @package     CyberSource
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen

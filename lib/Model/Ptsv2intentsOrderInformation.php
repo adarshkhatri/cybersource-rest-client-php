@@ -57,7 +57,7 @@ class Ptsv2intentsOrderInformation implements ArrayAccess
         'billTo' => '\CyberSource\Model\Ptsv2intentsOrderInformationBillTo',
         'shipTo' => '\CyberSource\Model\Ptsv2intentsOrderInformationShipTo',
         'lineItems' => '\CyberSource\Model\Ptsv2intentsOrderInformationLineItems[]',
-        'invoiceDetails' => '\CyberSource\Model\Ptsv2intentsOrderInformationInvoiceDetails'
+        'invoiceDetails' => '\CyberSource\Model\Ptsv2billingagreementsOrderInformationInvoiceDetails'
     ];
 
     /**
@@ -269,7 +269,7 @@ class Ptsv2intentsOrderInformation implements ArrayAccess
 
     /**
      * Gets invoiceDetails
-     * @return \CyberSource\Model\Ptsv2intentsOrderInformationInvoiceDetails
+     * @return \CyberSource\Model\Ptsv2billingagreementsOrderInformationInvoiceDetails
      */
     public function getInvoiceDetails()
     {
@@ -278,7 +278,7 @@ class Ptsv2intentsOrderInformation implements ArrayAccess
 
     /**
      * Sets invoiceDetails
-     * @param \CyberSource\Model\Ptsv2intentsOrderInformationInvoiceDetails $invoiceDetails
+     * @param \CyberSource\Model\Ptsv2billingagreementsOrderInformationInvoiceDetails $invoiceDetails
      * @return $this
      */
     public function setInvoiceDetails($invoiceDetails)

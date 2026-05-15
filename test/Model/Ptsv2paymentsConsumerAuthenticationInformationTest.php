@@ -495,4 +495,11 @@ class Ptsv2paymentsConsumerAuthenticationInformationTest extends \PHPUnit_Framew
     public function testPropertyDsReferenceNumber()
     {
     }
+
+    /**
+     * Test attribute "scoreRequest"
+     */
+    public function testPropertyScoreRequest()
+    {
+    }
 }

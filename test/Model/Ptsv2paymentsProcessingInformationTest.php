@@ -376,4 +376,39 @@ class Ptsv2paymentsProcessingInformationTest extends \PHPUnit_Framework_TestCase
     public function testPropertyOriginalPaymentId()
     {
     }
+
+    /**
+     * Test attribute "amexIndirectModelType"
+     */
+    public function testPropertyAmexIndirectModelType()
+    {
+    }
+
+    /**
+     * Test attribute "walletTransactionIntent"
+     */
+    public function testPropertyWalletTransactionIntent()
+    {
+    }
+
+    /**
+     * Test attribute "destinationType"
+     */
+    public function testPropertyDestinationType()
+    {
+    }
+
+    /**
+     * Test attribute "programIndicators"
+     */
+    public function testPropertyProgramIndicators()
+    {
+    }
+
+    /**
+     * Test attribute "inquiryType"
+     */
+    public function testPropertyInquiryType()
+    {
+    }
 }

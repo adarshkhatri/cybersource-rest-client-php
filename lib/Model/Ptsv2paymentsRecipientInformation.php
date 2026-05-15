@@ -71,7 +71,8 @@ class Ptsv2paymentsRecipientInformation implements ArrayAccess
         'countryOfBirth' => 'string',
         'occupation' => 'string',
         'email' => 'string',
-        'locality' => 'string'
+        'locality' => 'string',
+        'taxIdNumber' => 'float'
     ];
 
     /**
@@ -97,7 +98,8 @@ class Ptsv2paymentsRecipientInformation implements ArrayAccess
         'countryOfBirth' => null,
         'occupation' => null,
         'email' => null,
-        'locality' => null
+        'locality' => null,
+        'taxIdNumber' => null
     ];
 
     public static function swaggerTypes()
@@ -133,7 +135,8 @@ class Ptsv2paymentsRecipientInformation implements ArrayAccess
         'countryOfBirth' => 'countryOfBirth',
         'occupation' => 'occupation',
         'email' => 'email',
-        'locality' => 'locality'
+        'locality' => 'locality',
+        'taxIdNumber' => 'taxIdNumber'
     ];
 
 
@@ -160,7 +163,8 @@ class Ptsv2paymentsRecipientInformation implements ArrayAccess
         'countryOfBirth' => 'setCountryOfBirth',
         'occupation' => 'setOccupation',
         'email' => 'setEmail',
-        'locality' => 'setLocality'
+        'locality' => 'setLocality',
+        'taxIdNumber' => 'setTaxIdNumber'
     ];
 
 
@@ -187,7 +191,8 @@ class Ptsv2paymentsRecipientInformation implements ArrayAccess
         'countryOfBirth' => 'getCountryOfBirth',
         'occupation' => 'getOccupation',
         'email' => 'getEmail',
-        'locality' => 'getLocality'
+        'locality' => 'getLocality',
+        'taxIdNumber' => 'getTaxIdNumber'
     ];
 
     public static function attributeMap()
@@ -240,6 +245,7 @@ class Ptsv2paymentsRecipientInformation implements ArrayAccess
         $this->container['occupation'] = isset($data['occupation']) ? $data['occupation'] : null;
         $this->container['email'] = isset($data['email']) ? $data['email'] : null;
         $this->container['locality'] = isset($data['locality']) ? $data['locality'] : null;
+        $this->container['taxIdNumber'] = isset($data['taxIdNumber']) ? $data['taxIdNumber'] : null;
     }
 
     /**
@@ -662,6 +668,27 @@ class Ptsv2paymentsRecipientInformation implements ArrayAccess
     public function setLocality($locality)
     {
         $this->container['locality'] = $locality;
+
+        return $this;
+    }
+
+    /**
+     * Gets taxIdNumber
+     * @return float
+     */
+    public function getTaxIdNumber()
+    {
+        return $this->container['taxIdNumber'];
+    }
+
+    /**
+     * Sets taxIdNumber
+     * @param float $taxIdNumber CPF or CNPJ of the cash-in recipient. \"Cadastro de Pessoas Físicas\", which translates to the \"Natural Persons Register.\" It is the individual taxpayer registry identification number in Brazil, similar to a Social Security Number (SSN) in the United States or a National Insurance Number in the UK.
+     * @return $this
+     */
+    public function setTaxIdNumber($taxIdNumber)
+    {
+        $this->container['taxIdNumber'] = $taxIdNumber;
 
         return $this;
     }

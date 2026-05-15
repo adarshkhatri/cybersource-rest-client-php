@@ -112,7 +112,8 @@ class Ptsv2paymentsConsumerAuthenticationInformation implements ArrayAccess
         'signedParesStatusReason' => 'string',
         'signedPares' => 'string',
         'acsReferenceNumber' => 'string',
-        'dsReferenceNumber' => 'string'
+        'dsReferenceNumber' => 'string',
+        'scoreRequest' => 'int'
     ];
 
     /**
@@ -179,7 +180,8 @@ class Ptsv2paymentsConsumerAuthenticationInformation implements ArrayAccess
         'signedParesStatusReason' => null,
         'signedPares' => null,
         'acsReferenceNumber' => null,
-        'dsReferenceNumber' => null
+        'dsReferenceNumber' => null,
+        'scoreRequest' => null
     ];
 
     public static function swaggerTypes()
@@ -256,7 +258,8 @@ class Ptsv2paymentsConsumerAuthenticationInformation implements ArrayAccess
         'signedParesStatusReason' => 'signedParesStatusReason',
         'signedPares' => 'signedPares',
         'acsReferenceNumber' => 'acsReferenceNumber',
-        'dsReferenceNumber' => 'dsReferenceNumber'
+        'dsReferenceNumber' => 'dsReferenceNumber',
+        'scoreRequest' => 'scoreRequest'
     ];
 
 
@@ -324,7 +327,8 @@ class Ptsv2paymentsConsumerAuthenticationInformation implements ArrayAccess
         'signedParesStatusReason' => 'setSignedParesStatusReason',
         'signedPares' => 'setSignedPares',
         'acsReferenceNumber' => 'setAcsReferenceNumber',
-        'dsReferenceNumber' => 'setDsReferenceNumber'
+        'dsReferenceNumber' => 'setDsReferenceNumber',
+        'scoreRequest' => 'setScoreRequest'
     ];
 
 
@@ -392,7 +396,8 @@ class Ptsv2paymentsConsumerAuthenticationInformation implements ArrayAccess
         'signedParesStatusReason' => 'getSignedParesStatusReason',
         'signedPares' => 'getSignedPares',
         'acsReferenceNumber' => 'getAcsReferenceNumber',
-        'dsReferenceNumber' => 'getDsReferenceNumber'
+        'dsReferenceNumber' => 'getDsReferenceNumber',
+        'scoreRequest' => 'getScoreRequest'
     ];
 
     public static function attributeMap()
@@ -486,6 +491,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation implements ArrayAccess
         $this->container['signedPares'] = isset($data['signedPares']) ? $data['signedPares'] : null;
         $this->container['acsReferenceNumber'] = isset($data['acsReferenceNumber']) ? $data['acsReferenceNumber'] : null;
         $this->container['dsReferenceNumber'] = isset($data['dsReferenceNumber']) ? $data['dsReferenceNumber'] : null;
+        $this->container['scoreRequest'] = isset($data['scoreRequest']) ? $data['scoreRequest'] : null;
     }
 
     /**
@@ -1769,6 +1775,27 @@ class Ptsv2paymentsConsumerAuthenticationInformation implements ArrayAccess
     public function setDsReferenceNumber($dsReferenceNumber)
     {
         $this->container['dsReferenceNumber'] = $dsReferenceNumber;
+
+        return $this;
+    }
+
+    /**
+     * Gets scoreRequest
+     * @return int
+     */
+    public function getScoreRequest()
+    {
+        return $this->container['scoreRequest'];
+    }
+
+    /**
+     * Sets scoreRequest
+     * @param int $scoreRequest Risk Assessment from Mastercard. This is to be sent by merchant if they would like to request a score
+     * @return $this
+     */
+    public function setScoreRequest($scoreRequest)
+    {
+        $this->container['scoreRequest'] = $scoreRequest;
 
         return $this;
     }

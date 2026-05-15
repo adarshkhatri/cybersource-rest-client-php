@@ -77,6 +77,13 @@ class Ucv1sessionsDataTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "aggregatorInformation"
+     */
+    public function testPropertyAggregatorInformation()
+    {
+    }
+
+    /**
      * Test attribute "orderInformation"
      */
     public function testPropertyOrderInformation()
@@ -126,9 +133,9 @@ class Ucv1sessionsDataTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "merchantDefinedInformation"
+     * Test attribute "senderInformation"
      */
-    public function testPropertyMerchantDefinedInformation()
+    public function testPropertySenderInformation()
     {
     }
 
@@ -143,6 +150,20 @@ class Ucv1sessionsDataTest extends \PHPUnit_Framework_TestCase
      * Test attribute "paymentInformation"
      */
     public function testPropertyPaymentInformation()
+    {
+    }
+
+    /**
+     * Test attribute "installmentInformation"
+     */
+    public function testPropertyInstallmentInformation()
+    {
+    }
+
+    /**
+     * Test attribute "merchantDefinedInformation"
+     */
+    public function testPropertyMerchantDefinedInformation()
     {
     }
 }

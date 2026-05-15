@@ -112,6 +112,13 @@ class PtsV2PaymentsRefundPost201ResponseProcessorInformationTest extends \PHPUni
     }
 
     /**
+     * Test attribute "responseSourceCode"
+     */
+    public function testPropertyResponseSourceCode()
+    {
+    }
+
+    /**
      * Test attribute "achVerification"
      */
     public function testPropertyAchVerification()

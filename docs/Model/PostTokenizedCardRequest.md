@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **source** | **string** | Source of the card details. Possible Values: - ONFILE - TOKEN - ISSUER | 
 **card** | [**\CyberSource\Model\Tmsv2tokenizedcardsCard**](Tmsv2tokenizedcardsCard.md) |  | [optional] 
 **passcode** | [**\CyberSource\Model\Tmsv2tokenizedcardsPasscode**](Tmsv2tokenizedcardsPasscode.md) |  | [optional] 
+**billTo** | [**\CyberSource\Model\Tmsv2tokenizedcardsBillTo**](Tmsv2tokenizedcardsBillTo.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

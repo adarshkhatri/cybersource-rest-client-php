@@ -53,7 +53,8 @@ class Ptsv2billingagreementsOrderInformation implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'amountDetails' => '\CyberSource\Model\Ptsv2paymentsidreversalsReversalInformationAmountDetails',
+        'amountDetails' => '\CyberSource\Model\Ptsv2billingagreementsOrderInformationAmountDetails',
+        'invoiceDetails' => '\CyberSource\Model\Ptsv2billingagreementsOrderInformationInvoiceDetails',
         'billTo' => '\CyberSource\Model\Ptsv2billingagreementsOrderInformationBillTo'
     ];
 
@@ -63,6 +64,7 @@ class Ptsv2billingagreementsOrderInformation implements ArrayAccess
       */
     protected static $swaggerFormats = [
         'amountDetails' => null,
+        'invoiceDetails' => null,
         'billTo' => null
     ];
 
@@ -82,6 +84,7 @@ class Ptsv2billingagreementsOrderInformation implements ArrayAccess
      */
     protected static $attributeMap = [
         'amountDetails' => 'amountDetails',
+        'invoiceDetails' => 'invoiceDetails',
         'billTo' => 'billTo'
     ];
 
@@ -92,6 +95,7 @@ class Ptsv2billingagreementsOrderInformation implements ArrayAccess
      */
     protected static $setters = [
         'amountDetails' => 'setAmountDetails',
+        'invoiceDetails' => 'setInvoiceDetails',
         'billTo' => 'setBillTo'
     ];
 
@@ -102,6 +106,7 @@ class Ptsv2billingagreementsOrderInformation implements ArrayAccess
      */
     protected static $getters = [
         'amountDetails' => 'getAmountDetails',
+        'invoiceDetails' => 'getInvoiceDetails',
         'billTo' => 'getBillTo'
     ];
 
@@ -137,6 +142,7 @@ class Ptsv2billingagreementsOrderInformation implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['amountDetails'] = isset($data['amountDetails']) ? $data['amountDetails'] : null;
+        $this->container['invoiceDetails'] = isset($data['invoiceDetails']) ? $data['invoiceDetails'] : null;
         $this->container['billTo'] = isset($data['billTo']) ? $data['billTo'] : null;
     }
 
@@ -167,7 +173,7 @@ class Ptsv2billingagreementsOrderInformation implements ArrayAccess
 
     /**
      * Gets amountDetails
-     * @return \CyberSource\Model\Ptsv2paymentsidreversalsReversalInformationAmountDetails
+     * @return \CyberSource\Model\Ptsv2billingagreementsOrderInformationAmountDetails
      */
     public function getAmountDetails()
     {
@@ -176,12 +182,33 @@ class Ptsv2billingagreementsOrderInformation implements ArrayAccess
 
     /**
      * Sets amountDetails
-     * @param \CyberSource\Model\Ptsv2paymentsidreversalsReversalInformationAmountDetails $amountDetails
+     * @param \CyberSource\Model\Ptsv2billingagreementsOrderInformationAmountDetails $amountDetails
      * @return $this
      */
     public function setAmountDetails($amountDetails)
     {
         $this->container['amountDetails'] = $amountDetails;
+
+        return $this;
+    }
+
+    /**
+     * Gets invoiceDetails
+     * @return \CyberSource\Model\Ptsv2billingagreementsOrderInformationInvoiceDetails
+     */
+    public function getInvoiceDetails()
+    {
+        return $this->container['invoiceDetails'];
+    }
+
+    /**
+     * Sets invoiceDetails
+     * @param \CyberSource\Model\Ptsv2billingagreementsOrderInformationInvoiceDetails $invoiceDetails
+     * @return $this
+     */
+    public function setInvoiceDetails($invoiceDetails)
+    {
+        $this->container['invoiceDetails'] = $invoiceDetails;
 
         return $this;
     }

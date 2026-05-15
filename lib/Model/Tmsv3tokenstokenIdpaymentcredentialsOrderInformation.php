@@ -54,7 +54,7 @@ class Tmsv3tokenstokenIdpaymentcredentialsOrderInformation implements ArrayAcces
       */
     protected static $swaggerTypes = [
         'amountDetails' => '\CyberSource\Model\Tmsv3tokenstokenIdpaymentcredentialsOrderInformationAmountDetails',
-        'billTo' => '\CyberSource\Model\Tmsv3tokenstokenIdpaymentcredentialsOrderInformationBillTo'
+        'billTo' => '\CyberSource\Model\Tmsv2tokenizedcardsBillTo'
     ];
 
     /**
@@ -188,7 +188,7 @@ class Tmsv3tokenstokenIdpaymentcredentialsOrderInformation implements ArrayAcces
 
     /**
      * Gets billTo
-     * @return \CyberSource\Model\Tmsv3tokenstokenIdpaymentcredentialsOrderInformationBillTo
+     * @return \CyberSource\Model\Tmsv2tokenizedcardsBillTo
      */
     public function getBillTo()
     {
@@ -197,7 +197,7 @@ class Tmsv3tokenstokenIdpaymentcredentialsOrderInformation implements ArrayAcces
 
     /**
      * Sets billTo
-     * @param \CyberSource\Model\Tmsv3tokenstokenIdpaymentcredentialsOrderInformationBillTo $billTo
+     * @param \CyberSource\Model\Tmsv2tokenizedcardsBillTo $billTo
      * @return $this
      */
     public function setBillTo($billTo)

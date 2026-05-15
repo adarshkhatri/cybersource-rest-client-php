@@ -117,4 +117,11 @@ class PostTokenizedCardRequestTest extends \PHPUnit_Framework_TestCase
     public function testPropertyPasscode()
     {
     }
+
+    /**
+     * Test attribute "billTo"
+     */
+    public function testPropertyBillTo()
+    {
+    }
 }

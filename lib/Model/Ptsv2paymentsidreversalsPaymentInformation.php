@@ -53,7 +53,8 @@ class Ptsv2paymentsidreversalsPaymentInformation implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'paymentType' => '\CyberSource\Model\Ptsv2paymentsidreversalsPaymentInformationPaymentType'
+        'paymentType' => '\CyberSource\Model\Ptsv2paymentsidreversalsPaymentInformationPaymentType',
+        'merchantLimitedAcceptanceIndicator' => 'string'
     ];
 
     /**
@@ -61,7 +62,8 @@ class Ptsv2paymentsidreversalsPaymentInformation implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'paymentType' => null
+        'paymentType' => null,
+        'merchantLimitedAcceptanceIndicator' => null
     ];
 
     public static function swaggerTypes()
@@ -79,7 +81,8 @@ class Ptsv2paymentsidreversalsPaymentInformation implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'paymentType' => 'paymentType'
+        'paymentType' => 'paymentType',
+        'merchantLimitedAcceptanceIndicator' => 'merchantLimitedAcceptanceIndicator'
     ];
 
 
@@ -88,7 +91,8 @@ class Ptsv2paymentsidreversalsPaymentInformation implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'paymentType' => 'setPaymentType'
+        'paymentType' => 'setPaymentType',
+        'merchantLimitedAcceptanceIndicator' => 'setMerchantLimitedAcceptanceIndicator'
     ];
 
 
@@ -97,7 +101,8 @@ class Ptsv2paymentsidreversalsPaymentInformation implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'paymentType' => 'getPaymentType'
+        'paymentType' => 'getPaymentType',
+        'merchantLimitedAcceptanceIndicator' => 'getMerchantLimitedAcceptanceIndicator'
     ];
 
     public static function attributeMap()
@@ -132,6 +137,7 @@ class Ptsv2paymentsidreversalsPaymentInformation implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['paymentType'] = isset($data['paymentType']) ? $data['paymentType'] : null;
+        $this->container['merchantLimitedAcceptanceIndicator'] = isset($data['merchantLimitedAcceptanceIndicator']) ? $data['merchantLimitedAcceptanceIndicator'] : null;
     }
 
     /**
@@ -176,6 +182,27 @@ class Ptsv2paymentsidreversalsPaymentInformation implements ArrayAccess
     public function setPaymentType($paymentType)
     {
         $this->container['paymentType'] = $paymentType;
+
+        return $this;
+    }
+
+    /**
+     * Gets merchantLimitedAcceptanceIndicator
+     * @return string
+     */
+    public function getMerchantLimitedAcceptanceIndicator()
+    {
+        return $this->container['merchantLimitedAcceptanceIndicator'];
+    }
+
+    /**
+     * Sets merchantLimitedAcceptanceIndicator
+     * @param string $merchantLimitedAcceptanceIndicator Mastercard One Credential merchant limited acceptance indicator. Mastercard One Credential connects multiple Mastercard payment methods and allows cardhollers to access various options and set payment preferences.  This field indicates which Mastercard One Credential funding PAN acceptance brands should NOT be assigned for this transaction.  This field flows in ISO field 34, DSID 02 tag DB, mapped to Mastercard Data Element (DE) 48, Sub element 02, Subfield 01.  Possible values: - `C`: Do not assign a Mastercard One Credential funding PAN containing the Mastercard Credit Acceptance Brand for this transaction - `D`: Do not assign a Mastercard One Credential funding PAN containing the Debit Mastercard Acceptance Brand for this transaction - `M`: Do not assign a Mastercard One Credential funding PAN containing the Maestro Acceptance Brand for this transaction  This field is supported for Authorization reversal request.  #### Used by **Authorization Reversal Request** Optional field.
+     * @return $this
+     */
+    public function setMerchantLimitedAcceptanceIndicator($merchantLimitedAcceptanceIndicator)
+    {
+        $this->container['merchantLimitedAcceptanceIndicator'] = $merchantLimitedAcceptanceIndicator;
 
         return $this;
     }

@@ -159,4 +159,18 @@ class Ptsv2paymentsidrefundsPaymentInformationTest extends \PHPUnit_Framework_Te
     public function testPropertyPaymentAccountReference()
     {
     }
+
+    /**
+     * Test attribute "thirdPartyToken"
+     */
+    public function testPropertyThirdPartyToken()
+    {
+    }
+
+    /**
+     * Test attribute "initiationChannel"
+     */
+    public function testPropertyInitiationChannel()
+    {
+    }
 }

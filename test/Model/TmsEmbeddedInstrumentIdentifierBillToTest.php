@@ -117,4 +117,11 @@ class TmsEmbeddedInstrumentIdentifierBillToTest extends \PHPUnit_Framework_TestC
     public function testPropertyCountry()
     {
     }
+
+    /**
+     * Test attribute "email"
+     */
+    public function testPropertyEmail()
+    {
+    }
 }

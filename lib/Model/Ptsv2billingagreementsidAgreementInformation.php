@@ -54,7 +54,10 @@ class Ptsv2billingagreementsidAgreementInformation implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'string',
-        'eSignIndicator' => 'string'
+        'eSignIndicator' => 'string',
+        'type' => 'string',
+        'frequency' => 'string',
+        'dateRevoked' => 'string'
     ];
 
     /**
@@ -63,7 +66,10 @@ class Ptsv2billingagreementsidAgreementInformation implements ArrayAccess
       */
     protected static $swaggerFormats = [
         'id' => null,
-        'eSignIndicator' => null
+        'eSignIndicator' => null,
+        'type' => null,
+        'frequency' => null,
+        'dateRevoked' => null
     ];
 
     public static function swaggerTypes()
@@ -82,7 +88,10 @@ class Ptsv2billingagreementsidAgreementInformation implements ArrayAccess
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'eSignIndicator' => 'eSignIndicator'
+        'eSignIndicator' => 'eSignIndicator',
+        'type' => 'type',
+        'frequency' => 'frequency',
+        'dateRevoked' => 'dateRevoked'
     ];
 
 
@@ -92,7 +101,10 @@ class Ptsv2billingagreementsidAgreementInformation implements ArrayAccess
      */
     protected static $setters = [
         'id' => 'setId',
-        'eSignIndicator' => 'setESignIndicator'
+        'eSignIndicator' => 'setESignIndicator',
+        'type' => 'setType',
+        'frequency' => 'setFrequency',
+        'dateRevoked' => 'setDateRevoked'
     ];
 
 
@@ -102,7 +114,10 @@ class Ptsv2billingagreementsidAgreementInformation implements ArrayAccess
      */
     protected static $getters = [
         'id' => 'getId',
-        'eSignIndicator' => 'getESignIndicator'
+        'eSignIndicator' => 'getESignIndicator',
+        'type' => 'getType',
+        'frequency' => 'getFrequency',
+        'dateRevoked' => 'getDateRevoked'
     ];
 
     public static function attributeMap()
@@ -138,6 +153,9 @@ class Ptsv2billingagreementsidAgreementInformation implements ArrayAccess
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['eSignIndicator'] = isset($data['eSignIndicator']) ? $data['eSignIndicator'] : null;
+        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
+        $this->container['frequency'] = isset($data['frequency']) ? $data['frequency'] : null;
+        $this->container['dateRevoked'] = isset($data['dateRevoked']) ? $data['dateRevoked'] : null;
     }
 
     /**
@@ -203,6 +221,69 @@ class Ptsv2billingagreementsidAgreementInformation implements ArrayAccess
     public function setESignIndicator($eSignIndicator)
     {
         $this->container['eSignIndicator'] = $eSignIndicator;
+
+        return $this;
+    }
+
+    /**
+     * Gets type
+     * @return string
+     */
+    public function getType()
+    {
+        return $this->container['type'];
+    }
+
+    /**
+     * Sets type
+     * @param string $type Identifies the type of schedule as either recurring, one-off, split or usage.  Possible values: - recurring - oneoff - split - usage
+     * @return $this
+     */
+    public function setType($type)
+    {
+        $this->container['type'] = $type;
+
+        return $this;
+    }
+
+    /**
+     * Gets frequency
+     * @return string
+     */
+    public function getFrequency()
+    {
+        return $this->container['frequency'];
+    }
+
+    /**
+     * Sets frequency
+     * @param string $frequency Regularity with which the event occurs.  Possible values: - annual - monthly - quarterly - semiannual - weekly - daily - adhoc - intraday - fortnightly
+     * @return $this
+     */
+    public function setFrequency($frequency)
+    {
+        $this->container['frequency'] = $frequency;
+
+        return $this;
+    }
+
+    /**
+     * Gets dateRevoked
+     * @return string
+     */
+    public function getDateRevoked()
+    {
+        return $this->container['dateRevoked'];
+    }
+
+    /**
+     * Sets dateRevoked
+     * @param string $dateRevoked Date the agreement was revoked (YYYYMMDD)
+     * @return $this
+     */
+    public function setDateRevoked($dateRevoked)
+    {
+        $this->container['dateRevoked'] = $dateRevoked;
 
         return $this;
     }

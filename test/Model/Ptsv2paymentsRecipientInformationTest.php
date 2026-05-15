@@ -208,4 +208,11 @@ class Ptsv2paymentsRecipientInformationTest extends \PHPUnit_Framework_TestCase
     public function testPropertyLocality()
     {
     }
+
+    /**
+     * Test attribute "taxIdNumber"
+     */
+    public function testPropertyTaxIdNumber()
+    {
+    }
 }

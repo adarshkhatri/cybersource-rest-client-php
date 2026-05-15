@@ -110,4 +110,11 @@ class Ptsv2paymentsPaymentInformationBankTest extends \PHPUnit_Framework_TestCas
     public function testPropertyCode()
     {
     }
+
+    /**
+     * Test attribute "accountAlias"
+     */
+    public function testPropertyAccountAlias()
+    {
+    }
 }

@@ -32,7 +32,7 @@ namespace CyberSource;
  * Acpv1instructionsinstructionIdconfirmationsProcessorInformationTest Class Doc Comment
  *
  * @category    Class */
-// * @description Payment/Transaction Confirmation Data provided by the payment processor/acquirer
+// * @description Payment/Transaction Confirmation Data provided by the payment processor/acquirer.
 /**
  * @package     CyberSource
  * @author      Swagger Codegen team

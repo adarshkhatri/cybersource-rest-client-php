@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **paymentInstrument** | [**\CyberSource\Model\Ptsv2paymentsPaymentInformationPaymentInstrument**](Ptsv2paymentsPaymentInformationPaymentInstrument.md) |  | [optional] 
 **instrumentIdentifier** | [**\CyberSource\Model\PtsV2PaymentsPost201ResponsePaymentInformationInstrumentIdentifier**](PtsV2PaymentsPost201ResponsePaymentInformationInstrumentIdentifier.md) |  | [optional] 
 **shippingAddress** | [**\CyberSource\Model\Ptsv2paymentsPaymentInformationShippingAddress**](Ptsv2paymentsPaymentInformationShippingAddress.md) |  | [optional] 
+**accountFeatures** | [**\CyberSource\Model\PtsV2CreditsPost201ResponsePaymentInformationAccountFeatures**](PtsV2CreditsPost201ResponsePaymentInformationAccountFeatures.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -32,7 +32,7 @@ namespace CyberSource;
  * Ptsv2paymentsidcapturesOrderInformationShippingDetailsTest Class Doc Comment
  *
  * @category    Class */
-// * @description Ptsv2paymentsidcapturesOrderInformationShippingDetails
+// * @description Contains shipping details information for Klarna Advantage Plus Capture transactions.
 /**
  * @package     CyberSource
  * @author      Swagger Codegen team
@@ -80,6 +80,41 @@ class Ptsv2paymentsidcapturesOrderInformationShippingDetailsTest extends \PHPUni
      * Test attribute "shipFromPostalCode"
      */
     public function testPropertyShipFromPostalCode()
+    {
+    }
+
+    /**
+     * Test attribute "trackingNumber"
+     */
+    public function testPropertyTrackingNumber()
+    {
+    }
+
+    /**
+     * Test attribute "trackingUrl"
+     */
+    public function testPropertyTrackingUrl()
+    {
+    }
+
+    /**
+     * Test attribute "shippingCarrier"
+     */
+    public function testPropertyShippingCarrier()
+    {
+    }
+
+    /**
+     * Test attribute "estimatedDeliveryDate"
+     */
+    public function testPropertyEstimatedDeliveryDate()
+    {
+    }
+
+    /**
+     * Test attribute "shippingMethod"
+     */
+    public function testPropertyShippingMethod()
     {
     }
 }

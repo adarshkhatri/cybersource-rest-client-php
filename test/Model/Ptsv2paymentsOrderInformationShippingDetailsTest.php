@@ -96,4 +96,11 @@ class Ptsv2paymentsOrderInformationShippingDetailsTest extends \PHPUnit_Framewor
     public function testPropertyShipFromPostalCode()
     {
     }
+
+    /**
+     * Test attribute "shippingCarrier"
+     */
+    public function testPropertyShippingCarrier()
+    {
+    }
 }

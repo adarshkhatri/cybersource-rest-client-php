@@ -82,4 +82,11 @@ class Ucv1sessionsDataMerchantInformationTest extends \PHPUnit_Framework_TestCas
     public function testPropertyMerchantDescriptor()
     {
     }
+
+    /**
+     * Test attribute "vatRegistrationNumber"
+     */
+    public function testPropertyVatRegistrationNumber()
+    {
+    }
 }

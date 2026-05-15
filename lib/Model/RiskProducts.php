@@ -55,7 +55,8 @@ class RiskProducts implements ArrayAccess
     protected static $swaggerTypes = [
         'fraudManagementEssentials' => '\CyberSource\Model\RiskProductsFraudManagementEssentials',
         'decisionManager' => '\CyberSource\Model\RiskProductsDecisionManager',
-        'portfolioRiskControls' => '\CyberSource\Model\RiskProductsPortfolioRiskControls'
+        'portfolioRiskControls' => '\CyberSource\Model\RiskProductsPortfolioRiskControls',
+        'enhancedAuthentication' => '\CyberSource\Model\PaymentsProductsPayerAuthentication'
     ];
 
     /**
@@ -65,7 +66,8 @@ class RiskProducts implements ArrayAccess
     protected static $swaggerFormats = [
         'fraudManagementEssentials' => null,
         'decisionManager' => null,
-        'portfolioRiskControls' => null
+        'portfolioRiskControls' => null,
+        'enhancedAuthentication' => null
     ];
 
     public static function swaggerTypes()
@@ -85,7 +87,8 @@ class RiskProducts implements ArrayAccess
     protected static $attributeMap = [
         'fraudManagementEssentials' => 'fraudManagementEssentials',
         'decisionManager' => 'decisionManager',
-        'portfolioRiskControls' => 'portfolioRiskControls'
+        'portfolioRiskControls' => 'portfolioRiskControls',
+        'enhancedAuthentication' => 'enhancedAuthentication'
     ];
 
 
@@ -96,7 +99,8 @@ class RiskProducts implements ArrayAccess
     protected static $setters = [
         'fraudManagementEssentials' => 'setFraudManagementEssentials',
         'decisionManager' => 'setDecisionManager',
-        'portfolioRiskControls' => 'setPortfolioRiskControls'
+        'portfolioRiskControls' => 'setPortfolioRiskControls',
+        'enhancedAuthentication' => 'setEnhancedAuthentication'
     ];
 
 
@@ -107,7 +111,8 @@ class RiskProducts implements ArrayAccess
     protected static $getters = [
         'fraudManagementEssentials' => 'getFraudManagementEssentials',
         'decisionManager' => 'getDecisionManager',
-        'portfolioRiskControls' => 'getPortfolioRiskControls'
+        'portfolioRiskControls' => 'getPortfolioRiskControls',
+        'enhancedAuthentication' => 'getEnhancedAuthentication'
     ];
 
     public static function attributeMap()
@@ -144,6 +149,7 @@ class RiskProducts implements ArrayAccess
         $this->container['fraudManagementEssentials'] = isset($data['fraudManagementEssentials']) ? $data['fraudManagementEssentials'] : null;
         $this->container['decisionManager'] = isset($data['decisionManager']) ? $data['decisionManager'] : null;
         $this->container['portfolioRiskControls'] = isset($data['portfolioRiskControls']) ? $data['portfolioRiskControls'] : null;
+        $this->container['enhancedAuthentication'] = isset($data['enhancedAuthentication']) ? $data['enhancedAuthentication'] : null;
     }
 
     /**
@@ -230,6 +236,27 @@ class RiskProducts implements ArrayAccess
     public function setPortfolioRiskControls($portfolioRiskControls)
     {
         $this->container['portfolioRiskControls'] = $portfolioRiskControls;
+
+        return $this;
+    }
+
+    /**
+     * Gets enhancedAuthentication
+     * @return \CyberSource\Model\PaymentsProductsPayerAuthentication
+     */
+    public function getEnhancedAuthentication()
+    {
+        return $this->container['enhancedAuthentication'];
+    }
+
+    /**
+     * Sets enhancedAuthentication
+     * @param \CyberSource\Model\PaymentsProductsPayerAuthentication $enhancedAuthentication
+     * @return $this
+     */
+    public function setEnhancedAuthentication($enhancedAuthentication)
+    {
+        $this->container['enhancedAuthentication'] = $enhancedAuthentication;
 
         return $this;
     }

@@ -53,6 +53,7 @@ class PaymentsProductsCurrencyConversionConfigurationInformationConfigurationsPr
       * @var string[]
       */
     protected static $swaggerTypes = [
+        'provider' => 'string',
         'merchantId' => 'string',
         'acquirerId' => 'string'
     ];
@@ -62,6 +63,7 @@ class PaymentsProductsCurrencyConversionConfigurationInformationConfigurationsPr
       * @var string[]
       */
     protected static $swaggerFormats = [
+        'provider' => null,
         'merchantId' => null,
         'acquirerId' => null
     ];
@@ -81,6 +83,7 @@ class PaymentsProductsCurrencyConversionConfigurationInformationConfigurationsPr
      * @var string[]
      */
     protected static $attributeMap = [
+        'provider' => 'provider',
         'merchantId' => 'merchantId',
         'acquirerId' => 'acquirerId'
     ];
@@ -91,6 +94,7 @@ class PaymentsProductsCurrencyConversionConfigurationInformationConfigurationsPr
      * @var string[]
      */
     protected static $setters = [
+        'provider' => 'setProvider',
         'merchantId' => 'setMerchantId',
         'acquirerId' => 'setAcquirerId'
     ];
@@ -101,6 +105,7 @@ class PaymentsProductsCurrencyConversionConfigurationInformationConfigurationsPr
      * @var string[]
      */
     protected static $getters = [
+        'provider' => 'getProvider',
         'merchantId' => 'getMerchantId',
         'acquirerId' => 'getAcquirerId'
     ];
@@ -136,6 +141,7 @@ class PaymentsProductsCurrencyConversionConfigurationInformationConfigurationsPr
      */
     public function __construct(array $data = null)
     {
+        $this->container['provider'] = isset($data['provider']) ? $data['provider'] : null;
         $this->container['merchantId'] = isset($data['merchantId']) ? $data['merchantId'] : null;
         $this->container['acquirerId'] = isset($data['acquirerId']) ? $data['acquirerId'] : null;
     }
@@ -166,6 +172,27 @@ class PaymentsProductsCurrencyConversionConfigurationInformationConfigurationsPr
 
 
     /**
+     * Gets provider
+     * @return string
+     */
+    public function getProvider()
+    {
+        return $this->container['provider'];
+    }
+
+    /**
+     * Sets provider
+     * @param string $provider The name of the provider.
+     * @return $this
+     */
+    public function setProvider($provider)
+    {
+        $this->container['provider'] = $provider;
+
+        return $this;
+    }
+
+    /**
      * Gets merchantId
      * @return string
      */
@@ -176,7 +203,7 @@ class PaymentsProductsCurrencyConversionConfigurationInformationConfigurationsPr
 
     /**
      * Sets merchantId
-     * @param string $merchantId The merchant identifier for the Currency Conversion service. Check with your Currency Conversion Provider for details.
+     * @param string $merchantId A unique identifier value assigned to each merchant. Assigned by the provider.
      * @return $this
      */
     public function setMerchantId($merchantId)
@@ -197,7 +224,7 @@ class PaymentsProductsCurrencyConversionConfigurationInformationConfigurationsPr
 
     /**
      * Sets acquirerId
-     * @param string $acquirerId
+     * @param string $acquirerId This code identifies the financial institution acting as the acquirer.
      * @return $this
      */
     public function setAcquirerId($acquirerId)

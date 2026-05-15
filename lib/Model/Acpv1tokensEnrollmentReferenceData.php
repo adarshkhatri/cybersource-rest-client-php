@@ -34,7 +34,7 @@ use \ArrayAccess;
  * Acpv1tokensEnrollmentReferenceData Class Doc Comment
  *
  * @category    Class
- * @description Enrollment Reference Data.
+ * @description Enrollment Reference Data. Links the enrollment to an existing token reference.
  * @package     CyberSource
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen

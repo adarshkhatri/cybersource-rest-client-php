@@ -53,7 +53,8 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformationStrongAuthent
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'issuerInformation' => '\CyberSource\Model\PaymentsStrongAuthIssuerInformation'
+        'issuerInformation' => '\CyberSource\Model\PaymentsStrongAuthIssuerInformation',
+        'outageExemptionIndicator' => 'string'
     ];
 
     /**
@@ -61,7 +62,8 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformationStrongAuthent
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'issuerInformation' => null
+        'issuerInformation' => null,
+        'outageExemptionIndicator' => null
     ];
 
     public static function swaggerTypes()
@@ -79,7 +81,8 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformationStrongAuthent
      * @var string[]
      */
     protected static $attributeMap = [
-        'issuerInformation' => 'issuerInformation'
+        'issuerInformation' => 'issuerInformation',
+        'outageExemptionIndicator' => 'outageExemptionIndicator'
     ];
 
 
@@ -88,7 +91,8 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformationStrongAuthent
      * @var string[]
      */
     protected static $setters = [
-        'issuerInformation' => 'setIssuerInformation'
+        'issuerInformation' => 'setIssuerInformation',
+        'outageExemptionIndicator' => 'setOutageExemptionIndicator'
     ];
 
 
@@ -97,7 +101,8 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformationStrongAuthent
      * @var string[]
      */
     protected static $getters = [
-        'issuerInformation' => 'getIssuerInformation'
+        'issuerInformation' => 'getIssuerInformation',
+        'outageExemptionIndicator' => 'getOutageExemptionIndicator'
     ];
 
     public static function attributeMap()
@@ -132,6 +137,7 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformationStrongAuthent
     public function __construct(array $data = null)
     {
         $this->container['issuerInformation'] = isset($data['issuerInformation']) ? $data['issuerInformation'] : null;
+        $this->container['outageExemptionIndicator'] = isset($data['outageExemptionIndicator']) ? $data['outageExemptionIndicator'] : null;
     }
 
     /**
@@ -176,6 +182,27 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformationStrongAuthent
     public function setIssuerInformation($issuerInformation)
     {
         $this->container['issuerInformation'] = $issuerInformation;
+
+        return $this;
+    }
+
+    /**
+     * Gets outageExemptionIndicator
+     * @return string
+     */
+    public function getOutageExemptionIndicator()
+    {
+        return $this->container['outageExemptionIndicator'];
+    }
+
+    /**
+     * Sets outageExemptionIndicator
+     * @param string $outageExemptionIndicator This field will contain the outage exemption indicator with one of the following values: Possible values: - `0`  (Outage Authentication exemption does not apply to the transaction) - `1` (Outage exempt from SCA as authentication could not be done due to outage)
+     * @return $this
+     */
+    public function setOutageExemptionIndicator($outageExemptionIndicator)
+    {
+        $this->container['outageExemptionIndicator'] = $outageExemptionIndicator;
 
         return $this;
     }

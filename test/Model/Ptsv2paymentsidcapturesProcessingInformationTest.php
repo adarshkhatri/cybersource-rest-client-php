@@ -126,6 +126,13 @@ class Ptsv2paymentsidcapturesProcessingInformationTest extends \PHPUnit_Framewor
     }
 
     /**
+     * Test attribute "digitalServiceIndicator"
+     */
+    public function testPropertyDigitalServiceIndicator()
+    {
+    }
+
+    /**
      * Test attribute "issuer"
      */
     public function testPropertyIssuer()

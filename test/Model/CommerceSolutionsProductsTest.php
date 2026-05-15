@@ -96,4 +96,11 @@ class CommerceSolutionsProductsTest extends \PHPUnit_Framework_TestCase
     public function testPropertyBinLookup()
     {
     }
+
+    /**
+     * Test attribute "agenticCommerce"
+     */
+    public function testPropertyAgenticCommerce()
+    {
+    }
 }

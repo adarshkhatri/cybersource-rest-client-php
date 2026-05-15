@@ -117,4 +117,25 @@ class Tmsv2TokenizedCardMetadataIssuerTest extends \PHPUnit_Framework_TestCase
     public function testPropertyUrl()
     {
     }
+
+    /**
+     * Test attribute "privacyPolicyUrl"
+     */
+    public function testPropertyPrivacyPolicyUrl()
+    {
+    }
+
+    /**
+     * Test attribute "capabilities"
+     */
+    public function testPropertyCapabilities()
+    {
+    }
+
+    /**
+     * Test attribute "bankApplications"
+     */
+    public function testPropertyBankApplications()
+    {
+    }
 }

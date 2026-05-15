@@ -110,4 +110,32 @@ class Iplv2paymentlinksOrderInformationLineItemsTest extends \PHPUnit_Framework_
     public function testPropertyProductDescription()
     {
     }
+
+    /**
+     * Test attribute "discountAmount"
+     */
+    public function testPropertyDiscountAmount()
+    {
+    }
+
+    /**
+     * Test attribute "discountPercent"
+     */
+    public function testPropertyDiscountPercent()
+    {
+    }
+
+    /**
+     * Test attribute "taxAmount"
+     */
+    public function testPropertyTaxAmount()
+    {
+    }
+
+    /**
+     * Test attribute "taxRate"
+     */
+    public function testPropertyTaxRate()
+    {
+    }
 }

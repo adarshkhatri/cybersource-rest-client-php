@@ -32,7 +32,7 @@ namespace CyberSource;
  * Bavsv1accountvalidationsPaymentInformationTest Class Doc Comment
  *
  * @category    Class */
-// * @description Bavsv1accountvalidationsPaymentInformation
+// * @description Payment information for account validation. Either tokenized payment data or bank account details must be provided, but not both. When token information is provided, the bank object becomes optional. Only one token type may be included per request.
 /**
  * @package     CyberSource
  * @author      Swagger Codegen team
@@ -73,6 +73,27 @@ class Bavsv1accountvalidationsPaymentInformationTest extends \PHPUnit_Framework_
      * Test "Bavsv1accountvalidationsPaymentInformation"
      */
     public function testBavsv1accountvalidationsPaymentInformation()
+    {
+    }
+
+    /**
+     * Test attribute "customer"
+     */
+    public function testPropertyCustomer()
+    {
+    }
+
+    /**
+     * Test attribute "paymentInstrument"
+     */
+    public function testPropertyPaymentInstrument()
+    {
+    }
+
+    /**
+     * Test attribute "instrumentIdentifier"
+     */
+    public function testPropertyInstrumentIdentifier()
     {
     }
 

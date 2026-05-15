@@ -96,4 +96,11 @@ class Ucv1sessionsDataConsumerAuthenticationInformationTest extends \PHPUnit_Fra
     public function testPropertyAcsWindowSize()
     {
     }
+
+    /**
+     * Test attribute "productCode"
+     */
+    public function testPropertyProductCode()
+    {
+    }
 }

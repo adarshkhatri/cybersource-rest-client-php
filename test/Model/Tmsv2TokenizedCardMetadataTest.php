@@ -89,4 +89,11 @@ class Tmsv2TokenizedCardMetadataTest extends \PHPUnit_Framework_TestCase
     public function testPropertyIssuer()
     {
     }
+
+    /**
+     * Test attribute "creator"
+     */
+    public function testPropertyCreator()
+    {
+    }
 }

@@ -69,7 +69,9 @@ class Tmsv2TokenizedCard implements ArrayAccess
         'eci' => 'string',
         'requestorId' => 'string',
         'paymentAccountReference' => 'string',
+        'applicationTransactionCounter' => 'string',
         'card' => '\CyberSource\Model\Tmsv2TokenizedCardCard',
+        'verificationResults' => '\CyberSource\Model\Tmsv2TokenizedCardVerificationResults',
         'metadata' => '\CyberSource\Model\Tmsv2TokenizedCardMetadata'
     ];
 
@@ -94,7 +96,9 @@ class Tmsv2TokenizedCard implements ArrayAccess
         'eci' => null,
         'requestorId' => null,
         'paymentAccountReference' => null,
+        'applicationTransactionCounter' => null,
         'card' => null,
+        'verificationResults' => null,
         'metadata' => null
     ];
 
@@ -129,7 +133,9 @@ class Tmsv2TokenizedCard implements ArrayAccess
         'eci' => 'eci',
         'requestorId' => 'requestorId',
         'paymentAccountReference' => 'paymentAccountReference',
+        'applicationTransactionCounter' => 'applicationTransactionCounter',
         'card' => 'card',
+        'verificationResults' => 'verificationResults',
         'metadata' => 'metadata'
     ];
 
@@ -155,7 +161,9 @@ class Tmsv2TokenizedCard implements ArrayAccess
         'eci' => 'setEci',
         'requestorId' => 'setRequestorId',
         'paymentAccountReference' => 'setPaymentAccountReference',
+        'applicationTransactionCounter' => 'setApplicationTransactionCounter',
         'card' => 'setCard',
+        'verificationResults' => 'setVerificationResults',
         'metadata' => 'setMetadata'
     ];
 
@@ -181,7 +189,9 @@ class Tmsv2TokenizedCard implements ArrayAccess
         'eci' => 'getEci',
         'requestorId' => 'getRequestorId',
         'paymentAccountReference' => 'getPaymentAccountReference',
+        'applicationTransactionCounter' => 'getApplicationTransactionCounter',
         'card' => 'getCard',
+        'verificationResults' => 'getVerificationResults',
         'metadata' => 'getMetadata'
     ];
 
@@ -232,7 +242,9 @@ class Tmsv2TokenizedCard implements ArrayAccess
         $this->container['eci'] = isset($data['eci']) ? $data['eci'] : null;
         $this->container['requestorId'] = isset($data['requestorId']) ? $data['requestorId'] : null;
         $this->container['paymentAccountReference'] = isset($data['paymentAccountReference']) ? $data['paymentAccountReference'] : null;
+        $this->container['applicationTransactionCounter'] = isset($data['applicationTransactionCounter']) ? $data['applicationTransactionCounter'] : null;
         $this->container['card'] = isset($data['card']) ? $data['card'] : null;
+        $this->container['verificationResults'] = isset($data['verificationResults']) ? $data['verificationResults'] : null;
         $this->container['metadata'] = isset($data['metadata']) ? $data['metadata'] : null;
     }
 
@@ -598,6 +610,27 @@ class Tmsv2TokenizedCard implements ArrayAccess
     }
 
     /**
+     * Gets applicationTransactionCounter
+     * @return string
+     */
+    public function getApplicationTransactionCounter()
+    {
+        return $this->container['applicationTransactionCounter'];
+    }
+
+    /**
+     * Sets applicationTransactionCounter
+     * @param string $applicationTransactionCounter A sequence counter used as part of the input to the TAVV cryptogram and it is incremented for each cryptogram generation. This field is only returned for Visa network tokens.
+     * @return $this
+     */
+    public function setApplicationTransactionCounter($applicationTransactionCounter)
+    {
+        $this->container['applicationTransactionCounter'] = $applicationTransactionCounter;
+
+        return $this;
+    }
+
+    /**
      * Gets card
      * @return \CyberSource\Model\Tmsv2TokenizedCardCard
      */
@@ -614,6 +647,27 @@ class Tmsv2TokenizedCard implements ArrayAccess
     public function setCard($card)
     {
         $this->container['card'] = $card;
+
+        return $this;
+    }
+
+    /**
+     * Gets verificationResults
+     * @return \CyberSource\Model\Tmsv2TokenizedCardVerificationResults
+     */
+    public function getVerificationResults()
+    {
+        return $this->container['verificationResults'];
+    }
+
+    /**
+     * Sets verificationResults
+     * @param \CyberSource\Model\Tmsv2TokenizedCardVerificationResults $verificationResults
+     * @return $this
+     */
+    public function setVerificationResults($verificationResults)
+    {
+        $this->container['verificationResults'] = $verificationResults;
 
         return $this;
     }

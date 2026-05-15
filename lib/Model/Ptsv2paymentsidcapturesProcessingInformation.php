@@ -60,6 +60,7 @@ class Ptsv2paymentsidcapturesProcessingInformation implements ArrayAccess
         'visaCheckoutId' => 'string',
         'purchaseLevel' => 'string',
         'industryDataType' => 'string',
+        'digitalServiceIndicator' => 'string',
         'issuer' => '\CyberSource\Model\Ptsv2paymentsIssuerInformation',
         'authorizationOptions' => '\CyberSource\Model\Ptsv2paymentsidcapturesProcessingInformationAuthorizationOptions',
         'captureOptions' => '\CyberSource\Model\Ptsv2paymentsidcapturesProcessingInformationCaptureOptions',
@@ -81,6 +82,7 @@ class Ptsv2paymentsidcapturesProcessingInformation implements ArrayAccess
         'visaCheckoutId' => null,
         'purchaseLevel' => null,
         'industryDataType' => null,
+        'digitalServiceIndicator' => null,
         'issuer' => null,
         'authorizationOptions' => null,
         'captureOptions' => null,
@@ -112,6 +114,7 @@ class Ptsv2paymentsidcapturesProcessingInformation implements ArrayAccess
         'visaCheckoutId' => 'visaCheckoutId',
         'purchaseLevel' => 'purchaseLevel',
         'industryDataType' => 'industryDataType',
+        'digitalServiceIndicator' => 'digitalServiceIndicator',
         'issuer' => 'issuer',
         'authorizationOptions' => 'authorizationOptions',
         'captureOptions' => 'captureOptions',
@@ -134,6 +137,7 @@ class Ptsv2paymentsidcapturesProcessingInformation implements ArrayAccess
         'visaCheckoutId' => 'setVisaCheckoutId',
         'purchaseLevel' => 'setPurchaseLevel',
         'industryDataType' => 'setIndustryDataType',
+        'digitalServiceIndicator' => 'setDigitalServiceIndicator',
         'issuer' => 'setIssuer',
         'authorizationOptions' => 'setAuthorizationOptions',
         'captureOptions' => 'setCaptureOptions',
@@ -156,6 +160,7 @@ class Ptsv2paymentsidcapturesProcessingInformation implements ArrayAccess
         'visaCheckoutId' => 'getVisaCheckoutId',
         'purchaseLevel' => 'getPurchaseLevel',
         'industryDataType' => 'getIndustryDataType',
+        'digitalServiceIndicator' => 'getDigitalServiceIndicator',
         'issuer' => 'getIssuer',
         'authorizationOptions' => 'getAuthorizationOptions',
         'captureOptions' => 'getCaptureOptions',
@@ -203,6 +208,7 @@ class Ptsv2paymentsidcapturesProcessingInformation implements ArrayAccess
         $this->container['visaCheckoutId'] = isset($data['visaCheckoutId']) ? $data['visaCheckoutId'] : null;
         $this->container['purchaseLevel'] = isset($data['purchaseLevel']) ? $data['purchaseLevel'] : null;
         $this->container['industryDataType'] = isset($data['industryDataType']) ? $data['industryDataType'] : null;
+        $this->container['digitalServiceIndicator'] = isset($data['digitalServiceIndicator']) ? $data['digitalServiceIndicator'] : null;
         $this->container['issuer'] = isset($data['issuer']) ? $data['issuer'] : null;
         $this->container['authorizationOptions'] = isset($data['authorizationOptions']) ? $data['authorizationOptions'] : null;
         $this->container['captureOptions'] = isset($data['captureOptions']) ? $data['captureOptions'] : null;
@@ -380,6 +386,27 @@ class Ptsv2paymentsidcapturesProcessingInformation implements ArrayAccess
     public function setIndustryDataType($industryDataType)
     {
         $this->container['industryDataType'] = $industryDataType;
+
+        return $this;
+    }
+
+    /**
+     * Gets digitalServiceIndicator
+     * @return string
+     */
+    public function getDigitalServiceIndicator()
+    {
+        return $this->container['digitalServiceIndicator'];
+    }
+
+    /**
+     * Sets digitalServiceIndicator
+     * @param string $digitalServiceIndicator Mastercard Digital Enablement Service (MDES) digital service indicators for force capture scenarios.   This field is used when the client is doing authorization with a different gateway and capture with CyberSource.   This field is in ANS, EBCDIC format and flows in Field 34, DSID 04 Tag DF1F, mapped to Mastercard Data Element DE119, Sub-element 004.  #### Used by **Capture Request** Request field for force capture support when auth is done with a different gateway.
+     * @return $this
+     */
+    public function setDigitalServiceIndicator($digitalServiceIndicator)
+    {
+        $this->container['digitalServiceIndicator'] = $digitalServiceIndicator;
 
         return $this;
     }

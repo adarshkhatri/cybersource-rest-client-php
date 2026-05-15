@@ -257,7 +257,7 @@ class CreateNewWebhooksApi
         $headerParams = [];
         $formParams = [];
         
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/hal+json;charset=utf-8']);
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json;charset=utf-8']);
         if (!is_null($_header_accept)) {
             $headerParams['Accept'] = $_header_accept;
         }
@@ -345,17 +345,17 @@ class CreateNewWebhooksApi
      *
      * Create Webhook Security Keys
      *
-     * @param string $vCSenderOrganizationId Sender organization id (required)
-     * @param string $vCPermissions Encoded user permissions returned by the CGK, for the entity user who initiated the boarding (required)
      * @param string $vCCorrelationId A globally unique id associated with your request (optional)
+     * @param string $vCSenderOrganizationId Sender organization id (optional)
+     * @param string $vCPermissions Encoded user permissions returned by the CGK, for the entity user who initiated the boarding (optional)
      * @param \CyberSource\Model\SaveSymEgressKey $saveSymEgressKey Provide egress Symmetric key information to save (create or store or refresh) (optional)
      * @throws \CyberSource\ApiException on non-2xx response
      * @return array of \CyberSource\Model\InlineResponse2015, HTTP status code, HTTP response headers (array of strings)
      */
-    public function saveSymEgressKey($vCSenderOrganizationId, $vCPermissions, $vCCorrelationId = null, $saveSymEgressKey = null)
+    public function saveSymEgressKey($vCCorrelationId = null, $vCSenderOrganizationId = null, $vCPermissions = null, $saveSymEgressKey = null)
     {
         self::$logger->info('CALL TO METHOD saveSymEgressKey STARTED');
-        list($response, $statusCode, $httpHeader) = $this->saveSymEgressKeyWithHttpInfo($vCSenderOrganizationId, $vCPermissions, $vCCorrelationId, $saveSymEgressKey);
+        list($response, $statusCode, $httpHeader) = $this->saveSymEgressKeyWithHttpInfo($vCCorrelationId, $vCSenderOrganizationId, $vCPermissions, $saveSymEgressKey);
         self::$logger->info('CALL TO METHOD saveSymEgressKey ENDED');
         self::$logger->close();
         return [$response, $statusCode, $httpHeader];
@@ -366,25 +366,15 @@ class CreateNewWebhooksApi
      *
      * Create Webhook Security Keys
      *
-     * @param string $vCSenderOrganizationId Sender organization id (required)
-     * @param string $vCPermissions Encoded user permissions returned by the CGK, for the entity user who initiated the boarding (required)
      * @param string $vCCorrelationId A globally unique id associated with your request (optional)
+     * @param string $vCSenderOrganizationId Sender organization id (optional)
+     * @param string $vCPermissions Encoded user permissions returned by the CGK, for the entity user who initiated the boarding (optional)
      * @param \CyberSource\Model\SaveSymEgressKey $saveSymEgressKey Provide egress Symmetric key information to save (create or store or refresh) (optional)
      * @throws \CyberSource\ApiException on non-2xx response
      * @return array of \CyberSource\Model\InlineResponse2015, HTTP status code, HTTP response headers (array of strings)
      */
-    public function saveSymEgressKeyWithHttpInfo($vCSenderOrganizationId, $vCPermissions, $vCCorrelationId = null, $saveSymEgressKey = null)
+    public function saveSymEgressKeyWithHttpInfo($vCCorrelationId = null, $vCSenderOrganizationId = null, $vCPermissions = null, $saveSymEgressKey = null)
     {
-        // verify the required parameter 'vCSenderOrganizationId' is set
-        if ($vCSenderOrganizationId === null) {
-            self::$logger->error("InvalidArgumentException : Missing the required parameter $vCSenderOrganizationId when calling saveSymEgressKey");
-            throw new \InvalidArgumentException('Missing the required parameter $vCSenderOrganizationId when calling saveSymEgressKey');
-        }
-        // verify the required parameter 'vCPermissions' is set
-        if ($vCPermissions === null) {
-            self::$logger->error("InvalidArgumentException : Missing the required parameter $vCPermissions when calling saveSymEgressKey");
-            throw new \InvalidArgumentException('Missing the required parameter $vCPermissions when calling saveSymEgressKey');
-        }
         // parse inputs
         $resourcePath = "/kms/egress/v2/keys-sym";
         $httpBody = '';

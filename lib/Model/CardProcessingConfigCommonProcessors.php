@@ -98,6 +98,10 @@ class CardProcessingConfigCommonProcessors implements ArrayAccess
         'enableLeastCostRouting' => 'bool',
         'enableCVVResponseIndicator' => 'bool',
         'enableMultiCurrencyProcessing' => 'string',
+        'transactionTypeIdentifier' => 'string',
+        'subMerchantId' => 'string',
+        'subMerchantEmail' => 'string',
+        'subMerchantPhoneNumber' => 'string',
         'enablePosNetworkSwitching' => 'bool',
         'enableDynamicCurrencyConversion' => 'bool',
         'merchantTier' => 'string'
@@ -153,6 +157,10 @@ class CardProcessingConfigCommonProcessors implements ArrayAccess
         'enableLeastCostRouting' => null,
         'enableCVVResponseIndicator' => null,
         'enableMultiCurrencyProcessing' => null,
+        'transactionTypeIdentifier' => null,
+        'subMerchantId' => null,
+        'subMerchantEmail' => null,
+        'subMerchantPhoneNumber' => null,
         'enablePosNetworkSwitching' => null,
         'enableDynamicCurrencyConversion' => null,
         'merchantTier' => null
@@ -218,6 +226,10 @@ class CardProcessingConfigCommonProcessors implements ArrayAccess
         'enableLeastCostRouting' => 'enableLeastCostRouting',
         'enableCVVResponseIndicator' => 'enableCVVResponseIndicator',
         'enableMultiCurrencyProcessing' => 'enableMultiCurrencyProcessing',
+        'transactionTypeIdentifier' => 'transactionTypeIdentifier',
+        'subMerchantId' => 'subMerchantId',
+        'subMerchantEmail' => 'subMerchantEmail',
+        'subMerchantPhoneNumber' => 'subMerchantPhoneNumber',
         'enablePosNetworkSwitching' => 'enablePosNetworkSwitching',
         'enableDynamicCurrencyConversion' => 'enableDynamicCurrencyConversion',
         'merchantTier' => 'merchantTier'
@@ -274,6 +286,10 @@ class CardProcessingConfigCommonProcessors implements ArrayAccess
         'enableLeastCostRouting' => 'setEnableLeastCostRouting',
         'enableCVVResponseIndicator' => 'setEnableCVVResponseIndicator',
         'enableMultiCurrencyProcessing' => 'setEnableMultiCurrencyProcessing',
+        'transactionTypeIdentifier' => 'setTransactionTypeIdentifier',
+        'subMerchantId' => 'setSubMerchantId',
+        'subMerchantEmail' => 'setSubMerchantEmail',
+        'subMerchantPhoneNumber' => 'setSubMerchantPhoneNumber',
         'enablePosNetworkSwitching' => 'setEnablePosNetworkSwitching',
         'enableDynamicCurrencyConversion' => 'setEnableDynamicCurrencyConversion',
         'merchantTier' => 'setMerchantTier'
@@ -330,6 +346,10 @@ class CardProcessingConfigCommonProcessors implements ArrayAccess
         'enableLeastCostRouting' => 'getEnableLeastCostRouting',
         'enableCVVResponseIndicator' => 'getEnableCVVResponseIndicator',
         'enableMultiCurrencyProcessing' => 'getEnableMultiCurrencyProcessing',
+        'transactionTypeIdentifier' => 'getTransactionTypeIdentifier',
+        'subMerchantId' => 'getSubMerchantId',
+        'subMerchantEmail' => 'getSubMerchantEmail',
+        'subMerchantPhoneNumber' => 'getSubMerchantPhoneNumber',
         'enablePosNetworkSwitching' => 'getEnablePosNetworkSwitching',
         'enableDynamicCurrencyConversion' => 'getEnableDynamicCurrencyConversion',
         'merchantTier' => 'getMerchantTier'
@@ -411,6 +431,10 @@ class CardProcessingConfigCommonProcessors implements ArrayAccess
         $this->container['enableLeastCostRouting'] = isset($data['enableLeastCostRouting']) ? $data['enableLeastCostRouting'] : null;
         $this->container['enableCVVResponseIndicator'] = isset($data['enableCVVResponseIndicator']) ? $data['enableCVVResponseIndicator'] : null;
         $this->container['enableMultiCurrencyProcessing'] = isset($data['enableMultiCurrencyProcessing']) ? $data['enableMultiCurrencyProcessing'] : null;
+        $this->container['transactionTypeIdentifier'] = isset($data['transactionTypeIdentifier']) ? $data['transactionTypeIdentifier'] : null;
+        $this->container['subMerchantId'] = isset($data['subMerchantId']) ? $data['subMerchantId'] : null;
+        $this->container['subMerchantEmail'] = isset($data['subMerchantEmail']) ? $data['subMerchantEmail'] : null;
+        $this->container['subMerchantPhoneNumber'] = isset($data['subMerchantPhoneNumber']) ? $data['subMerchantPhoneNumber'] : null;
         $this->container['enablePosNetworkSwitching'] = isset($data['enablePosNetworkSwitching']) ? $data['enablePosNetworkSwitching'] : null;
         $this->container['enableDynamicCurrencyConversion'] = isset($data['enableDynamicCurrencyConversion']) ? $data['enableDynamicCurrencyConversion'] : null;
         $this->container['merchantTier'] = isset($data['merchantTier']) ? $data['merchantTier'] : null;
@@ -1388,6 +1412,90 @@ class CardProcessingConfigCommonProcessors implements ArrayAccess
     public function setEnableMultiCurrencyProcessing($enableMultiCurrencyProcessing)
     {
         $this->container['enableMultiCurrencyProcessing'] = $enableMultiCurrencyProcessing;
+
+        return $this;
+    }
+
+    /**
+     * Gets transactionTypeIdentifier
+     * @return string
+     */
+    public function getTransactionTypeIdentifier()
+    {
+        return $this->container['transactionTypeIdentifier'];
+    }
+
+    /**
+     * Sets transactionTypeIdentifier
+     * @param string $transactionTypeIdentifier Transaction Type Identifier (TTI) field for Mastercard AFT transactions. Maps to ISO field F104.65.32. Used to ensure compliance with Mastercard's requirements for money send transactions when wallet classifications differ between Visa and Mastercard schemes. Takes priority over BAI values for Mastercard AFT transactions when present.
+     * @return $this
+     */
+    public function setTransactionTypeIdentifier($transactionTypeIdentifier)
+    {
+        $this->container['transactionTypeIdentifier'] = $transactionTypeIdentifier;
+
+        return $this;
+    }
+
+    /**
+     * Gets subMerchantId
+     * @return string
+     */
+    public function getSubMerchantId()
+    {
+        return $this->container['subMerchantId'];
+    }
+
+    /**
+     * Sets subMerchantId
+     * @param string $subMerchantId The Sub merchant ID, sometimes referred to as the 'Seller ID' is generally used and *required for Aggregators and OptBlue participants. The 'Sub Merchant' is the Merchant whose transactions are submitted by a payment aggregator.
+     * @return $this
+     */
+    public function setSubMerchantId($subMerchantId)
+    {
+        $this->container['subMerchantId'] = $subMerchantId;
+
+        return $this;
+    }
+
+    /**
+     * Gets subMerchantEmail
+     * @return string
+     */
+    public function getSubMerchantEmail()
+    {
+        return $this->container['subMerchantEmail'];
+    }
+
+    /**
+     * Sets subMerchantEmail
+     * @param string $subMerchantEmail Sub Merchant Email of the Payment Facilitator's, OptBlue Participant
+     * @return $this
+     */
+    public function setSubMerchantEmail($subMerchantEmail)
+    {
+        $this->container['subMerchantEmail'] = $subMerchantEmail;
+
+        return $this;
+    }
+
+    /**
+     * Gets subMerchantPhoneNumber
+     * @return string
+     */
+    public function getSubMerchantPhoneNumber()
+    {
+        return $this->container['subMerchantPhoneNumber'];
+    }
+
+    /**
+     * Sets subMerchantPhoneNumber
+     * @param string $subMerchantPhoneNumber Sub Merchant Phone Number of the Payment Facilitator's, OptBlue Participant's
+     * @return $this
+     */
+    public function setSubMerchantPhoneNumber($subMerchantPhoneNumber)
+    {
+        $this->container['subMerchantPhoneNumber'] = $subMerchantPhoneNumber;
 
         return $this;
     }

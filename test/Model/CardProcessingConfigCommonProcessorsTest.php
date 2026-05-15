@@ -392,6 +392,34 @@ class CardProcessingConfigCommonProcessorsTest extends \PHPUnit_Framework_TestCa
     }
 
     /**
+     * Test attribute "transactionTypeIdentifier"
+     */
+    public function testPropertyTransactionTypeIdentifier()
+    {
+    }
+
+    /**
+     * Test attribute "subMerchantId"
+     */
+    public function testPropertySubMerchantId()
+    {
+    }
+
+    /**
+     * Test attribute "subMerchantEmail"
+     */
+    public function testPropertySubMerchantEmail()
+    {
+    }
+
+    /**
+     * Test attribute "subMerchantPhoneNumber"
+     */
+    public function testPropertySubMerchantPhoneNumber()
+    {
+    }
+
+    /**
      * Test attribute "enablePosNetworkSwitching"
      */
     public function testPropertyEnablePosNetworkSwitching()

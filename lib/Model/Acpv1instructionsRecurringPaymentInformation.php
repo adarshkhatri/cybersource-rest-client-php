@@ -34,7 +34,7 @@ use \ArrayAccess;
  * Acpv1instructionsRecurringPaymentInformation Class Doc Comment
  *
  * @category    Class
- * @description Frequency of the transaction.   Specifies how often the transaction occurs. If the mandate contains a recurring instruction, a recurring frequency must be provided and the request.isRecurring flag should be set to true.
+ * @description Frequency of the transaction. Specifies how often the transaction occurs. If the mandate contains a recurring instruction, a recurring frequency must be provided and the request.isRecurring flag should be set to true.
  * @package     CyberSource
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen

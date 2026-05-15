@@ -76,6 +76,7 @@ class Ptsv2paymentsPointOfSaleInformation implements ArrayAccess
         'pinBlockEncodingFormat' => 'int',
         'encryptedPin' => 'string',
         'encryptedKeySerialNumber' => 'string',
+        'encryptedKeyId' => 'string',
         'partnerSdkVersion' => 'string',
         'emvApplicationIdentifierAndDedicatedFileName' => 'string',
         'terminalCompliance' => 'string',
@@ -113,6 +114,7 @@ class Ptsv2paymentsPointOfSaleInformation implements ArrayAccess
         'pinBlockEncodingFormat' => null,
         'encryptedPin' => null,
         'encryptedKeySerialNumber' => null,
+        'encryptedKeyId' => null,
         'partnerSdkVersion' => null,
         'emvApplicationIdentifierAndDedicatedFileName' => null,
         'terminalCompliance' => null,
@@ -160,6 +162,7 @@ class Ptsv2paymentsPointOfSaleInformation implements ArrayAccess
         'pinBlockEncodingFormat' => 'pinBlockEncodingFormat',
         'encryptedPin' => 'encryptedPin',
         'encryptedKeySerialNumber' => 'encryptedKeySerialNumber',
+        'encryptedKeyId' => 'encryptedKeyId',
         'partnerSdkVersion' => 'partnerSdkVersion',
         'emvApplicationIdentifierAndDedicatedFileName' => 'emvApplicationIdentifierAndDedicatedFileName',
         'terminalCompliance' => 'terminalCompliance',
@@ -198,6 +201,7 @@ class Ptsv2paymentsPointOfSaleInformation implements ArrayAccess
         'pinBlockEncodingFormat' => 'setPinBlockEncodingFormat',
         'encryptedPin' => 'setEncryptedPin',
         'encryptedKeySerialNumber' => 'setEncryptedKeySerialNumber',
+        'encryptedKeyId' => 'setEncryptedKeyId',
         'partnerSdkVersion' => 'setPartnerSdkVersion',
         'emvApplicationIdentifierAndDedicatedFileName' => 'setEmvApplicationIdentifierAndDedicatedFileName',
         'terminalCompliance' => 'setTerminalCompliance',
@@ -236,6 +240,7 @@ class Ptsv2paymentsPointOfSaleInformation implements ArrayAccess
         'pinBlockEncodingFormat' => 'getPinBlockEncodingFormat',
         'encryptedPin' => 'getEncryptedPin',
         'encryptedKeySerialNumber' => 'getEncryptedKeySerialNumber',
+        'encryptedKeyId' => 'getEncryptedKeyId',
         'partnerSdkVersion' => 'getPartnerSdkVersion',
         'emvApplicationIdentifierAndDedicatedFileName' => 'getEmvApplicationIdentifierAndDedicatedFileName',
         'terminalCompliance' => 'getTerminalCompliance',
@@ -299,6 +304,7 @@ class Ptsv2paymentsPointOfSaleInformation implements ArrayAccess
         $this->container['pinBlockEncodingFormat'] = isset($data['pinBlockEncodingFormat']) ? $data['pinBlockEncodingFormat'] : null;
         $this->container['encryptedPin'] = isset($data['encryptedPin']) ? $data['encryptedPin'] : null;
         $this->container['encryptedKeySerialNumber'] = isset($data['encryptedKeySerialNumber']) ? $data['encryptedKeySerialNumber'] : null;
+        $this->container['encryptedKeyId'] = isset($data['encryptedKeyId']) ? $data['encryptedKeyId'] : null;
         $this->container['partnerSdkVersion'] = isset($data['partnerSdkVersion']) ? $data['partnerSdkVersion'] : null;
         $this->container['emvApplicationIdentifierAndDedicatedFileName'] = isset($data['emvApplicationIdentifierAndDedicatedFileName']) ? $data['emvApplicationIdentifierAndDedicatedFileName'] : null;
         $this->container['terminalCompliance'] = isset($data['terminalCompliance']) ? $data['terminalCompliance'] : null;
@@ -812,6 +818,27 @@ class Ptsv2paymentsPointOfSaleInformation implements ArrayAccess
     public function setEncryptedKeySerialNumber($encryptedKeySerialNumber)
     {
         $this->container['encryptedKeySerialNumber'] = $encryptedKeySerialNumber;
+
+        return $this;
+    }
+
+    /**
+     * Gets encryptedKeyId
+     * @return string
+     */
+    public function getEncryptedKeyId()
+    {
+        return $this->container['encryptedKeyId'];
+    }
+
+    /**
+     * Sets encryptedKeyId
+     * @param string $encryptedKeyId Identifies the Zone PIN Key (ZPK) used for Online PIN processing by providing the 10‑digit Key Set Identifier (KSI). This value indicates that the PIN block is encrypted under a ZPK and enables the Payment Security Service (PSS) to perform  the correct ZPK→ZPK PIN translation during card‑present EMV PIN transactions.
+     * @return $this
+     */
+    public function setEncryptedKeyId($encryptedKeyId)
+    {
+        $this->container['encryptedKeyId'] = $encryptedKeyId;
 
         return $this;
     }

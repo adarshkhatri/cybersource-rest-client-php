@@ -34,7 +34,7 @@ use \ArrayAccess;
  * Acpv1instructionsinstructionIdconfirmationsProcessorInformation Class Doc Comment
  *
  * @category    Class
- * @description Payment/Transaction Confirmation Data provided by the payment processor/acquirer
+ * @description Payment/Transaction Confirmation Data provided by the payment processor/acquirer.
  * @package     CyberSource
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen

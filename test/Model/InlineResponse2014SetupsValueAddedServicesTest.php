@@ -96,4 +96,18 @@ class InlineResponse2014SetupsValueAddedServicesTest extends \PHPUnit_Framework_
     public function testPropertyBankAccountValidation()
     {
     }
+
+    /**
+     * Test attribute "flexapi"
+     */
+    public function testPropertyFlexapi()
+    {
+    }
+
+    /**
+     * Test attribute "webhooks"
+     */
+    public function testPropertyWebhooks()
+    {
+    }
 }

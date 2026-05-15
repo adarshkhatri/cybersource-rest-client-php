@@ -82,4 +82,11 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformationStrongAuthent
     public function testPropertyIssuerInformation()
     {
     }
+
+    /**
+     * Test attribute "outageExemptionIndicator"
+     */
+    public function testPropertyOutageExemptionIndicator()
+    {
+    }
 }

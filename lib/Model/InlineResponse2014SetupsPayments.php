@@ -72,7 +72,9 @@ class InlineResponse2014SetupsPayments implements ArrayAccess
         'unifiedCheckout' => '\CyberSource\Model\InlineResponse2014SetupsPaymentsDigitalPayments',
         'receivablesManager' => '\CyberSource\Model\InlineResponse2014SetupsPaymentsDigitalPayments',
         'serviceFee' => '\CyberSource\Model\InlineResponse2014SetupsPaymentsCardProcessing',
-        'batchUpload' => '\CyberSource\Model\InlineResponse2014SetupsPaymentsDigitalPayments'
+        'batchUpload' => '\CyberSource\Model\InlineResponse2014SetupsPaymentsDigitalPayments',
+        'transactGuard' => '\CyberSource\Model\InlineResponse2014SetupsPaymentsDigitalPayments',
+        'microform' => '\CyberSource\Model\InlineResponse2014SetupsPaymentsCardProcessing'
     ];
 
     /**
@@ -99,7 +101,9 @@ class InlineResponse2014SetupsPayments implements ArrayAccess
         'unifiedCheckout' => null,
         'receivablesManager' => null,
         'serviceFee' => null,
-        'batchUpload' => null
+        'batchUpload' => null,
+        'transactGuard' => null,
+        'microform' => null
     ];
 
     public static function swaggerTypes()
@@ -136,7 +140,9 @@ class InlineResponse2014SetupsPayments implements ArrayAccess
         'unifiedCheckout' => 'unifiedCheckout',
         'receivablesManager' => 'receivablesManager',
         'serviceFee' => 'serviceFee',
-        'batchUpload' => 'batchUpload'
+        'batchUpload' => 'batchUpload',
+        'transactGuard' => 'transactGuard',
+        'microform' => 'microform'
     ];
 
 
@@ -164,7 +170,9 @@ class InlineResponse2014SetupsPayments implements ArrayAccess
         'unifiedCheckout' => 'setUnifiedCheckout',
         'receivablesManager' => 'setReceivablesManager',
         'serviceFee' => 'setServiceFee',
-        'batchUpload' => 'setBatchUpload'
+        'batchUpload' => 'setBatchUpload',
+        'transactGuard' => 'setTransactGuard',
+        'microform' => 'setMicroform'
     ];
 
 
@@ -192,7 +200,9 @@ class InlineResponse2014SetupsPayments implements ArrayAccess
         'unifiedCheckout' => 'getUnifiedCheckout',
         'receivablesManager' => 'getReceivablesManager',
         'serviceFee' => 'getServiceFee',
-        'batchUpload' => 'getBatchUpload'
+        'batchUpload' => 'getBatchUpload',
+        'transactGuard' => 'getTransactGuard',
+        'microform' => 'getMicroform'
     ];
 
     public static function attributeMap()
@@ -246,6 +256,8 @@ class InlineResponse2014SetupsPayments implements ArrayAccess
         $this->container['receivablesManager'] = isset($data['receivablesManager']) ? $data['receivablesManager'] : null;
         $this->container['serviceFee'] = isset($data['serviceFee']) ? $data['serviceFee'] : null;
         $this->container['batchUpload'] = isset($data['batchUpload']) ? $data['batchUpload'] : null;
+        $this->container['transactGuard'] = isset($data['transactGuard']) ? $data['transactGuard'] : null;
+        $this->container['microform'] = isset($data['microform']) ? $data['microform'] : null;
     }
 
     /**
@@ -689,6 +701,48 @@ class InlineResponse2014SetupsPayments implements ArrayAccess
     public function setBatchUpload($batchUpload)
     {
         $this->container['batchUpload'] = $batchUpload;
+
+        return $this;
+    }
+
+    /**
+     * Gets transactGuard
+     * @return \CyberSource\Model\InlineResponse2014SetupsPaymentsDigitalPayments
+     */
+    public function getTransactGuard()
+    {
+        return $this->container['transactGuard'];
+    }
+
+    /**
+     * Sets transactGuard
+     * @param \CyberSource\Model\InlineResponse2014SetupsPaymentsDigitalPayments $transactGuard
+     * @return $this
+     */
+    public function setTransactGuard($transactGuard)
+    {
+        $this->container['transactGuard'] = $transactGuard;
+
+        return $this;
+    }
+
+    /**
+     * Gets microform
+     * @return \CyberSource\Model\InlineResponse2014SetupsPaymentsCardProcessing
+     */
+    public function getMicroform()
+    {
+        return $this->container['microform'];
+    }
+
+    /**
+     * Sets microform
+     * @param \CyberSource\Model\InlineResponse2014SetupsPaymentsCardProcessing $microform
+     * @return $this
+     */
+    public function setMicroform($microform)
+    {
+        $this->container['microform'] = $microform;
 
         return $this;
     }

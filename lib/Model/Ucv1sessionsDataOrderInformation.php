@@ -56,8 +56,9 @@ class Ucv1sessionsDataOrderInformation implements ArrayAccess
         'amountDetails' => '\CyberSource\Model\Ucv1sessionsDataOrderInformationAmountDetails',
         'billTo' => '\CyberSource\Model\Ucv1sessionsDataOrderInformationBillTo',
         'shipTo' => '\CyberSource\Model\Upv1capturecontextsDataOrderInformationShipTo',
-        'lineItems' => '\CyberSource\Model\Upv1capturecontextsDataOrderInformationLineItems[]',
-        'invoiceDetails' => '\CyberSource\Model\Upv1capturecontextsDataOrderInformationInvoiceDetails'
+        'lineItems' => '\CyberSource\Model\Ucv1sessionsDataOrderInformationLineItems[]',
+        'invoiceDetails' => '\CyberSource\Model\Ucv1sessionsDataOrderInformationInvoiceDetails',
+        'shippingDetails' => '\CyberSource\Model\Ucv1sessionsDataOrderInformationShippingDetails'
     ];
 
     /**
@@ -69,7 +70,8 @@ class Ucv1sessionsDataOrderInformation implements ArrayAccess
         'billTo' => null,
         'shipTo' => null,
         'lineItems' => null,
-        'invoiceDetails' => null
+        'invoiceDetails' => null,
+        'shippingDetails' => null
     ];
 
     public static function swaggerTypes()
@@ -91,7 +93,8 @@ class Ucv1sessionsDataOrderInformation implements ArrayAccess
         'billTo' => 'billTo',
         'shipTo' => 'shipTo',
         'lineItems' => 'lineItems',
-        'invoiceDetails' => 'invoiceDetails'
+        'invoiceDetails' => 'invoiceDetails',
+        'shippingDetails' => 'shippingDetails'
     ];
 
 
@@ -104,7 +107,8 @@ class Ucv1sessionsDataOrderInformation implements ArrayAccess
         'billTo' => 'setBillTo',
         'shipTo' => 'setShipTo',
         'lineItems' => 'setLineItems',
-        'invoiceDetails' => 'setInvoiceDetails'
+        'invoiceDetails' => 'setInvoiceDetails',
+        'shippingDetails' => 'setShippingDetails'
     ];
 
 
@@ -117,7 +121,8 @@ class Ucv1sessionsDataOrderInformation implements ArrayAccess
         'billTo' => 'getBillTo',
         'shipTo' => 'getShipTo',
         'lineItems' => 'getLineItems',
-        'invoiceDetails' => 'getInvoiceDetails'
+        'invoiceDetails' => 'getInvoiceDetails',
+        'shippingDetails' => 'getShippingDetails'
     ];
 
     public static function attributeMap()
@@ -156,6 +161,7 @@ class Ucv1sessionsDataOrderInformation implements ArrayAccess
         $this->container['shipTo'] = isset($data['shipTo']) ? $data['shipTo'] : null;
         $this->container['lineItems'] = isset($data['lineItems']) ? $data['lineItems'] : null;
         $this->container['invoiceDetails'] = isset($data['invoiceDetails']) ? $data['invoiceDetails'] : null;
+        $this->container['shippingDetails'] = isset($data['shippingDetails']) ? $data['shippingDetails'] : null;
     }
 
     /**
@@ -248,7 +254,7 @@ class Ucv1sessionsDataOrderInformation implements ArrayAccess
 
     /**
      * Gets lineItems
-     * @return \CyberSource\Model\Upv1capturecontextsDataOrderInformationLineItems[]
+     * @return \CyberSource\Model\Ucv1sessionsDataOrderInformationLineItems[]
      */
     public function getLineItems()
     {
@@ -257,7 +263,7 @@ class Ucv1sessionsDataOrderInformation implements ArrayAccess
 
     /**
      * Sets lineItems
-     * @param \CyberSource\Model\Upv1capturecontextsDataOrderInformationLineItems[] $lineItems
+     * @param \CyberSource\Model\Ucv1sessionsDataOrderInformationLineItems[] $lineItems
      * @return $this
      */
     public function setLineItems($lineItems)
@@ -269,7 +275,7 @@ class Ucv1sessionsDataOrderInformation implements ArrayAccess
 
     /**
      * Gets invoiceDetails
-     * @return \CyberSource\Model\Upv1capturecontextsDataOrderInformationInvoiceDetails
+     * @return \CyberSource\Model\Ucv1sessionsDataOrderInformationInvoiceDetails
      */
     public function getInvoiceDetails()
     {
@@ -278,12 +284,33 @@ class Ucv1sessionsDataOrderInformation implements ArrayAccess
 
     /**
      * Sets invoiceDetails
-     * @param \CyberSource\Model\Upv1capturecontextsDataOrderInformationInvoiceDetails $invoiceDetails
+     * @param \CyberSource\Model\Ucv1sessionsDataOrderInformationInvoiceDetails $invoiceDetails
      * @return $this
      */
     public function setInvoiceDetails($invoiceDetails)
     {
         $this->container['invoiceDetails'] = $invoiceDetails;
+
+        return $this;
+    }
+
+    /**
+     * Gets shippingDetails
+     * @return \CyberSource\Model\Ucv1sessionsDataOrderInformationShippingDetails
+     */
+    public function getShippingDetails()
+    {
+        return $this->container['shippingDetails'];
+    }
+
+    /**
+     * Sets shippingDetails
+     * @param \CyberSource\Model\Ucv1sessionsDataOrderInformationShippingDetails $shippingDetails
+     * @return $this
+     */
+    public function setShippingDetails($shippingDetails)
+    {
+        $this->container['shippingDetails'] = $shippingDetails;
 
         return $this;
     }

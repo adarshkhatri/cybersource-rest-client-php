@@ -53,10 +53,10 @@ class InlineResponse4009 implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'submitTimeUtc' => 'string',
+        'submitTimeUtc' => '\DateTime',
         'status' => 'string',
-        'message' => 'string',
         'reason' => 'string',
+        'message' => 'string',
         'details' => '\CyberSource\Model\InlineResponse4009Details[]'
     ];
 
@@ -65,10 +65,10 @@ class InlineResponse4009 implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'submitTimeUtc' => null,
+        'submitTimeUtc' => 'date-time',
         'status' => null,
-        'message' => null,
         'reason' => null,
+        'message' => null,
         'details' => null
     ];
 
@@ -89,8 +89,8 @@ class InlineResponse4009 implements ArrayAccess
     protected static $attributeMap = [
         'submitTimeUtc' => 'submitTimeUtc',
         'status' => 'status',
-        'message' => 'message',
         'reason' => 'reason',
+        'message' => 'message',
         'details' => 'details'
     ];
 
@@ -102,8 +102,8 @@ class InlineResponse4009 implements ArrayAccess
     protected static $setters = [
         'submitTimeUtc' => 'setSubmitTimeUtc',
         'status' => 'setStatus',
-        'message' => 'setMessage',
         'reason' => 'setReason',
+        'message' => 'setMessage',
         'details' => 'setDetails'
     ];
 
@@ -115,8 +115,8 @@ class InlineResponse4009 implements ArrayAccess
     protected static $getters = [
         'submitTimeUtc' => 'getSubmitTimeUtc',
         'status' => 'getStatus',
-        'message' => 'getMessage',
         'reason' => 'getReason',
+        'message' => 'getMessage',
         'details' => 'getDetails'
     ];
 
@@ -153,8 +153,8 @@ class InlineResponse4009 implements ArrayAccess
     {
         $this->container['submitTimeUtc'] = isset($data['submitTimeUtc']) ? $data['submitTimeUtc'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
-        $this->container['message'] = isset($data['message']) ? $data['message'] : null;
         $this->container['reason'] = isset($data['reason']) ? $data['reason'] : null;
+        $this->container['message'] = isset($data['message']) ? $data['message'] : null;
         $this->container['details'] = isset($data['details']) ? $data['details'] : null;
     }
 
@@ -185,7 +185,7 @@ class InlineResponse4009 implements ArrayAccess
 
     /**
      * Gets submitTimeUtc
-     * @return string
+     * @return \DateTime
      */
     public function getSubmitTimeUtc()
     {
@@ -194,7 +194,7 @@ class InlineResponse4009 implements ArrayAccess
 
     /**
      * Sets submitTimeUtc
-     * @param string $submitTimeUtc Time verification was requested  Format: `YYYY-MM-DDThhmmssZ`, where: - `T`:  Separates the date and the time - `Z`:  Indicates Coordinated Universal Time (UTC), also known as Greenwich Mean Time (GMT)  Example:  `2020-01-11T224757Z` equals January 11, 2020, at 22:47:57 (10:47:57 p.m.)
+     * @param \DateTime $submitTimeUtc Time of request in UTC. `Format: YYYY-MM-DDThh:mm:ssZ`  Example 2016-08-11T22:47:57Z equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The T separates the date and the time. The Z indicates UTC.
      * @return $this
      */
     public function setSubmitTimeUtc($submitTimeUtc)
@@ -215,33 +215,12 @@ class InlineResponse4009 implements ArrayAccess
 
     /**
      * Sets status
-     * @param string $status Possible values:   - `INVALID_REQUEST`
+     * @param string $status The http status description of the submitted request.
      * @return $this
      */
     public function setStatus($status)
     {
         $this->container['status'] = $status;
-
-        return $this;
-    }
-
-    /**
-     * Gets message
-     * @return string
-     */
-    public function getMessage()
-    {
-        return $this->container['message'];
-    }
-
-    /**
-     * Sets message
-     * @param string $message The detail message related to the status and reason
-     * @return $this
-     */
-    public function setMessage($message)
-    {
-        $this->container['message'] = $message;
 
         return $this;
     }
@@ -257,12 +236,33 @@ class InlineResponse4009 implements ArrayAccess
 
     /**
      * Sets reason
-     * @param string $reason The reason of the status.  Possible values:   - `INVALID_REQUEST`
+     * @param string $reason Documented reason codes. Client should be able to use the key for generating their own error message Possible Values:   - 'INVALID_DATA'   - 'SYSTEM_ERROR'   - 'RESOURCE_NOT_FOUND'
      * @return $this
      */
     public function setReason($reason)
     {
         $this->container['reason'] = $reason;
+
+        return $this;
+    }
+
+    /**
+     * Gets message
+     * @return string
+     */
+    public function getMessage()
+    {
+        return $this->container['message'];
+    }
+
+    /**
+     * Sets message
+     * @param string $message Descriptive message for the error.
+     * @return $this
+     */
+    public function setMessage($message)
+    {
+        $this->container['message'] = $message;
 
         return $this;
     }

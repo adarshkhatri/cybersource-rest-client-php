@@ -89,4 +89,18 @@ class Ptsv2paymentsidcapturesProcessorInformationTest extends \PHPUnit_Framework
     public function testPropertyResponseSourceCode()
     {
     }
+
+    /**
+     * Test attribute "supplementaryTransactionData"
+     */
+    public function testPropertySupplementaryTransactionData()
+    {
+    }
+
+    /**
+     * Test attribute "cedpVerifiedIndicator"
+     */
+    public function testPropertyCedpVerifiedIndicator()
+    {
+    }
 }

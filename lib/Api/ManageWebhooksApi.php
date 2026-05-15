@@ -137,7 +137,7 @@ class ManageWebhooksApi
         $headerParams = [];
         $formParams = [];
         
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/hal+json;charset=utf-8']);
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json;charset=utf-8']);
         if (!is_null($_header_accept)) {
             $headerParams['Accept'] = $_header_accept;
         }
@@ -258,7 +258,7 @@ class ManageWebhooksApi
         $headerParams = [];
         $formParams = [];
         
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/hal+json;charset=utf-8']);
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json;charset=utf-8']);
         if (!is_null($_header_accept)) {
             $headerParams['Accept'] = $_header_accept;
         }
@@ -387,7 +387,7 @@ class ManageWebhooksApi
         $headerParams = [];
         $formParams = [];
         
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/hal+json;charset=utf-8']);
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json;charset=utf-8']);
         if (!is_null($_header_accept)) {
             $headerParams['Accept'] = $_header_accept;
         }
@@ -519,7 +519,7 @@ class ManageWebhooksApi
         $headerParams = [];
         $formParams = [];
         
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/hal+json;charset=utf-8']);
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json;charset=utf-8']);
         if (!is_null($_header_accept)) {
             $headerParams['Accept'] = $_header_accept;
         }
@@ -646,7 +646,7 @@ class ManageWebhooksApi
         $headerParams = [];
         $formParams = [];
         
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/hal+json;charset=utf-8']);
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json;charset=utf-8']);
         if (!is_null($_header_accept)) {
             $headerParams['Accept'] = $_header_accept;
         }
@@ -784,7 +784,7 @@ class ManageWebhooksApi
         $headerParams = [];
         $formParams = [];
         
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/hal+json;charset=utf-8']);
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json;charset=utf-8']);
         if (!is_null($_header_accept)) {
             $headerParams['Accept'] = $_header_accept;
         }
@@ -880,17 +880,17 @@ class ManageWebhooksApi
      *
      * Message Level Encryption
      *
-     * @param string $vCSenderOrganizationId Sender organization id (required)
-     * @param string $vCPermissions Encoded user permissions returned by the CGK, for the entity user who initiated the boarding (required)
      * @param \CyberSource\Model\SaveAsymEgressKey $saveAsymEgressKey Provide egress Asymmetric key information to save (create or store) (required)
      * @param string $vCCorrelationId A globally unique id associated with your request (optional)
+     * @param string $vCSenderOrganizationId Sender organization id (optional)
+     * @param string $vCPermissions Encoded user permissions returned by the CGK, for the entity user who initiated the boarding (optional)
      * @throws \CyberSource\ApiException on non-2xx response
      * @return array of \CyberSource\Model\InlineResponse2018, HTTP status code, HTTP response headers (array of strings)
      */
-    public function saveAsymEgressKey($vCSenderOrganizationId, $vCPermissions, $saveAsymEgressKey, $vCCorrelationId = null)
+    public function saveAsymEgressKey($saveAsymEgressKey, $vCCorrelationId = null, $vCSenderOrganizationId = null, $vCPermissions = null)
     {
         self::$logger->info('CALL TO METHOD saveAsymEgressKey STARTED');
-        list($response, $statusCode, $httpHeader) = $this->saveAsymEgressKeyWithHttpInfo($vCSenderOrganizationId, $vCPermissions, $saveAsymEgressKey, $vCCorrelationId);
+        list($response, $statusCode, $httpHeader) = $this->saveAsymEgressKeyWithHttpInfo($saveAsymEgressKey, $vCCorrelationId, $vCSenderOrganizationId, $vCPermissions);
         self::$logger->info('CALL TO METHOD saveAsymEgressKey ENDED');
         self::$logger->close();
         return [$response, $statusCode, $httpHeader];
@@ -901,25 +901,15 @@ class ManageWebhooksApi
      *
      * Message Level Encryption
      *
-     * @param string $vCSenderOrganizationId Sender organization id (required)
-     * @param string $vCPermissions Encoded user permissions returned by the CGK, for the entity user who initiated the boarding (required)
      * @param \CyberSource\Model\SaveAsymEgressKey $saveAsymEgressKey Provide egress Asymmetric key information to save (create or store) (required)
      * @param string $vCCorrelationId A globally unique id associated with your request (optional)
+     * @param string $vCSenderOrganizationId Sender organization id (optional)
+     * @param string $vCPermissions Encoded user permissions returned by the CGK, for the entity user who initiated the boarding (optional)
      * @throws \CyberSource\ApiException on non-2xx response
      * @return array of \CyberSource\Model\InlineResponse2018, HTTP status code, HTTP response headers (array of strings)
      */
-    public function saveAsymEgressKeyWithHttpInfo($vCSenderOrganizationId, $vCPermissions, $saveAsymEgressKey, $vCCorrelationId = null)
+    public function saveAsymEgressKeyWithHttpInfo($saveAsymEgressKey, $vCCorrelationId = null, $vCSenderOrganizationId = null, $vCPermissions = null)
     {
-        // verify the required parameter 'vCSenderOrganizationId' is set
-        if ($vCSenderOrganizationId === null) {
-            self::$logger->error("InvalidArgumentException : Missing the required parameter $vCSenderOrganizationId when calling saveAsymEgressKey");
-            throw new \InvalidArgumentException('Missing the required parameter $vCSenderOrganizationId when calling saveAsymEgressKey');
-        }
-        // verify the required parameter 'vCPermissions' is set
-        if ($vCPermissions === null) {
-            self::$logger->error("InvalidArgumentException : Missing the required parameter $vCPermissions when calling saveAsymEgressKey");
-            throw new \InvalidArgumentException('Missing the required parameter $vCPermissions when calling saveAsymEgressKey');
-        }
         // verify the required parameter 'saveAsymEgressKey' is set
         if ($saveAsymEgressKey === null) {
             self::$logger->error("InvalidArgumentException : Missing the required parameter $saveAsymEgressKey when calling saveAsymEgressKey");
@@ -932,7 +922,7 @@ class ManageWebhooksApi
         $headerParams = [];
         $formParams = [];
         
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/hal+json;charset=utf-8']);
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json;charset=utf-8']);
         if (!is_null($_header_accept)) {
             $headerParams['Accept'] = $_header_accept;
         }

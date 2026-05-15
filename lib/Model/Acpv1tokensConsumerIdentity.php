@@ -34,7 +34,7 @@ use \ArrayAccess;
  * Acpv1tokensConsumerIdentity Class Doc Comment
  *
  * @category    Class
- * @description Consumer Identity data.
+ * @description Consumer Identity data. Identifies the consumer using an email address or phone number.
  * @package     CyberSource
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen

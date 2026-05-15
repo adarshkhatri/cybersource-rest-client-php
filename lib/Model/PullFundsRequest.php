@@ -58,6 +58,7 @@ class PullFundsRequest implements ArrayAccess
         'processingInformation' => '\CyberSource\Model\Ptsv1pullfundstransferProcessingInformation',
         'recipientInformation' => '\CyberSource\Model\Ptsv1pullfundstransferRecipientInformation',
         'senderInformation' => '\CyberSource\Model\Ptsv1pullfundstransferSenderInformation',
+        'buyerInformation' => '\CyberSource\Model\Ptsv1pullfundstransferBuyerInformation',
         'aggregatorInformation' => '\CyberSource\Model\Ptsv1pullfundstransferAggregatorInformation',
         'merchantInformation' => '\CyberSource\Model\Ptsv1pullfundstransferMerchantInformation'
     ];
@@ -72,6 +73,7 @@ class PullFundsRequest implements ArrayAccess
         'processingInformation' => null,
         'recipientInformation' => null,
         'senderInformation' => null,
+        'buyerInformation' => null,
         'aggregatorInformation' => null,
         'merchantInformation' => null
     ];
@@ -96,6 +98,7 @@ class PullFundsRequest implements ArrayAccess
         'processingInformation' => 'processingInformation',
         'recipientInformation' => 'recipientInformation',
         'senderInformation' => 'senderInformation',
+        'buyerInformation' => 'buyerInformation',
         'aggregatorInformation' => 'aggregatorInformation',
         'merchantInformation' => 'merchantInformation'
     ];
@@ -111,6 +114,7 @@ class PullFundsRequest implements ArrayAccess
         'processingInformation' => 'setProcessingInformation',
         'recipientInformation' => 'setRecipientInformation',
         'senderInformation' => 'setSenderInformation',
+        'buyerInformation' => 'setBuyerInformation',
         'aggregatorInformation' => 'setAggregatorInformation',
         'merchantInformation' => 'setMerchantInformation'
     ];
@@ -126,6 +130,7 @@ class PullFundsRequest implements ArrayAccess
         'processingInformation' => 'getProcessingInformation',
         'recipientInformation' => 'getRecipientInformation',
         'senderInformation' => 'getSenderInformation',
+        'buyerInformation' => 'getBuyerInformation',
         'aggregatorInformation' => 'getAggregatorInformation',
         'merchantInformation' => 'getMerchantInformation'
     ];
@@ -166,6 +171,7 @@ class PullFundsRequest implements ArrayAccess
         $this->container['processingInformation'] = isset($data['processingInformation']) ? $data['processingInformation'] : null;
         $this->container['recipientInformation'] = isset($data['recipientInformation']) ? $data['recipientInformation'] : null;
         $this->container['senderInformation'] = isset($data['senderInformation']) ? $data['senderInformation'] : null;
+        $this->container['buyerInformation'] = isset($data['buyerInformation']) ? $data['buyerInformation'] : null;
         $this->container['aggregatorInformation'] = isset($data['aggregatorInformation']) ? $data['aggregatorInformation'] : null;
         $this->container['merchantInformation'] = isset($data['merchantInformation']) ? $data['merchantInformation'] : null;
     }
@@ -296,6 +302,27 @@ class PullFundsRequest implements ArrayAccess
     public function setSenderInformation($senderInformation)
     {
         $this->container['senderInformation'] = $senderInformation;
+
+        return $this;
+    }
+
+    /**
+     * Gets buyerInformation
+     * @return \CyberSource\Model\Ptsv1pullfundstransferBuyerInformation
+     */
+    public function getBuyerInformation()
+    {
+        return $this->container['buyerInformation'];
+    }
+
+    /**
+     * Sets buyerInformation
+     * @param \CyberSource\Model\Ptsv1pullfundstransferBuyerInformation $buyerInformation
+     * @return $this
+     */
+    public function setBuyerInformation($buyerInformation)
+    {
+        $this->container['buyerInformation'] = $buyerInformation;
 
         return $this;
     }

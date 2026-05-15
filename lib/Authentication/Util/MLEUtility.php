@@ -105,6 +105,14 @@ class MLEUtility
             return $requestBody;
         }
 
+        if ($mleCert == false) {
+            $errorMsg = "No certificate found for MLE Request. "
+                . "Please provide the Request MLE certificate file path via 'mleForRequestPublicCertPath' in merchant configuration. "
+                . "This is required when using jwtKeyType=SHARED_SECRET or when the P12 file does not contain the MLE certificate.";
+            self::$logger->error($errorMsg);
+            throw new MLEException($errorMsg);
+        }
+
         if ($merchantConfig->getLogConfiguration()->isMaskingEnabled()) {
             $printRequestBody = \CyberSource\Utilities\Helpers\DataMasker::maskData($requestBody);
         } else {

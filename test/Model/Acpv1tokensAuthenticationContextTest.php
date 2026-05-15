@@ -32,7 +32,7 @@ namespace CyberSource;
  * Acpv1tokensAuthenticationContextTest Class Doc Comment
  *
  * @category    Class */
-// * @description Authentication Context data.
+// * @description Authentication Context data. Describes the authentication action performed.
 /**
  * @package     CyberSource
  * @author      Swagger Codegen team

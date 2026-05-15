@@ -197,7 +197,7 @@ class InlineResponse4009Details implements ArrayAccess
 
     /**
      * Sets reason
-     * @param string $reason Possible reasons for the error.  Possible values:   - `MISSING_FIELD`   - `INVALID_DATA`
+     * @param string $reason Possible reasons for the error.
      * @return $this
      */
     public function setReason($reason)

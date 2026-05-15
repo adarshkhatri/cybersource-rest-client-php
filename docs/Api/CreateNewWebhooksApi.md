@@ -95,12 +95,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json;charset=utf-8
- - **Accept**: application/hal+json;charset=utf-8
+ - **Accept**: application/json;charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **saveSymEgressKey**
-> \CyberSource\Model\InlineResponse2015 saveSymEgressKey($vCSenderOrganizationId, $vCPermissions, $vCCorrelationId, $saveSymEgressKey)
+> \CyberSource\Model\InlineResponse2015 saveSymEgressKey($vCCorrelationId, $vCSenderOrganizationId, $vCPermissions, $saveSymEgressKey)
 
 Create Webhook Security Keys
 
@@ -112,13 +112,13 @@ Create security keys that CyberSource will use internally to connect to your ser
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new CyberSource\Api\CreateNewWebhooksApi();
+$vCCorrelationId = "vCCorrelationId_example"; // string | A globally unique id associated with your request
 $vCSenderOrganizationId = "vCSenderOrganizationId_example"; // string | Sender organization id
 $vCPermissions = "vCPermissions_example"; // string | Encoded user permissions returned by the CGK, for the entity user who initiated the boarding
-$vCCorrelationId = "vCCorrelationId_example"; // string | A globally unique id associated with your request
 $saveSymEgressKey = new \CyberSource\Model\SaveSymEgressKey(); // \CyberSource\Model\SaveSymEgressKey | Provide egress Symmetric key information to save (create or store or refresh)
 
 try {
-    $result = $api_instance->saveSymEgressKey($vCSenderOrganizationId, $vCPermissions, $vCCorrelationId, $saveSymEgressKey);
+    $result = $api_instance->saveSymEgressKey($vCCorrelationId, $vCSenderOrganizationId, $vCPermissions, $saveSymEgressKey);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CreateNewWebhooksApi->saveSymEgressKey: ', $e->getMessage(), PHP_EOL;
@@ -130,9 +130,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **vCSenderOrganizationId** | **string**| Sender organization id |
- **vCPermissions** | **string**| Encoded user permissions returned by the CGK, for the entity user who initiated the boarding |
  **vCCorrelationId** | **string**| A globally unique id associated with your request | [optional]
+ **vCSenderOrganizationId** | **string**| Sender organization id | [optional]
+ **vCPermissions** | **string**| Encoded user permissions returned by the CGK, for the entity user who initiated the boarding | [optional]
  **saveSymEgressKey** | [**\CyberSource\Model\SaveSymEgressKey**](../Model/SaveSymEgressKey.md)| Provide egress Symmetric key information to save (create or store or refresh) | [optional]
 
 ### Return type

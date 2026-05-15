@@ -59,6 +59,7 @@ class AuthReversalRequest implements ArrayAccess
         'orderInformation' => '\CyberSource\Model\Ptsv2paymentsidreversalsOrderInformation',
         'pointOfSaleInformation' => '\CyberSource\Model\Ptsv2paymentsidreversalsPointOfSaleInformation',
         'paymentInformation' => '\CyberSource\Model\Ptsv2paymentsidreversalsPaymentInformation',
+        'deviceInformation' => '\CyberSource\Model\Ptsv2paymentsidreversalsDeviceInformation',
         'processorInformation' => '\CyberSource\Model\Ptsv2paymentsProcessorInformationReversal'
     ];
 
@@ -73,6 +74,7 @@ class AuthReversalRequest implements ArrayAccess
         'orderInformation' => null,
         'pointOfSaleInformation' => null,
         'paymentInformation' => null,
+        'deviceInformation' => null,
         'processorInformation' => null
     ];
 
@@ -97,6 +99,7 @@ class AuthReversalRequest implements ArrayAccess
         'orderInformation' => 'orderInformation',
         'pointOfSaleInformation' => 'pointOfSaleInformation',
         'paymentInformation' => 'paymentInformation',
+        'deviceInformation' => 'deviceInformation',
         'processorInformation' => 'processorInformation'
     ];
 
@@ -112,6 +115,7 @@ class AuthReversalRequest implements ArrayAccess
         'orderInformation' => 'setOrderInformation',
         'pointOfSaleInformation' => 'setPointOfSaleInformation',
         'paymentInformation' => 'setPaymentInformation',
+        'deviceInformation' => 'setDeviceInformation',
         'processorInformation' => 'setProcessorInformation'
     ];
 
@@ -127,6 +131,7 @@ class AuthReversalRequest implements ArrayAccess
         'orderInformation' => 'getOrderInformation',
         'pointOfSaleInformation' => 'getPointOfSaleInformation',
         'paymentInformation' => 'getPaymentInformation',
+        'deviceInformation' => 'getDeviceInformation',
         'processorInformation' => 'getProcessorInformation'
     ];
 
@@ -167,6 +172,7 @@ class AuthReversalRequest implements ArrayAccess
         $this->container['orderInformation'] = isset($data['orderInformation']) ? $data['orderInformation'] : null;
         $this->container['pointOfSaleInformation'] = isset($data['pointOfSaleInformation']) ? $data['pointOfSaleInformation'] : null;
         $this->container['paymentInformation'] = isset($data['paymentInformation']) ? $data['paymentInformation'] : null;
+        $this->container['deviceInformation'] = isset($data['deviceInformation']) ? $data['deviceInformation'] : null;
         $this->container['processorInformation'] = isset($data['processorInformation']) ? $data['processorInformation'] : null;
     }
 
@@ -317,6 +323,27 @@ class AuthReversalRequest implements ArrayAccess
     public function setPaymentInformation($paymentInformation)
     {
         $this->container['paymentInformation'] = $paymentInformation;
+
+        return $this;
+    }
+
+    /**
+     * Gets deviceInformation
+     * @return \CyberSource\Model\Ptsv2paymentsidreversalsDeviceInformation
+     */
+    public function getDeviceInformation()
+    {
+        return $this->container['deviceInformation'];
+    }
+
+    /**
+     * Sets deviceInformation
+     * @param \CyberSource\Model\Ptsv2paymentsidreversalsDeviceInformation $deviceInformation
+     * @return $this
+     */
+    public function setDeviceInformation($deviceInformation)
+    {
+        $this->container['deviceInformation'] = $deviceInformation;
 
         return $this;
     }

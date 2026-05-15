@@ -53,7 +53,8 @@ class GetAllSubscriptionsResponseOrderInformationAmountDetailsSurcharge implemen
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'amount' => 'string'
+        'amount' => 'string',
+        'description' => 'string'
     ];
 
     /**
@@ -61,7 +62,8 @@ class GetAllSubscriptionsResponseOrderInformationAmountDetailsSurcharge implemen
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'amount' => null
+        'amount' => null,
+        'description' => null
     ];
 
     public static function swaggerTypes()
@@ -79,7 +81,8 @@ class GetAllSubscriptionsResponseOrderInformationAmountDetailsSurcharge implemen
      * @var string[]
      */
     protected static $attributeMap = [
-        'amount' => 'amount'
+        'amount' => 'amount',
+        'description' => 'description'
     ];
 
 
@@ -88,7 +91,8 @@ class GetAllSubscriptionsResponseOrderInformationAmountDetailsSurcharge implemen
      * @var string[]
      */
     protected static $setters = [
-        'amount' => 'setAmount'
+        'amount' => 'setAmount',
+        'description' => 'setDescription'
     ];
 
 
@@ -97,7 +101,8 @@ class GetAllSubscriptionsResponseOrderInformationAmountDetailsSurcharge implemen
      * @var string[]
      */
     protected static $getters = [
-        'amount' => 'getAmount'
+        'amount' => 'getAmount',
+        'description' => 'getDescription'
     ];
 
     public static function attributeMap()
@@ -132,6 +137,7 @@ class GetAllSubscriptionsResponseOrderInformationAmountDetailsSurcharge implemen
     public function __construct(array $data = null)
     {
         $this->container['amount'] = isset($data['amount']) ? $data['amount'] : null;
+        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
     }
 
     /**
@@ -176,6 +182,27 @@ class GetAllSubscriptionsResponseOrderInformationAmountDetailsSurcharge implemen
     public function setAmount($amount)
     {
         $this->container['amount'] = $amount;
+
+        return $this;
+    }
+
+    /**
+     * Gets description
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->container['description'];
+    }
+
+    /**
+     * Sets description
+     * @param string $description Description of the surcharge.
+     * @return $this
+     */
+    public function setDescription($description)
+    {
+        $this->container['description'] = $description;
 
         return $this;
     }

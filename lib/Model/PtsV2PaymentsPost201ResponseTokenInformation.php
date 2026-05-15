@@ -57,7 +57,8 @@ class PtsV2PaymentsPost201ResponseTokenInformation implements ArrayAccess
         'customer' => '\CyberSource\Model\PtsV2PaymentsPost201ResponseTokenInformationCustomer',
         'paymentInstrument' => '\CyberSource\Model\PtsV2PaymentsPost201ResponseTokenInformationPaymentInstrument',
         'shippingAddress' => '\CyberSource\Model\PtsV2PaymentsPost201ResponseTokenInformationShippingAddress',
-        'instrumentIdentifier' => '\CyberSource\Model\PtsV2PaymentsPost201ResponseTokenInformationInstrumentIdentifier'
+        'instrumentIdentifier' => '\CyberSource\Model\PtsV2PaymentsPost201ResponseTokenInformationInstrumentIdentifier',
+        'thirdPartyToken' => '\CyberSource\Model\PtsV2PaymentsPost201ResponseTokenInformationThirdPartyToken'
     ];
 
     /**
@@ -69,7 +70,8 @@ class PtsV2PaymentsPost201ResponseTokenInformation implements ArrayAccess
         'customer' => null,
         'paymentInstrument' => null,
         'shippingAddress' => null,
-        'instrumentIdentifier' => null
+        'instrumentIdentifier' => null,
+        'thirdPartyToken' => null
     ];
 
     public static function swaggerTypes()
@@ -91,7 +93,8 @@ class PtsV2PaymentsPost201ResponseTokenInformation implements ArrayAccess
         'customer' => 'customer',
         'paymentInstrument' => 'paymentInstrument',
         'shippingAddress' => 'shippingAddress',
-        'instrumentIdentifier' => 'instrumentIdentifier'
+        'instrumentIdentifier' => 'instrumentIdentifier',
+        'thirdPartyToken' => 'thirdPartyToken'
     ];
 
 
@@ -104,7 +107,8 @@ class PtsV2PaymentsPost201ResponseTokenInformation implements ArrayAccess
         'customer' => 'setCustomer',
         'paymentInstrument' => 'setPaymentInstrument',
         'shippingAddress' => 'setShippingAddress',
-        'instrumentIdentifier' => 'setInstrumentIdentifier'
+        'instrumentIdentifier' => 'setInstrumentIdentifier',
+        'thirdPartyToken' => 'setThirdPartyToken'
     ];
 
 
@@ -117,7 +121,8 @@ class PtsV2PaymentsPost201ResponseTokenInformation implements ArrayAccess
         'customer' => 'getCustomer',
         'paymentInstrument' => 'getPaymentInstrument',
         'shippingAddress' => 'getShippingAddress',
-        'instrumentIdentifier' => 'getInstrumentIdentifier'
+        'instrumentIdentifier' => 'getInstrumentIdentifier',
+        'thirdPartyToken' => 'getThirdPartyToken'
     ];
 
     public static function attributeMap()
@@ -156,6 +161,7 @@ class PtsV2PaymentsPost201ResponseTokenInformation implements ArrayAccess
         $this->container['paymentInstrument'] = isset($data['paymentInstrument']) ? $data['paymentInstrument'] : null;
         $this->container['shippingAddress'] = isset($data['shippingAddress']) ? $data['shippingAddress'] : null;
         $this->container['instrumentIdentifier'] = isset($data['instrumentIdentifier']) ? $data['instrumentIdentifier'] : null;
+        $this->container['thirdPartyToken'] = isset($data['thirdPartyToken']) ? $data['thirdPartyToken'] : null;
     }
 
     /**
@@ -284,6 +290,27 @@ class PtsV2PaymentsPost201ResponseTokenInformation implements ArrayAccess
     public function setInstrumentIdentifier($instrumentIdentifier)
     {
         $this->container['instrumentIdentifier'] = $instrumentIdentifier;
+
+        return $this;
+    }
+
+    /**
+     * Gets thirdPartyToken
+     * @return \CyberSource\Model\PtsV2PaymentsPost201ResponseTokenInformationThirdPartyToken
+     */
+    public function getThirdPartyToken()
+    {
+        return $this->container['thirdPartyToken'];
+    }
+
+    /**
+     * Sets thirdPartyToken
+     * @param \CyberSource\Model\PtsV2PaymentsPost201ResponseTokenInformationThirdPartyToken $thirdPartyToken
+     * @return $this
+     */
+    public function setThirdPartyToken($thirdPartyToken)
+    {
+        $this->container['thirdPartyToken'] = $thirdPartyToken;
 
         return $this;
     }

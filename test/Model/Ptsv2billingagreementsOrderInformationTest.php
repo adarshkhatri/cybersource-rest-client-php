@@ -84,6 +84,13 @@ class Ptsv2billingagreementsOrderInformationTest extends \PHPUnit_Framework_Test
     }
 
     /**
+     * Test attribute "invoiceDetails"
+     */
+    public function testPropertyInvoiceDetails()
+    {
+    }
+
+    /**
      * Test attribute "billTo"
      */
     public function testPropertyBillTo()

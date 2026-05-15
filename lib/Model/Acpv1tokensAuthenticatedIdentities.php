@@ -34,7 +34,7 @@ use \ArrayAccess;
  * Acpv1tokensAuthenticatedIdentities Class Doc Comment
  *
  * @category    Class
- * @description Authenticated Identities data.
+ * @description Authenticated Identities data. Contains the identity assertion from the authentication provider.
  * @package     CyberSource
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen

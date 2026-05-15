@@ -54,7 +54,8 @@ class Ptsv2paymentsidcapturesPointOfSaleInformation implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'emv' => '\CyberSource\Model\Ptsv2paymentsidcapturesPointOfSaleInformationEmv',
-        'amexCapnData' => 'string'
+        'amexCapnData' => 'string',
+        'encryptedKeyId' => 'string'
     ];
 
     /**
@@ -63,7 +64,8 @@ class Ptsv2paymentsidcapturesPointOfSaleInformation implements ArrayAccess
       */
     protected static $swaggerFormats = [
         'emv' => null,
-        'amexCapnData' => null
+        'amexCapnData' => null,
+        'encryptedKeyId' => null
     ];
 
     public static function swaggerTypes()
@@ -82,7 +84,8 @@ class Ptsv2paymentsidcapturesPointOfSaleInformation implements ArrayAccess
      */
     protected static $attributeMap = [
         'emv' => 'emv',
-        'amexCapnData' => 'amexCapnData'
+        'amexCapnData' => 'amexCapnData',
+        'encryptedKeyId' => 'encryptedKeyId'
     ];
 
 
@@ -92,7 +95,8 @@ class Ptsv2paymentsidcapturesPointOfSaleInformation implements ArrayAccess
      */
     protected static $setters = [
         'emv' => 'setEmv',
-        'amexCapnData' => 'setAmexCapnData'
+        'amexCapnData' => 'setAmexCapnData',
+        'encryptedKeyId' => 'setEncryptedKeyId'
     ];
 
 
@@ -102,7 +106,8 @@ class Ptsv2paymentsidcapturesPointOfSaleInformation implements ArrayAccess
      */
     protected static $getters = [
         'emv' => 'getEmv',
-        'amexCapnData' => 'getAmexCapnData'
+        'amexCapnData' => 'getAmexCapnData',
+        'encryptedKeyId' => 'getEncryptedKeyId'
     ];
 
     public static function attributeMap()
@@ -138,6 +143,7 @@ class Ptsv2paymentsidcapturesPointOfSaleInformation implements ArrayAccess
     {
         $this->container['emv'] = isset($data['emv']) ? $data['emv'] : null;
         $this->container['amexCapnData'] = isset($data['amexCapnData']) ? $data['amexCapnData'] : null;
+        $this->container['encryptedKeyId'] = isset($data['encryptedKeyId']) ? $data['encryptedKeyId'] : null;
     }
 
     /**
@@ -203,6 +209,27 @@ class Ptsv2paymentsidcapturesPointOfSaleInformation implements ArrayAccess
     public function setAmexCapnData($amexCapnData)
     {
         $this->container['amexCapnData'] = $amexCapnData;
+
+        return $this;
+    }
+
+    /**
+     * Gets encryptedKeyId
+     * @return string
+     */
+    public function getEncryptedKeyId()
+    {
+        return $this->container['encryptedKeyId'];
+    }
+
+    /**
+     * Sets encryptedKeyId
+     * @param string $encryptedKeyId Identifies the Zone PIN Key (ZPK) used for Online PIN processing by providing the 10‑digit Key Set Identifier (KSI). This value indicates that the PIN block is encrypted under a ZPK and enables the Payment Security Service (PSS) to perform  the correct ZPK→ZPK PIN translation during card‑present EMV PIN transactions.
+     * @return $this
+     */
+    public function setEncryptedKeyId($encryptedKeyId)
+    {
+        $this->container['encryptedKeyId'] = $encryptedKeyId;
 
         return $this;
     }

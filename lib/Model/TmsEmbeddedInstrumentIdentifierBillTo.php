@@ -59,7 +59,8 @@ class TmsEmbeddedInstrumentIdentifierBillTo implements ArrayAccess
         'locality' => 'string',
         'administrativeArea' => 'string',
         'postalCode' => 'string',
-        'country' => 'string'
+        'country' => 'string',
+        'email' => 'string'
     ];
 
     /**
@@ -72,7 +73,8 @@ class TmsEmbeddedInstrumentIdentifierBillTo implements ArrayAccess
         'locality' => null,
         'administrativeArea' => null,
         'postalCode' => null,
-        'country' => null
+        'country' => null,
+        'email' => null
     ];
 
     public static function swaggerTypes()
@@ -95,7 +97,8 @@ class TmsEmbeddedInstrumentIdentifierBillTo implements ArrayAccess
         'locality' => 'locality',
         'administrativeArea' => 'administrativeArea',
         'postalCode' => 'postalCode',
-        'country' => 'country'
+        'country' => 'country',
+        'email' => 'email'
     ];
 
 
@@ -109,7 +112,8 @@ class TmsEmbeddedInstrumentIdentifierBillTo implements ArrayAccess
         'locality' => 'setLocality',
         'administrativeArea' => 'setAdministrativeArea',
         'postalCode' => 'setPostalCode',
-        'country' => 'setCountry'
+        'country' => 'setCountry',
+        'email' => 'setEmail'
     ];
 
 
@@ -123,7 +127,8 @@ class TmsEmbeddedInstrumentIdentifierBillTo implements ArrayAccess
         'locality' => 'getLocality',
         'administrativeArea' => 'getAdministrativeArea',
         'postalCode' => 'getPostalCode',
-        'country' => 'getCountry'
+        'country' => 'getCountry',
+        'email' => 'getEmail'
     ];
 
     public static function attributeMap()
@@ -163,6 +168,7 @@ class TmsEmbeddedInstrumentIdentifierBillTo implements ArrayAccess
         $this->container['administrativeArea'] = isset($data['administrativeArea']) ? $data['administrativeArea'] : null;
         $this->container['postalCode'] = isset($data['postalCode']) ? $data['postalCode'] : null;
         $this->container['country'] = isset($data['country']) ? $data['country'] : null;
+        $this->container['email'] = isset($data['email']) ? $data['email'] : null;
     }
 
     /**
@@ -312,6 +318,27 @@ class TmsEmbeddedInstrumentIdentifierBillTo implements ArrayAccess
     public function setCountry($country)
     {
         $this->container['country'] = $country;
+
+        return $this;
+    }
+
+    /**
+     * Gets email
+     * @return string
+     */
+    public function getEmail()
+    {
+        return $this->container['email'];
+    }
+
+    /**
+     * Sets email
+     * @param string $email Customer's email address, including the full domain name.
+     * @return $this
+     */
+    public function setEmail($email)
+    {
+        $this->container['email'] = $email;
 
         return $this;
     }

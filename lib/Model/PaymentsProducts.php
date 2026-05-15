@@ -73,7 +73,9 @@ class PaymentsProducts implements ArrayAccess
         'unifiedCheckout' => '\CyberSource\Model\PaymentsProductsUnifiedCheckout',
         'receivablesManager' => '\CyberSource\Model\PaymentsProductsTax',
         'serviceFee' => '\CyberSource\Model\PaymentsProductsServiceFee',
-        'batchUpload' => '\CyberSource\Model\PaymentsProductsTax'
+        'batchUpload' => '\CyberSource\Model\PaymentsProductsTax',
+        'transactGuard' => '\CyberSource\Model\PaymentsProductsTax',
+        'microform' => '\CyberSource\Model\PaymentsProductsMicroform'
     ];
 
     /**
@@ -101,7 +103,9 @@ class PaymentsProducts implements ArrayAccess
         'unifiedCheckout' => null,
         'receivablesManager' => null,
         'serviceFee' => null,
-        'batchUpload' => null
+        'batchUpload' => null,
+        'transactGuard' => null,
+        'microform' => null
     ];
 
     public static function swaggerTypes()
@@ -139,7 +143,9 @@ class PaymentsProducts implements ArrayAccess
         'unifiedCheckout' => 'unifiedCheckout',
         'receivablesManager' => 'receivablesManager',
         'serviceFee' => 'serviceFee',
-        'batchUpload' => 'batchUpload'
+        'batchUpload' => 'batchUpload',
+        'transactGuard' => 'transactGuard',
+        'microform' => 'microform'
     ];
 
 
@@ -168,7 +174,9 @@ class PaymentsProducts implements ArrayAccess
         'unifiedCheckout' => 'setUnifiedCheckout',
         'receivablesManager' => 'setReceivablesManager',
         'serviceFee' => 'setServiceFee',
-        'batchUpload' => 'setBatchUpload'
+        'batchUpload' => 'setBatchUpload',
+        'transactGuard' => 'setTransactGuard',
+        'microform' => 'setMicroform'
     ];
 
 
@@ -197,7 +205,9 @@ class PaymentsProducts implements ArrayAccess
         'unifiedCheckout' => 'getUnifiedCheckout',
         'receivablesManager' => 'getReceivablesManager',
         'serviceFee' => 'getServiceFee',
-        'batchUpload' => 'getBatchUpload'
+        'batchUpload' => 'getBatchUpload',
+        'transactGuard' => 'getTransactGuard',
+        'microform' => 'getMicroform'
     ];
 
     public static function attributeMap()
@@ -252,6 +262,8 @@ class PaymentsProducts implements ArrayAccess
         $this->container['receivablesManager'] = isset($data['receivablesManager']) ? $data['receivablesManager'] : null;
         $this->container['serviceFee'] = isset($data['serviceFee']) ? $data['serviceFee'] : null;
         $this->container['batchUpload'] = isset($data['batchUpload']) ? $data['batchUpload'] : null;
+        $this->container['transactGuard'] = isset($data['transactGuard']) ? $data['transactGuard'] : null;
+        $this->container['microform'] = isset($data['microform']) ? $data['microform'] : null;
     }
 
     /**
@@ -716,6 +728,48 @@ class PaymentsProducts implements ArrayAccess
     public function setBatchUpload($batchUpload)
     {
         $this->container['batchUpload'] = $batchUpload;
+
+        return $this;
+    }
+
+    /**
+     * Gets transactGuard
+     * @return \CyberSource\Model\PaymentsProductsTax
+     */
+    public function getTransactGuard()
+    {
+        return $this->container['transactGuard'];
+    }
+
+    /**
+     * Sets transactGuard
+     * @param \CyberSource\Model\PaymentsProductsTax $transactGuard
+     * @return $this
+     */
+    public function setTransactGuard($transactGuard)
+    {
+        $this->container['transactGuard'] = $transactGuard;
+
+        return $this;
+    }
+
+    /**
+     * Gets microform
+     * @return \CyberSource\Model\PaymentsProductsMicroform
+     */
+    public function getMicroform()
+    {
+        return $this->container['microform'];
+    }
+
+    /**
+     * Sets microform
+     * @param \CyberSource\Model\PaymentsProductsMicroform $microform
+     * @return $this
+     */
+    public function setMicroform($microform)
+    {
+        $this->container['microform'] = $microform;
 
         return $this;
     }

@@ -376,4 +376,53 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformationTest extends 
     public function testPropertyWhiteListStatus()
     {
     }
+
+    /**
+     * Test attribute "token"
+     */
+    public function testPropertyToken()
+    {
+    }
+
+    /**
+     * Test attribute "acsReferenceNumber"
+     */
+    public function testPropertyAcsReferenceNumber()
+    {
+    }
+
+    /**
+     * Test attribute "acsOperatorID"
+     */
+    public function testPropertyAcsOperatorID()
+    {
+    }
+
+    /**
+     * Test attribute "idciScore"
+     */
+    public function testPropertyIdciScore()
+    {
+    }
+
+    /**
+     * Test attribute "idciDecision"
+     */
+    public function testPropertyIdciDecision()
+    {
+    }
+
+    /**
+     * Test attribute "idciReasonCode1"
+     */
+    public function testPropertyIdciReasonCode1()
+    {
+    }
+
+    /**
+     * Test attribute "idciReasonCode2"
+     */
+    public function testPropertyIdciReasonCode2()
+    {
+    }
 }

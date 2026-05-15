@@ -34,7 +34,7 @@ use \ArrayAccess;
  * Acpv1tokensBuyerInformation Class Doc Comment
  *
  * @category    Class
- * @description Buyer Information data.
+ * @description Buyer Information data. Contains consumer identification and preference details.
  * @package     CyberSource
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen

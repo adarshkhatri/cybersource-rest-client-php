@@ -58,7 +58,10 @@ class Ptsv2paymentsProcessorInformation implements ArrayAccess
         'authorizationOptions' => '\CyberSource\Model\Ptsv2paymentsProcessorInformationAuthorizationOptions',
         'reversal' => '\CyberSource\Model\Ptsv2paymentsProcessorInformationReversal',
         'network' => '\CyberSource\Model\Ptsv2paymentsProcessorInformationReversalNetwork',
-        'responseSourceCode' => 'string'
+        'authApprovalToken' => 'string',
+        'supplementaryTransactionData' => 'string',
+        'responseSourceCode' => 'string',
+        'cedpVerifiedIndicator' => 'string'
     ];
 
     /**
@@ -70,7 +73,10 @@ class Ptsv2paymentsProcessorInformation implements ArrayAccess
         'authorizationOptions' => null,
         'reversal' => null,
         'network' => null,
-        'responseSourceCode' => null
+        'authApprovalToken' => null,
+        'supplementaryTransactionData' => null,
+        'responseSourceCode' => null,
+        'cedpVerifiedIndicator' => null
     ];
 
     public static function swaggerTypes()
@@ -92,7 +98,10 @@ class Ptsv2paymentsProcessorInformation implements ArrayAccess
         'authorizationOptions' => 'authorizationOptions',
         'reversal' => 'reversal',
         'network' => 'network',
-        'responseSourceCode' => 'responseSourceCode'
+        'authApprovalToken' => 'authApprovalToken',
+        'supplementaryTransactionData' => 'supplementaryTransactionData',
+        'responseSourceCode' => 'responseSourceCode',
+        'cedpVerifiedIndicator' => 'cedpVerifiedIndicator'
     ];
 
 
@@ -105,7 +114,10 @@ class Ptsv2paymentsProcessorInformation implements ArrayAccess
         'authorizationOptions' => 'setAuthorizationOptions',
         'reversal' => 'setReversal',
         'network' => 'setNetwork',
-        'responseSourceCode' => 'setResponseSourceCode'
+        'authApprovalToken' => 'setAuthApprovalToken',
+        'supplementaryTransactionData' => 'setSupplementaryTransactionData',
+        'responseSourceCode' => 'setResponseSourceCode',
+        'cedpVerifiedIndicator' => 'setCedpVerifiedIndicator'
     ];
 
 
@@ -118,7 +130,10 @@ class Ptsv2paymentsProcessorInformation implements ArrayAccess
         'authorizationOptions' => 'getAuthorizationOptions',
         'reversal' => 'getReversal',
         'network' => 'getNetwork',
-        'responseSourceCode' => 'getResponseSourceCode'
+        'authApprovalToken' => 'getAuthApprovalToken',
+        'supplementaryTransactionData' => 'getSupplementaryTransactionData',
+        'responseSourceCode' => 'getResponseSourceCode',
+        'cedpVerifiedIndicator' => 'getCedpVerifiedIndicator'
     ];
 
     public static function attributeMap()
@@ -156,7 +171,10 @@ class Ptsv2paymentsProcessorInformation implements ArrayAccess
         $this->container['authorizationOptions'] = isset($data['authorizationOptions']) ? $data['authorizationOptions'] : null;
         $this->container['reversal'] = isset($data['reversal']) ? $data['reversal'] : null;
         $this->container['network'] = isset($data['network']) ? $data['network'] : null;
+        $this->container['authApprovalToken'] = isset($data['authApprovalToken']) ? $data['authApprovalToken'] : null;
+        $this->container['supplementaryTransactionData'] = isset($data['supplementaryTransactionData']) ? $data['supplementaryTransactionData'] : null;
         $this->container['responseSourceCode'] = isset($data['responseSourceCode']) ? $data['responseSourceCode'] : null;
+        $this->container['cedpVerifiedIndicator'] = isset($data['cedpVerifiedIndicator']) ? $data['cedpVerifiedIndicator'] : null;
     }
 
     /**
@@ -269,6 +287,48 @@ class Ptsv2paymentsProcessorInformation implements ArrayAccess
     }
 
     /**
+     * Gets authApprovalToken
+     * @return string
+     */
+    public function getAuthApprovalToken()
+    {
+        return $this->container['authApprovalToken'];
+    }
+
+    /**
+     * Sets authApprovalToken
+     * @param string $authApprovalToken Interoperability Token received by merchant for Authorization API. Field for merchant to send Klarna Advantage Plus authorization approval token for Auth API call.
+     * @return $this
+     */
+    public function setAuthApprovalToken($authApprovalToken)
+    {
+        $this->container['authApprovalToken'] = $authApprovalToken;
+
+        return $this;
+    }
+
+    /**
+     * Gets supplementaryTransactionData
+     * @return string
+     */
+    public function getSupplementaryTransactionData()
+    {
+        return $this->container['supplementaryTransactionData'];
+    }
+
+    /**
+     * Sets supplementaryTransactionData
+     * @param string $supplementaryTransactionData Supplementary transaction data for Klarna Advantage Plus. Fields to capture Interoperability Data from Merchant and transfer to Klarna for Authorization/Sale/Re-Auth/Capture APIs.
+     * @return $this
+     */
+    public function setSupplementaryTransactionData($supplementaryTransactionData)
+    {
+        $this->container['supplementaryTransactionData'] = $supplementaryTransactionData;
+
+        return $this;
+    }
+
+    /**
      * Gets responseSourceCode
      * @return string
      */
@@ -285,6 +345,27 @@ class Ptsv2paymentsProcessorInformation implements ArrayAccess
     public function setResponseSourceCode($responseSourceCode)
     {
         $this->container['responseSourceCode'] = $responseSourceCode;
+
+        return $this;
+    }
+
+    /**
+     * Gets cedpVerifiedIndicator
+     * @return string
+     */
+    public function getCedpVerifiedIndicator()
+    {
+        return $this->container['cedpVerifiedIndicator'];
+    }
+
+    /**
+     * Sets cedpVerifiedIndicator
+     * @param string $cedpVerifiedIndicator Merchant Commercial Enhanced Data Program (CEDP) verified indicator for capture/bill requests.  This field is used when the client is doing authorization with a different gateway and capture/settlement with CyberSource.  This field flows in ISO field 34, DSID 02 tag DA, in AN, EBCDIC format.  Possible values: - `Y`: Merchant CEDP verified  #### Used by **Capture Request** Request field for force capture/bill support when auth is done with a different gateway.
+     * @return $this
+     */
+    public function setCedpVerifiedIndicator($cedpVerifiedIndicator)
+    {
+        $this->container['cedpVerifiedIndicator'] = $cedpVerifiedIndicator;
 
         return $this;
     }

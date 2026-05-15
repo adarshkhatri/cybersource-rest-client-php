@@ -53,7 +53,8 @@ class PtsV2PaymentsCapturesPost201ResponsePointOfSaleInformation implements Arra
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'terminalId' => 'string'
+        'terminalId' => 'string',
+        'encryptedKeyId' => 'string'
     ];
 
     /**
@@ -61,7 +62,8 @@ class PtsV2PaymentsCapturesPost201ResponsePointOfSaleInformation implements Arra
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'terminalId' => null
+        'terminalId' => null,
+        'encryptedKeyId' => null
     ];
 
     public static function swaggerTypes()
@@ -79,7 +81,8 @@ class PtsV2PaymentsCapturesPost201ResponsePointOfSaleInformation implements Arra
      * @var string[]
      */
     protected static $attributeMap = [
-        'terminalId' => 'terminalId'
+        'terminalId' => 'terminalId',
+        'encryptedKeyId' => 'encryptedKeyId'
     ];
 
 
@@ -88,7 +91,8 @@ class PtsV2PaymentsCapturesPost201ResponsePointOfSaleInformation implements Arra
      * @var string[]
      */
     protected static $setters = [
-        'terminalId' => 'setTerminalId'
+        'terminalId' => 'setTerminalId',
+        'encryptedKeyId' => 'setEncryptedKeyId'
     ];
 
 
@@ -97,7 +101,8 @@ class PtsV2PaymentsCapturesPost201ResponsePointOfSaleInformation implements Arra
      * @var string[]
      */
     protected static $getters = [
-        'terminalId' => 'getTerminalId'
+        'terminalId' => 'getTerminalId',
+        'encryptedKeyId' => 'getEncryptedKeyId'
     ];
 
     public static function attributeMap()
@@ -132,6 +137,7 @@ class PtsV2PaymentsCapturesPost201ResponsePointOfSaleInformation implements Arra
     public function __construct(array $data = null)
     {
         $this->container['terminalId'] = isset($data['terminalId']) ? $data['terminalId'] : null;
+        $this->container['encryptedKeyId'] = isset($data['encryptedKeyId']) ? $data['encryptedKeyId'] : null;
     }
 
     /**
@@ -176,6 +182,27 @@ class PtsV2PaymentsCapturesPost201ResponsePointOfSaleInformation implements Arra
     public function setTerminalId($terminalId)
     {
         $this->container['terminalId'] = $terminalId;
+
+        return $this;
+    }
+
+    /**
+     * Gets encryptedKeyId
+     * @return string
+     */
+    public function getEncryptedKeyId()
+    {
+        return $this->container['encryptedKeyId'];
+    }
+
+    /**
+     * Sets encryptedKeyId
+     * @param string $encryptedKeyId Identifies the Zone PIN Key (ZPK) used for Online PIN processing by providing the 10‑digit Key Set Identifier (KSI). This value indicates that the PIN block is encrypted under a ZPK and enables the Payment Security Service (PSS) to perform  the correct ZPK→ZPK PIN translation during card‑present EMV PIN transactions.
+     * @return $this
+     */
+    public function setEncryptedKeyId($encryptedKeyId)
+    {
+        $this->container['encryptedKeyId'] = $encryptedKeyId;
 
         return $this;
     }

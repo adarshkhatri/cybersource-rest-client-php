@@ -55,7 +55,8 @@ class Ucv1sessionsDataConsumerAuthenticationInformation implements ArrayAccess
     protected static $swaggerTypes = [
         'challengeCode' => 'string',
         'messageCategory' => 'string',
-        'acsWindowSize' => 'string'
+        'acsWindowSize' => 'string',
+        'productCode' => 'string'
     ];
 
     /**
@@ -65,7 +66,8 @@ class Ucv1sessionsDataConsumerAuthenticationInformation implements ArrayAccess
     protected static $swaggerFormats = [
         'challengeCode' => null,
         'messageCategory' => null,
-        'acsWindowSize' => null
+        'acsWindowSize' => null,
+        'productCode' => null
     ];
 
     public static function swaggerTypes()
@@ -85,7 +87,8 @@ class Ucv1sessionsDataConsumerAuthenticationInformation implements ArrayAccess
     protected static $attributeMap = [
         'challengeCode' => 'challengeCode',
         'messageCategory' => 'messageCategory',
-        'acsWindowSize' => 'acsWindowSize'
+        'acsWindowSize' => 'acsWindowSize',
+        'productCode' => 'productCode'
     ];
 
 
@@ -96,7 +99,8 @@ class Ucv1sessionsDataConsumerAuthenticationInformation implements ArrayAccess
     protected static $setters = [
         'challengeCode' => 'setChallengeCode',
         'messageCategory' => 'setMessageCategory',
-        'acsWindowSize' => 'setAcsWindowSize'
+        'acsWindowSize' => 'setAcsWindowSize',
+        'productCode' => 'setProductCode'
     ];
 
 
@@ -107,7 +111,8 @@ class Ucv1sessionsDataConsumerAuthenticationInformation implements ArrayAccess
     protected static $getters = [
         'challengeCode' => 'getChallengeCode',
         'messageCategory' => 'getMessageCategory',
-        'acsWindowSize' => 'getAcsWindowSize'
+        'acsWindowSize' => 'getAcsWindowSize',
+        'productCode' => 'getProductCode'
     ];
 
     public static function attributeMap()
@@ -144,6 +149,7 @@ class Ucv1sessionsDataConsumerAuthenticationInformation implements ArrayAccess
         $this->container['challengeCode'] = isset($data['challengeCode']) ? $data['challengeCode'] : null;
         $this->container['messageCategory'] = isset($data['messageCategory']) ? $data['messageCategory'] : null;
         $this->container['acsWindowSize'] = isset($data['acsWindowSize']) ? $data['acsWindowSize'] : null;
+        $this->container['productCode'] = isset($data['productCode']) ? $data['productCode'] : null;
     }
 
     /**
@@ -230,6 +236,27 @@ class Ucv1sessionsDataConsumerAuthenticationInformation implements ArrayAccess
     public function setAcsWindowSize($acsWindowSize)
     {
         $this->container['acsWindowSize'] = $acsWindowSize;
+
+        return $this;
+    }
+
+    /**
+     * Gets productCode
+     * @return string
+     */
+    public function getProductCode()
+    {
+        return $this->container['productCode'];
+    }
+
+    /**
+     * Sets productCode
+     * @param string $productCode Specifies the product code, which designates the type of transaction.<br><br>  Specify one of the following values for this field:  - AIR: Airline purchase  Important Required for American Express SafeKey (U.S.).  - ACC: Accommodation Rental  - ACF: Account funding  - CHA: Check acceptance  - DIG: Digital Goods  - DSP: Cash Dispensing  - GAS: Fuel  - GEN: General Retail  - LUX: Luxury Retail  - PAL: Prepaid activation and load  - PHY: Goods or services purchase  - QCT: Quasi-cash transaction  - REN: Car Rental  - RES: Restaurant  - SVC: Services  - TBD: Other  - TRA: Travel<br>  **Important** Required for Visa Secure transactions in Brazil. Do not use this request field for any other types of transactions.
+     * @return $this
+     */
+    public function setProductCode($productCode)
+    {
+        $this->container['productCode'] = $productCode;
 
         return $this;
     }

@@ -32,7 +32,7 @@ namespace CyberSource;
  * Acpv1tokensConsumerIdentityTest Class Doc Comment
  *
  * @category    Class */
-// * @description Consumer Identity data.
+// * @description Consumer Identity data. Identifies the consumer using an email address or phone number.
 /**
  * @package     CyberSource
  * @author      Swagger Codegen team

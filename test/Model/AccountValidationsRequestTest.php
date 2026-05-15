@@ -96,4 +96,11 @@ class AccountValidationsRequestTest extends \PHPUnit_Framework_TestCase
     public function testPropertyPaymentInformation()
     {
     }
+
+    /**
+     * Test attribute "tokenInformation"
+     */
+    public function testPropertyTokenInformation()
+    {
+    }
 }

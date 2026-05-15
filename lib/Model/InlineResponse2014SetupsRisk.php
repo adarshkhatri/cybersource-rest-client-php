@@ -54,7 +54,8 @@ class InlineResponse2014SetupsRisk implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'fraudManagementEssentials' => '\CyberSource\Model\InlineResponse2014SetupsPaymentsCardProcessing',
-        'decisionManager' => '\CyberSource\Model\InlineResponse2014SetupsPaymentsCardProcessing'
+        'decisionManager' => '\CyberSource\Model\InlineResponse2014SetupsPaymentsCardProcessing',
+        'enhancedAuthentication' => '\CyberSource\Model\InlineResponse2014SetupsPaymentsCardProcessing'
     ];
 
     /**
@@ -63,7 +64,8 @@ class InlineResponse2014SetupsRisk implements ArrayAccess
       */
     protected static $swaggerFormats = [
         'fraudManagementEssentials' => null,
-        'decisionManager' => null
+        'decisionManager' => null,
+        'enhancedAuthentication' => null
     ];
 
     public static function swaggerTypes()
@@ -82,7 +84,8 @@ class InlineResponse2014SetupsRisk implements ArrayAccess
      */
     protected static $attributeMap = [
         'fraudManagementEssentials' => 'fraudManagementEssentials',
-        'decisionManager' => 'decisionManager'
+        'decisionManager' => 'decisionManager',
+        'enhancedAuthentication' => 'enhancedAuthentication'
     ];
 
 
@@ -92,7 +95,8 @@ class InlineResponse2014SetupsRisk implements ArrayAccess
      */
     protected static $setters = [
         'fraudManagementEssentials' => 'setFraudManagementEssentials',
-        'decisionManager' => 'setDecisionManager'
+        'decisionManager' => 'setDecisionManager',
+        'enhancedAuthentication' => 'setEnhancedAuthentication'
     ];
 
 
@@ -102,7 +106,8 @@ class InlineResponse2014SetupsRisk implements ArrayAccess
      */
     protected static $getters = [
         'fraudManagementEssentials' => 'getFraudManagementEssentials',
-        'decisionManager' => 'getDecisionManager'
+        'decisionManager' => 'getDecisionManager',
+        'enhancedAuthentication' => 'getEnhancedAuthentication'
     ];
 
     public static function attributeMap()
@@ -138,6 +143,7 @@ class InlineResponse2014SetupsRisk implements ArrayAccess
     {
         $this->container['fraudManagementEssentials'] = isset($data['fraudManagementEssentials']) ? $data['fraudManagementEssentials'] : null;
         $this->container['decisionManager'] = isset($data['decisionManager']) ? $data['decisionManager'] : null;
+        $this->container['enhancedAuthentication'] = isset($data['enhancedAuthentication']) ? $data['enhancedAuthentication'] : null;
     }
 
     /**
@@ -203,6 +209,27 @@ class InlineResponse2014SetupsRisk implements ArrayAccess
     public function setDecisionManager($decisionManager)
     {
         $this->container['decisionManager'] = $decisionManager;
+
+        return $this;
+    }
+
+    /**
+     * Gets enhancedAuthentication
+     * @return \CyberSource\Model\InlineResponse2014SetupsPaymentsCardProcessing
+     */
+    public function getEnhancedAuthentication()
+    {
+        return $this->container['enhancedAuthentication'];
+    }
+
+    /**
+     * Sets enhancedAuthentication
+     * @param \CyberSource\Model\InlineResponse2014SetupsPaymentsCardProcessing $enhancedAuthentication
+     * @return $this
+     */
+    public function setEnhancedAuthentication($enhancedAuthentication)
+    {
+        $this->container['enhancedAuthentication'] = $enhancedAuthentication;
 
         return $this;
     }

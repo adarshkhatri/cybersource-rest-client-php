@@ -117,4 +117,11 @@ class Ptsv2paymentsidrefundsOrderInformationTest extends \PHPUnit_Framework_Test
     public function testPropertyShippingDetails()
     {
     }
+
+    /**
+     * Test attribute "digitalCurrency"
+     */
+    public function testPropertyDigitalCurrency()
+    {
+    }
 }

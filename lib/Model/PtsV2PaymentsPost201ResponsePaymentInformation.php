@@ -54,7 +54,7 @@ class PtsV2PaymentsPost201ResponsePaymentInformation implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'card' => '\CyberSource\Model\PtsV2PaymentsPost201ResponsePaymentAccountInformationCard',
-        'tokenizedCard' => '\CyberSource\Model\PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard',
+        'tokenizedCard' => '\CyberSource\Model\PtsV2PaymentsPost201ResponsePaymentAccountInformationTokenizedCard',
         'tokenizedPaymentMethod' => '\CyberSource\Model\PtsV2PaymentsPost201ResponsePaymentInformationTokenizedPaymentMethod',
         'accountFeatures' => '\CyberSource\Model\PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures',
         'bank' => '\CyberSource\Model\PtsV2PaymentsPost201ResponsePaymentInformationBank',
@@ -266,7 +266,7 @@ class PtsV2PaymentsPost201ResponsePaymentInformation implements ArrayAccess
 
     /**
      * Gets tokenizedCard
-     * @return \CyberSource\Model\PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard
+     * @return \CyberSource\Model\PtsV2PaymentsPost201ResponsePaymentAccountInformationTokenizedCard
      */
     public function getTokenizedCard()
     {
@@ -275,7 +275,7 @@ class PtsV2PaymentsPost201ResponsePaymentInformation implements ArrayAccess
 
     /**
      * Sets tokenizedCard
-     * @param \CyberSource\Model\PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard $tokenizedCard
+     * @param \CyberSource\Model\PtsV2PaymentsPost201ResponsePaymentAccountInformationTokenizedCard $tokenizedCard
      * @return $this
      */
     public function setTokenizedCard($tokenizedCard)

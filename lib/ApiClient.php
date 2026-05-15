@@ -761,6 +761,14 @@ class ApiClient
             throw new \InvalidArgumentException("Invalid Authentication Type : " . $merchantConfig->getAuthenticationType());
         }
 
+        $vcSDKTelemetryMerchant = "v-c-sdk-telemetry-merchant-id:".$merchantConfig->getMerchantID();
+        array_push($headers, $vcSDKTelemetryMerchant);
+
+        if($merchantConfig->getIsSDK() === true){
+            $vcSDKTelemetryMCP = "v-c-sdk-telemetry-mcp:true";
+            array_push($headers, $vcSDKTelemetryMCP);
+        }
+
         array_push($headers, "v-c-client-id:" . $this->clientId);
 
         // if ($merchantConfig->getSolutionId() != null && trim($merchantConfig->getSolutionId() ?? '') != '')

@@ -32,7 +32,7 @@ namespace CyberSource;
  * Acpv1instructionsinstructionIdcredentialsOrderInformationAmountDetailTest Class Doc Comment
  *
  * @category    Class */
-// * @description Amount Detail data.
+// * @description Amount Detail data. Breaks down the total transaction amount into components.
 /**
  * @package     CyberSource
  * @author      Swagger Codegen team

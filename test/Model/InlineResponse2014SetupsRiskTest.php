@@ -89,4 +89,11 @@ class InlineResponse2014SetupsRiskTest extends \PHPUnit_Framework_TestCase
     public function testPropertyDecisionManager()
     {
     }
+
+    /**
+     * Test attribute "enhancedAuthentication"
+     */
+    public function testPropertyEnhancedAuthentication()
+    {
+    }
 }

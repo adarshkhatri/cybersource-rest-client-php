@@ -4,6 +4,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **foregroundColor** | **string** | Card foreground color. | [optional] 
+**backgroundColor** | **string** | Card background color. | [optional] 
+**labelColor** | **string** | Card label color. | [optional] 
 **combinedAsset** | [**\CyberSource\Model\TmsCardArtCombinedAsset**](TmsCardArtCombinedAsset.md) |  | [optional] 
 **brandLogoAsset** | [**\CyberSource\Model\TmsCardArtBrandLogoAsset**](TmsCardArtBrandLogoAsset.md) |  | [optional] 
 **issuerLogoAsset** | [**\CyberSource\Model\TmsCardArtIssuerLogoAsset**](TmsCardArtIssuerLogoAsset.md) |  | [optional] 

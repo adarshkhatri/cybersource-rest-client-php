@@ -96,4 +96,18 @@ class ValueAddedServicesProductsTest extends \PHPUnit_Framework_TestCase
     public function testPropertyBankAccountValidation()
     {
     }
+
+    /**
+     * Test attribute "flexapi"
+     */
+    public function testPropertyFlexapi()
+    {
+    }
+
+    /**
+     * Test attribute "webhooks"
+     */
+    public function testPropertyWebhooks()
+    {
+    }
 }

@@ -119,6 +119,13 @@ class AuthReversalRequestTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "deviceInformation"
+     */
+    public function testPropertyDeviceInformation()
+    {
+    }
+
+    /**
      * Test attribute "processorInformation"
      */
     public function testPropertyProcessorInformation()

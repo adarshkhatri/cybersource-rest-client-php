@@ -131,4 +131,11 @@ class Ptsv1pushfundstransferProcessingInformationTest extends \PHPUnit_Framework
     public function testPropertyReconciliationId()
     {
     }
+
+    /**
+     * Test attribute "accountVerificationCode"
+     */
+    public function testPropertyAccountVerificationCode()
+    {
+    }
 }

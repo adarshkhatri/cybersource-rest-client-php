@@ -67,7 +67,7 @@ class PostCustomerPaymentInstrumentRequest implements ArrayAccess
         'merchantInformation' => '\CyberSource\Model\TmsMerchantInformation',
         'instrumentIdentifier' => '\CyberSource\Model\Tmsv2tokenizeTokenInformationCustomerEmbeddedDefaultPaymentInstrumentInstrumentIdentifier',
         'metadata' => '\CyberSource\Model\Tmsv2tokenizeTokenInformationCustomerEmbeddedDefaultPaymentInstrumentMetadata',
-        'embedded' => '\CyberSource\Model\Tmsv2tokenizeTokenInformationCustomerEmbeddedDefaultPaymentInstrumentEmbedded'
+        'embedded' => '\CyberSource\Model\Tmsv1paymentinstrumentsEmbedded'
     ];
 
     /**
@@ -539,7 +539,7 @@ class PostCustomerPaymentInstrumentRequest implements ArrayAccess
 
     /**
      * Gets embedded
-     * @return \CyberSource\Model\Tmsv2tokenizeTokenInformationCustomerEmbeddedDefaultPaymentInstrumentEmbedded
+     * @return \CyberSource\Model\Tmsv1paymentinstrumentsEmbedded
      */
     public function getEmbedded()
     {
@@ -548,7 +548,7 @@ class PostCustomerPaymentInstrumentRequest implements ArrayAccess
 
     /**
      * Sets embedded
-     * @param \CyberSource\Model\Tmsv2tokenizeTokenInformationCustomerEmbeddedDefaultPaymentInstrumentEmbedded $embedded
+     * @param \CyberSource\Model\Tmsv1paymentinstrumentsEmbedded $embedded
      * @return $this
      */
     public function setEmbedded($embedded)

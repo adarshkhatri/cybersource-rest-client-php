@@ -55,7 +55,9 @@ class ValueAddedServicesProducts implements ArrayAccess
     protected static $swaggerTypes = [
         'reporting' => '\CyberSource\Model\PaymentsProductsTax',
         'transactionSearch' => '\CyberSource\Model\PaymentsProductsTax',
-        'bankAccountValidation' => '\CyberSource\Model\PaymentsProductsTax'
+        'bankAccountValidation' => '\CyberSource\Model\PaymentsProductsTax',
+        'flexapi' => '\CyberSource\Model\PaymentsProductsTax',
+        'webhooks' => '\CyberSource\Model\PaymentsProductsTax'
     ];
 
     /**
@@ -65,7 +67,9 @@ class ValueAddedServicesProducts implements ArrayAccess
     protected static $swaggerFormats = [
         'reporting' => null,
         'transactionSearch' => null,
-        'bankAccountValidation' => null
+        'bankAccountValidation' => null,
+        'flexapi' => null,
+        'webhooks' => null
     ];
 
     public static function swaggerTypes()
@@ -85,7 +89,9 @@ class ValueAddedServicesProducts implements ArrayAccess
     protected static $attributeMap = [
         'reporting' => 'reporting',
         'transactionSearch' => 'transactionSearch',
-        'bankAccountValidation' => 'bankAccountValidation'
+        'bankAccountValidation' => 'bankAccountValidation',
+        'flexapi' => 'flexapi',
+        'webhooks' => 'webhooks'
     ];
 
 
@@ -96,7 +102,9 @@ class ValueAddedServicesProducts implements ArrayAccess
     protected static $setters = [
         'reporting' => 'setReporting',
         'transactionSearch' => 'setTransactionSearch',
-        'bankAccountValidation' => 'setBankAccountValidation'
+        'bankAccountValidation' => 'setBankAccountValidation',
+        'flexapi' => 'setFlexapi',
+        'webhooks' => 'setWebhooks'
     ];
 
 
@@ -107,7 +115,9 @@ class ValueAddedServicesProducts implements ArrayAccess
     protected static $getters = [
         'reporting' => 'getReporting',
         'transactionSearch' => 'getTransactionSearch',
-        'bankAccountValidation' => 'getBankAccountValidation'
+        'bankAccountValidation' => 'getBankAccountValidation',
+        'flexapi' => 'getFlexapi',
+        'webhooks' => 'getWebhooks'
     ];
 
     public static function attributeMap()
@@ -144,6 +154,8 @@ class ValueAddedServicesProducts implements ArrayAccess
         $this->container['reporting'] = isset($data['reporting']) ? $data['reporting'] : null;
         $this->container['transactionSearch'] = isset($data['transactionSearch']) ? $data['transactionSearch'] : null;
         $this->container['bankAccountValidation'] = isset($data['bankAccountValidation']) ? $data['bankAccountValidation'] : null;
+        $this->container['flexapi'] = isset($data['flexapi']) ? $data['flexapi'] : null;
+        $this->container['webhooks'] = isset($data['webhooks']) ? $data['webhooks'] : null;
     }
 
     /**
@@ -230,6 +242,48 @@ class ValueAddedServicesProducts implements ArrayAccess
     public function setBankAccountValidation($bankAccountValidation)
     {
         $this->container['bankAccountValidation'] = $bankAccountValidation;
+
+        return $this;
+    }
+
+    /**
+     * Gets flexapi
+     * @return \CyberSource\Model\PaymentsProductsTax
+     */
+    public function getFlexapi()
+    {
+        return $this->container['flexapi'];
+    }
+
+    /**
+     * Sets flexapi
+     * @param \CyberSource\Model\PaymentsProductsTax $flexapi
+     * @return $this
+     */
+    public function setFlexapi($flexapi)
+    {
+        $this->container['flexapi'] = $flexapi;
+
+        return $this;
+    }
+
+    /**
+     * Gets webhooks
+     * @return \CyberSource\Model\PaymentsProductsTax
+     */
+    public function getWebhooks()
+    {
+        return $this->container['webhooks'];
+    }
+
+    /**
+     * Sets webhooks
+     * @param \CyberSource\Model\PaymentsProductsTax $webhooks
+     * @return $this
+     */
+    public function setWebhooks($webhooks)
+    {
+        $this->container['webhooks'] = $webhooks;
 
         return $this;
     }

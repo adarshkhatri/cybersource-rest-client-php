@@ -53,12 +53,14 @@ class Ptsv2paymentsOrderInformation implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
+        'extensionDays' => 'string',
         'amountDetails' => '\CyberSource\Model\Ptsv2paymentsOrderInformationAmountDetails',
         'billTo' => '\CyberSource\Model\Ptsv2paymentsOrderInformationBillTo',
         'shipTo' => '\CyberSource\Model\Ptsv2paymentsOrderInformationShipTo',
         'lineItems' => '\CyberSource\Model\Ptsv2paymentsOrderInformationLineItems[]',
         'invoiceDetails' => '\CyberSource\Model\Ptsv2paymentsOrderInformationInvoiceDetails',
         'shippingDetails' => '\CyberSource\Model\Ptsv2paymentsOrderInformationShippingDetails',
+        'digitalCurrency' => '\CyberSource\Model\Ptsv2paymentsOrderInformationDigitalCurrency',
         'returnsAccepted' => 'bool',
         'isCryptocurrencyPurchase' => 'string',
         'cutoffDateTime' => 'string',
@@ -73,12 +75,14 @@ class Ptsv2paymentsOrderInformation implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
+        'extensionDays' => null,
         'amountDetails' => null,
         'billTo' => null,
         'shipTo' => null,
         'lineItems' => null,
         'invoiceDetails' => null,
         'shippingDetails' => null,
+        'digitalCurrency' => null,
         'returnsAccepted' => null,
         'isCryptocurrencyPurchase' => null,
         'cutoffDateTime' => null,
@@ -103,12 +107,14 @@ class Ptsv2paymentsOrderInformation implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
+        'extensionDays' => 'extensionDays',
         'amountDetails' => 'amountDetails',
         'billTo' => 'billTo',
         'shipTo' => 'shipTo',
         'lineItems' => 'lineItems',
         'invoiceDetails' => 'invoiceDetails',
         'shippingDetails' => 'shippingDetails',
+        'digitalCurrency' => 'digitalCurrency',
         'returnsAccepted' => 'returnsAccepted',
         'isCryptocurrencyPurchase' => 'isCryptocurrencyPurchase',
         'cutoffDateTime' => 'cutoffDateTime',
@@ -124,12 +130,14 @@ class Ptsv2paymentsOrderInformation implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
+        'extensionDays' => 'setExtensionDays',
         'amountDetails' => 'setAmountDetails',
         'billTo' => 'setBillTo',
         'shipTo' => 'setShipTo',
         'lineItems' => 'setLineItems',
         'invoiceDetails' => 'setInvoiceDetails',
         'shippingDetails' => 'setShippingDetails',
+        'digitalCurrency' => 'setDigitalCurrency',
         'returnsAccepted' => 'setReturnsAccepted',
         'isCryptocurrencyPurchase' => 'setIsCryptocurrencyPurchase',
         'cutoffDateTime' => 'setCutoffDateTime',
@@ -145,12 +153,14 @@ class Ptsv2paymentsOrderInformation implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
+        'extensionDays' => 'getExtensionDays',
         'amountDetails' => 'getAmountDetails',
         'billTo' => 'getBillTo',
         'shipTo' => 'getShipTo',
         'lineItems' => 'getLineItems',
         'invoiceDetails' => 'getInvoiceDetails',
         'shippingDetails' => 'getShippingDetails',
+        'digitalCurrency' => 'getDigitalCurrency',
         'returnsAccepted' => 'getReturnsAccepted',
         'isCryptocurrencyPurchase' => 'getIsCryptocurrencyPurchase',
         'cutoffDateTime' => 'getCutoffDateTime',
@@ -191,12 +201,14 @@ class Ptsv2paymentsOrderInformation implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['extensionDays'] = isset($data['extensionDays']) ? $data['extensionDays'] : null;
         $this->container['amountDetails'] = isset($data['amountDetails']) ? $data['amountDetails'] : null;
         $this->container['billTo'] = isset($data['billTo']) ? $data['billTo'] : null;
         $this->container['shipTo'] = isset($data['shipTo']) ? $data['shipTo'] : null;
         $this->container['lineItems'] = isset($data['lineItems']) ? $data['lineItems'] : null;
         $this->container['invoiceDetails'] = isset($data['invoiceDetails']) ? $data['invoiceDetails'] : null;
         $this->container['shippingDetails'] = isset($data['shippingDetails']) ? $data['shippingDetails'] : null;
+        $this->container['digitalCurrency'] = isset($data['digitalCurrency']) ? $data['digitalCurrency'] : null;
         $this->container['returnsAccepted'] = isset($data['returnsAccepted']) ? $data['returnsAccepted'] : null;
         $this->container['isCryptocurrencyPurchase'] = isset($data['isCryptocurrencyPurchase']) ? $data['isCryptocurrencyPurchase'] : null;
         $this->container['cutoffDateTime'] = isset($data['cutoffDateTime']) ? $data['cutoffDateTime'] : null;
@@ -230,6 +242,27 @@ class Ptsv2paymentsOrderInformation implements ArrayAccess
         return true;
     }
 
+
+    /**
+     * Gets extensionDays
+     * @return string
+     */
+    public function getExtensionDays()
+    {
+        return $this->container['extensionDays'];
+    }
+
+    /**
+     * Sets extensionDays
+     * @param string $extensionDays Request field for merchant to increase the AUTH expiry days for Klarna Advantage Plus. Applicable for Re-Authorization (AP_REAUTH) service.
+     * @return $this
+     */
+    public function setExtensionDays($extensionDays)
+    {
+        $this->container['extensionDays'] = $extensionDays;
+
+        return $this;
+    }
 
     /**
      * Gets amountDetails
@@ -353,6 +386,27 @@ class Ptsv2paymentsOrderInformation implements ArrayAccess
     public function setShippingDetails($shippingDetails)
     {
         $this->container['shippingDetails'] = $shippingDetails;
+
+        return $this;
+    }
+
+    /**
+     * Gets digitalCurrency
+     * @return \CyberSource\Model\Ptsv2paymentsOrderInformationDigitalCurrency
+     */
+    public function getDigitalCurrency()
+    {
+        return $this->container['digitalCurrency'];
+    }
+
+    /**
+     * Sets digitalCurrency
+     * @param \CyberSource\Model\Ptsv2paymentsOrderInformationDigitalCurrency $digitalCurrency
+     * @return $this
+     */
+    public function setDigitalCurrency($digitalCurrency)
+    {
+        $this->container['digitalCurrency'] = $digitalCurrency;
 
         return $this;
     }

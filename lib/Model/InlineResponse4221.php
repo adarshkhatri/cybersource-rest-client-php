@@ -57,7 +57,7 @@ class InlineResponse4221 implements ArrayAccess
         'status' => 'string',
         'reason' => 'string',
         'message' => 'string',
-        'details' => '\CyberSource\Model\InlineResponse4007Details[]'
+        'details' => '\CyberSource\Model\InlineResponse4009Details[]'
     ];
 
     /**
@@ -269,7 +269,7 @@ class InlineResponse4221 implements ArrayAccess
 
     /**
      * Gets details
-     * @return \CyberSource\Model\InlineResponse4007Details[]
+     * @return \CyberSource\Model\InlineResponse4009Details[]
      */
     public function getDetails()
     {
@@ -278,7 +278,7 @@ class InlineResponse4221 implements ArrayAccess
 
     /**
      * Sets details
-     * @param \CyberSource\Model\InlineResponse4007Details[] $details
+     * @param \CyberSource\Model\InlineResponse4009Details[] $details
      * @return $this
      */
     public function setDetails($details)
