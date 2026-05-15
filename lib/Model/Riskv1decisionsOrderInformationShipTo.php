@@ -66,7 +66,9 @@ class Riskv1decisionsOrderInformationShipTo implements ArrayAccess
         'phoneNumber' => 'string',
         'postalCode' => 'string',
         'destinationCode' => 'int',
-        'method' => 'string'
+        'method' => 'string',
+        'email' => 'string',
+        'company' => 'string'
     ];
 
     /**
@@ -87,7 +89,9 @@ class Riskv1decisionsOrderInformationShipTo implements ArrayAccess
         'phoneNumber' => null,
         'postalCode' => null,
         'destinationCode' => null,
-        'method' => null
+        'method' => null,
+        'email' => null,
+        'company' => null
     ];
 
     public static function swaggerTypes()
@@ -118,7 +122,9 @@ class Riskv1decisionsOrderInformationShipTo implements ArrayAccess
         'phoneNumber' => 'phoneNumber',
         'postalCode' => 'postalCode',
         'destinationCode' => 'destinationCode',
-        'method' => 'method'
+        'method' => 'method',
+        'email' => 'email',
+        'company' => 'company'
     ];
 
 
@@ -140,7 +146,9 @@ class Riskv1decisionsOrderInformationShipTo implements ArrayAccess
         'phoneNumber' => 'setPhoneNumber',
         'postalCode' => 'setPostalCode',
         'destinationCode' => 'setDestinationCode',
-        'method' => 'setMethod'
+        'method' => 'setMethod',
+        'email' => 'setEmail',
+        'company' => 'setCompany'
     ];
 
 
@@ -162,7 +170,9 @@ class Riskv1decisionsOrderInformationShipTo implements ArrayAccess
         'phoneNumber' => 'getPhoneNumber',
         'postalCode' => 'getPostalCode',
         'destinationCode' => 'getDestinationCode',
-        'method' => 'getMethod'
+        'method' => 'getMethod',
+        'email' => 'getEmail',
+        'company' => 'getCompany'
     ];
 
     public static function attributeMap()
@@ -210,6 +220,8 @@ class Riskv1decisionsOrderInformationShipTo implements ArrayAccess
         $this->container['postalCode'] = isset($data['postalCode']) ? $data['postalCode'] : null;
         $this->container['destinationCode'] = isset($data['destinationCode']) ? $data['destinationCode'] : null;
         $this->container['method'] = isset($data['method']) ? $data['method'] : null;
+        $this->container['email'] = isset($data['email']) ? $data['email'] : null;
+        $this->container['company'] = isset($data['company']) ? $data['company'] : null;
     }
 
     /**
@@ -527,6 +539,48 @@ class Riskv1decisionsOrderInformationShipTo implements ArrayAccess
     public function setMethod($method)
     {
         $this->container['method'] = $method;
+
+        return $this;
+    }
+
+    /**
+     * Gets email
+     * @return string
+     */
+    public function getEmail()
+    {
+        return $this->container['email'];
+    }
+
+    /**
+     * Sets email
+     * @param string $email Email of the recipient.
+     * @return $this
+     */
+    public function setEmail($email)
+    {
+        $this->container['email'] = $email;
+
+        return $this;
+    }
+
+    /**
+     * Gets company
+     * @return string
+     */
+    public function getCompany()
+    {
+        return $this->container['company'];
+    }
+
+    /**
+     * Sets company
+     * @param string $company Name of the customer's company.
+     * @return $this
+     */
+    public function setCompany($company)
+    {
+        $this->container['company'] = $company;
 
         return $this;
     }

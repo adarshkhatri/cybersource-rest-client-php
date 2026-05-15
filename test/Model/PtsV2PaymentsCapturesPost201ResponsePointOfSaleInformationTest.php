@@ -82,4 +82,11 @@ class PtsV2PaymentsCapturesPost201ResponsePointOfSaleInformationTest extends \PH
     public function testPropertyTerminalId()
     {
     }
+
+    /**
+     * Test attribute "encryptedKeyId"
+     */
+    public function testPropertyEncryptedKeyId()
+    {
+    }
 }

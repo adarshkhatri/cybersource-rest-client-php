@@ -238,6 +238,13 @@ class Ptsv2paymentsPointOfSaleInformationTest extends \PHPUnit_Framework_TestCas
     }
 
     /**
+     * Test attribute "encryptedKeyId"
+     */
+    public function testPropertyEncryptedKeyId()
+    {
+    }
+
+    /**
      * Test attribute "partnerSdkVersion"
      */
     public function testPropertyPartnerSdkVersion()

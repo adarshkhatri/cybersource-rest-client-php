@@ -131,4 +131,25 @@ class PullFunds201ResponseProcessorInformationTest extends \PHPUnit_Framework_Te
     public function testPropertyResponseDetails()
     {
     }
+
+    /**
+     * Test attribute "customer"
+     */
+    public function testPropertyCustomer()
+    {
+    }
+
+    /**
+     * Test attribute "electronicVerificationResults"
+     */
+    public function testPropertyElectronicVerificationResults()
+    {
+    }
+
+    /**
+     * Test attribute "cardVerification"
+     */
+    public function testPropertyCardVerification()
+    {
+    }
 }

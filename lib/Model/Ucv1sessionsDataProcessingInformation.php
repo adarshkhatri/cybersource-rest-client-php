@@ -54,7 +54,10 @@ class Ucv1sessionsDataProcessingInformation implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'reconciliationId' => 'string',
+        'purposeOfPayment' => 'string',
         'authorizationOptions' => '\CyberSource\Model\Ucv1sessionsDataProcessingInformationAuthorizationOptions',
+        'recurringOptions' => '\CyberSource\Model\Ucv1sessionsDataProcessingInformationRecurringOptions',
+        'bankTransferOptions' => '\CyberSource\Model\Ucv1sessionsDataProcessingInformationBankTransferOptions',
         'businessApplicationId' => 'string',
         'commerceIndicator' => 'string',
         'processingInstruction' => 'string'
@@ -66,7 +69,10 @@ class Ucv1sessionsDataProcessingInformation implements ArrayAccess
       */
     protected static $swaggerFormats = [
         'reconciliationId' => null,
+        'purposeOfPayment' => null,
         'authorizationOptions' => null,
+        'recurringOptions' => null,
+        'bankTransferOptions' => null,
         'businessApplicationId' => null,
         'commerceIndicator' => null,
         'processingInstruction' => null
@@ -88,7 +94,10 @@ class Ucv1sessionsDataProcessingInformation implements ArrayAccess
      */
     protected static $attributeMap = [
         'reconciliationId' => 'reconciliationId',
+        'purposeOfPayment' => 'purposeOfPayment',
         'authorizationOptions' => 'authorizationOptions',
+        'recurringOptions' => 'recurringOptions',
+        'bankTransferOptions' => 'bankTransferOptions',
         'businessApplicationId' => 'businessApplicationId',
         'commerceIndicator' => 'commerceIndicator',
         'processingInstruction' => 'processingInstruction'
@@ -101,7 +110,10 @@ class Ucv1sessionsDataProcessingInformation implements ArrayAccess
      */
     protected static $setters = [
         'reconciliationId' => 'setReconciliationId',
+        'purposeOfPayment' => 'setPurposeOfPayment',
         'authorizationOptions' => 'setAuthorizationOptions',
+        'recurringOptions' => 'setRecurringOptions',
+        'bankTransferOptions' => 'setBankTransferOptions',
         'businessApplicationId' => 'setBusinessApplicationId',
         'commerceIndicator' => 'setCommerceIndicator',
         'processingInstruction' => 'setProcessingInstruction'
@@ -114,7 +126,10 @@ class Ucv1sessionsDataProcessingInformation implements ArrayAccess
      */
     protected static $getters = [
         'reconciliationId' => 'getReconciliationId',
+        'purposeOfPayment' => 'getPurposeOfPayment',
         'authorizationOptions' => 'getAuthorizationOptions',
+        'recurringOptions' => 'getRecurringOptions',
+        'bankTransferOptions' => 'getBankTransferOptions',
         'businessApplicationId' => 'getBusinessApplicationId',
         'commerceIndicator' => 'getCommerceIndicator',
         'processingInstruction' => 'getProcessingInstruction'
@@ -152,7 +167,10 @@ class Ucv1sessionsDataProcessingInformation implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['reconciliationId'] = isset($data['reconciliationId']) ? $data['reconciliationId'] : null;
+        $this->container['purposeOfPayment'] = isset($data['purposeOfPayment']) ? $data['purposeOfPayment'] : null;
         $this->container['authorizationOptions'] = isset($data['authorizationOptions']) ? $data['authorizationOptions'] : null;
+        $this->container['recurringOptions'] = isset($data['recurringOptions']) ? $data['recurringOptions'] : null;
+        $this->container['bankTransferOptions'] = isset($data['bankTransferOptions']) ? $data['bankTransferOptions'] : null;
         $this->container['businessApplicationId'] = isset($data['businessApplicationId']) ? $data['businessApplicationId'] : null;
         $this->container['commerceIndicator'] = isset($data['commerceIndicator']) ? $data['commerceIndicator'] : null;
         $this->container['processingInstruction'] = isset($data['processingInstruction']) ? $data['processingInstruction'] : null;
@@ -205,6 +223,27 @@ class Ucv1sessionsDataProcessingInformation implements ArrayAccess
     }
 
     /**
+     * Gets purposeOfPayment
+     * @return string
+     */
+    public function getPurposeOfPayment()
+    {
+        return $this->container['purposeOfPayment'];
+    }
+
+    /**
+     * Sets purposeOfPayment
+     * @param string $purposeOfPayment This field is applicable for AFT and OCT transactions.  For list of supported values, please refer to Developer Guide.
+     * @return $this
+     */
+    public function setPurposeOfPayment($purposeOfPayment)
+    {
+        $this->container['purposeOfPayment'] = $purposeOfPayment;
+
+        return $this;
+    }
+
+    /**
      * Gets authorizationOptions
      * @return \CyberSource\Model\Ucv1sessionsDataProcessingInformationAuthorizationOptions
      */
@@ -221,6 +260,48 @@ class Ucv1sessionsDataProcessingInformation implements ArrayAccess
     public function setAuthorizationOptions($authorizationOptions)
     {
         $this->container['authorizationOptions'] = $authorizationOptions;
+
+        return $this;
+    }
+
+    /**
+     * Gets recurringOptions
+     * @return \CyberSource\Model\Ucv1sessionsDataProcessingInformationRecurringOptions
+     */
+    public function getRecurringOptions()
+    {
+        return $this->container['recurringOptions'];
+    }
+
+    /**
+     * Sets recurringOptions
+     * @param \CyberSource\Model\Ucv1sessionsDataProcessingInformationRecurringOptions $recurringOptions
+     * @return $this
+     */
+    public function setRecurringOptions($recurringOptions)
+    {
+        $this->container['recurringOptions'] = $recurringOptions;
+
+        return $this;
+    }
+
+    /**
+     * Gets bankTransferOptions
+     * @return \CyberSource\Model\Ucv1sessionsDataProcessingInformationBankTransferOptions
+     */
+    public function getBankTransferOptions()
+    {
+        return $this->container['bankTransferOptions'];
+    }
+
+    /**
+     * Sets bankTransferOptions
+     * @param \CyberSource\Model\Ucv1sessionsDataProcessingInformationBankTransferOptions $bankTransferOptions
+     * @return $this
+     */
+    public function setBankTransferOptions($bankTransferOptions)
+    {
+        $this->container['bankTransferOptions'] = $bankTransferOptions;
 
         return $this;
     }

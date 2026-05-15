@@ -84,9 +84,30 @@ class Ucv1sessionsDataProcessingInformationTest extends \PHPUnit_Framework_TestC
     }
 
     /**
+     * Test attribute "purposeOfPayment"
+     */
+    public function testPropertyPurposeOfPayment()
+    {
+    }
+
+    /**
      * Test attribute "authorizationOptions"
      */
     public function testPropertyAuthorizationOptions()
+    {
+    }
+
+    /**
+     * Test attribute "recurringOptions"
+     */
+    public function testPropertyRecurringOptions()
+    {
+    }
+
+    /**
+     * Test attribute "bankTransferOptions"
+     */
+    public function testPropertyBankTransferOptions()
     {
     }
 

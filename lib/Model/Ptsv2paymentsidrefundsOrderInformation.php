@@ -58,7 +58,8 @@ class Ptsv2paymentsidrefundsOrderInformation implements ArrayAccess
         'shipTo' => '\CyberSource\Model\Ptsv2paymentsidcapturesOrderInformationShipTo',
         'lineItems' => '\CyberSource\Model\Ptsv2paymentsidrefundsOrderInformationLineItems[]',
         'invoiceDetails' => '\CyberSource\Model\Ptsv2paymentsidcapturesOrderInformationInvoiceDetails',
-        'shippingDetails' => '\CyberSource\Model\Ptsv2paymentsidcapturesOrderInformationShippingDetails'
+        'shippingDetails' => '\CyberSource\Model\Ptsv2paymentsidrefundsOrderInformationShippingDetails',
+        'digitalCurrency' => '\CyberSource\Model\Ptsv2paymentsOrderInformationDigitalCurrency'
     ];
 
     /**
@@ -71,7 +72,8 @@ class Ptsv2paymentsidrefundsOrderInformation implements ArrayAccess
         'shipTo' => null,
         'lineItems' => null,
         'invoiceDetails' => null,
-        'shippingDetails' => null
+        'shippingDetails' => null,
+        'digitalCurrency' => null
     ];
 
     public static function swaggerTypes()
@@ -94,7 +96,8 @@ class Ptsv2paymentsidrefundsOrderInformation implements ArrayAccess
         'shipTo' => 'shipTo',
         'lineItems' => 'lineItems',
         'invoiceDetails' => 'invoiceDetails',
-        'shippingDetails' => 'shippingDetails'
+        'shippingDetails' => 'shippingDetails',
+        'digitalCurrency' => 'digitalCurrency'
     ];
 
 
@@ -108,7 +111,8 @@ class Ptsv2paymentsidrefundsOrderInformation implements ArrayAccess
         'shipTo' => 'setShipTo',
         'lineItems' => 'setLineItems',
         'invoiceDetails' => 'setInvoiceDetails',
-        'shippingDetails' => 'setShippingDetails'
+        'shippingDetails' => 'setShippingDetails',
+        'digitalCurrency' => 'setDigitalCurrency'
     ];
 
 
@@ -122,7 +126,8 @@ class Ptsv2paymentsidrefundsOrderInformation implements ArrayAccess
         'shipTo' => 'getShipTo',
         'lineItems' => 'getLineItems',
         'invoiceDetails' => 'getInvoiceDetails',
-        'shippingDetails' => 'getShippingDetails'
+        'shippingDetails' => 'getShippingDetails',
+        'digitalCurrency' => 'getDigitalCurrency'
     ];
 
     public static function attributeMap()
@@ -162,6 +167,7 @@ class Ptsv2paymentsidrefundsOrderInformation implements ArrayAccess
         $this->container['lineItems'] = isset($data['lineItems']) ? $data['lineItems'] : null;
         $this->container['invoiceDetails'] = isset($data['invoiceDetails']) ? $data['invoiceDetails'] : null;
         $this->container['shippingDetails'] = isset($data['shippingDetails']) ? $data['shippingDetails'] : null;
+        $this->container['digitalCurrency'] = isset($data['digitalCurrency']) ? $data['digitalCurrency'] : null;
     }
 
     /**
@@ -296,7 +302,7 @@ class Ptsv2paymentsidrefundsOrderInformation implements ArrayAccess
 
     /**
      * Gets shippingDetails
-     * @return \CyberSource\Model\Ptsv2paymentsidcapturesOrderInformationShippingDetails
+     * @return \CyberSource\Model\Ptsv2paymentsidrefundsOrderInformationShippingDetails
      */
     public function getShippingDetails()
     {
@@ -305,12 +311,33 @@ class Ptsv2paymentsidrefundsOrderInformation implements ArrayAccess
 
     /**
      * Sets shippingDetails
-     * @param \CyberSource\Model\Ptsv2paymentsidcapturesOrderInformationShippingDetails $shippingDetails
+     * @param \CyberSource\Model\Ptsv2paymentsidrefundsOrderInformationShippingDetails $shippingDetails
      * @return $this
      */
     public function setShippingDetails($shippingDetails)
     {
         $this->container['shippingDetails'] = $shippingDetails;
+
+        return $this;
+    }
+
+    /**
+     * Gets digitalCurrency
+     * @return \CyberSource\Model\Ptsv2paymentsOrderInformationDigitalCurrency
+     */
+    public function getDigitalCurrency()
+    {
+        return $this->container['digitalCurrency'];
+    }
+
+    /**
+     * Sets digitalCurrency
+     * @param \CyberSource\Model\Ptsv2paymentsOrderInformationDigitalCurrency $digitalCurrency
+     * @return $this
+     */
+    public function setDigitalCurrency($digitalCurrency)
+    {
+        $this->container['digitalCurrency'] = $digitalCurrency;
 
         return $this;
     }

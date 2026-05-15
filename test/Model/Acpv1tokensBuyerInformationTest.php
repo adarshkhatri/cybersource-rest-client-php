@@ -32,7 +32,7 @@ namespace CyberSource;
  * Acpv1tokensBuyerInformationTest Class Doc Comment
  *
  * @category    Class */
-// * @description Buyer Information data.
+// * @description Buyer Information data. Contains consumer identification and preference details.
 /**
  * @package     CyberSource
  * @author      Swagger Codegen team

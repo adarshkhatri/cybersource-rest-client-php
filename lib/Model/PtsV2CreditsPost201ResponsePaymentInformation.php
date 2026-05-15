@@ -57,7 +57,8 @@ class PtsV2CreditsPost201ResponsePaymentInformation implements ArrayAccess
         'customer' => '\CyberSource\Model\Ptsv2paymentsPaymentInformationCustomer',
         'paymentInstrument' => '\CyberSource\Model\Ptsv2paymentsPaymentInformationPaymentInstrument',
         'instrumentIdentifier' => '\CyberSource\Model\PtsV2PaymentsPost201ResponsePaymentInformationInstrumentIdentifier',
-        'shippingAddress' => '\CyberSource\Model\Ptsv2paymentsPaymentInformationShippingAddress'
+        'shippingAddress' => '\CyberSource\Model\Ptsv2paymentsPaymentInformationShippingAddress',
+        'accountFeatures' => '\CyberSource\Model\PtsV2CreditsPost201ResponsePaymentInformationAccountFeatures'
     ];
 
     /**
@@ -69,7 +70,8 @@ class PtsV2CreditsPost201ResponsePaymentInformation implements ArrayAccess
         'customer' => null,
         'paymentInstrument' => null,
         'instrumentIdentifier' => null,
-        'shippingAddress' => null
+        'shippingAddress' => null,
+        'accountFeatures' => null
     ];
 
     public static function swaggerTypes()
@@ -91,7 +93,8 @@ class PtsV2CreditsPost201ResponsePaymentInformation implements ArrayAccess
         'customer' => 'customer',
         'paymentInstrument' => 'paymentInstrument',
         'instrumentIdentifier' => 'instrumentIdentifier',
-        'shippingAddress' => 'shippingAddress'
+        'shippingAddress' => 'shippingAddress',
+        'accountFeatures' => 'accountFeatures'
     ];
 
 
@@ -104,7 +107,8 @@ class PtsV2CreditsPost201ResponsePaymentInformation implements ArrayAccess
         'customer' => 'setCustomer',
         'paymentInstrument' => 'setPaymentInstrument',
         'instrumentIdentifier' => 'setInstrumentIdentifier',
-        'shippingAddress' => 'setShippingAddress'
+        'shippingAddress' => 'setShippingAddress',
+        'accountFeatures' => 'setAccountFeatures'
     ];
 
 
@@ -117,7 +121,8 @@ class PtsV2CreditsPost201ResponsePaymentInformation implements ArrayAccess
         'customer' => 'getCustomer',
         'paymentInstrument' => 'getPaymentInstrument',
         'instrumentIdentifier' => 'getInstrumentIdentifier',
-        'shippingAddress' => 'getShippingAddress'
+        'shippingAddress' => 'getShippingAddress',
+        'accountFeatures' => 'getAccountFeatures'
     ];
 
     public static function attributeMap()
@@ -156,6 +161,7 @@ class PtsV2CreditsPost201ResponsePaymentInformation implements ArrayAccess
         $this->container['paymentInstrument'] = isset($data['paymentInstrument']) ? $data['paymentInstrument'] : null;
         $this->container['instrumentIdentifier'] = isset($data['instrumentIdentifier']) ? $data['instrumentIdentifier'] : null;
         $this->container['shippingAddress'] = isset($data['shippingAddress']) ? $data['shippingAddress'] : null;
+        $this->container['accountFeatures'] = isset($data['accountFeatures']) ? $data['accountFeatures'] : null;
     }
 
     /**
@@ -284,6 +290,27 @@ class PtsV2CreditsPost201ResponsePaymentInformation implements ArrayAccess
     public function setShippingAddress($shippingAddress)
     {
         $this->container['shippingAddress'] = $shippingAddress;
+
+        return $this;
+    }
+
+    /**
+     * Gets accountFeatures
+     * @return \CyberSource\Model\PtsV2CreditsPost201ResponsePaymentInformationAccountFeatures
+     */
+    public function getAccountFeatures()
+    {
+        return $this->container['accountFeatures'];
+    }
+
+    /**
+     * Sets accountFeatures
+     * @param \CyberSource\Model\PtsV2CreditsPost201ResponsePaymentInformationAccountFeatures $accountFeatures
+     * @return $this
+     */
+    public function setAccountFeatures($accountFeatures)
+    {
+        $this->container['accountFeatures'] = $accountFeatures;
 
         return $this;
     }

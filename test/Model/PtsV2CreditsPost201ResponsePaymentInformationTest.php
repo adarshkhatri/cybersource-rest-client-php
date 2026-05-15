@@ -110,4 +110,11 @@ class PtsV2CreditsPost201ResponsePaymentInformationTest extends \PHPUnit_Framewo
     public function testPropertyShippingAddress()
     {
     }
+
+    /**
+     * Test attribute "accountFeatures"
+     */
+    public function testPropertyAccountFeatures()
+    {
+    }
 }

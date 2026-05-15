@@ -59,7 +59,10 @@ class Tmsv2TokenizedCardMetadataIssuer implements ArrayAccess
         'longDescription' => 'string',
         'email' => 'string',
         'phoneNumber' => 'string',
-        'url' => 'string'
+        'url' => 'string',
+        'privacyPolicyUrl' => 'string',
+        'capabilities' => '\CyberSource\Model\Tmsv2TokenizedCardMetadataIssuerCapabilities',
+        'bankApplications' => '\CyberSource\Model\Tmsv2TokenizedCardMetadataIssuerBankApplications[]'
     ];
 
     /**
@@ -72,7 +75,10 @@ class Tmsv2TokenizedCardMetadataIssuer implements ArrayAccess
         'longDescription' => null,
         'email' => null,
         'phoneNumber' => null,
-        'url' => null
+        'url' => null,
+        'privacyPolicyUrl' => null,
+        'capabilities' => null,
+        'bankApplications' => null
     ];
 
     public static function swaggerTypes()
@@ -95,7 +101,10 @@ class Tmsv2TokenizedCardMetadataIssuer implements ArrayAccess
         'longDescription' => 'longDescription',
         'email' => 'email',
         'phoneNumber' => 'phoneNumber',
-        'url' => 'url'
+        'url' => 'url',
+        'privacyPolicyUrl' => 'privacyPolicyUrl',
+        'capabilities' => 'capabilities',
+        'bankApplications' => 'bankApplications'
     ];
 
 
@@ -109,7 +118,10 @@ class Tmsv2TokenizedCardMetadataIssuer implements ArrayAccess
         'longDescription' => 'setLongDescription',
         'email' => 'setEmail',
         'phoneNumber' => 'setPhoneNumber',
-        'url' => 'setUrl'
+        'url' => 'setUrl',
+        'privacyPolicyUrl' => 'setPrivacyPolicyUrl',
+        'capabilities' => 'setCapabilities',
+        'bankApplications' => 'setBankApplications'
     ];
 
 
@@ -123,7 +135,10 @@ class Tmsv2TokenizedCardMetadataIssuer implements ArrayAccess
         'longDescription' => 'getLongDescription',
         'email' => 'getEmail',
         'phoneNumber' => 'getPhoneNumber',
-        'url' => 'getUrl'
+        'url' => 'getUrl',
+        'privacyPolicyUrl' => 'getPrivacyPolicyUrl',
+        'capabilities' => 'getCapabilities',
+        'bankApplications' => 'getBankApplications'
     ];
 
     public static function attributeMap()
@@ -163,6 +178,9 @@ class Tmsv2TokenizedCardMetadataIssuer implements ArrayAccess
         $this->container['email'] = isset($data['email']) ? $data['email'] : null;
         $this->container['phoneNumber'] = isset($data['phoneNumber']) ? $data['phoneNumber'] : null;
         $this->container['url'] = isset($data['url']) ? $data['url'] : null;
+        $this->container['privacyPolicyUrl'] = isset($data['privacyPolicyUrl']) ? $data['privacyPolicyUrl'] : null;
+        $this->container['capabilities'] = isset($data['capabilities']) ? $data['capabilities'] : null;
+        $this->container['bankApplications'] = isset($data['bankApplications']) ? $data['bankApplications'] : null;
     }
 
     /**
@@ -312,6 +330,69 @@ class Tmsv2TokenizedCardMetadataIssuer implements ArrayAccess
     public function setUrl($url)
     {
         $this->container['url'] = $url;
+
+        return $this;
+    }
+
+    /**
+     * Gets privacyPolicyUrl
+     * @return string
+     */
+    public function getPrivacyPolicyUrl()
+    {
+        return $this->container['privacyPolicyUrl'];
+    }
+
+    /**
+     * Sets privacyPolicyUrl
+     * @param string $privacyPolicyUrl Issuer privacy policy url.
+     * @return $this
+     */
+    public function setPrivacyPolicyUrl($privacyPolicyUrl)
+    {
+        $this->container['privacyPolicyUrl'] = $privacyPolicyUrl;
+
+        return $this;
+    }
+
+    /**
+     * Gets capabilities
+     * @return \CyberSource\Model\Tmsv2TokenizedCardMetadataIssuerCapabilities
+     */
+    public function getCapabilities()
+    {
+        return $this->container['capabilities'];
+    }
+
+    /**
+     * Sets capabilities
+     * @param \CyberSource\Model\Tmsv2TokenizedCardMetadataIssuerCapabilities $capabilities
+     * @return $this
+     */
+    public function setCapabilities($capabilities)
+    {
+        $this->container['capabilities'] = $capabilities;
+
+        return $this;
+    }
+
+    /**
+     * Gets bankApplications
+     * @return \CyberSource\Model\Tmsv2TokenizedCardMetadataIssuerBankApplications[]
+     */
+    public function getBankApplications()
+    {
+        return $this->container['bankApplications'];
+    }
+
+    /**
+     * Sets bankApplications
+     * @param \CyberSource\Model\Tmsv2TokenizedCardMetadataIssuerBankApplications[] $bankApplications
+     * @return $this
+     */
+    public function setBankApplications($bankApplications)
+    {
+        $this->container['bankApplications'] = $bankApplications;
 
         return $this;
     }

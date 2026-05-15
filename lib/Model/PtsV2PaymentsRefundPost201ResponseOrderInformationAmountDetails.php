@@ -53,6 +53,7 @@ class PtsV2PaymentsRefundPost201ResponseOrderInformationAmountDetails implements
       * @var string[]
       */
     protected static $swaggerTypes = [
+        'cashbackAmount' => 'string',
         'settlementAmount' => 'string',
         'settlementCurrency' => 'string',
         'exchangeRate' => 'string',
@@ -65,6 +66,7 @@ class PtsV2PaymentsRefundPost201ResponseOrderInformationAmountDetails implements
       * @var string[]
       */
     protected static $swaggerFormats = [
+        'cashbackAmount' => null,
         'settlementAmount' => null,
         'settlementCurrency' => null,
         'exchangeRate' => null,
@@ -87,6 +89,7 @@ class PtsV2PaymentsRefundPost201ResponseOrderInformationAmountDetails implements
      * @var string[]
      */
     protected static $attributeMap = [
+        'cashbackAmount' => 'cashbackAmount',
         'settlementAmount' => 'settlementAmount',
         'settlementCurrency' => 'settlementCurrency',
         'exchangeRate' => 'exchangeRate',
@@ -100,6 +103,7 @@ class PtsV2PaymentsRefundPost201ResponseOrderInformationAmountDetails implements
      * @var string[]
      */
     protected static $setters = [
+        'cashbackAmount' => 'setCashbackAmount',
         'settlementAmount' => 'setSettlementAmount',
         'settlementCurrency' => 'setSettlementCurrency',
         'exchangeRate' => 'setExchangeRate',
@@ -113,6 +117,7 @@ class PtsV2PaymentsRefundPost201ResponseOrderInformationAmountDetails implements
      * @var string[]
      */
     protected static $getters = [
+        'cashbackAmount' => 'getCashbackAmount',
         'settlementAmount' => 'getSettlementAmount',
         'settlementCurrency' => 'getSettlementCurrency',
         'exchangeRate' => 'getExchangeRate',
@@ -151,6 +156,7 @@ class PtsV2PaymentsRefundPost201ResponseOrderInformationAmountDetails implements
      */
     public function __construct(array $data = null)
     {
+        $this->container['cashbackAmount'] = isset($data['cashbackAmount']) ? $data['cashbackAmount'] : null;
         $this->container['settlementAmount'] = isset($data['settlementAmount']) ? $data['settlementAmount'] : null;
         $this->container['settlementCurrency'] = isset($data['settlementCurrency']) ? $data['settlementCurrency'] : null;
         $this->container['exchangeRate'] = isset($data['exchangeRate']) ? $data['exchangeRate'] : null;
@@ -182,6 +188,27 @@ class PtsV2PaymentsRefundPost201ResponseOrderInformationAmountDetails implements
         return true;
     }
 
+
+    /**
+     * Gets cashbackAmount
+     * @return string
+     */
+    public function getCashbackAmount()
+    {
+        return $this->container['cashbackAmount'];
+    }
+
+    /**
+     * Sets cashbackAmount
+     * @param string $cashbackAmount This field contains the purchase cashback amount expressed in the acquirer transaction currency.  Use this field only for clearing with your acquirer.
+     * @return $this
+     */
+    public function setCashbackAmount($cashbackAmount)
+    {
+        $this->container['cashbackAmount'] = $cashbackAmount;
+
+        return $this;
+    }
 
     /**
      * Gets settlementAmount

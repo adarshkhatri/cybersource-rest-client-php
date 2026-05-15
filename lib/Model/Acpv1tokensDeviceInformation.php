@@ -34,7 +34,7 @@ use \ArrayAccess;
  * Acpv1tokensDeviceInformation Class Doc Comment
  *
  * @category    Class
- * @description Device and Application instance data.
+ * @description Device and Application instance data. Identifies the device and application from which the consumer is making the payment request.
  * @package     CyberSource
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen

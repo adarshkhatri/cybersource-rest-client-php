@@ -64,7 +64,11 @@ class PtsV2CreditsPost201Response implements ArrayAccess
         'processorInformation' => '\CyberSource\Model\PtsV2PaymentsRefundPost201ResponseProcessorInformation',
         'paymentInformation' => '\CyberSource\Model\PtsV2CreditsPost201ResponsePaymentInformation',
         'orderInformation' => '\CyberSource\Model\PtsV2PaymentsRefundPost201ResponseOrderInformation',
+        'merchantInformation' => '\CyberSource\Model\PtsV2CreditsPost201ResponseMerchantInformation',
+        'clearingInformation' => '\CyberSource\Model\PtsV2PaymentsPost201ResponseClearingInformation',
         'pointOfSaleInformation' => '\CyberSource\Model\PtsV2PaymentsCapturesPost201ResponsePointOfSaleInformation',
+        'tokenInformation' => '\CyberSource\Model\PtsV2CreditsPost201ResponseTokenInformation',
+        'paymentAccountInformation' => '\CyberSource\Model\PtsV2CreditsPost201ResponsePaymentAccountInformation',
         'errorInformation' => '\CyberSource\Model\PtsV2PaymentsRefundPost201ResponseErrorInformation'
     ];
 
@@ -84,7 +88,11 @@ class PtsV2CreditsPost201Response implements ArrayAccess
         'processorInformation' => null,
         'paymentInformation' => null,
         'orderInformation' => null,
+        'merchantInformation' => null,
+        'clearingInformation' => null,
         'pointOfSaleInformation' => null,
+        'tokenInformation' => null,
+        'paymentAccountInformation' => null,
         'errorInformation' => null
     ];
 
@@ -114,7 +122,11 @@ class PtsV2CreditsPost201Response implements ArrayAccess
         'processorInformation' => 'processorInformation',
         'paymentInformation' => 'paymentInformation',
         'orderInformation' => 'orderInformation',
+        'merchantInformation' => 'merchantInformation',
+        'clearingInformation' => 'clearingInformation',
         'pointOfSaleInformation' => 'pointOfSaleInformation',
+        'tokenInformation' => 'tokenInformation',
+        'paymentAccountInformation' => 'paymentAccountInformation',
         'errorInformation' => 'errorInformation'
     ];
 
@@ -135,7 +147,11 @@ class PtsV2CreditsPost201Response implements ArrayAccess
         'processorInformation' => 'setProcessorInformation',
         'paymentInformation' => 'setPaymentInformation',
         'orderInformation' => 'setOrderInformation',
+        'merchantInformation' => 'setMerchantInformation',
+        'clearingInformation' => 'setClearingInformation',
         'pointOfSaleInformation' => 'setPointOfSaleInformation',
+        'tokenInformation' => 'setTokenInformation',
+        'paymentAccountInformation' => 'setPaymentAccountInformation',
         'errorInformation' => 'setErrorInformation'
     ];
 
@@ -156,7 +172,11 @@ class PtsV2CreditsPost201Response implements ArrayAccess
         'processorInformation' => 'getProcessorInformation',
         'paymentInformation' => 'getPaymentInformation',
         'orderInformation' => 'getOrderInformation',
+        'merchantInformation' => 'getMerchantInformation',
+        'clearingInformation' => 'getClearingInformation',
         'pointOfSaleInformation' => 'getPointOfSaleInformation',
+        'tokenInformation' => 'getTokenInformation',
+        'paymentAccountInformation' => 'getPaymentAccountInformation',
         'errorInformation' => 'getErrorInformation'
     ];
 
@@ -202,7 +222,11 @@ class PtsV2CreditsPost201Response implements ArrayAccess
         $this->container['processorInformation'] = isset($data['processorInformation']) ? $data['processorInformation'] : null;
         $this->container['paymentInformation'] = isset($data['paymentInformation']) ? $data['paymentInformation'] : null;
         $this->container['orderInformation'] = isset($data['orderInformation']) ? $data['orderInformation'] : null;
+        $this->container['merchantInformation'] = isset($data['merchantInformation']) ? $data['merchantInformation'] : null;
+        $this->container['clearingInformation'] = isset($data['clearingInformation']) ? $data['clearingInformation'] : null;
         $this->container['pointOfSaleInformation'] = isset($data['pointOfSaleInformation']) ? $data['pointOfSaleInformation'] : null;
+        $this->container['tokenInformation'] = isset($data['tokenInformation']) ? $data['tokenInformation'] : null;
+        $this->container['paymentAccountInformation'] = isset($data['paymentAccountInformation']) ? $data['paymentAccountInformation'] : null;
         $this->container['errorInformation'] = isset($data['errorInformation']) ? $data['errorInformation'] : null;
     }
 
@@ -463,6 +487,48 @@ class PtsV2CreditsPost201Response implements ArrayAccess
     }
 
     /**
+     * Gets merchantInformation
+     * @return \CyberSource\Model\PtsV2CreditsPost201ResponseMerchantInformation
+     */
+    public function getMerchantInformation()
+    {
+        return $this->container['merchantInformation'];
+    }
+
+    /**
+     * Sets merchantInformation
+     * @param \CyberSource\Model\PtsV2CreditsPost201ResponseMerchantInformation $merchantInformation
+     * @return $this
+     */
+    public function setMerchantInformation($merchantInformation)
+    {
+        $this->container['merchantInformation'] = $merchantInformation;
+
+        return $this;
+    }
+
+    /**
+     * Gets clearingInformation
+     * @return \CyberSource\Model\PtsV2PaymentsPost201ResponseClearingInformation
+     */
+    public function getClearingInformation()
+    {
+        return $this->container['clearingInformation'];
+    }
+
+    /**
+     * Sets clearingInformation
+     * @param \CyberSource\Model\PtsV2PaymentsPost201ResponseClearingInformation $clearingInformation
+     * @return $this
+     */
+    public function setClearingInformation($clearingInformation)
+    {
+        $this->container['clearingInformation'] = $clearingInformation;
+
+        return $this;
+    }
+
+    /**
      * Gets pointOfSaleInformation
      * @return \CyberSource\Model\PtsV2PaymentsCapturesPost201ResponsePointOfSaleInformation
      */
@@ -479,6 +545,48 @@ class PtsV2CreditsPost201Response implements ArrayAccess
     public function setPointOfSaleInformation($pointOfSaleInformation)
     {
         $this->container['pointOfSaleInformation'] = $pointOfSaleInformation;
+
+        return $this;
+    }
+
+    /**
+     * Gets tokenInformation
+     * @return \CyberSource\Model\PtsV2CreditsPost201ResponseTokenInformation
+     */
+    public function getTokenInformation()
+    {
+        return $this->container['tokenInformation'];
+    }
+
+    /**
+     * Sets tokenInformation
+     * @param \CyberSource\Model\PtsV2CreditsPost201ResponseTokenInformation $tokenInformation
+     * @return $this
+     */
+    public function setTokenInformation($tokenInformation)
+    {
+        $this->container['tokenInformation'] = $tokenInformation;
+
+        return $this;
+    }
+
+    /**
+     * Gets paymentAccountInformation
+     * @return \CyberSource\Model\PtsV2CreditsPost201ResponsePaymentAccountInformation
+     */
+    public function getPaymentAccountInformation()
+    {
+        return $this->container['paymentAccountInformation'];
+    }
+
+    /**
+     * Sets paymentAccountInformation
+     * @param \CyberSource\Model\PtsV2CreditsPost201ResponsePaymentAccountInformation $paymentAccountInformation
+     * @return $this
+     */
+    public function setPaymentAccountInformation($paymentAccountInformation)
+    {
+        $this->container['paymentAccountInformation'] = $paymentAccountInformation;
 
         return $this;
     }

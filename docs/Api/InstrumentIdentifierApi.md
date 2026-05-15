@@ -108,7 +108,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getInstrumentIdentifierPaymentInstrumentsList**
-> \CyberSource\Model\PaymentInstrumentList1 getInstrumentIdentifierPaymentInstrumentsList($instrumentIdentifierId, $profileId, $retrieveBinDetails, $offset, $limit)
+> \CyberSource\Model\PaymentInstrumentList getInstrumentIdentifierPaymentInstrumentsList($instrumentIdentifierId, $profileId, $retrieveBinDetails, $offset, $limit)
 
 List Payment Instruments for an Instrument Identifier
 
@@ -147,7 +147,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CyberSource\Model\PaymentInstrumentList1**](../Model/PaymentInstrumentList1.md)
+[**\CyberSource\Model\PaymentInstrumentList**](../Model/PaymentInstrumentList.md)
 
 ### Authorization
 

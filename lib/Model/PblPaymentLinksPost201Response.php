@@ -53,7 +53,7 @@ class PblPaymentLinksPost201Response implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'links' => '\CyberSource\Model\PblPaymentLinksPost201ResponseLinks',
+        'links' => '\CyberSource\Model\GetSubscriptionsPaymentsResponse1Links',
         'id' => 'string',
         'submitTimeUtc' => 'string',
         'status' => 'string',
@@ -197,7 +197,7 @@ class PblPaymentLinksPost201Response implements ArrayAccess
 
     /**
      * Gets links
-     * @return \CyberSource\Model\PblPaymentLinksPost201ResponseLinks
+     * @return \CyberSource\Model\GetSubscriptionsPaymentsResponse1Links
      */
     public function getLinks()
     {
@@ -206,7 +206,7 @@ class PblPaymentLinksPost201Response implements ArrayAccess
 
     /**
      * Sets links
-     * @param \CyberSource\Model\PblPaymentLinksPost201ResponseLinks $links
+     * @param \CyberSource\Model\GetSubscriptionsPaymentsResponse1Links $links
      * @return $this
      */
     public function setLinks($links)

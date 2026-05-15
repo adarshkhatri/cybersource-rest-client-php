@@ -89,4 +89,39 @@ class Ptsv2billingagreementsAgreementInformationTest extends \PHPUnit_Framework_
     public function testPropertyDateSigned()
     {
     }
+
+    /**
+     * Test attribute "type"
+     */
+    public function testPropertyType()
+    {
+    }
+
+    /**
+     * Test attribute "frequency"
+     */
+    public function testPropertyFrequency()
+    {
+    }
+
+    /**
+     * Test attribute "occurrencesPerPeriod"
+     */
+    public function testPropertyOccurrencesPerPeriod()
+    {
+    }
+
+    /**
+     * Test attribute "startDate"
+     */
+    public function testPropertyStartDate()
+    {
+    }
+
+    /**
+     * Test attribute "endDate"
+     */
+    public function testPropertyEndDate()
+    {
+    }
 }

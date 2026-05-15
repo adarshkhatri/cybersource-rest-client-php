@@ -58,7 +58,8 @@ class PostTokenizedCardRequest implements ArrayAccess
         'createPanInstrumentIdentifier' => 'bool',
         'source' => 'string',
         'card' => '\CyberSource\Model\Tmsv2tokenizedcardsCard',
-        'passcode' => '\CyberSource\Model\Tmsv2tokenizedcardsPasscode'
+        'passcode' => '\CyberSource\Model\Tmsv2tokenizedcardsPasscode',
+        'billTo' => '\CyberSource\Model\Tmsv2tokenizedcardsBillTo'
     ];
 
     /**
@@ -71,7 +72,8 @@ class PostTokenizedCardRequest implements ArrayAccess
         'createPanInstrumentIdentifier' => null,
         'source' => null,
         'card' => null,
-        'passcode' => null
+        'passcode' => null,
+        'billTo' => null
     ];
 
     public static function swaggerTypes()
@@ -94,7 +96,8 @@ class PostTokenizedCardRequest implements ArrayAccess
         'createPanInstrumentIdentifier' => 'createPanInstrumentIdentifier',
         'source' => 'source',
         'card' => 'card',
-        'passcode' => 'passcode'
+        'passcode' => 'passcode',
+        'billTo' => 'billTo'
     ];
 
 
@@ -108,7 +111,8 @@ class PostTokenizedCardRequest implements ArrayAccess
         'createPanInstrumentIdentifier' => 'setCreatePanInstrumentIdentifier',
         'source' => 'setSource',
         'card' => 'setCard',
-        'passcode' => 'setPasscode'
+        'passcode' => 'setPasscode',
+        'billTo' => 'setBillTo'
     ];
 
 
@@ -122,7 +126,8 @@ class PostTokenizedCardRequest implements ArrayAccess
         'createPanInstrumentIdentifier' => 'getCreatePanInstrumentIdentifier',
         'source' => 'getSource',
         'card' => 'getCard',
-        'passcode' => 'getPasscode'
+        'passcode' => 'getPasscode',
+        'billTo' => 'getBillTo'
     ];
 
     public static function attributeMap()
@@ -162,6 +167,7 @@ class PostTokenizedCardRequest implements ArrayAccess
         $this->container['source'] = isset($data['source']) ? $data['source'] : null;
         $this->container['card'] = isset($data['card']) ? $data['card'] : null;
         $this->container['passcode'] = isset($data['passcode']) ? $data['passcode'] : null;
+        $this->container['billTo'] = isset($data['billTo']) ? $data['billTo'] : null;
     }
 
     /**
@@ -317,6 +323,27 @@ class PostTokenizedCardRequest implements ArrayAccess
     public function setPasscode($passcode)
     {
         $this->container['passcode'] = $passcode;
+
+        return $this;
+    }
+
+    /**
+     * Gets billTo
+     * @return \CyberSource\Model\Tmsv2tokenizedcardsBillTo
+     */
+    public function getBillTo()
+    {
+        return $this->container['billTo'];
+    }
+
+    /**
+     * Sets billTo
+     * @param \CyberSource\Model\Tmsv2tokenizedcardsBillTo $billTo
+     * @return $this
+     */
+    public function setBillTo($billTo)
+    {
+        $this->container['billTo'] = $billTo;
 
         return $this;
     }

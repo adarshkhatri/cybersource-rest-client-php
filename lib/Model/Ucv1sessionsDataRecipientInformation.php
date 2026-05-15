@@ -53,15 +53,18 @@ class Ucv1sessionsDataRecipientInformation implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
+        'accountId' => 'string',
+        'accountType' => 'string',
         'firstName' => 'string',
         'middleName' => 'string',
         'lastName' => 'string',
-        'country' => 'string',
-        'accountId' => 'string',
+        'address1' => 'string',
         'administrativeArea' => 'string',
-        'accountType' => 'string',
+        'postalCode' => 'string',
+        'country' => 'string',
+        'phoneNumber' => 'string',
         'dateOfBirth' => 'string',
-        'postalCode' => 'string'
+        'locality' => 'string'
     ];
 
     /**
@@ -69,15 +72,18 @@ class Ucv1sessionsDataRecipientInformation implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
+        'accountId' => null,
+        'accountType' => null,
         'firstName' => null,
         'middleName' => null,
         'lastName' => null,
-        'country' => null,
-        'accountId' => null,
+        'address1' => null,
         'administrativeArea' => null,
-        'accountType' => null,
+        'postalCode' => null,
+        'country' => null,
+        'phoneNumber' => null,
         'dateOfBirth' => null,
-        'postalCode' => null
+        'locality' => null
     ];
 
     public static function swaggerTypes()
@@ -95,15 +101,18 @@ class Ucv1sessionsDataRecipientInformation implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
+        'accountId' => 'accountId',
+        'accountType' => 'accountType',
         'firstName' => 'firstName',
         'middleName' => 'middleName',
         'lastName' => 'lastName',
-        'country' => 'country',
-        'accountId' => 'accountId',
+        'address1' => 'address1',
         'administrativeArea' => 'administrativeArea',
-        'accountType' => 'accountType',
+        'postalCode' => 'postalCode',
+        'country' => 'country',
+        'phoneNumber' => 'phoneNumber',
         'dateOfBirth' => 'dateOfBirth',
-        'postalCode' => 'postalCode'
+        'locality' => 'locality'
     ];
 
 
@@ -112,15 +121,18 @@ class Ucv1sessionsDataRecipientInformation implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
+        'accountId' => 'setAccountId',
+        'accountType' => 'setAccountType',
         'firstName' => 'setFirstName',
         'middleName' => 'setMiddleName',
         'lastName' => 'setLastName',
-        'country' => 'setCountry',
-        'accountId' => 'setAccountId',
+        'address1' => 'setAddress1',
         'administrativeArea' => 'setAdministrativeArea',
-        'accountType' => 'setAccountType',
+        'postalCode' => 'setPostalCode',
+        'country' => 'setCountry',
+        'phoneNumber' => 'setPhoneNumber',
         'dateOfBirth' => 'setDateOfBirth',
-        'postalCode' => 'setPostalCode'
+        'locality' => 'setLocality'
     ];
 
 
@@ -129,15 +141,18 @@ class Ucv1sessionsDataRecipientInformation implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
+        'accountId' => 'getAccountId',
+        'accountType' => 'getAccountType',
         'firstName' => 'getFirstName',
         'middleName' => 'getMiddleName',
         'lastName' => 'getLastName',
-        'country' => 'getCountry',
-        'accountId' => 'getAccountId',
+        'address1' => 'getAddress1',
         'administrativeArea' => 'getAdministrativeArea',
-        'accountType' => 'getAccountType',
+        'postalCode' => 'getPostalCode',
+        'country' => 'getCountry',
+        'phoneNumber' => 'getPhoneNumber',
         'dateOfBirth' => 'getDateOfBirth',
-        'postalCode' => 'getPostalCode'
+        'locality' => 'getLocality'
     ];
 
     public static function attributeMap()
@@ -171,15 +186,18 @@ class Ucv1sessionsDataRecipientInformation implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['accountId'] = isset($data['accountId']) ? $data['accountId'] : null;
+        $this->container['accountType'] = isset($data['accountType']) ? $data['accountType'] : null;
         $this->container['firstName'] = isset($data['firstName']) ? $data['firstName'] : null;
         $this->container['middleName'] = isset($data['middleName']) ? $data['middleName'] : null;
         $this->container['lastName'] = isset($data['lastName']) ? $data['lastName'] : null;
-        $this->container['country'] = isset($data['country']) ? $data['country'] : null;
-        $this->container['accountId'] = isset($data['accountId']) ? $data['accountId'] : null;
+        $this->container['address1'] = isset($data['address1']) ? $data['address1'] : null;
         $this->container['administrativeArea'] = isset($data['administrativeArea']) ? $data['administrativeArea'] : null;
-        $this->container['accountType'] = isset($data['accountType']) ? $data['accountType'] : null;
-        $this->container['dateOfBirth'] = isset($data['dateOfBirth']) ? $data['dateOfBirth'] : null;
         $this->container['postalCode'] = isset($data['postalCode']) ? $data['postalCode'] : null;
+        $this->container['country'] = isset($data['country']) ? $data['country'] : null;
+        $this->container['phoneNumber'] = isset($data['phoneNumber']) ? $data['phoneNumber'] : null;
+        $this->container['dateOfBirth'] = isset($data['dateOfBirth']) ? $data['dateOfBirth'] : null;
+        $this->container['locality'] = isset($data['locality']) ? $data['locality'] : null;
     }
 
     /**
@@ -208,6 +226,48 @@ class Ucv1sessionsDataRecipientInformation implements ArrayAccess
 
 
     /**
+     * Gets accountId
+     * @return string
+     */
+    public function getAccountId()
+    {
+        return $this->container['accountId'];
+    }
+
+    /**
+     * Sets accountId
+     * @param string $accountId Identifier for the recipient's account. This field is applicable for AFT transactions.
+     * @return $this
+     */
+    public function setAccountId($accountId)
+    {
+        $this->container['accountId'] = $accountId;
+
+        return $this;
+    }
+
+    /**
+     * Gets accountType
+     * @return string
+     */
+    public function getAccountType()
+    {
+        return $this->container['accountType'];
+    }
+
+    /**
+     * Sets accountType
+     * @param string $accountType Identifies the recipient's account type. This field is applicable for AFT transactions.  Valid values are:   - `00` for Other   - `01` for Routing Transit Number (RTN) + Bank Account Number (BAN)   - `02` for International Bank Account Number (IBAN)   - `03` for Card Account   - `06` for Bank Account Number (BAN) + Bank Identification Code (BIC), also known as a SWIFT code
+     * @return $this
+     */
+    public function setAccountType($accountType)
+    {
+        $this->container['accountType'] = $accountType;
+
+        return $this;
+    }
+
+    /**
      * Gets firstName
      * @return string
      */
@@ -218,7 +278,7 @@ class Ucv1sessionsDataRecipientInformation implements ArrayAccess
 
     /**
      * Sets firstName
-     * @param string $firstName
+     * @param string $firstName First name of the recipient. This field is applicable for AFT transactions.    Only alpha numeric values are supported. Special characters not in the standard ASCII character set, are not supported and will be stripped before being sent to sent to the processor.
      * @return $this
      */
     public function setFirstName($firstName)
@@ -239,7 +299,7 @@ class Ucv1sessionsDataRecipientInformation implements ArrayAccess
 
     /**
      * Sets middleName
-     * @param string $middleName
+     * @param string $middleName Middle name of the recipient. This field is applicable for AFT transactions.  Only alpha numeric values are supported. Special characters not in the standard ASCII character set, are not supported and will be stripped before being sent to sent to the processor.
      * @return $this
      */
     public function setMiddleName($middleName)
@@ -260,7 +320,7 @@ class Ucv1sessionsDataRecipientInformation implements ArrayAccess
 
     /**
      * Sets lastName
-     * @param string $lastName
+     * @param string $lastName Last name of the recipient. This field is applicable for AFT transactions.  Only alpha numeric values are supported. Special characters not in the standard ASCII character set, are not supported and will be stripped before being sent to sent to the processor.
      * @return $this
      */
     public function setLastName($lastName)
@@ -271,43 +331,22 @@ class Ucv1sessionsDataRecipientInformation implements ArrayAccess
     }
 
     /**
-     * Gets country
+     * Gets address1
      * @return string
      */
-    public function getCountry()
+    public function getAddress1()
     {
-        return $this->container['country'];
+        return $this->container['address1'];
     }
 
     /**
-     * Sets country
-     * @param string $country The country code of the recipient's country<br><br>  Optional field: This field cannot be configured through the Merchant Experience screens in the Business Center, but if required should be provided on a per‑transaction basis in the uc/v1/sessions API request.
+     * Sets address1
+     * @param string $address1 The street address of the recipient This field is applicable for AFT and OCT transactions.  Only alpha numeric values are supported. Special characters not in the standard ASCII character set are not supported and will be stripped before being sent to sent to the processor.
      * @return $this
      */
-    public function setCountry($country)
+    public function setAddress1($address1)
     {
-        $this->container['country'] = $country;
-
-        return $this;
-    }
-
-    /**
-     * Gets accountId
-     * @return string
-     */
-    public function getAccountId()
-    {
-        return $this->container['accountId'];
-    }
-
-    /**
-     * Sets accountId
-     * @param string $accountId The account ID of the recipient<br><br>  Optional field: This field cannot be configured through the Merchant Experience screens in the Business Center, but if required should be provided on a per‑transaction basis in the uc/v1/sessions API request.
-     * @return $this
-     */
-    public function setAccountId($accountId)
-    {
-        $this->container['accountId'] = $accountId;
+        $this->container['address1'] = $address1;
 
         return $this;
     }
@@ -323,54 +362,12 @@ class Ucv1sessionsDataRecipientInformation implements ArrayAccess
 
     /**
      * Sets administrativeArea
-     * @param string $administrativeArea The administrative area of the recipient<br><br>  Optional field: This field cannot be configured through the Merchant Experience screens in the Business Center, but if required should be provided on a per‑transaction basis in the uc/v1/sessions API request.
+     * @param string $administrativeArea The state or province of the recipient. This field is applicable for AFT transactions when the recipient country is US or CA. Else it is optional.  Must be a two character value
      * @return $this
      */
     public function setAdministrativeArea($administrativeArea)
     {
         $this->container['administrativeArea'] = $administrativeArea;
-
-        return $this;
-    }
-
-    /**
-     * Gets accountType
-     * @return string
-     */
-    public function getAccountType()
-    {
-        return $this->container['accountType'];
-    }
-
-    /**
-     * Sets accountType
-     * @param string $accountType The account type of the recipient<br><br>  Optional field: This field cannot be configured through the Merchant Experience screens in the Business Center, but if required should be provided on a per‑transaction basis in the uc/v1/sessions API request.
-     * @return $this
-     */
-    public function setAccountType($accountType)
-    {
-        $this->container['accountType'] = $accountType;
-
-        return $this;
-    }
-
-    /**
-     * Gets dateOfBirth
-     * @return string
-     */
-    public function getDateOfBirth()
-    {
-        return $this->container['dateOfBirth'];
-    }
-
-    /**
-     * Sets dateOfBirth
-     * @param string $dateOfBirth The date of birth of the recipient<br><br>  Optional field: This field cannot be configured through the Merchant Experience screens in the Business Center, but if required should be provided on a per‑transaction basis in the uc/v1/sessions API request.
-     * @return $this
-     */
-    public function setDateOfBirth($dateOfBirth)
-    {
-        $this->container['dateOfBirth'] = $dateOfBirth;
 
         return $this;
     }
@@ -386,12 +383,96 @@ class Ucv1sessionsDataRecipientInformation implements ArrayAccess
 
     /**
      * Sets postalCode
-     * @param string $postalCode The postal code of the recipient<br><br>  Optional field: This field cannot be configured through the Merchant Experience screens in the Business Center, but if required should be provided on a per‑transaction basis in the uc/v1/sessions API request.
+     * @param string $postalCode Partial postal code for the recipient's address. For example, if the postal code is **NN5 7SG**, the value for this field should be the first part of the postal code: **NN5**. This field is a _pass-through_, which means that CyberSource does not verify the value or modify it in any way before sending it to the processor. If the field is not required for the transaction, CyberSource does not forward it to the processor.
      * @return $this
      */
     public function setPostalCode($postalCode)
     {
         $this->container['postalCode'] = $postalCode;
+
+        return $this;
+    }
+
+    /**
+     * Gets country
+     * @return string
+     */
+    public function getCountry()
+    {
+        return $this->container['country'];
+    }
+
+    /**
+     * Sets country
+     * @param string $country The country associated with the address of the recipient. This field is applicable for AFT and OCT transactions.  Must be a two character ISO country code.  For example, see [ISO Country Code](https://developer.cybersource.com/docs/cybs/en-us/country-codes/reference/all/na/country-codes/country-codes.html)
+     * @return $this
+     */
+    public function setCountry($country)
+    {
+        $this->container['country'] = $country;
+
+        return $this;
+    }
+
+    /**
+     * Gets phoneNumber
+     * @return string
+     */
+    public function getPhoneNumber()
+    {
+        return $this->container['phoneNumber'];
+    }
+
+    /**
+     * Sets phoneNumber
+     * @param string $phoneNumber Account Owner phone number
+     * @return $this
+     */
+    public function setPhoneNumber($phoneNumber)
+    {
+        $this->container['phoneNumber'] = $phoneNumber;
+
+        return $this;
+    }
+
+    /**
+     * Gets dateOfBirth
+     * @return string
+     */
+    public function getDateOfBirth()
+    {
+        return $this->container['dateOfBirth'];
+    }
+
+    /**
+     * Sets dateOfBirth
+     * @param string $dateOfBirth Recipient's date of birth. **Format**: `YYYYMMDD`.  This field is a `pass-through`, which means that CyberSource ensures that the value is eight numeric characters but otherwise does not verify the value or modify it in any way before sending it to the processor. If the field is not required for the transaction, CyberSource does not forward it to the processor.
+     * @return $this
+     */
+    public function setDateOfBirth($dateOfBirth)
+    {
+        $this->container['dateOfBirth'] = $dateOfBirth;
+
+        return $this;
+    }
+
+    /**
+     * Gets locality
+     * @return string
+     */
+    public function getLocality()
+    {
+        return $this->container['locality'];
+    }
+
+    /**
+     * Sets locality
+     * @param string $locality The city of the recipient. This field is applicable for AFT transactions.  Only alpha numeric values are supported. Special characters not in the standard ASCII character set are not supported and will be stripped before being sent to sent to the processor.
+     * @return $this
+     */
+    public function setLocality($locality)
+    {
+        $this->container['locality'] = $locality;
 
         return $this;
     }

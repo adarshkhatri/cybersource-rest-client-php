@@ -63,7 +63,8 @@ class Ptsv2paymentsAggregatorInformationSubMerchant implements ArrayAccess
         'postalCode' => 'string',
         'country' => 'string',
         'email' => 'string',
-        'phoneNumber' => 'string'
+        'phoneNumber' => 'string',
+        'merchantCategoryCode' => 'float'
     ];
 
     /**
@@ -81,7 +82,8 @@ class Ptsv2paymentsAggregatorInformationSubMerchant implements ArrayAccess
         'postalCode' => null,
         'country' => null,
         'email' => null,
-        'phoneNumber' => null
+        'phoneNumber' => null,
+        'merchantCategoryCode' => null
     ];
 
     public static function swaggerTypes()
@@ -109,7 +111,8 @@ class Ptsv2paymentsAggregatorInformationSubMerchant implements ArrayAccess
         'postalCode' => 'postalCode',
         'country' => 'country',
         'email' => 'email',
-        'phoneNumber' => 'phoneNumber'
+        'phoneNumber' => 'phoneNumber',
+        'merchantCategoryCode' => 'merchantCategoryCode'
     ];
 
 
@@ -128,7 +131,8 @@ class Ptsv2paymentsAggregatorInformationSubMerchant implements ArrayAccess
         'postalCode' => 'setPostalCode',
         'country' => 'setCountry',
         'email' => 'setEmail',
-        'phoneNumber' => 'setPhoneNumber'
+        'phoneNumber' => 'setPhoneNumber',
+        'merchantCategoryCode' => 'setMerchantCategoryCode'
     ];
 
 
@@ -147,7 +151,8 @@ class Ptsv2paymentsAggregatorInformationSubMerchant implements ArrayAccess
         'postalCode' => 'getPostalCode',
         'country' => 'getCountry',
         'email' => 'getEmail',
-        'phoneNumber' => 'getPhoneNumber'
+        'phoneNumber' => 'getPhoneNumber',
+        'merchantCategoryCode' => 'getMerchantCategoryCode'
     ];
 
     public static function attributeMap()
@@ -192,6 +197,7 @@ class Ptsv2paymentsAggregatorInformationSubMerchant implements ArrayAccess
         $this->container['country'] = isset($data['country']) ? $data['country'] : null;
         $this->container['email'] = isset($data['email']) ? $data['email'] : null;
         $this->container['phoneNumber'] = isset($data['phoneNumber']) ? $data['phoneNumber'] : null;
+        $this->container['merchantCategoryCode'] = isset($data['merchantCategoryCode']) ? $data['merchantCategoryCode'] : null;
     }
 
     /**
@@ -446,6 +452,27 @@ class Ptsv2paymentsAggregatorInformationSubMerchant implements ArrayAccess
     public function setPhoneNumber($phoneNumber)
     {
         $this->container['phoneNumber'] = $phoneNumber;
+
+        return $this;
+    }
+
+    /**
+     * Gets merchantCategoryCode
+     * @return float
+     */
+    public function getMerchantCategoryCode()
+    {
+        return $this->container['merchantCategoryCode'];
+    }
+
+    /**
+     * Sets merchantCategoryCode
+     * @param float $merchantCategoryCode
+     * @return $this
+     */
+    public function setMerchantCategoryCode($merchantCategoryCode)
+    {
+        $this->container['merchantCategoryCode'] = $merchantCategoryCode;
 
         return $this;
     }

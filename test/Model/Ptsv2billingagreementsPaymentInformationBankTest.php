@@ -103,4 +103,11 @@ class Ptsv2billingagreementsPaymentInformationBankTest extends \PHPUnit_Framewor
     public function testPropertyScheme()
     {
     }
+
+    /**
+     * Test attribute "accountAlias"
+     */
+    public function testPropertyAccountAlias()
+    {
+    }
 }

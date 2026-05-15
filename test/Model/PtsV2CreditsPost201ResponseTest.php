@@ -154,9 +154,37 @@ class PtsV2CreditsPost201ResponseTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "merchantInformation"
+     */
+    public function testPropertyMerchantInformation()
+    {
+    }
+
+    /**
+     * Test attribute "clearingInformation"
+     */
+    public function testPropertyClearingInformation()
+    {
+    }
+
+    /**
      * Test attribute "pointOfSaleInformation"
      */
     public function testPropertyPointOfSaleInformation()
+    {
+    }
+
+    /**
+     * Test attribute "tokenInformation"
+     */
+    public function testPropertyTokenInformation()
+    {
+    }
+
+    /**
+     * Test attribute "paymentAccountInformation"
+     */
+    public function testPropertyPaymentAccountInformation()
     {
     }
 

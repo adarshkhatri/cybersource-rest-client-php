@@ -141,7 +141,7 @@ class Cache
         if (!empty($merchantConfig->getMleForRequestPublicCertPath())) {
             $mleCertPath = $merchantConfig->getMleForRequestPublicCertPath();
             $cacheKey = $merchantId . GlobalParameter::MLE_CACHE_IDENTIFIER_FOR_CONFIG_CERT;
-        } elseif (GlobalParameter::JWT == $merchantConfig->getAuthenticationType()) {
+        } elseif (GlobalParameter::JWT == $merchantConfig->getAuthenticationType() && !$merchantConfig->isSharedSecretKeyType()) {
             $mleCertPath = self::getFilePath($merchantConfig);
             if (!file_exists($mleCertPath) || !is_readable($mleCertPath)) {
                 self::$logger->warning("MLE certificate file not found or not readable: ". $mleCertPath);
@@ -403,17 +403,21 @@ class Cache
             $filePath = $merchantConfig->getResponseMlePrivateKeyFilePath();
             $cacheKey = $filePath . GlobalParameter::RESPONSE_MLE_P12_PFX_CACHE_IDENTIFIER;
 
-            // Get certificate from P12 file using merchant ID as alias
+            // Use portfolioID as alias for MetaKey mode, merchantID otherwise (matching Java SDK)
+            $responseMleKeyAlias = $merchantConfig->getUseMetaKey()
+                ? $merchantConfig->getPortfolioID()
+                : $merchantConfig->getMerchantID();
+
             $merchantCert = Utility::getCertificateByAliasFromPKCS(
                 $filePath,
                 $merchantConfig->getResponseMlePrivateKeyFilePassword(),
-                $merchantConfig->getMerchantID()
+                $responseMleKeyAlias
             );
 
             if ($merchantCert === null) {
                 throw new MLEException(
-                    "No certificate found for Response MLE Private Key file with merchant ID alias " .
-                    $merchantConfig->getMerchantID()
+                    "No certificate found for Response MLE Private Key file with alias " .
+                    $responseMleKeyAlias
                 );
             }
 
@@ -432,8 +436,8 @@ class Cache
                 try {
                     $mleKID = MLEUtility::extractSerialNumber(
                         $merchantCert,
-                        "Serial number not found in certificate subject field for Response MLE Private Key with merchant ID alias " .
-                        $merchantConfig->getMerchantID()
+                        "Serial number not found in certificate subject field for Response MLE Private Key with alias " .
+                        $responseMleKeyAlias
                     );
                     $cachedMLEKId['kid'] = $mleKID;
                 } catch (\Exception $e) {

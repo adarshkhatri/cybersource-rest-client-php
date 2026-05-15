@@ -89,4 +89,11 @@ class Ptsv2paymentsidcapturesPointOfSaleInformationTest extends \PHPUnit_Framewo
     public function testPropertyAmexCapnData()
     {
     }
+
+    /**
+     * Test attribute "encryptedKeyId"
+     */
+    public function testPropertyEncryptedKeyId()
+    {
+    }
 }

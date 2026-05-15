@@ -84,6 +84,41 @@ class Ucv1sessionsDataOrderInformationAmountDetailsTest extends \PHPUnit_Framewo
     }
 
     /**
+     * Test attribute "freightAmount"
+     */
+    public function testPropertyFreightAmount()
+    {
+    }
+
+    /**
+     * Test attribute "dutyAmount"
+     */
+    public function testPropertyDutyAmount()
+    {
+    }
+
+    /**
+     * Test attribute "discountAmount"
+     */
+    public function testPropertyDiscountAmount()
+    {
+    }
+
+    /**
+     * Test attribute "taxAppliedAfterDiscount"
+     */
+    public function testPropertyTaxAppliedAfterDiscount()
+    {
+    }
+
+    /**
+     * Test attribute "taxAppliedLevel"
+     */
+    public function testPropertyTaxAppliedLevel()
+    {
+    }
+
+    /**
      * Test attribute "currency"
      */
     public function testPropertyCurrency()
@@ -94,13 +129,6 @@ class Ucv1sessionsDataOrderInformationAmountDetailsTest extends \PHPUnit_Framewo
      * Test attribute "surcharge"
      */
     public function testPropertySurcharge()
-    {
-    }
-
-    /**
-     * Test attribute "discountAmount"
-     */
-    public function testPropertyDiscountAmount()
     {
     }
 

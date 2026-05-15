@@ -77,6 +77,13 @@ class PaymentsProductsCurrencyConversionConfigurationInformationConfigurationsPr
     }
 
     /**
+     * Test attribute "provider"
+     */
+    public function testPropertyProvider()
+    {
+    }
+
+    /**
      * Test attribute "merchantId"
      */
     public function testPropertyMerchantId()

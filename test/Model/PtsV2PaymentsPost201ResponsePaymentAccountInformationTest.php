@@ -82,4 +82,11 @@ class PtsV2PaymentsPost201ResponsePaymentAccountInformationTest extends \PHPUnit
     public function testPropertyCard()
     {
     }
+
+    /**
+     * Test attribute "tokenizedCard"
+     */
+    public function testPropertyTokenizedCard()
+    {
+    }
 }

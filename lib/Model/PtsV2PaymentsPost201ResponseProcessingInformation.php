@@ -56,6 +56,7 @@ class PtsV2PaymentsPost201ResponseProcessingInformation implements ArrayAccess
         'bankTransferOptions' => '\CyberSource\Model\PtsV2PaymentsPost201ResponseProcessingInformationBankTransferOptions',
         'paymentSolution' => 'string',
         'enhancedDataEnabled' => 'bool',
+        'digitalServiceIndicator' => 'string',
         'captureOptions' => '\CyberSource\Model\PtsV2PaymentsPost201ResponseProcessingInformationCaptureOptions',
         'authorizationOptions' => '\CyberSource\Model\PtsV2PaymentsPost201ResponseProcessingInformationAuthorizationOptions',
         'purchaseOptions' => '\CyberSource\Model\PtsV2PaymentsPost201ResponseProcessingInformationPurchaseOptions'
@@ -69,6 +70,7 @@ class PtsV2PaymentsPost201ResponseProcessingInformation implements ArrayAccess
         'bankTransferOptions' => null,
         'paymentSolution' => null,
         'enhancedDataEnabled' => null,
+        'digitalServiceIndicator' => null,
         'captureOptions' => null,
         'authorizationOptions' => null,
         'purchaseOptions' => null
@@ -92,6 +94,7 @@ class PtsV2PaymentsPost201ResponseProcessingInformation implements ArrayAccess
         'bankTransferOptions' => 'bankTransferOptions',
         'paymentSolution' => 'paymentSolution',
         'enhancedDataEnabled' => 'enhancedDataEnabled',
+        'digitalServiceIndicator' => 'digitalServiceIndicator',
         'captureOptions' => 'captureOptions',
         'authorizationOptions' => 'authorizationOptions',
         'purchaseOptions' => 'purchaseOptions'
@@ -106,6 +109,7 @@ class PtsV2PaymentsPost201ResponseProcessingInformation implements ArrayAccess
         'bankTransferOptions' => 'setBankTransferOptions',
         'paymentSolution' => 'setPaymentSolution',
         'enhancedDataEnabled' => 'setEnhancedDataEnabled',
+        'digitalServiceIndicator' => 'setDigitalServiceIndicator',
         'captureOptions' => 'setCaptureOptions',
         'authorizationOptions' => 'setAuthorizationOptions',
         'purchaseOptions' => 'setPurchaseOptions'
@@ -120,6 +124,7 @@ class PtsV2PaymentsPost201ResponseProcessingInformation implements ArrayAccess
         'bankTransferOptions' => 'getBankTransferOptions',
         'paymentSolution' => 'getPaymentSolution',
         'enhancedDataEnabled' => 'getEnhancedDataEnabled',
+        'digitalServiceIndicator' => 'getDigitalServiceIndicator',
         'captureOptions' => 'getCaptureOptions',
         'authorizationOptions' => 'getAuthorizationOptions',
         'purchaseOptions' => 'getPurchaseOptions'
@@ -159,6 +164,7 @@ class PtsV2PaymentsPost201ResponseProcessingInformation implements ArrayAccess
         $this->container['bankTransferOptions'] = isset($data['bankTransferOptions']) ? $data['bankTransferOptions'] : null;
         $this->container['paymentSolution'] = isset($data['paymentSolution']) ? $data['paymentSolution'] : null;
         $this->container['enhancedDataEnabled'] = isset($data['enhancedDataEnabled']) ? $data['enhancedDataEnabled'] : null;
+        $this->container['digitalServiceIndicator'] = isset($data['digitalServiceIndicator']) ? $data['digitalServiceIndicator'] : null;
         $this->container['captureOptions'] = isset($data['captureOptions']) ? $data['captureOptions'] : null;
         $this->container['authorizationOptions'] = isset($data['authorizationOptions']) ? $data['authorizationOptions'] : null;
         $this->container['purchaseOptions'] = isset($data['purchaseOptions']) ? $data['purchaseOptions'] : null;
@@ -248,6 +254,27 @@ class PtsV2PaymentsPost201ResponseProcessingInformation implements ArrayAccess
     public function setEnhancedDataEnabled($enhancedDataEnabled)
     {
         $this->container['enhancedDataEnabled'] = $enhancedDataEnabled;
+
+        return $this;
+    }
+
+    /**
+     * Gets digitalServiceIndicator
+     * @return string
+     */
+    public function getDigitalServiceIndicator()
+    {
+        return $this->container['digitalServiceIndicator'];
+    }
+
+    /**
+     * Sets digitalServiceIndicator
+     * @param string $digitalServiceIndicator Mastercard Digital Enablement Service (MDES) digital service indicators received in the authorization response message for MDES transactions.   This data is provided in the 0110 response in the Field 34—Acceptance Environment Data (TLV Format), Dataset ID 04—Additional Service Result Data, Tag DF1F—Mastercard Digital Enablement Service Indicator for Acquirer to acquirers.  This field is in ANS, EBCDIC format and flows in Field 34, DSID 04 Tag DF1F, mapped to Mastercard Data Element DE119, Sub-element 004.  This field is supported for all flavors of Authorization response only.  #### Used by **Authorization Response** Response field only.
+     * @return $this
+     */
+    public function setDigitalServiceIndicator($digitalServiceIndicator)
+    {
+        $this->container['digitalServiceIndicator'] = $digitalServiceIndicator;
 
         return $this;
     }

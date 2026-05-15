@@ -55,6 +55,7 @@ class Ucv1sessionsDataMerchantInformationMerchantDescriptor implements ArrayAcce
     protected static $swaggerTypes = [
         'name' => 'string',
         'alternateName' => 'string',
+        'contact' => 'string',
         'locality' => 'string',
         'phone' => 'string',
         'country' => 'string',
@@ -70,6 +71,7 @@ class Ucv1sessionsDataMerchantInformationMerchantDescriptor implements ArrayAcce
     protected static $swaggerFormats = [
         'name' => null,
         'alternateName' => null,
+        'contact' => null,
         'locality' => null,
         'phone' => null,
         'country' => null,
@@ -95,6 +97,7 @@ class Ucv1sessionsDataMerchantInformationMerchantDescriptor implements ArrayAcce
     protected static $attributeMap = [
         'name' => 'name',
         'alternateName' => 'alternateName',
+        'contact' => 'contact',
         'locality' => 'locality',
         'phone' => 'phone',
         'country' => 'country',
@@ -111,6 +114,7 @@ class Ucv1sessionsDataMerchantInformationMerchantDescriptor implements ArrayAcce
     protected static $setters = [
         'name' => 'setName',
         'alternateName' => 'setAlternateName',
+        'contact' => 'setContact',
         'locality' => 'setLocality',
         'phone' => 'setPhone',
         'country' => 'setCountry',
@@ -127,6 +131,7 @@ class Ucv1sessionsDataMerchantInformationMerchantDescriptor implements ArrayAcce
     protected static $getters = [
         'name' => 'getName',
         'alternateName' => 'getAlternateName',
+        'contact' => 'getContact',
         'locality' => 'getLocality',
         'phone' => 'getPhone',
         'country' => 'getCountry',
@@ -168,6 +173,7 @@ class Ucv1sessionsDataMerchantInformationMerchantDescriptor implements ArrayAcce
     {
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['alternateName'] = isset($data['alternateName']) ? $data['alternateName'] : null;
+        $this->container['contact'] = isset($data['contact']) ? $data['contact'] : null;
         $this->container['locality'] = isset($data['locality']) ? $data['locality'] : null;
         $this->container['phone'] = isset($data['phone']) ? $data['phone'] : null;
         $this->container['country'] = isset($data['country']) ? $data['country'] : null;
@@ -239,6 +245,27 @@ class Ucv1sessionsDataMerchantInformationMerchantDescriptor implements ArrayAcce
     public function setAlternateName($alternateName)
     {
         $this->container['alternateName'] = $alternateName;
+
+        return $this;
+    }
+
+    /**
+     * Gets contact
+     * @return string
+     */
+    public function getContact()
+    {
+        return $this->container['contact'];
+    }
+
+    /**
+     * Sets contact
+     * @param string $contact Contact information for the merchant.  **Note** These are the maximum data lengths for the following payment processors: - FDCCompass (13) - Paymentech (13)
+     * @return $this
+     */
+    public function setContact($contact)
+    {
+        $this->container['contact'] = $contact;
 
         return $this;
     }

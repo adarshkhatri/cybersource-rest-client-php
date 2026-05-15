@@ -3,8 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**merchantId** | **string** | The merchant identifier for the Currency Conversion service. Check with your Currency Conversion Provider for details. | [optional] 
-**acquirerId** | **string** |  | [optional] 
+**provider** | **string** | The name of the provider. | [optional] 
+**merchantId** | **string** | A unique identifier value assigned to each merchant. Assigned by the provider. | [optional] 
+**acquirerId** | **string** | This code identifies the financial institution acting as the acquirer. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

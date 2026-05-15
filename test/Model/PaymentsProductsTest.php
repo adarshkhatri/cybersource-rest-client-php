@@ -222,4 +222,18 @@ class PaymentsProductsTest extends \PHPUnit_Framework_TestCase
     public function testPropertyBatchUpload()
     {
     }
+
+    /**
+     * Test attribute "transactGuard"
+     */
+    public function testPropertyTransactGuard()
+    {
+    }
+
+    /**
+     * Test attribute "microform"
+     */
+    public function testPropertyMicroform()
+    {
+    }
 }

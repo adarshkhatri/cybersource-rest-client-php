@@ -34,7 +34,7 @@ use \ArrayAccess;
  * Acpv1tokensAssuranceData Class Doc Comment
  *
  * @category    Class
- * @description Assurance data.
+ * @description Assurance data. Contains identity verification details that prove the consumer or device has been authenticated before the payment operation.
  * @package     CyberSource
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
@@ -237,7 +237,7 @@ class Acpv1tokensAssuranceData implements ArrayAccess
 
     /**
      * Sets verificationType
-     * @param string $verificationType Type of the verification data.   Possible values:   - `CARDHOLDER` (Default)   - `DEVICE`
+     * @param string $verificationType Optional. Type of the verification data.   Possible values:   - `CARDHOLDER` (Default)   - `DEVICE`
      * @return $this
      */
     public function setVerificationType($verificationType)
@@ -258,7 +258,7 @@ class Acpv1tokensAssuranceData implements ArrayAccess
 
     /**
      * Sets verificationEntity
-     * @param string $verificationEntity Entity performing the verification.   Possible value:     - `10` - VISA (Default)
+     * @param string $verificationEntity Optional. Entity performing the verification.   Possible value:     - `10` - VISA (Default)
      * @return $this
      */
     public function setVerificationEntity($verificationEntity)
@@ -279,7 +279,7 @@ class Acpv1tokensAssuranceData implements ArrayAccess
 
     /**
      * Sets verificationEvents
-     * @param string[] $verificationEvents Event where the verification occurred.   Possible values:     - `01` - Payment transaction   - `02` - Add card/Card enrollment   - `03` - Profile access   - `04` - Account verification
+     * @param string[] $verificationEvents Optional. Event where the verification occurred.   Possible values:     - `01` - Payment transaction   - `02` - Add card/Card enrollment   - `03` - Profile access   - `04` - Account verification
      * @return $this
      */
     public function setVerificationEvents($verificationEvents)
@@ -300,7 +300,7 @@ class Acpv1tokensAssuranceData implements ArrayAccess
 
     /**
      * Sets verificationMethod
-     * @param string $verificationMethod Method of the verification.   Possible values:     - `02` - App-based authentication   - `04` - One-time passcode   - `21` - Visa Token Service step-up: Device binding   - `22` - Visa Token Service step-up: Cardholder verification   - `23` - FIDO2
+     * @param string $verificationMethod Required. Method of the verification.   Possible values:     - `02` - App-based authentication   - `04` - One-time passcode   - `21` - Visa Token Service step-up: Device binding   - `22` - Visa Token Service step-up: Cardholder verification   - `23` - FIDO2
      * @return $this
      */
     public function setVerificationMethod($verificationMethod)
@@ -321,7 +321,7 @@ class Acpv1tokensAssuranceData implements ArrayAccess
 
     /**
      * Sets verificationResults
-     * @param string $verificationResults Result of the verification.   Possible values:     - `01` - Verified   - `02` - Not Verified   - `03` - Not performed   - `04` - Not required   - `21` - Not allowed
+     * @param string $verificationResults Required. Result of the verification.   Possible values:     - `01` - Verified   - `02` - Not Verified   - `03` - Not performed   - `04` - Not required   - `21` - Not allowed
      * @return $this
      */
     public function setVerificationResults($verificationResults)
@@ -342,7 +342,7 @@ class Acpv1tokensAssuranceData implements ArrayAccess
 
     /**
      * Sets verificationTimestamp
-     * @param string $verificationTimestamp Date and time the verification occurred. UTC time in Unix epoch format.
+     * @param string $verificationTimestamp Required. Date and time the verification occurred. UTC time in Unix epoch format.
      * @return $this
      */
     public function setVerificationTimestamp($verificationTimestamp)

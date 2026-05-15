@@ -117,4 +117,32 @@ class PtsV2PayoutsPost201ResponseProcessorInformationTest extends \PHPUnit_Frame
     public function testPropertyMerchantAdvice()
     {
     }
+
+    /**
+     * Test attribute "avs"
+     */
+    public function testPropertyAvs()
+    {
+    }
+
+    /**
+     * Test attribute "customer"
+     */
+    public function testPropertyCustomer()
+    {
+    }
+
+    /**
+     * Test attribute "electronicVerificationResults"
+     */
+    public function testPropertyElectronicVerificationResults()
+    {
+    }
+
+    /**
+     * Test attribute "cardVerification"
+     */
+    public function testPropertyCardVerification()
+    {
+    }
 }

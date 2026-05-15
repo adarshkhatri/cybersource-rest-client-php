@@ -32,7 +32,7 @@ namespace CyberSource;
  * Acpv1instructionsMandatesTest Class Doc Comment
  *
  * @category    Class */
-// * @description Mandate data.
+// * @description Mandate data. Defines the consumer&#39;s spending authorization for a purchase intent, including merchant preferences, amount limits, and product details.
 /**
  * @package     CyberSource
  * @author      Swagger Codegen team

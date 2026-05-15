@@ -216,7 +216,7 @@ class BankAccountValidationApi
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse4009', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse40011', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 403:

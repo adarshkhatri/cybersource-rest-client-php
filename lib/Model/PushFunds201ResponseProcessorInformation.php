@@ -63,7 +63,11 @@ class PushFunds201ResponseProcessorInformation implements ArrayAccess
         'name' => 'string',
         'routing' => '\CyberSource\Model\PushFunds201ResponseProcessorInformationRouting',
         'settlement' => '\CyberSource\Model\PushFunds201ResponseProcessorInformationSettlement',
-        'merchantAdvice' => '\CyberSource\Model\PushFunds201ResponseProcessorInformationMerchantAdvice'
+        'merchantAdvice' => '\CyberSource\Model\PushFunds201ResponseProcessorInformationMerchantAdvice',
+        'avs' => '\CyberSource\Model\PtsV2PayoutsPost201ResponseProcessorInformationAvs',
+        'customer' => '\CyberSource\Model\PtsV2PayoutsPost201ResponseProcessorInformationCustomer',
+        'electronicVerificationResults' => '\CyberSource\Model\PtsV2PayoutsPost201ResponseProcessorInformationElectronicVerificationResults',
+        'cardVerification' => '\CyberSource\Model\PtsV2PaymentsPost201ResponseProcessorInformationCardVerification'
     ];
 
     /**
@@ -81,7 +85,11 @@ class PushFunds201ResponseProcessorInformation implements ArrayAccess
         'name' => null,
         'routing' => null,
         'settlement' => null,
-        'merchantAdvice' => null
+        'merchantAdvice' => null,
+        'avs' => null,
+        'customer' => null,
+        'electronicVerificationResults' => null,
+        'cardVerification' => null
     ];
 
     public static function swaggerTypes()
@@ -109,7 +117,11 @@ class PushFunds201ResponseProcessorInformation implements ArrayAccess
         'name' => 'name',
         'routing' => 'routing',
         'settlement' => 'settlement',
-        'merchantAdvice' => 'merchantAdvice'
+        'merchantAdvice' => 'merchantAdvice',
+        'avs' => 'avs',
+        'customer' => 'customer',
+        'electronicVerificationResults' => 'electronicVerificationResults',
+        'cardVerification' => 'cardVerification'
     ];
 
 
@@ -128,7 +140,11 @@ class PushFunds201ResponseProcessorInformation implements ArrayAccess
         'name' => 'setName',
         'routing' => 'setRouting',
         'settlement' => 'setSettlement',
-        'merchantAdvice' => 'setMerchantAdvice'
+        'merchantAdvice' => 'setMerchantAdvice',
+        'avs' => 'setAvs',
+        'customer' => 'setCustomer',
+        'electronicVerificationResults' => 'setElectronicVerificationResults',
+        'cardVerification' => 'setCardVerification'
     ];
 
 
@@ -147,7 +163,11 @@ class PushFunds201ResponseProcessorInformation implements ArrayAccess
         'name' => 'getName',
         'routing' => 'getRouting',
         'settlement' => 'getSettlement',
-        'merchantAdvice' => 'getMerchantAdvice'
+        'merchantAdvice' => 'getMerchantAdvice',
+        'avs' => 'getAvs',
+        'customer' => 'getCustomer',
+        'electronicVerificationResults' => 'getElectronicVerificationResults',
+        'cardVerification' => 'getCardVerification'
     ];
 
     public static function attributeMap()
@@ -192,6 +212,10 @@ class PushFunds201ResponseProcessorInformation implements ArrayAccess
         $this->container['routing'] = isset($data['routing']) ? $data['routing'] : null;
         $this->container['settlement'] = isset($data['settlement']) ? $data['settlement'] : null;
         $this->container['merchantAdvice'] = isset($data['merchantAdvice']) ? $data['merchantAdvice'] : null;
+        $this->container['avs'] = isset($data['avs']) ? $data['avs'] : null;
+        $this->container['customer'] = isset($data['customer']) ? $data['customer'] : null;
+        $this->container['electronicVerificationResults'] = isset($data['electronicVerificationResults']) ? $data['electronicVerificationResults'] : null;
+        $this->container['cardVerification'] = isset($data['cardVerification']) ? $data['cardVerification'] : null;
     }
 
     /**
@@ -446,6 +470,90 @@ class PushFunds201ResponseProcessorInformation implements ArrayAccess
     public function setMerchantAdvice($merchantAdvice)
     {
         $this->container['merchantAdvice'] = $merchantAdvice;
+
+        return $this;
+    }
+
+    /**
+     * Gets avs
+     * @return \CyberSource\Model\PtsV2PayoutsPost201ResponseProcessorInformationAvs
+     */
+    public function getAvs()
+    {
+        return $this->container['avs'];
+    }
+
+    /**
+     * Sets avs
+     * @param \CyberSource\Model\PtsV2PayoutsPost201ResponseProcessorInformationAvs $avs
+     * @return $this
+     */
+    public function setAvs($avs)
+    {
+        $this->container['avs'] = $avs;
+
+        return $this;
+    }
+
+    /**
+     * Gets customer
+     * @return \CyberSource\Model\PtsV2PayoutsPost201ResponseProcessorInformationCustomer
+     */
+    public function getCustomer()
+    {
+        return $this->container['customer'];
+    }
+
+    /**
+     * Sets customer
+     * @param \CyberSource\Model\PtsV2PayoutsPost201ResponseProcessorInformationCustomer $customer
+     * @return $this
+     */
+    public function setCustomer($customer)
+    {
+        $this->container['customer'] = $customer;
+
+        return $this;
+    }
+
+    /**
+     * Gets electronicVerificationResults
+     * @return \CyberSource\Model\PtsV2PayoutsPost201ResponseProcessorInformationElectronicVerificationResults
+     */
+    public function getElectronicVerificationResults()
+    {
+        return $this->container['electronicVerificationResults'];
+    }
+
+    /**
+     * Sets electronicVerificationResults
+     * @param \CyberSource\Model\PtsV2PayoutsPost201ResponseProcessorInformationElectronicVerificationResults $electronicVerificationResults
+     * @return $this
+     */
+    public function setElectronicVerificationResults($electronicVerificationResults)
+    {
+        $this->container['electronicVerificationResults'] = $electronicVerificationResults;
+
+        return $this;
+    }
+
+    /**
+     * Gets cardVerification
+     * @return \CyberSource\Model\PtsV2PaymentsPost201ResponseProcessorInformationCardVerification
+     */
+    public function getCardVerification()
+    {
+        return $this->container['cardVerification'];
+    }
+
+    /**
+     * Sets cardVerification
+     * @param \CyberSource\Model\PtsV2PaymentsPost201ResponseProcessorInformationCardVerification $cardVerification
+     * @return $this
+     */
+    public function setCardVerification($cardVerification)
+    {
+        $this->container['cardVerification'] = $cardVerification;
 
         return $this;
     }

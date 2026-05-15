@@ -63,7 +63,8 @@ class Ptsv2paymentsSenderInformation implements ArrayAccess
         'aliasName' => 'string',
         'referenceNumber' => 'string',
         'account' => '\CyberSource\Model\Ptsv2paymentsSenderInformationAccount',
-        'postalCode' => 'string'
+        'postalCode' => 'string',
+        'taxIdNumber' => 'float'
     ];
 
     /**
@@ -81,7 +82,8 @@ class Ptsv2paymentsSenderInformation implements ArrayAccess
         'aliasName' => null,
         'referenceNumber' => null,
         'account' => null,
-        'postalCode' => null
+        'postalCode' => null,
+        'taxIdNumber' => null
     ];
 
     public static function swaggerTypes()
@@ -109,7 +111,8 @@ class Ptsv2paymentsSenderInformation implements ArrayAccess
         'aliasName' => 'aliasName',
         'referenceNumber' => 'referenceNumber',
         'account' => 'account',
-        'postalCode' => 'postalCode'
+        'postalCode' => 'postalCode',
+        'taxIdNumber' => 'taxIdNumber'
     ];
 
 
@@ -128,7 +131,8 @@ class Ptsv2paymentsSenderInformation implements ArrayAccess
         'aliasName' => 'setAliasName',
         'referenceNumber' => 'setReferenceNumber',
         'account' => 'setAccount',
-        'postalCode' => 'setPostalCode'
+        'postalCode' => 'setPostalCode',
+        'taxIdNumber' => 'setTaxIdNumber'
     ];
 
 
@@ -147,7 +151,8 @@ class Ptsv2paymentsSenderInformation implements ArrayAccess
         'aliasName' => 'getAliasName',
         'referenceNumber' => 'getReferenceNumber',
         'account' => 'getAccount',
-        'postalCode' => 'getPostalCode'
+        'postalCode' => 'getPostalCode',
+        'taxIdNumber' => 'getTaxIdNumber'
     ];
 
     public static function attributeMap()
@@ -192,6 +197,7 @@ class Ptsv2paymentsSenderInformation implements ArrayAccess
         $this->container['referenceNumber'] = isset($data['referenceNumber']) ? $data['referenceNumber'] : null;
         $this->container['account'] = isset($data['account']) ? $data['account'] : null;
         $this->container['postalCode'] = isset($data['postalCode']) ? $data['postalCode'] : null;
+        $this->container['taxIdNumber'] = isset($data['taxIdNumber']) ? $data['taxIdNumber'] : null;
     }
 
     /**
@@ -446,6 +452,27 @@ class Ptsv2paymentsSenderInformation implements ArrayAccess
     public function setPostalCode($postalCode)
     {
         $this->container['postalCode'] = $postalCode;
+
+        return $this;
+    }
+
+    /**
+     * Gets taxIdNumber
+     * @return float
+     */
+    public function getTaxIdNumber()
+    {
+        return $this->container['taxIdNumber'];
+    }
+
+    /**
+     * Sets taxIdNumber
+     * @param float $taxIdNumber CPF or CNPJ of the cash-in recipient. \"Cadastro de Pessoas Físicas\", which translates to the \"Natural Persons Register.\" It is the individual taxpayer registry identification number in Brazil, similar to a Social Security Number (SSN) in the United States or a National Insurance Number in the UK.
+     * @return $this
+     */
+    public function setTaxIdNumber($taxIdNumber)
+    {
+        $this->container['taxIdNumber'] = $taxIdNumber;
 
         return $this;
     }

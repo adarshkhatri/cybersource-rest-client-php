@@ -110,4 +110,11 @@ class PtsV2PaymentsPost201ResponseTokenInformationTest extends \PHPUnit_Framewor
     public function testPropertyInstrumentIdentifier()
     {
     }
+
+    /**
+     * Test attribute "thirdPartyToken"
+     */
+    public function testPropertyThirdPartyToken()
+    {
+    }
 }

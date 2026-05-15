@@ -54,7 +54,8 @@ class Tmsv2TokenizedCardMetadata implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'cardArt' => '\CyberSource\Model\TmsCardArt',
-        'issuer' => '\CyberSource\Model\Tmsv2TokenizedCardMetadataIssuer'
+        'issuer' => '\CyberSource\Model\Tmsv2TokenizedCardMetadataIssuer',
+        'creator' => 'string'
     ];
 
     /**
@@ -63,7 +64,8 @@ class Tmsv2TokenizedCardMetadata implements ArrayAccess
       */
     protected static $swaggerFormats = [
         'cardArt' => null,
-        'issuer' => null
+        'issuer' => null,
+        'creator' => null
     ];
 
     public static function swaggerTypes()
@@ -82,7 +84,8 @@ class Tmsv2TokenizedCardMetadata implements ArrayAccess
      */
     protected static $attributeMap = [
         'cardArt' => 'cardArt',
-        'issuer' => 'issuer'
+        'issuer' => 'issuer',
+        'creator' => 'creator'
     ];
 
 
@@ -92,7 +95,8 @@ class Tmsv2TokenizedCardMetadata implements ArrayAccess
      */
     protected static $setters = [
         'cardArt' => 'setCardArt',
-        'issuer' => 'setIssuer'
+        'issuer' => 'setIssuer',
+        'creator' => 'setCreator'
     ];
 
 
@@ -102,7 +106,8 @@ class Tmsv2TokenizedCardMetadata implements ArrayAccess
      */
     protected static $getters = [
         'cardArt' => 'getCardArt',
-        'issuer' => 'getIssuer'
+        'issuer' => 'getIssuer',
+        'creator' => 'getCreator'
     ];
 
     public static function attributeMap()
@@ -138,6 +143,7 @@ class Tmsv2TokenizedCardMetadata implements ArrayAccess
     {
         $this->container['cardArt'] = isset($data['cardArt']) ? $data['cardArt'] : null;
         $this->container['issuer'] = isset($data['issuer']) ? $data['issuer'] : null;
+        $this->container['creator'] = isset($data['creator']) ? $data['creator'] : null;
     }
 
     /**
@@ -203,6 +209,27 @@ class Tmsv2TokenizedCardMetadata implements ArrayAccess
     public function setIssuer($issuer)
     {
         $this->container['issuer'] = $issuer;
+
+        return $this;
+    }
+
+    /**
+     * Gets creator
+     * @return string
+     */
+    public function getCreator()
+    {
+        return $this->container['creator'];
+    }
+
+    /**
+     * Sets creator
+     * @param string $creator The creator of the Tokenized Card.
+     * @return $this
+     */
+    public function setCreator($creator)
+    {
+        $this->container['creator'] = $creator;
 
         return $this;
     }

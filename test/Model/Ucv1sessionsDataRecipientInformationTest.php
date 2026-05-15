@@ -77,6 +77,20 @@ class Ucv1sessionsDataRecipientInformationTest extends \PHPUnit_Framework_TestCa
     }
 
     /**
+     * Test attribute "accountId"
+     */
+    public function testPropertyAccountId()
+    {
+    }
+
+    /**
+     * Test attribute "accountType"
+     */
+    public function testPropertyAccountType()
+    {
+    }
+
+    /**
      * Test attribute "firstName"
      */
     public function testPropertyFirstName()
@@ -98,16 +112,9 @@ class Ucv1sessionsDataRecipientInformationTest extends \PHPUnit_Framework_TestCa
     }
 
     /**
-     * Test attribute "country"
+     * Test attribute "address1"
      */
-    public function testPropertyCountry()
-    {
-    }
-
-    /**
-     * Test attribute "accountId"
-     */
-    public function testPropertyAccountId()
+    public function testPropertyAddress1()
     {
     }
 
@@ -119,9 +126,23 @@ class Ucv1sessionsDataRecipientInformationTest extends \PHPUnit_Framework_TestCa
     }
 
     /**
-     * Test attribute "accountType"
+     * Test attribute "postalCode"
      */
-    public function testPropertyAccountType()
+    public function testPropertyPostalCode()
+    {
+    }
+
+    /**
+     * Test attribute "country"
+     */
+    public function testPropertyCountry()
+    {
+    }
+
+    /**
+     * Test attribute "phoneNumber"
+     */
+    public function testPropertyPhoneNumber()
     {
     }
 
@@ -133,9 +154,9 @@ class Ucv1sessionsDataRecipientInformationTest extends \PHPUnit_Framework_TestCa
     }
 
     /**
-     * Test attribute "postalCode"
+     * Test attribute "locality"
      */
-    public function testPropertyPostalCode()
+    public function testPropertyLocality()
     {
     }
 }

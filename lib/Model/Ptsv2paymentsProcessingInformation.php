@@ -95,7 +95,12 @@ class Ptsv2paymentsProcessingInformation implements ArrayAccess
         'transactionTypeIndicator' => 'string',
         'purposeOfPayment' => 'string',
         'languageCode' => 'string',
-        'originalPaymentId' => 'string'
+        'originalPaymentId' => 'string',
+        'amexIndirectModelType' => 'string',
+        'walletTransactionIntent' => 'float',
+        'destinationType' => 'float',
+        'programIndicators' => '\CyberSource\Model\Ptsv2paymentsProcessingInformationProgramIndicators',
+        'inquiryType' => 'string'
     ];
 
     /**
@@ -145,7 +150,12 @@ class Ptsv2paymentsProcessingInformation implements ArrayAccess
         'transactionTypeIndicator' => null,
         'purposeOfPayment' => null,
         'languageCode' => null,
-        'originalPaymentId' => null
+        'originalPaymentId' => null,
+        'amexIndirectModelType' => null,
+        'walletTransactionIntent' => null,
+        'destinationType' => null,
+        'programIndicators' => null,
+        'inquiryType' => null
     ];
 
     public static function swaggerTypes()
@@ -205,7 +215,12 @@ class Ptsv2paymentsProcessingInformation implements ArrayAccess
         'transactionTypeIndicator' => 'transactionTypeIndicator',
         'purposeOfPayment' => 'purposeOfPayment',
         'languageCode' => 'languageCode',
-        'originalPaymentId' => 'originalPaymentId'
+        'originalPaymentId' => 'originalPaymentId',
+        'amexIndirectModelType' => 'amexIndirectModelType',
+        'walletTransactionIntent' => 'walletTransactionIntent',
+        'destinationType' => 'destinationType',
+        'programIndicators' => 'programIndicators',
+        'inquiryType' => 'inquiryType'
     ];
 
 
@@ -256,7 +271,12 @@ class Ptsv2paymentsProcessingInformation implements ArrayAccess
         'transactionTypeIndicator' => 'setTransactionTypeIndicator',
         'purposeOfPayment' => 'setPurposeOfPayment',
         'languageCode' => 'setLanguageCode',
-        'originalPaymentId' => 'setOriginalPaymentId'
+        'originalPaymentId' => 'setOriginalPaymentId',
+        'amexIndirectModelType' => 'setAmexIndirectModelType',
+        'walletTransactionIntent' => 'setWalletTransactionIntent',
+        'destinationType' => 'setDestinationType',
+        'programIndicators' => 'setProgramIndicators',
+        'inquiryType' => 'setInquiryType'
     ];
 
 
@@ -307,7 +327,12 @@ class Ptsv2paymentsProcessingInformation implements ArrayAccess
         'transactionTypeIndicator' => 'getTransactionTypeIndicator',
         'purposeOfPayment' => 'getPurposeOfPayment',
         'languageCode' => 'getLanguageCode',
-        'originalPaymentId' => 'getOriginalPaymentId'
+        'originalPaymentId' => 'getOriginalPaymentId',
+        'amexIndirectModelType' => 'getAmexIndirectModelType',
+        'walletTransactionIntent' => 'getWalletTransactionIntent',
+        'destinationType' => 'getDestinationType',
+        'programIndicators' => 'getProgramIndicators',
+        'inquiryType' => 'getInquiryType'
     ];
 
     public static function attributeMap()
@@ -384,6 +409,11 @@ class Ptsv2paymentsProcessingInformation implements ArrayAccess
         $this->container['purposeOfPayment'] = isset($data['purposeOfPayment']) ? $data['purposeOfPayment'] : null;
         $this->container['languageCode'] = isset($data['languageCode']) ? $data['languageCode'] : null;
         $this->container['originalPaymentId'] = isset($data['originalPaymentId']) ? $data['originalPaymentId'] : null;
+        $this->container['amexIndirectModelType'] = isset($data['amexIndirectModelType']) ? $data['amexIndirectModelType'] : null;
+        $this->container['walletTransactionIntent'] = isset($data['walletTransactionIntent']) ? $data['walletTransactionIntent'] : null;
+        $this->container['destinationType'] = isset($data['destinationType']) ? $data['destinationType'] : null;
+        $this->container['programIndicators'] = isset($data['programIndicators']) ? $data['programIndicators'] : null;
+        $this->container['inquiryType'] = isset($data['inquiryType']) ? $data['inquiryType'] : null;
     }
 
     /**
@@ -1157,7 +1187,7 @@ class Ptsv2paymentsProcessingInformation implements ArrayAccess
 
     /**
      * Sets networkPartnerId
-     * @param string $networkPartnerId Merchant payment gateway ID that is assigned by Mastercard and is provided by the acquirer when a registered merchant payment gateway service provider is involved in the transaction.  This field is supported for Visa Platform Connect.
+     * @param string $networkPartnerId Merchant payment gateway ID that is assigned by Mastercard and is provided by the acquirer when a registered merchant payment gateway service provider is involved in the transaction. This field is supported for Visa Platform Connect, Chase Paymentech Salem.
      * @return $this
      */
     public function setNetworkPartnerId($networkPartnerId)
@@ -1310,6 +1340,111 @@ class Ptsv2paymentsProcessingInformation implements ArrayAccess
     public function setOriginalPaymentId($originalPaymentId)
     {
         $this->container['originalPaymentId'] = $originalPaymentId;
+
+        return $this;
+    }
+
+    /**
+     * Gets amexIndirectModelType
+     * @return string
+     */
+    public function getAmexIndirectModelType()
+    {
+        return $this->container['amexIndirectModelType'];
+    }
+
+    /**
+     * Sets amexIndirectModelType
+     * @param string $amexIndirectModelType Effective with the April 2025 release, American Express is introducing the following new Indirect Acceptor models : - Digital Wallet Operator   - Staged back to back transaction   - Peer to peer (P2P) transaction   - Stored value transaction - Marketplace  Each model must have a separate American Express Merchant Account number and will be assigned a unique Indirect Model Type value.  Valid/Sample Values : - `1`: Bill payment provider - `2`: Installment payment transaction - `3`: Marketplace - `4`: Peer to peer transaction - `5`: Staged back to back transaction - `6`: Stored value transaction
+     * @return $this
+     */
+    public function setAmexIndirectModelType($amexIndirectModelType)
+    {
+        $this->container['amexIndirectModelType'] = $amexIndirectModelType;
+
+        return $this;
+    }
+
+    /**
+     * Gets walletTransactionIntent
+     * @return float
+     */
+    public function getWalletTransactionIntent()
+    {
+        return $this->container['walletTransactionIntent'];
+    }
+
+    /**
+     * Sets walletTransactionIntent
+     * @param float $walletTransactionIntent Identifies the type of operation being performed by the staged digital wallet operator. The value distinguishes between a Cash-in transaction (coded as \"02\"), where funds are loaded into the digital wallet from a registered payment card, and a Purchase transaction (coded as \"01\"), where the wallet is used to make a payment to a merchant or transfer funds between wallets. This distinction is essential for transaction processing, reporting, and ensuring compliance with the specific rules and requirements associated with each card brand and transaction type.
+     * @return $this
+     */
+    public function setWalletTransactionIntent($walletTransactionIntent)
+    {
+        $this->container['walletTransactionIntent'] = $walletTransactionIntent;
+
+        return $this;
+    }
+
+    /**
+     * Gets destinationType
+     * @return float
+     */
+    public function getDestinationType()
+    {
+        return $this->container['destinationType'];
+    }
+
+    /**
+     * Sets destinationType
+     * @param float $destinationType Identifies the destination/purpose of the cash-in:  • 04: M2M (Same ownership, same portfolio/arrangement) • 05: P2P (For another holder, same wallet/arrangement) • 06: Transfer to another arrangement (same ownership) • 07: Transfer to another arrangement (other ownership) • 08: Transfer to stored value digital wallet.
+     * @return $this
+     */
+    public function setDestinationType($destinationType)
+    {
+        $this->container['destinationType'] = $destinationType;
+
+        return $this;
+    }
+
+    /**
+     * Gets programIndicators
+     * @return \CyberSource\Model\Ptsv2paymentsProcessingInformationProgramIndicators
+     */
+    public function getProgramIndicators()
+    {
+        return $this->container['programIndicators'];
+    }
+
+    /**
+     * Sets programIndicators
+     * @param \CyberSource\Model\Ptsv2paymentsProcessingInformationProgramIndicators $programIndicators
+     * @return $this
+     */
+    public function setProgramIndicators($programIndicators)
+    {
+        $this->container['programIndicators'] = $programIndicators;
+
+        return $this;
+    }
+
+    /**
+     * Gets inquiryType
+     * @return string
+     */
+    public function getInquiryType()
+    {
+        return $this->container['inquiryType'];
+    }
+
+    /**
+     * Sets inquiryType
+     * @param string $inquiryType Type of inquiry for Zero dollar transactions. Mastercard is introducing Mastercard One Credential, a single, digitally connected credential that offers cardholders the ability to access multiple payment methods.   This field is used for Product Status Inquiry (PSI), Account Status Inquiry with Product Status Inquiry (ASI with PSI), and Account Status Inquiry with Product Status Inquiry and Probability Indicator.  This field is supported for Zero dollar transactions only.  Possible values: - `01`: Product status inquiry - `02`: Account status inquiry with product status inquiry - `03`: Account status Inquiry with Product Status Inquiry and Probability Indicator  #### Used by **Authorization (Zero dollar transactions)** Optional field.
+     * @return $this
+     */
+    public function setInquiryType($inquiryType)
+    {
+        $this->container['inquiryType'] = $inquiryType;
 
         return $this;
     }

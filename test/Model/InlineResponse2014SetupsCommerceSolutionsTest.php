@@ -96,4 +96,11 @@ class InlineResponse2014SetupsCommerceSolutionsTest extends \PHPUnit_Framework_T
     public function testPropertyBinLookup()
     {
     }
+
+    /**
+     * Test attribute "agenticCommerce"
+     */
+    public function testPropertyAgenticCommerce()
+    {
+    }
 }

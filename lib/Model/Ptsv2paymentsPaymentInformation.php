@@ -69,7 +69,9 @@ class Ptsv2paymentsPaymentInformation implements ArrayAccess
         'initiationChannel' => 'string',
         'sepa' => '\CyberSource\Model\Ptsv2paymentsPaymentInformationSepa',
         'eWallet' => '\CyberSource\Model\Ptsv2paymentsPaymentInformationEWallet',
-        'paymentAccountReference' => '\CyberSource\Model\Ptsv2paymentsPaymentInformationPaymentAccountReference'
+        'paymentAccountReference' => '\CyberSource\Model\Ptsv2paymentsPaymentInformationPaymentAccountReference',
+        'thirdPartyToken' => '\CyberSource\Model\Ptsv2paymentsPaymentInformationThirdPartyToken',
+        'merchantLimitedAcceptanceIndicator' => 'string'
     ];
 
     /**
@@ -93,7 +95,9 @@ class Ptsv2paymentsPaymentInformation implements ArrayAccess
         'initiationChannel' => null,
         'sepa' => null,
         'eWallet' => null,
-        'paymentAccountReference' => null
+        'paymentAccountReference' => null,
+        'thirdPartyToken' => null,
+        'merchantLimitedAcceptanceIndicator' => null
     ];
 
     public static function swaggerTypes()
@@ -127,7 +131,9 @@ class Ptsv2paymentsPaymentInformation implements ArrayAccess
         'initiationChannel' => 'initiationChannel',
         'sepa' => 'sepa',
         'eWallet' => 'eWallet',
-        'paymentAccountReference' => 'paymentAccountReference'
+        'paymentAccountReference' => 'paymentAccountReference',
+        'thirdPartyToken' => 'thirdPartyToken',
+        'merchantLimitedAcceptanceIndicator' => 'merchantLimitedAcceptanceIndicator'
     ];
 
 
@@ -152,7 +158,9 @@ class Ptsv2paymentsPaymentInformation implements ArrayAccess
         'initiationChannel' => 'setInitiationChannel',
         'sepa' => 'setSepa',
         'eWallet' => 'setEWallet',
-        'paymentAccountReference' => 'setPaymentAccountReference'
+        'paymentAccountReference' => 'setPaymentAccountReference',
+        'thirdPartyToken' => 'setThirdPartyToken',
+        'merchantLimitedAcceptanceIndicator' => 'setMerchantLimitedAcceptanceIndicator'
     ];
 
 
@@ -177,7 +185,9 @@ class Ptsv2paymentsPaymentInformation implements ArrayAccess
         'initiationChannel' => 'getInitiationChannel',
         'sepa' => 'getSepa',
         'eWallet' => 'getEWallet',
-        'paymentAccountReference' => 'getPaymentAccountReference'
+        'paymentAccountReference' => 'getPaymentAccountReference',
+        'thirdPartyToken' => 'getThirdPartyToken',
+        'merchantLimitedAcceptanceIndicator' => 'getMerchantLimitedAcceptanceIndicator'
     ];
 
     public static function attributeMap()
@@ -228,6 +238,8 @@ class Ptsv2paymentsPaymentInformation implements ArrayAccess
         $this->container['sepa'] = isset($data['sepa']) ? $data['sepa'] : null;
         $this->container['eWallet'] = isset($data['eWallet']) ? $data['eWallet'] : null;
         $this->container['paymentAccountReference'] = isset($data['paymentAccountReference']) ? $data['paymentAccountReference'] : null;
+        $this->container['thirdPartyToken'] = isset($data['thirdPartyToken']) ? $data['thirdPartyToken'] : null;
+        $this->container['merchantLimitedAcceptanceIndicator'] = isset($data['merchantLimitedAcceptanceIndicator']) ? $data['merchantLimitedAcceptanceIndicator'] : null;
     }
 
     /**
@@ -608,6 +620,48 @@ class Ptsv2paymentsPaymentInformation implements ArrayAccess
     public function setPaymentAccountReference($paymentAccountReference)
     {
         $this->container['paymentAccountReference'] = $paymentAccountReference;
+
+        return $this;
+    }
+
+    /**
+     * Gets thirdPartyToken
+     * @return \CyberSource\Model\Ptsv2paymentsPaymentInformationThirdPartyToken
+     */
+    public function getThirdPartyToken()
+    {
+        return $this->container['thirdPartyToken'];
+    }
+
+    /**
+     * Sets thirdPartyToken
+     * @param \CyberSource\Model\Ptsv2paymentsPaymentInformationThirdPartyToken $thirdPartyToken
+     * @return $this
+     */
+    public function setThirdPartyToken($thirdPartyToken)
+    {
+        $this->container['thirdPartyToken'] = $thirdPartyToken;
+
+        return $this;
+    }
+
+    /**
+     * Gets merchantLimitedAcceptanceIndicator
+     * @return string
+     */
+    public function getMerchantLimitedAcceptanceIndicator()
+    {
+        return $this->container['merchantLimitedAcceptanceIndicator'];
+    }
+
+    /**
+     * Sets merchantLimitedAcceptanceIndicator
+     * @param string $merchantLimitedAcceptanceIndicator Mastercard One Credential merchant limited acceptance indicator. Mastercard One Credential connects multiple Mastercard payment methods and allows cardhollers to access various options and set payment preferences.  This field indicates which Mastercard One Credential funding PAN acceptance brands should NOT be assigned for this transaction.  This field flows in ISO field 34, DSID 02 tag DB, mapped to Mastercard Data Element (DE) 48, Sub element 02, Subfield 01.  Possible values: - `C`: Do not assign a Mastercard One Credential funding PAN containing the Mastercard Credit Acceptance Brand for this transaction - `D`: Do not assign a Mastercard One Credential funding PAN containing the Debit Mastercard Acceptance Brand for this transaction - `M`: Do not assign a Mastercard One Credential funding PAN containing the Maestro Acceptance Brand for this transaction  This field is supported for all flavors of Authorization request only. Will not be received in response.  #### Used by **Authorization Request** Optional field.
+     * @return $this
+     */
+    public function setMerchantLimitedAcceptanceIndicator($merchantLimitedAcceptanceIndicator)
+    {
+        $this->container['merchantLimitedAcceptanceIndicator'] = $merchantLimitedAcceptanceIndicator;
 
         return $this;
     }

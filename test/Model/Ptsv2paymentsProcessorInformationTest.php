@@ -105,9 +105,30 @@ class Ptsv2paymentsProcessorInformationTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "authApprovalToken"
+     */
+    public function testPropertyAuthApprovalToken()
+    {
+    }
+
+    /**
+     * Test attribute "supplementaryTransactionData"
+     */
+    public function testPropertySupplementaryTransactionData()
+    {
+    }
+
+    /**
      * Test attribute "responseSourceCode"
      */
     public function testPropertyResponseSourceCode()
+    {
+    }
+
+    /**
+     * Test attribute "cedpVerifiedIndicator"
+     */
+    public function testPropertyCedpVerifiedIndicator()
     {
     }
 }

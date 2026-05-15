@@ -58,6 +58,7 @@ class MitReversalRequest implements ArrayAccess
         'processingInformation' => '\CyberSource\Model\Ptsv2paymentsidreversalsProcessingInformation',
         'orderInformation' => '\CyberSource\Model\Ptsv2paymentsidreversalsOrderInformation',
         'pointOfSaleInformation' => '\CyberSource\Model\Ptsv2paymentsidreversalsPointOfSaleInformation',
+        'deviceInformation' => '\CyberSource\Model\Ptsv2paymentsidreversalsDeviceInformation',
         'processorInformation' => '\CyberSource\Model\Ptsv2reversalsProcessorInformation'
     ];
 
@@ -71,6 +72,7 @@ class MitReversalRequest implements ArrayAccess
         'processingInformation' => null,
         'orderInformation' => null,
         'pointOfSaleInformation' => null,
+        'deviceInformation' => null,
         'processorInformation' => null
     ];
 
@@ -94,6 +96,7 @@ class MitReversalRequest implements ArrayAccess
         'processingInformation' => 'processingInformation',
         'orderInformation' => 'orderInformation',
         'pointOfSaleInformation' => 'pointOfSaleInformation',
+        'deviceInformation' => 'deviceInformation',
         'processorInformation' => 'processorInformation'
     ];
 
@@ -108,6 +111,7 @@ class MitReversalRequest implements ArrayAccess
         'processingInformation' => 'setProcessingInformation',
         'orderInformation' => 'setOrderInformation',
         'pointOfSaleInformation' => 'setPointOfSaleInformation',
+        'deviceInformation' => 'setDeviceInformation',
         'processorInformation' => 'setProcessorInformation'
     ];
 
@@ -122,6 +126,7 @@ class MitReversalRequest implements ArrayAccess
         'processingInformation' => 'getProcessingInformation',
         'orderInformation' => 'getOrderInformation',
         'pointOfSaleInformation' => 'getPointOfSaleInformation',
+        'deviceInformation' => 'getDeviceInformation',
         'processorInformation' => 'getProcessorInformation'
     ];
 
@@ -161,6 +166,7 @@ class MitReversalRequest implements ArrayAccess
         $this->container['processingInformation'] = isset($data['processingInformation']) ? $data['processingInformation'] : null;
         $this->container['orderInformation'] = isset($data['orderInformation']) ? $data['orderInformation'] : null;
         $this->container['pointOfSaleInformation'] = isset($data['pointOfSaleInformation']) ? $data['pointOfSaleInformation'] : null;
+        $this->container['deviceInformation'] = isset($data['deviceInformation']) ? $data['deviceInformation'] : null;
         $this->container['processorInformation'] = isset($data['processorInformation']) ? $data['processorInformation'] : null;
     }
 
@@ -290,6 +296,27 @@ class MitReversalRequest implements ArrayAccess
     public function setPointOfSaleInformation($pointOfSaleInformation)
     {
         $this->container['pointOfSaleInformation'] = $pointOfSaleInformation;
+
+        return $this;
+    }
+
+    /**
+     * Gets deviceInformation
+     * @return \CyberSource\Model\Ptsv2paymentsidreversalsDeviceInformation
+     */
+    public function getDeviceInformation()
+    {
+        return $this->container['deviceInformation'];
+    }
+
+    /**
+     * Sets deviceInformation
+     * @param \CyberSource\Model\Ptsv2paymentsidreversalsDeviceInformation $deviceInformation
+     * @return $this
+     */
+    public function setDeviceInformation($deviceInformation)
+    {
+        $this->container['deviceInformation'] = $deviceInformation;
 
         return $this;
     }

@@ -54,6 +54,7 @@ class Ptsv2creditsProcessingInformation implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'actionList' => 'string[]',
+        'actionTokenTypes' => 'string[]',
         'commerceIndicator' => 'string',
         'processorId' => 'string',
         'paymentSolution' => 'string',
@@ -73,7 +74,8 @@ class Ptsv2creditsProcessingInformation implements ArrayAccess
         'loanOptions' => '\CyberSource\Model\Ptsv2paymentsProcessingInformationLoanOptions',
         'japanPaymentOptions' => '\CyberSource\Model\Ptsv2creditsProcessingInformationJapanPaymentOptions',
         'refundOptions' => '\CyberSource\Model\Ptsv2creditsProcessingInformationRefundOptions',
-        'merchantVerificationValue' => 'string'
+        'merchantVerificationValue' => 'string',
+        'transactionTypeIndicator' => 'string'
     ];
 
     /**
@@ -82,6 +84,7 @@ class Ptsv2creditsProcessingInformation implements ArrayAccess
       */
     protected static $swaggerFormats = [
         'actionList' => null,
+        'actionTokenTypes' => null,
         'commerceIndicator' => null,
         'processorId' => null,
         'paymentSolution' => null,
@@ -101,7 +104,8 @@ class Ptsv2creditsProcessingInformation implements ArrayAccess
         'loanOptions' => null,
         'japanPaymentOptions' => null,
         'refundOptions' => null,
-        'merchantVerificationValue' => null
+        'merchantVerificationValue' => null,
+        'transactionTypeIndicator' => null
     ];
 
     public static function swaggerTypes()
@@ -120,6 +124,7 @@ class Ptsv2creditsProcessingInformation implements ArrayAccess
      */
     protected static $attributeMap = [
         'actionList' => 'actionList',
+        'actionTokenTypes' => 'actionTokenTypes',
         'commerceIndicator' => 'commerceIndicator',
         'processorId' => 'processorId',
         'paymentSolution' => 'paymentSolution',
@@ -139,7 +144,8 @@ class Ptsv2creditsProcessingInformation implements ArrayAccess
         'loanOptions' => 'loanOptions',
         'japanPaymentOptions' => 'japanPaymentOptions',
         'refundOptions' => 'refundOptions',
-        'merchantVerificationValue' => 'merchantVerificationValue'
+        'merchantVerificationValue' => 'merchantVerificationValue',
+        'transactionTypeIndicator' => 'transactionTypeIndicator'
     ];
 
 
@@ -149,6 +155,7 @@ class Ptsv2creditsProcessingInformation implements ArrayAccess
      */
     protected static $setters = [
         'actionList' => 'setActionList',
+        'actionTokenTypes' => 'setActionTokenTypes',
         'commerceIndicator' => 'setCommerceIndicator',
         'processorId' => 'setProcessorId',
         'paymentSolution' => 'setPaymentSolution',
@@ -168,7 +175,8 @@ class Ptsv2creditsProcessingInformation implements ArrayAccess
         'loanOptions' => 'setLoanOptions',
         'japanPaymentOptions' => 'setJapanPaymentOptions',
         'refundOptions' => 'setRefundOptions',
-        'merchantVerificationValue' => 'setMerchantVerificationValue'
+        'merchantVerificationValue' => 'setMerchantVerificationValue',
+        'transactionTypeIndicator' => 'setTransactionTypeIndicator'
     ];
 
 
@@ -178,6 +186,7 @@ class Ptsv2creditsProcessingInformation implements ArrayAccess
      */
     protected static $getters = [
         'actionList' => 'getActionList',
+        'actionTokenTypes' => 'getActionTokenTypes',
         'commerceIndicator' => 'getCommerceIndicator',
         'processorId' => 'getProcessorId',
         'paymentSolution' => 'getPaymentSolution',
@@ -197,7 +206,8 @@ class Ptsv2creditsProcessingInformation implements ArrayAccess
         'loanOptions' => 'getLoanOptions',
         'japanPaymentOptions' => 'getJapanPaymentOptions',
         'refundOptions' => 'getRefundOptions',
-        'merchantVerificationValue' => 'getMerchantVerificationValue'
+        'merchantVerificationValue' => 'getMerchantVerificationValue',
+        'transactionTypeIndicator' => 'getTransactionTypeIndicator'
     ];
 
     public static function attributeMap()
@@ -232,6 +242,7 @@ class Ptsv2creditsProcessingInformation implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['actionList'] = isset($data['actionList']) ? $data['actionList'] : null;
+        $this->container['actionTokenTypes'] = isset($data['actionTokenTypes']) ? $data['actionTokenTypes'] : null;
         $this->container['commerceIndicator'] = isset($data['commerceIndicator']) ? $data['commerceIndicator'] : null;
         $this->container['processorId'] = isset($data['processorId']) ? $data['processorId'] : null;
         $this->container['paymentSolution'] = isset($data['paymentSolution']) ? $data['paymentSolution'] : null;
@@ -252,6 +263,7 @@ class Ptsv2creditsProcessingInformation implements ArrayAccess
         $this->container['japanPaymentOptions'] = isset($data['japanPaymentOptions']) ? $data['japanPaymentOptions'] : null;
         $this->container['refundOptions'] = isset($data['refundOptions']) ? $data['refundOptions'] : null;
         $this->container['merchantVerificationValue'] = isset($data['merchantVerificationValue']) ? $data['merchantVerificationValue'] : null;
+        $this->container['transactionTypeIndicator'] = isset($data['transactionTypeIndicator']) ? $data['transactionTypeIndicator'] : null;
     }
 
     /**
@@ -296,6 +308,27 @@ class Ptsv2creditsProcessingInformation implements ArrayAccess
     public function setActionList($actionList)
     {
         $this->container['actionList'] = $actionList;
+
+        return $this;
+    }
+
+    /**
+     * Gets actionTokenTypes
+     * @return string[]
+     */
+    public function getActionTokenTypes()
+    {
+        return $this->container['actionTokenTypes'];
+    }
+
+    /**
+     * Sets actionTokenTypes
+     * @param string[] $actionTokenTypes CyberSource tokens types you are performing a create on. If not supplied the default token type for the merchants token vault will be used.  Valid values: - customer - paymentInstrument - instrumentIdentifier - shippingAddress
+     * @return $this
+     */
+    public function setActionTokenTypes($actionTokenTypes)
+    {
+        $this->container['actionTokenTypes'] = $actionTokenTypes;
 
         return $this;
     }
@@ -716,6 +749,27 @@ class Ptsv2creditsProcessingInformation implements ArrayAccess
     public function setMerchantVerificationValue($merchantVerificationValue)
     {
         $this->container['merchantVerificationValue'] = $merchantVerificationValue;
+
+        return $this;
+    }
+
+    /**
+     * Gets transactionTypeIndicator
+     * @return string
+     */
+    public function getTransactionTypeIndicator()
+    {
+        return $this->container['transactionTypeIndicator'];
+    }
+
+    /**
+     * Sets transactionTypeIndicator
+     * @param string $transactionTypeIndicator This field is used identify the type of payment transaction taking place. This field is applicable for MasterCard transactions only. Possible values: - 201- Mastercard Rebate - 202- rePower Load Value - 203- Gaming Re-pay - 204- General Person-to-Person - 205- General Transfer to Own Account - 206- Agent Cash Out - 207- Payment of Own Credit Card Bill - 208- Business Disbursement - 209- Government/Non-Profit Disbursement - 210- Rapid Merchant Settlement - 211- Cash in at ATM (Usage limited to specific countries) - 212- Cash in at Point of Sale (Usage limited to specific countries) - 213- General Business to Business Transfer - 214- Mastercard Merchant Presented QR - 215- Mastercard Merchant Presented QR Refund Payment - 216- Utility Payments (for Brazil domestic use only) - 217- Government Services (for Brazil domestic use only) - 218- Mobile phone top-ups (for Brazil domestic use only) - 219- Coupon booklet payments (for Brazil domestic use only) - 220- General Person-to-Person Transfer - 221- Person-to-Person Transfer to Card Account - 222- General Transfer to Own Account - 223- Agent Cash Out - 224- Payment of Own Credit Card Bill - 225- Business Disbursement - 226- Transfer to Own Staged Digital Wallet Account - 227- Transfer to Own Debit or Prepaid Account - 228- General Business-to-Business Transfer - 229- Installment-based repayment - 230- Mastercard ATM Cash Pick-Up Transaction - 231- Cryptocurrency - 232- High-risk Securities
+     * @return $this
+     */
+    public function setTransactionTypeIndicator($transactionTypeIndicator)
+    {
+        $this->container['transactionTypeIndicator'] = $transactionTypeIndicator;
 
         return $this;
     }

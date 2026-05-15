@@ -96,4 +96,11 @@ class RiskProductsTest extends \PHPUnit_Framework_TestCase
     public function testPropertyPortfolioRiskControls()
     {
     }
+
+    /**
+     * Test attribute "enhancedAuthentication"
+     */
+    public function testPropertyEnhancedAuthentication()
+    {
+    }
 }

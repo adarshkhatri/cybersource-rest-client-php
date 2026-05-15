@@ -61,7 +61,8 @@ class Ptsv2paymentsidcapturesAggregatorInformationSubMerchant implements ArrayAc
         'country' => 'string',
         'email' => 'string',
         'phoneNumber' => 'string',
-        'id' => 'string'
+        'id' => 'string',
+        'merchantCategoryCode' => 'float'
     ];
 
     /**
@@ -77,7 +78,8 @@ class Ptsv2paymentsidcapturesAggregatorInformationSubMerchant implements ArrayAc
         'country' => null,
         'email' => null,
         'phoneNumber' => null,
-        'id' => null
+        'id' => null,
+        'merchantCategoryCode' => null
     ];
 
     public static function swaggerTypes()
@@ -103,7 +105,8 @@ class Ptsv2paymentsidcapturesAggregatorInformationSubMerchant implements ArrayAc
         'country' => 'country',
         'email' => 'email',
         'phoneNumber' => 'phoneNumber',
-        'id' => 'id'
+        'id' => 'id',
+        'merchantCategoryCode' => 'merchantCategoryCode'
     ];
 
 
@@ -120,7 +123,8 @@ class Ptsv2paymentsidcapturesAggregatorInformationSubMerchant implements ArrayAc
         'country' => 'setCountry',
         'email' => 'setEmail',
         'phoneNumber' => 'setPhoneNumber',
-        'id' => 'setId'
+        'id' => 'setId',
+        'merchantCategoryCode' => 'setMerchantCategoryCode'
     ];
 
 
@@ -137,7 +141,8 @@ class Ptsv2paymentsidcapturesAggregatorInformationSubMerchant implements ArrayAc
         'country' => 'getCountry',
         'email' => 'getEmail',
         'phoneNumber' => 'getPhoneNumber',
-        'id' => 'getId'
+        'id' => 'getId',
+        'merchantCategoryCode' => 'getMerchantCategoryCode'
     ];
 
     public static function attributeMap()
@@ -180,6 +185,7 @@ class Ptsv2paymentsidcapturesAggregatorInformationSubMerchant implements ArrayAc
         $this->container['email'] = isset($data['email']) ? $data['email'] : null;
         $this->container['phoneNumber'] = isset($data['phoneNumber']) ? $data['phoneNumber'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['merchantCategoryCode'] = isset($data['merchantCategoryCode']) ? $data['merchantCategoryCode'] : null;
     }
 
     /**
@@ -392,6 +398,27 @@ class Ptsv2paymentsidcapturesAggregatorInformationSubMerchant implements ArrayAc
     public function setId($id)
     {
         $this->container['id'] = $id;
+
+        return $this;
+    }
+
+    /**
+     * Gets merchantCategoryCode
+     * @return float
+     */
+    public function getMerchantCategoryCode()
+    {
+        return $this->container['merchantCategoryCode'];
+    }
+
+    /**
+     * Sets merchantCategoryCode
+     * @param float $merchantCategoryCode
+     * @return $this
+     */
+    public function setMerchantCategoryCode($merchantCategoryCode)
+    {
+        $this->container['merchantCategoryCode'] = $merchantCategoryCode;
 
         return $this;
     }

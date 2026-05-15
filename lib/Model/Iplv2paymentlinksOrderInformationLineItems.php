@@ -58,7 +58,11 @@ class Iplv2paymentlinksOrderInformationLineItems implements ArrayAccess
         'productName' => 'string',
         'quantity' => 'int',
         'unitPrice' => 'string',
-        'productDescription' => 'string'
+        'productDescription' => 'string',
+        'discountAmount' => 'string',
+        'discountPercent' => 'string',
+        'taxAmount' => 'string',
+        'taxRate' => 'string'
     ];
 
     /**
@@ -70,7 +74,11 @@ class Iplv2paymentlinksOrderInformationLineItems implements ArrayAccess
         'productName' => null,
         'quantity' => null,
         'unitPrice' => null,
-        'productDescription' => null
+        'productDescription' => null,
+        'discountAmount' => null,
+        'discountPercent' => null,
+        'taxAmount' => null,
+        'taxRate' => null
     ];
 
     public static function swaggerTypes()
@@ -92,7 +100,11 @@ class Iplv2paymentlinksOrderInformationLineItems implements ArrayAccess
         'productName' => 'productName',
         'quantity' => 'quantity',
         'unitPrice' => 'unitPrice',
-        'productDescription' => 'productDescription'
+        'productDescription' => 'productDescription',
+        'discountAmount' => 'discountAmount',
+        'discountPercent' => 'discountPercent',
+        'taxAmount' => 'taxAmount',
+        'taxRate' => 'taxRate'
     ];
 
 
@@ -105,7 +117,11 @@ class Iplv2paymentlinksOrderInformationLineItems implements ArrayAccess
         'productName' => 'setProductName',
         'quantity' => 'setQuantity',
         'unitPrice' => 'setUnitPrice',
-        'productDescription' => 'setProductDescription'
+        'productDescription' => 'setProductDescription',
+        'discountAmount' => 'setDiscountAmount',
+        'discountPercent' => 'setDiscountPercent',
+        'taxAmount' => 'setTaxAmount',
+        'taxRate' => 'setTaxRate'
     ];
 
 
@@ -118,7 +134,11 @@ class Iplv2paymentlinksOrderInformationLineItems implements ArrayAccess
         'productName' => 'getProductName',
         'quantity' => 'getQuantity',
         'unitPrice' => 'getUnitPrice',
-        'productDescription' => 'getProductDescription'
+        'productDescription' => 'getProductDescription',
+        'discountAmount' => 'getDiscountAmount',
+        'discountPercent' => 'getDiscountPercent',
+        'taxAmount' => 'getTaxAmount',
+        'taxRate' => 'getTaxRate'
     ];
 
     public static function attributeMap()
@@ -157,6 +177,10 @@ class Iplv2paymentlinksOrderInformationLineItems implements ArrayAccess
         $this->container['quantity'] = isset($data['quantity']) ? $data['quantity'] : null;
         $this->container['unitPrice'] = isset($data['unitPrice']) ? $data['unitPrice'] : null;
         $this->container['productDescription'] = isset($data['productDescription']) ? $data['productDescription'] : null;
+        $this->container['discountAmount'] = isset($data['discountAmount']) ? $data['discountAmount'] : null;
+        $this->container['discountPercent'] = isset($data['discountPercent']) ? $data['discountPercent'] : null;
+        $this->container['taxAmount'] = isset($data['taxAmount']) ? $data['taxAmount'] : null;
+        $this->container['taxRate'] = isset($data['taxRate']) ? $data['taxRate'] : null;
     }
 
     /**
@@ -291,6 +315,90 @@ class Iplv2paymentlinksOrderInformationLineItems implements ArrayAccess
     public function setProductDescription($productDescription)
     {
         $this->container['productDescription'] = $productDescription;
+
+        return $this;
+    }
+
+    /**
+     * Gets discountAmount
+     * @return string
+     */
+    public function getDiscountAmount()
+    {
+        return $this->container['discountAmount'];
+    }
+
+    /**
+     * Sets discountAmount
+     * @param string $discountAmount Discount amount applied to the item. Maximum of 2 decimal places. You may provide either discountAmount or discountPercent (not both). If both are present, their values must be consistent. Otherwise, a validation error will be returned.
+     * @return $this
+     */
+    public function setDiscountAmount($discountAmount)
+    {
+        $this->container['discountAmount'] = $discountAmount;
+
+        return $this;
+    }
+
+    /**
+     * Gets discountPercent
+     * @return string
+     */
+    public function getDiscountPercent()
+    {
+        return $this->container['discountPercent'];
+    }
+
+    /**
+     * Sets discountPercent
+     * @param string $discountPercent Discount rate applied to the item. Maximum of 3 decimal places. You may provide either discountAmount or discountPercent (not both). If both are present, their values must be consistent; otherwise, a validation error will be returned. Example: 5.25 (=5.25%)
+     * @return $this
+     */
+    public function setDiscountPercent($discountPercent)
+    {
+        $this->container['discountPercent'] = $discountPercent;
+
+        return $this;
+    }
+
+    /**
+     * Gets taxAmount
+     * @return string
+     */
+    public function getTaxAmount()
+    {
+        return $this->container['taxAmount'];
+    }
+
+    /**
+     * Sets taxAmount
+     * @param string $taxAmount Tax amount applied to the item. This value cannot be negative. Maximum of 2 decimal places. The tax amount and the offer amount must be in the same currency. The tax amount field is additive. If taxAmount is provided but taxRate is not, the taxRate will be calculated.
+     * @return $this
+     */
+    public function setTaxAmount($taxAmount)
+    {
+        $this->container['taxAmount'] = $taxAmount;
+
+        return $this;
+    }
+
+    /**
+     * Gets taxRate
+     * @return string
+     */
+    public function getTaxRate()
+    {
+        return $this->container['taxRate'];
+    }
+
+    /**
+     * Sets taxRate
+     * @param string $taxRate Tax rate applied to the item. Valid range: 1.001% to 99.999%. Maximum of 3 decimal places. If a taxRate is provided but taxAmount is missing or incorrect, the taxAmount based on the given taxRate will be overwritten. Example: 21.00 (=21.00%)
+     * @return $this
+     */
+    public function setTaxRate($taxRate)
+    {
+        $this->container['taxRate'] = $taxRate;
 
         return $this;
     }

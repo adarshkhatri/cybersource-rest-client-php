@@ -84,6 +84,13 @@ class Ptsv2billingagreementsidProcessingInformationTest extends \PHPUnit_Framewo
     }
 
     /**
+     * Test attribute "paymentCompletionTimeout"
+     */
+    public function testPropertyPaymentCompletionTimeout()
+    {
+    }
+
+    /**
      * Test attribute "actionList"
      */
     public function testPropertyActionList()

@@ -62,7 +62,8 @@ class Ptsv2payoutsProcessingInformation implements ArrayAccess
         'purposeOfPayment' => 'string',
         'fundingOptions' => '\CyberSource\Model\Ptsv2payoutsProcessingInformationFundingOptions',
         'languageCode' => 'string',
-        'purchaseOptions' => '\CyberSource\Model\Ptsv2payoutsProcessingInformationPurchaseOptions'
+        'purchaseOptions' => '\CyberSource\Model\Ptsv2payoutsProcessingInformationPurchaseOptions',
+        'accountVerificationCode' => 'string[]'
     ];
 
     /**
@@ -79,7 +80,8 @@ class Ptsv2payoutsProcessingInformation implements ArrayAccess
         'purposeOfPayment' => null,
         'fundingOptions' => null,
         'languageCode' => null,
-        'purchaseOptions' => null
+        'purchaseOptions' => null,
+        'accountVerificationCode' => null
     ];
 
     public static function swaggerTypes()
@@ -106,7 +108,8 @@ class Ptsv2payoutsProcessingInformation implements ArrayAccess
         'purposeOfPayment' => 'purposeOfPayment',
         'fundingOptions' => 'fundingOptions',
         'languageCode' => 'languageCode',
-        'purchaseOptions' => 'purchaseOptions'
+        'purchaseOptions' => 'purchaseOptions',
+        'accountVerificationCode' => 'accountVerificationCode'
     ];
 
 
@@ -124,7 +127,8 @@ class Ptsv2payoutsProcessingInformation implements ArrayAccess
         'purposeOfPayment' => 'setPurposeOfPayment',
         'fundingOptions' => 'setFundingOptions',
         'languageCode' => 'setLanguageCode',
-        'purchaseOptions' => 'setPurchaseOptions'
+        'purchaseOptions' => 'setPurchaseOptions',
+        'accountVerificationCode' => 'setAccountVerificationCode'
     ];
 
 
@@ -142,7 +146,8 @@ class Ptsv2payoutsProcessingInformation implements ArrayAccess
         'purposeOfPayment' => 'getPurposeOfPayment',
         'fundingOptions' => 'getFundingOptions',
         'languageCode' => 'getLanguageCode',
-        'purchaseOptions' => 'getPurchaseOptions'
+        'purchaseOptions' => 'getPurchaseOptions',
+        'accountVerificationCode' => 'getAccountVerificationCode'
     ];
 
     public static function attributeMap()
@@ -186,6 +191,7 @@ class Ptsv2payoutsProcessingInformation implements ArrayAccess
         $this->container['fundingOptions'] = isset($data['fundingOptions']) ? $data['fundingOptions'] : null;
         $this->container['languageCode'] = isset($data['languageCode']) ? $data['languageCode'] : null;
         $this->container['purchaseOptions'] = isset($data['purchaseOptions']) ? $data['purchaseOptions'] : null;
+        $this->container['accountVerificationCode'] = isset($data['accountVerificationCode']) ? $data['accountVerificationCode'] : null;
     }
 
     /**
@@ -419,6 +425,27 @@ class Ptsv2payoutsProcessingInformation implements ArrayAccess
     public function setPurchaseOptions($purchaseOptions)
     {
         $this->container['purchaseOptions'] = $purchaseOptions;
+
+        return $this;
+    }
+
+    /**
+     * Gets accountVerificationCode
+     * @return string[]
+     */
+    public function getAccountVerificationCode()
+    {
+        return $this->container['accountVerificationCode'];
+    }
+
+    /**
+     * Sets accountVerificationCode
+     * @param string[] $accountVerificationCode Account verification code will inform what Payment Account Verification should be performed. With this array of codes, a merchant can choose à la carte what verifications to run. This field is optional, and the default is 1 if it is not passed in. This means that a full validation of the fields will be performed. Valid verification codes: - `1` = Full Account Verification (Card Account, CVN, CAVV, TAVV, Address, Name, eMail, Phone, Identity) - `2` = Card Account Verification - `3` = Address Verification - `4` = Card Authentication Method (CAM) (Cryptogram) - `5` = Cardholder Authentication Verification (CAVV) - `6` = Cardholder Identity Verification - `7` = CVV2 Verification - `8` = eMail Verification - `9` = Name Verification - `10` = Phone Verification
+     * @return $this
+     */
+    public function setAccountVerificationCode($accountVerificationCode)
+    {
+        $this->container['accountVerificationCode'] = $accountVerificationCode;
 
         return $this;
     }

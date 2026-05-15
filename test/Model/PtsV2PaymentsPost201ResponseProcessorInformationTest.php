@@ -404,4 +404,11 @@ class PtsV2PaymentsPost201ResponseProcessorInformationTest extends \PHPUnit_Fram
     public function testPropertyNetwork()
     {
     }
+
+    /**
+     * Test attribute "cedpVerifiedIndicator"
+     */
+    public function testPropertyCedpVerifiedIndicator()
+    {
+    }
 }

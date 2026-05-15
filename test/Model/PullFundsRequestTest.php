@@ -112,6 +112,13 @@ class PullFundsRequestTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "buyerInformation"
+     */
+    public function testPropertyBuyerInformation()
+    {
+    }
+
+    /**
      * Test attribute "aggregatorInformation"
      */
     public function testPropertyAggregatorInformation()

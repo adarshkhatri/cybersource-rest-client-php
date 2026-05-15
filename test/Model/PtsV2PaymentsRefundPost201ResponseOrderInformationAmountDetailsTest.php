@@ -77,6 +77,13 @@ class PtsV2PaymentsRefundPost201ResponseOrderInformationAmountDetailsTest extend
     }
 
     /**
+     * Test attribute "cashbackAmount"
+     */
+    public function testPropertyCashbackAmount()
+    {
+    }
+
+    /**
      * Test attribute "settlementAmount"
      */
     public function testPropertySettlementAmount()

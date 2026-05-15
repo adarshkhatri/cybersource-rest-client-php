@@ -84,6 +84,13 @@ class Ptsv2creditsProcessingInformationTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "actionTokenTypes"
+     */
+    public function testPropertyActionTokenTypes()
+    {
+    }
+
+    /**
      * Test attribute "commerceIndicator"
      */
     public function testPropertyCommerceIndicator()
@@ -220,6 +227,13 @@ class Ptsv2creditsProcessingInformationTest extends \PHPUnit_Framework_TestCase
      * Test attribute "merchantVerificationValue"
      */
     public function testPropertyMerchantVerificationValue()
+    {
+    }
+
+    /**
+     * Test attribute "transactionTypeIndicator"
+     */
+    public function testPropertyTransactionTypeIndicator()
     {
     }
 }

@@ -89,4 +89,25 @@ class Ptsv2billingagreementsidAgreementInformationTest extends \PHPUnit_Framewor
     public function testPropertyESignIndicator()
     {
     }
+
+    /**
+     * Test attribute "type"
+     */
+    public function testPropertyType()
+    {
+    }
+
+    /**
+     * Test attribute "frequency"
+     */
+    public function testPropertyFrequency()
+    {
+    }
+
+    /**
+     * Test attribute "dateRevoked"
+     */
+    public function testPropertyDateRevoked()
+    {
+    }
 }

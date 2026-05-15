@@ -132,6 +132,26 @@ class SubscriptionsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for subscriptionsIdPaymentsGet
+     *
+     * Get Payments for a Subscription.
+     *
+     */
+    public function testSubscriptionsIdPaymentsGet()
+    {
+    }
+
+    /**
+     * Test case for subscriptionsIdPaymentsPut
+     *
+     * Update Payments for a subscription.
+     *
+     */
+    public function testSubscriptionsIdPaymentsPut()
+    {
+    }
+
+    /**
      * Test case for suspendSubscription
      *
      * Suspend a Subscription.

@@ -84,6 +84,20 @@ class TmsCardArtTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "backgroundColor"
+     */
+    public function testPropertyBackgroundColor()
+    {
+    }
+
+    /**
+     * Test attribute "labelColor"
+     */
+    public function testPropertyLabelColor()
+    {
+    }
+
+    /**
      * Test attribute "combinedAsset"
      */
     public function testPropertyCombinedAsset()

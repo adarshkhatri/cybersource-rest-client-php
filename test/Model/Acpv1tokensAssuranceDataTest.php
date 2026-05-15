@@ -32,7 +32,7 @@ namespace CyberSource;
  * Acpv1tokensAssuranceDataTest Class Doc Comment
  *
  * @category    Class */
-// * @description Assurance data.
+// * @description Assurance data. Contains identity verification details that prove the consumer or device has been authenticated before the payment operation.
 /**
  * @package     CyberSource
  * @author      Swagger Codegen team

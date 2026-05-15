@@ -194,4 +194,18 @@ class Ptsv2paymentsPaymentInformationTest extends \PHPUnit_Framework_TestCase
     public function testPropertyPaymentAccountReference()
     {
     }
+
+    /**
+     * Test attribute "thirdPartyToken"
+     */
+    public function testPropertyThirdPartyToken()
+    {
+    }
+
+    /**
+     * Test attribute "merchantLimitedAcceptanceIndicator"
+     */
+    public function testPropertyMerchantLimitedAcceptanceIndicator()
+    {
+    }
 }

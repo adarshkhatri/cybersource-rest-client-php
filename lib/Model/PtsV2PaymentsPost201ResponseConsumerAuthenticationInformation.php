@@ -95,7 +95,14 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation implements A
         'authenticationStatusMsg' => 'string',
         'indicator' => 'string',
         'interactionCounter' => 'string',
-        'whiteListStatus' => 'string'
+        'whiteListStatus' => 'string',
+        'token' => 'string',
+        'acsReferenceNumber' => 'string',
+        'acsOperatorID' => 'string',
+        'idciScore' => 'int',
+        'idciDecision' => 'string',
+        'idciReasonCode1' => 'string',
+        'idciReasonCode2' => 'string'
     ];
 
     /**
@@ -145,7 +152,14 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation implements A
         'authenticationStatusMsg' => null,
         'indicator' => null,
         'interactionCounter' => null,
-        'whiteListStatus' => null
+        'whiteListStatus' => null,
+        'token' => null,
+        'acsReferenceNumber' => null,
+        'acsOperatorID' => null,
+        'idciScore' => null,
+        'idciDecision' => null,
+        'idciReasonCode1' => null,
+        'idciReasonCode2' => null
     ];
 
     public static function swaggerTypes()
@@ -205,7 +219,14 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation implements A
         'authenticationStatusMsg' => 'authenticationStatusMsg',
         'indicator' => 'indicator',
         'interactionCounter' => 'interactionCounter',
-        'whiteListStatus' => 'whiteListStatus'
+        'whiteListStatus' => 'whiteListStatus',
+        'token' => 'token',
+        'acsReferenceNumber' => 'acsReferenceNumber',
+        'acsOperatorID' => 'acsOperatorID',
+        'idciScore' => 'idciScore',
+        'idciDecision' => 'idciDecision',
+        'idciReasonCode1' => 'idciReasonCode1',
+        'idciReasonCode2' => 'idciReasonCode2'
     ];
 
 
@@ -256,7 +277,14 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation implements A
         'authenticationStatusMsg' => 'setAuthenticationStatusMsg',
         'indicator' => 'setIndicator',
         'interactionCounter' => 'setInteractionCounter',
-        'whiteListStatus' => 'setWhiteListStatus'
+        'whiteListStatus' => 'setWhiteListStatus',
+        'token' => 'setToken',
+        'acsReferenceNumber' => 'setAcsReferenceNumber',
+        'acsOperatorID' => 'setAcsOperatorID',
+        'idciScore' => 'setIdciScore',
+        'idciDecision' => 'setIdciDecision',
+        'idciReasonCode1' => 'setIdciReasonCode1',
+        'idciReasonCode2' => 'setIdciReasonCode2'
     ];
 
 
@@ -307,7 +335,14 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation implements A
         'authenticationStatusMsg' => 'getAuthenticationStatusMsg',
         'indicator' => 'getIndicator',
         'interactionCounter' => 'getInteractionCounter',
-        'whiteListStatus' => 'getWhiteListStatus'
+        'whiteListStatus' => 'getWhiteListStatus',
+        'token' => 'getToken',
+        'acsReferenceNumber' => 'getAcsReferenceNumber',
+        'acsOperatorID' => 'getAcsOperatorID',
+        'idciScore' => 'getIdciScore',
+        'idciDecision' => 'getIdciDecision',
+        'idciReasonCode1' => 'getIdciReasonCode1',
+        'idciReasonCode2' => 'getIdciReasonCode2'
     ];
 
     public static function attributeMap()
@@ -384,6 +419,13 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation implements A
         $this->container['indicator'] = isset($data['indicator']) ? $data['indicator'] : null;
         $this->container['interactionCounter'] = isset($data['interactionCounter']) ? $data['interactionCounter'] : null;
         $this->container['whiteListStatus'] = isset($data['whiteListStatus']) ? $data['whiteListStatus'] : null;
+        $this->container['token'] = isset($data['token']) ? $data['token'] : null;
+        $this->container['acsReferenceNumber'] = isset($data['acsReferenceNumber']) ? $data['acsReferenceNumber'] : null;
+        $this->container['acsOperatorID'] = isset($data['acsOperatorID']) ? $data['acsOperatorID'] : null;
+        $this->container['idciScore'] = isset($data['idciScore']) ? $data['idciScore'] : null;
+        $this->container['idciDecision'] = isset($data['idciDecision']) ? $data['idciDecision'] : null;
+        $this->container['idciReasonCode1'] = isset($data['idciReasonCode1']) ? $data['idciReasonCode1'] : null;
+        $this->container['idciReasonCode2'] = isset($data['idciReasonCode2']) ? $data['idciReasonCode2'] : null;
     }
 
     /**
@@ -1310,6 +1352,153 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation implements A
     public function setWhiteListStatus($whiteListStatus)
     {
         $this->container['whiteListStatus'] = $whiteListStatus;
+
+        return $this;
+    }
+
+    /**
+     * Gets token
+     * @return string
+     */
+    public function getToken()
+    {
+        return $this->container['token'];
+    }
+
+    /**
+     * Sets token
+     * @param string $token 
+     * @return $this
+     */
+    public function setToken($token)
+    {
+        $this->container['token'] = $token;
+
+        return $this;
+    }
+
+    /**
+     * Gets acsReferenceNumber
+     * @return string
+     */
+    public function getAcsReferenceNumber()
+    {
+        return $this->container['acsReferenceNumber'];
+    }
+
+    /**
+     * Sets acsReferenceNumber
+     * @param string $acsReferenceNumber Unique identifier assigned by the EMVCo Secretariat upon Testing and Approval.
+     * @return $this
+     */
+    public function setAcsReferenceNumber($acsReferenceNumber)
+    {
+        $this->container['acsReferenceNumber'] = $acsReferenceNumber;
+
+        return $this;
+    }
+
+    /**
+     * Gets acsOperatorID
+     * @return string
+     */
+    public function getAcsOperatorID()
+    {
+        return $this->container['acsOperatorID'];
+    }
+
+    /**
+     * Sets acsOperatorID
+     * @param string $acsOperatorID Directory Server assigned ACS identifier.
+     * @return $this
+     */
+    public function setAcsOperatorID($acsOperatorID)
+    {
+        $this->container['acsOperatorID'] = $acsOperatorID;
+
+        return $this;
+    }
+
+    /**
+     * Gets idciScore
+     * @return int
+     */
+    public function getIdciScore()
+    {
+        return $this->container['idciScore'];
+    }
+
+    /**
+     * Sets idciScore
+     * @param int $idciScore Risk Assessment from Mastercard
+     * @return $this
+     */
+    public function setIdciScore($idciScore)
+    {
+        $this->container['idciScore'] = $idciScore;
+
+        return $this;
+    }
+
+    /**
+     * Gets idciDecision
+     * @return string
+     */
+    public function getIdciDecision()
+    {
+        return $this->container['idciDecision'];
+    }
+
+    /**
+     * Sets idciDecision
+     * @param string $idciDecision Decision on the Risk Assessment from Mastercard.
+     * @return $this
+     */
+    public function setIdciDecision($idciDecision)
+    {
+        $this->container['idciDecision'] = $idciDecision;
+
+        return $this;
+    }
+
+    /**
+     * Gets idciReasonCode1
+     * @return string
+     */
+    public function getIdciReasonCode1()
+    {
+        return $this->container['idciReasonCode1'];
+    }
+
+    /**
+     * Sets idciReasonCode1
+     * @param string $idciReasonCode1 ReasonCode from Mastercard
+     * @return $this
+     */
+    public function setIdciReasonCode1($idciReasonCode1)
+    {
+        $this->container['idciReasonCode1'] = $idciReasonCode1;
+
+        return $this;
+    }
+
+    /**
+     * Gets idciReasonCode2
+     * @return string
+     */
+    public function getIdciReasonCode2()
+    {
+        return $this->container['idciReasonCode2'];
+    }
+
+    /**
+     * Sets idciReasonCode2
+     * @param string $idciReasonCode2 ReasonCode from Mastercard
+     * @return $this
+     */
+    public function setIdciReasonCode2($idciReasonCode2)
+    {
+        $this->container['idciReasonCode2'] = $idciReasonCode2;
 
         return $this;
     }

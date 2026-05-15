@@ -59,8 +59,11 @@ class PullFunds201ResponseProcessorInformation implements ArrayAccess
         'transactionId' => 'string',
         'consumerAuthenticationResponse' => '\CyberSource\Model\PullFunds201ResponseProcessorInformationConsumerAuthenticationResponse',
         'retrievalReferenceNumber' => 'string',
-        'avs' => '\CyberSource\Model\PullFunds201ResponseProcessorInformationAvs',
-        'responseDetails' => 'string'
+        'avs' => '\CyberSource\Model\PtsV2PayoutsPost201ResponseProcessorInformationAvs',
+        'responseDetails' => 'string',
+        'customer' => '\CyberSource\Model\PtsV2PayoutsPost201ResponseProcessorInformationCustomer',
+        'electronicVerificationResults' => '\CyberSource\Model\PtsV2PayoutsPost201ResponseProcessorInformationElectronicVerificationResults',
+        'cardVerification' => '\CyberSource\Model\PtsV2PaymentsPost201ResponseProcessorInformationCardVerification'
     ];
 
     /**
@@ -75,7 +78,10 @@ class PullFunds201ResponseProcessorInformation implements ArrayAccess
         'consumerAuthenticationResponse' => null,
         'retrievalReferenceNumber' => null,
         'avs' => null,
-        'responseDetails' => null
+        'responseDetails' => null,
+        'customer' => null,
+        'electronicVerificationResults' => null,
+        'cardVerification' => null
     ];
 
     public static function swaggerTypes()
@@ -100,7 +106,10 @@ class PullFunds201ResponseProcessorInformation implements ArrayAccess
         'consumerAuthenticationResponse' => 'consumerAuthenticationResponse',
         'retrievalReferenceNumber' => 'retrievalReferenceNumber',
         'avs' => 'avs',
-        'responseDetails' => 'responseDetails'
+        'responseDetails' => 'responseDetails',
+        'customer' => 'customer',
+        'electronicVerificationResults' => 'electronicVerificationResults',
+        'cardVerification' => 'cardVerification'
     ];
 
 
@@ -116,7 +125,10 @@ class PullFunds201ResponseProcessorInformation implements ArrayAccess
         'consumerAuthenticationResponse' => 'setConsumerAuthenticationResponse',
         'retrievalReferenceNumber' => 'setRetrievalReferenceNumber',
         'avs' => 'setAvs',
-        'responseDetails' => 'setResponseDetails'
+        'responseDetails' => 'setResponseDetails',
+        'customer' => 'setCustomer',
+        'electronicVerificationResults' => 'setElectronicVerificationResults',
+        'cardVerification' => 'setCardVerification'
     ];
 
 
@@ -132,7 +144,10 @@ class PullFunds201ResponseProcessorInformation implements ArrayAccess
         'consumerAuthenticationResponse' => 'getConsumerAuthenticationResponse',
         'retrievalReferenceNumber' => 'getRetrievalReferenceNumber',
         'avs' => 'getAvs',
-        'responseDetails' => 'getResponseDetails'
+        'responseDetails' => 'getResponseDetails',
+        'customer' => 'getCustomer',
+        'electronicVerificationResults' => 'getElectronicVerificationResults',
+        'cardVerification' => 'getCardVerification'
     ];
 
     public static function attributeMap()
@@ -174,6 +189,9 @@ class PullFunds201ResponseProcessorInformation implements ArrayAccess
         $this->container['retrievalReferenceNumber'] = isset($data['retrievalReferenceNumber']) ? $data['retrievalReferenceNumber'] : null;
         $this->container['avs'] = isset($data['avs']) ? $data['avs'] : null;
         $this->container['responseDetails'] = isset($data['responseDetails']) ? $data['responseDetails'] : null;
+        $this->container['customer'] = isset($data['customer']) ? $data['customer'] : null;
+        $this->container['electronicVerificationResults'] = isset($data['electronicVerificationResults']) ? $data['electronicVerificationResults'] : null;
+        $this->container['cardVerification'] = isset($data['cardVerification']) ? $data['cardVerification'] : null;
     }
 
     /**
@@ -329,7 +347,7 @@ class PullFunds201ResponseProcessorInformation implements ArrayAccess
 
     /**
      * Gets avs
-     * @return \CyberSource\Model\PullFunds201ResponseProcessorInformationAvs
+     * @return \CyberSource\Model\PtsV2PayoutsPost201ResponseProcessorInformationAvs
      */
     public function getAvs()
     {
@@ -338,7 +356,7 @@ class PullFunds201ResponseProcessorInformation implements ArrayAccess
 
     /**
      * Sets avs
-     * @param \CyberSource\Model\PullFunds201ResponseProcessorInformationAvs $avs
+     * @param \CyberSource\Model\PtsV2PayoutsPost201ResponseProcessorInformationAvs $avs
      * @return $this
      */
     public function setAvs($avs)
@@ -365,6 +383,69 @@ class PullFunds201ResponseProcessorInformation implements ArrayAccess
     public function setResponseDetails($responseDetails)
     {
         $this->container['responseDetails'] = $responseDetails;
+
+        return $this;
+    }
+
+    /**
+     * Gets customer
+     * @return \CyberSource\Model\PtsV2PayoutsPost201ResponseProcessorInformationCustomer
+     */
+    public function getCustomer()
+    {
+        return $this->container['customer'];
+    }
+
+    /**
+     * Sets customer
+     * @param \CyberSource\Model\PtsV2PayoutsPost201ResponseProcessorInformationCustomer $customer
+     * @return $this
+     */
+    public function setCustomer($customer)
+    {
+        $this->container['customer'] = $customer;
+
+        return $this;
+    }
+
+    /**
+     * Gets electronicVerificationResults
+     * @return \CyberSource\Model\PtsV2PayoutsPost201ResponseProcessorInformationElectronicVerificationResults
+     */
+    public function getElectronicVerificationResults()
+    {
+        return $this->container['electronicVerificationResults'];
+    }
+
+    /**
+     * Sets electronicVerificationResults
+     * @param \CyberSource\Model\PtsV2PayoutsPost201ResponseProcessorInformationElectronicVerificationResults $electronicVerificationResults
+     * @return $this
+     */
+    public function setElectronicVerificationResults($electronicVerificationResults)
+    {
+        $this->container['electronicVerificationResults'] = $electronicVerificationResults;
+
+        return $this;
+    }
+
+    /**
+     * Gets cardVerification
+     * @return \CyberSource\Model\PtsV2PaymentsPost201ResponseProcessorInformationCardVerification
+     */
+    public function getCardVerification()
+    {
+        return $this->container['cardVerification'];
+    }
+
+    /**
+     * Sets cardVerification
+     * @param \CyberSource\Model\PtsV2PaymentsPost201ResponseProcessorInformationCardVerification $cardVerification
+     * @return $this
+     */
+    public function setCardVerification($cardVerification)
+    {
+        $this->container['cardVerification'] = $cardVerification;
 
         return $this;
     }

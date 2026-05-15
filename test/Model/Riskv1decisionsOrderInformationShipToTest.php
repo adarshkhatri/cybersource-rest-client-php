@@ -173,4 +173,18 @@ class Riskv1decisionsOrderInformationShipToTest extends \PHPUnit_Framework_TestC
     public function testPropertyMethod()
     {
     }
+
+    /**
+     * Test attribute "email"
+     */
+    public function testPropertyEmail()
+    {
+    }
+
+    /**
+     * Test attribute "company"
+     */
+    public function testPropertyCompany()
+    {
+    }
 }

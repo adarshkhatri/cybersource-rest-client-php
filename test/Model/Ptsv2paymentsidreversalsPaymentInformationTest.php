@@ -82,4 +82,11 @@ class Ptsv2paymentsidreversalsPaymentInformationTest extends \PHPUnit_Framework_
     public function testPropertyPaymentType()
     {
     }
+
+    /**
+     * Test attribute "merchantLimitedAcceptanceIndicator"
+     */
+    public function testPropertyMerchantLimitedAcceptanceIndicator()
+    {
+    }
 }

@@ -14,7 +14,11 @@ Name | Type | Description | Notes
 **processorInformation** | [**\CyberSource\Model\PtsV2PaymentsRefundPost201ResponseProcessorInformation**](PtsV2PaymentsRefundPost201ResponseProcessorInformation.md) |  | [optional] 
 **paymentInformation** | [**\CyberSource\Model\PtsV2CreditsPost201ResponsePaymentInformation**](PtsV2CreditsPost201ResponsePaymentInformation.md) |  | [optional] 
 **orderInformation** | [**\CyberSource\Model\PtsV2PaymentsRefundPost201ResponseOrderInformation**](PtsV2PaymentsRefundPost201ResponseOrderInformation.md) |  | [optional] 
+**merchantInformation** | [**\CyberSource\Model\PtsV2CreditsPost201ResponseMerchantInformation**](PtsV2CreditsPost201ResponseMerchantInformation.md) |  | [optional] 
+**clearingInformation** | [**\CyberSource\Model\PtsV2PaymentsPost201ResponseClearingInformation**](PtsV2PaymentsPost201ResponseClearingInformation.md) |  | [optional] 
 **pointOfSaleInformation** | [**\CyberSource\Model\PtsV2PaymentsCapturesPost201ResponsePointOfSaleInformation**](PtsV2PaymentsCapturesPost201ResponsePointOfSaleInformation.md) |  | [optional] 
+**tokenInformation** | [**\CyberSource\Model\PtsV2CreditsPost201ResponseTokenInformation**](PtsV2CreditsPost201ResponseTokenInformation.md) |  | [optional] 
+**paymentAccountInformation** | [**\CyberSource\Model\PtsV2CreditsPost201ResponsePaymentAccountInformation**](PtsV2CreditsPost201ResponsePaymentAccountInformation.md) |  | [optional] 
 **errorInformation** | [**\CyberSource\Model\PtsV2PaymentsRefundPost201ResponseErrorInformation**](PtsV2PaymentsRefundPost201ResponseErrorInformation.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

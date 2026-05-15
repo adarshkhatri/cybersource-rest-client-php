@@ -91,6 +91,13 @@ class Ucv1sessionsDataMerchantInformationMerchantDescriptorTest extends \PHPUnit
     }
 
     /**
+     * Test attribute "contact"
+     */
+    public function testPropertyContact()
+    {
+    }
+
+    /**
      * Test attribute "locality"
      */
     public function testPropertyLocality()

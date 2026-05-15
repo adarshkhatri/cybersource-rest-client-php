@@ -54,6 +54,7 @@ class Ptsv2billingagreementsProcessingInformation implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'commerceIndicator' => 'string',
+        'paymentCompletionTimeout' => 'string',
         'actionList' => 'string[]'
     ];
 
@@ -63,6 +64,7 @@ class Ptsv2billingagreementsProcessingInformation implements ArrayAccess
       */
     protected static $swaggerFormats = [
         'commerceIndicator' => null,
+        'paymentCompletionTimeout' => null,
         'actionList' => null
     ];
 
@@ -82,6 +84,7 @@ class Ptsv2billingagreementsProcessingInformation implements ArrayAccess
      */
     protected static $attributeMap = [
         'commerceIndicator' => 'commerceIndicator',
+        'paymentCompletionTimeout' => 'paymentCompletionTimeout',
         'actionList' => 'actionList'
     ];
 
@@ -92,6 +95,7 @@ class Ptsv2billingagreementsProcessingInformation implements ArrayAccess
      */
     protected static $setters = [
         'commerceIndicator' => 'setCommerceIndicator',
+        'paymentCompletionTimeout' => 'setPaymentCompletionTimeout',
         'actionList' => 'setActionList'
     ];
 
@@ -102,6 +106,7 @@ class Ptsv2billingagreementsProcessingInformation implements ArrayAccess
      */
     protected static $getters = [
         'commerceIndicator' => 'getCommerceIndicator',
+        'paymentCompletionTimeout' => 'getPaymentCompletionTimeout',
         'actionList' => 'getActionList'
     ];
 
@@ -137,6 +142,7 @@ class Ptsv2billingagreementsProcessingInformation implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['commerceIndicator'] = isset($data['commerceIndicator']) ? $data['commerceIndicator'] : null;
+        $this->container['paymentCompletionTimeout'] = isset($data['paymentCompletionTimeout']) ? $data['paymentCompletionTimeout'] : null;
         $this->container['actionList'] = isset($data['actionList']) ? $data['actionList'] : null;
     }
 
@@ -182,6 +188,27 @@ class Ptsv2billingagreementsProcessingInformation implements ArrayAccess
     public function setCommerceIndicator($commerceIndicator)
     {
         $this->container['commerceIndicator'] = $commerceIndicator;
+
+        return $this;
+    }
+
+    /**
+     * Gets paymentCompletionTimeout
+     * @return string
+     */
+    public function getPaymentCompletionTimeout()
+    {
+        return $this->container['paymentCompletionTimeout'];
+    }
+
+    /**
+     * Sets paymentCompletionTimeout
+     * @param string $paymentCompletionTimeout Period after which an authorization request to the consumer expires due to inactivity. Value in seconds (e.g., 86400 for one day).
+     * @return $this
+     */
+    public function setPaymentCompletionTimeout($paymentCompletionTimeout)
+    {
+        $this->container['paymentCompletionTimeout'] = $paymentCompletionTimeout;
 
         return $this;
     }

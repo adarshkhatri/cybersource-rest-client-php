@@ -152,4 +152,11 @@ class Ptsv2paymentsAggregatorInformationSubMerchantTest extends \PHPUnit_Framewo
     public function testPropertyPhoneNumber()
     {
     }
+
+    /**
+     * Test attribute "merchantCategoryCode"
+     */
+    public function testPropertyMerchantCategoryCode()
+    {
+    }
 }

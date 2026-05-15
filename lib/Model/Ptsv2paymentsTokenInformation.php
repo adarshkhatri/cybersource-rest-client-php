@@ -58,7 +58,9 @@ class Ptsv2paymentsTokenInformation implements ArrayAccess
         'paymentInstrument' => '\CyberSource\Model\Ptsv2paymentsTokenInformationPaymentInstrument',
         'shippingAddress' => '\CyberSource\Model\Ptsv2paymentsTokenInformationShippingAddress',
         'networkTokenOption' => 'string',
-        'tokenProvisioningInformation' => '\CyberSource\Model\Ptsv2paymentsTokenInformationTokenProvisioningInformation'
+        'tokenProvisioningInformation' => '\CyberSource\Model\Ptsv2paymentsTokenInformationTokenProvisioningInformation',
+        'clientCorrelationId' => 'string',
+        'tokenAuthenticationInformation' => '\CyberSource\Model\Ptsv2paymentsTokenInformationTokenAuthenticationInformation'
     ];
 
     /**
@@ -71,7 +73,9 @@ class Ptsv2paymentsTokenInformation implements ArrayAccess
         'paymentInstrument' => null,
         'shippingAddress' => null,
         'networkTokenOption' => null,
-        'tokenProvisioningInformation' => null
+        'tokenProvisioningInformation' => null,
+        'clientCorrelationId' => null,
+        'tokenAuthenticationInformation' => null
     ];
 
     public static function swaggerTypes()
@@ -94,7 +98,9 @@ class Ptsv2paymentsTokenInformation implements ArrayAccess
         'paymentInstrument' => 'paymentInstrument',
         'shippingAddress' => 'shippingAddress',
         'networkTokenOption' => 'networkTokenOption',
-        'tokenProvisioningInformation' => 'tokenProvisioningInformation'
+        'tokenProvisioningInformation' => 'tokenProvisioningInformation',
+        'clientCorrelationId' => 'clientCorrelationId',
+        'tokenAuthenticationInformation' => 'tokenAuthenticationInformation'
     ];
 
 
@@ -108,7 +114,9 @@ class Ptsv2paymentsTokenInformation implements ArrayAccess
         'paymentInstrument' => 'setPaymentInstrument',
         'shippingAddress' => 'setShippingAddress',
         'networkTokenOption' => 'setNetworkTokenOption',
-        'tokenProvisioningInformation' => 'setTokenProvisioningInformation'
+        'tokenProvisioningInformation' => 'setTokenProvisioningInformation',
+        'clientCorrelationId' => 'setClientCorrelationId',
+        'tokenAuthenticationInformation' => 'setTokenAuthenticationInformation'
     ];
 
 
@@ -122,7 +130,9 @@ class Ptsv2paymentsTokenInformation implements ArrayAccess
         'paymentInstrument' => 'getPaymentInstrument',
         'shippingAddress' => 'getShippingAddress',
         'networkTokenOption' => 'getNetworkTokenOption',
-        'tokenProvisioningInformation' => 'getTokenProvisioningInformation'
+        'tokenProvisioningInformation' => 'getTokenProvisioningInformation',
+        'clientCorrelationId' => 'getClientCorrelationId',
+        'tokenAuthenticationInformation' => 'getTokenAuthenticationInformation'
     ];
 
     public static function attributeMap()
@@ -162,6 +172,8 @@ class Ptsv2paymentsTokenInformation implements ArrayAccess
         $this->container['shippingAddress'] = isset($data['shippingAddress']) ? $data['shippingAddress'] : null;
         $this->container['networkTokenOption'] = isset($data['networkTokenOption']) ? $data['networkTokenOption'] : null;
         $this->container['tokenProvisioningInformation'] = isset($data['tokenProvisioningInformation']) ? $data['tokenProvisioningInformation'] : null;
+        $this->container['clientCorrelationId'] = isset($data['clientCorrelationId']) ? $data['clientCorrelationId'] : null;
+        $this->container['tokenAuthenticationInformation'] = isset($data['tokenAuthenticationInformation']) ? $data['tokenAuthenticationInformation'] : null;
     }
 
     /**
@@ -311,6 +323,48 @@ class Ptsv2paymentsTokenInformation implements ArrayAccess
     public function setTokenProvisioningInformation($tokenProvisioningInformation)
     {
         $this->container['tokenProvisioningInformation'] = $tokenProvisioningInformation;
+
+        return $this;
+    }
+
+    /**
+     * Gets clientCorrelationId
+     * @return string
+     */
+    public function getClientCorrelationId()
+    {
+        return $this->container['clientCorrelationId'];
+    }
+
+    /**
+     * Sets clientCorrelationId
+     * @param string $clientCorrelationId Client-generated unique identifier for correlating token operations across API calls. This value helps track and associate token-related transactions.
+     * @return $this
+     */
+    public function setClientCorrelationId($clientCorrelationId)
+    {
+        $this->container['clientCorrelationId'] = $clientCorrelationId;
+
+        return $this;
+    }
+
+    /**
+     * Gets tokenAuthenticationInformation
+     * @return \CyberSource\Model\Ptsv2paymentsTokenInformationTokenAuthenticationInformation
+     */
+    public function getTokenAuthenticationInformation()
+    {
+        return $this->container['tokenAuthenticationInformation'];
+    }
+
+    /**
+     * Sets tokenAuthenticationInformation
+     * @param \CyberSource\Model\Ptsv2paymentsTokenInformationTokenAuthenticationInformation $tokenAuthenticationInformation
+     * @return $this
+     */
+    public function setTokenAuthenticationInformation($tokenAuthenticationInformation)
+    {
+        $this->container['tokenAuthenticationInformation'] = $tokenAuthenticationInformation;
 
         return $this;
     }

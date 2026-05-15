@@ -138,4 +138,11 @@ class Ptsv2paymentsidcapturesAggregatorInformationSubMerchantTest extends \PHPUn
     public function testPropertyId()
     {
     }
+
+    /**
+     * Test attribute "merchantCategoryCode"
+     */
+    public function testPropertyMerchantCategoryCode()
+    {
+    }
 }

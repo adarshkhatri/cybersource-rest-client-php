@@ -60,7 +60,8 @@ class Ptsv1pushfundstransferProcessingInformation implements ArrayAccess
         'processingCode' => 'string',
         'sharingGroupCode' => 'string',
         'purposeOfPayment' => 'string',
-        'reconciliationId' => 'string'
+        'reconciliationId' => 'string',
+        'accountVerificationCode' => 'string[]'
     ];
 
     /**
@@ -75,7 +76,8 @@ class Ptsv1pushfundstransferProcessingInformation implements ArrayAccess
         'processingCode' => null,
         'sharingGroupCode' => null,
         'purposeOfPayment' => null,
-        'reconciliationId' => null
+        'reconciliationId' => null,
+        'accountVerificationCode' => null
     ];
 
     public static function swaggerTypes()
@@ -100,7 +102,8 @@ class Ptsv1pushfundstransferProcessingInformation implements ArrayAccess
         'processingCode' => 'processingCode',
         'sharingGroupCode' => 'sharingGroupCode',
         'purposeOfPayment' => 'purposeOfPayment',
-        'reconciliationId' => 'reconciliationId'
+        'reconciliationId' => 'reconciliationId',
+        'accountVerificationCode' => 'accountVerificationCode'
     ];
 
 
@@ -116,7 +119,8 @@ class Ptsv1pushfundstransferProcessingInformation implements ArrayAccess
         'processingCode' => 'setProcessingCode',
         'sharingGroupCode' => 'setSharingGroupCode',
         'purposeOfPayment' => 'setPurposeOfPayment',
-        'reconciliationId' => 'setReconciliationId'
+        'reconciliationId' => 'setReconciliationId',
+        'accountVerificationCode' => 'setAccountVerificationCode'
     ];
 
 
@@ -132,7 +136,8 @@ class Ptsv1pushfundstransferProcessingInformation implements ArrayAccess
         'processingCode' => 'getProcessingCode',
         'sharingGroupCode' => 'getSharingGroupCode',
         'purposeOfPayment' => 'getPurposeOfPayment',
-        'reconciliationId' => 'getReconciliationId'
+        'reconciliationId' => 'getReconciliationId',
+        'accountVerificationCode' => 'getAccountVerificationCode'
     ];
 
     public static function attributeMap()
@@ -174,6 +179,7 @@ class Ptsv1pushfundstransferProcessingInformation implements ArrayAccess
         $this->container['sharingGroupCode'] = isset($data['sharingGroupCode']) ? $data['sharingGroupCode'] : null;
         $this->container['purposeOfPayment'] = isset($data['purposeOfPayment']) ? $data['purposeOfPayment'] : null;
         $this->container['reconciliationId'] = isset($data['reconciliationId']) ? $data['reconciliationId'] : null;
+        $this->container['accountVerificationCode'] = isset($data['accountVerificationCode']) ? $data['accountVerificationCode'] : null;
     }
 
     /**
@@ -275,7 +281,7 @@ class Ptsv1pushfundstransferProcessingInformation implements ArrayAccess
 
     /**
      * Sets networkPartnerId
-     * @param string $networkPartnerId Merchant payment gateway ID that is assigned by Mastercard and is provided by the acquirer when a registered merchant payment gateway service provider is involved in the transaction.
+     * @param string $networkPartnerId Merchant payment gateway ID that is assigned by Mastercard and is provided by the acquirer when a registered merchant payment gateway service provider is involved in the transaction.  This field is supported for Visa Platform Connect, Chase Paymentech Salem.
      * @return $this
      */
     public function setNetworkPartnerId($networkPartnerId)
@@ -365,6 +371,27 @@ class Ptsv1pushfundstransferProcessingInformation implements ArrayAccess
     public function setReconciliationId($reconciliationId)
     {
         $this->container['reconciliationId'] = $reconciliationId;
+
+        return $this;
+    }
+
+    /**
+     * Gets accountVerificationCode
+     * @return string[]
+     */
+    public function getAccountVerificationCode()
+    {
+        return $this->container['accountVerificationCode'];
+    }
+
+    /**
+     * Sets accountVerificationCode
+     * @param string[] $accountVerificationCode Account verification code will inform what Payment Account Verification should be performed. With this array of codes, a merchant can choose à la carte what verifications to run. This field is optional, and the default is 1 if it is not passed in. This means that a full validation of the fields will be performed. Valid verification codes: - `1` = Full Account Verification (Card Account, CVN, CAVV, TAVV, Address, Name, eMail, Phone, Identity) - `2` = Card Account Verification - `3` = Address Verification - `4` = Card Authentication Method (CAM) (Cryptogram) - `5` = Cardholder Authentication Verification (CAVV) - `6` = Cardholder Identity Verification - `7` = CVV2 Verification - `8` = eMail Verification - `9` = Name Verification - `10` = Phone Verification
+     * @return $this
+     */
+    public function setAccountVerificationCode($accountVerificationCode)
+    {
+        $this->container['accountVerificationCode'] = $accountVerificationCode;
 
         return $this;
     }

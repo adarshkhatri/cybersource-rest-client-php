@@ -54,7 +54,9 @@ class Ptsv2paymentsidcapturesProcessorInformation implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'network' => '\CyberSource\Model\Ptsv2paymentsProcessorInformationReversalNetwork',
-        'responseSourceCode' => 'string'
+        'responseSourceCode' => 'string',
+        'supplementaryTransactionData' => 'string',
+        'cedpVerifiedIndicator' => 'string'
     ];
 
     /**
@@ -63,7 +65,9 @@ class Ptsv2paymentsidcapturesProcessorInformation implements ArrayAccess
       */
     protected static $swaggerFormats = [
         'network' => null,
-        'responseSourceCode' => null
+        'responseSourceCode' => null,
+        'supplementaryTransactionData' => null,
+        'cedpVerifiedIndicator' => null
     ];
 
     public static function swaggerTypes()
@@ -82,7 +86,9 @@ class Ptsv2paymentsidcapturesProcessorInformation implements ArrayAccess
      */
     protected static $attributeMap = [
         'network' => 'network',
-        'responseSourceCode' => 'responseSourceCode'
+        'responseSourceCode' => 'responseSourceCode',
+        'supplementaryTransactionData' => 'supplementaryTransactionData',
+        'cedpVerifiedIndicator' => 'cedpVerifiedIndicator'
     ];
 
 
@@ -92,7 +98,9 @@ class Ptsv2paymentsidcapturesProcessorInformation implements ArrayAccess
      */
     protected static $setters = [
         'network' => 'setNetwork',
-        'responseSourceCode' => 'setResponseSourceCode'
+        'responseSourceCode' => 'setResponseSourceCode',
+        'supplementaryTransactionData' => 'setSupplementaryTransactionData',
+        'cedpVerifiedIndicator' => 'setCedpVerifiedIndicator'
     ];
 
 
@@ -102,7 +110,9 @@ class Ptsv2paymentsidcapturesProcessorInformation implements ArrayAccess
      */
     protected static $getters = [
         'network' => 'getNetwork',
-        'responseSourceCode' => 'getResponseSourceCode'
+        'responseSourceCode' => 'getResponseSourceCode',
+        'supplementaryTransactionData' => 'getSupplementaryTransactionData',
+        'cedpVerifiedIndicator' => 'getCedpVerifiedIndicator'
     ];
 
     public static function attributeMap()
@@ -138,6 +148,8 @@ class Ptsv2paymentsidcapturesProcessorInformation implements ArrayAccess
     {
         $this->container['network'] = isset($data['network']) ? $data['network'] : null;
         $this->container['responseSourceCode'] = isset($data['responseSourceCode']) ? $data['responseSourceCode'] : null;
+        $this->container['supplementaryTransactionData'] = isset($data['supplementaryTransactionData']) ? $data['supplementaryTransactionData'] : null;
+        $this->container['cedpVerifiedIndicator'] = isset($data['cedpVerifiedIndicator']) ? $data['cedpVerifiedIndicator'] : null;
     }
 
     /**
@@ -203,6 +215,48 @@ class Ptsv2paymentsidcapturesProcessorInformation implements ArrayAccess
     public function setResponseSourceCode($responseSourceCode)
     {
         $this->container['responseSourceCode'] = $responseSourceCode;
+
+        return $this;
+    }
+
+    /**
+     * Gets supplementaryTransactionData
+     * @return string
+     */
+    public function getSupplementaryTransactionData()
+    {
+        return $this->container['supplementaryTransactionData'];
+    }
+
+    /**
+     * Sets supplementaryTransactionData
+     * @param string $supplementaryTransactionData Supplementary transaction data for Klarna Advantage Plus. Fields to capture Interoperability Data from Merchant and transfer to Klarna for Authorization/Sale/Re-Auth/Capture APIs.
+     * @return $this
+     */
+    public function setSupplementaryTransactionData($supplementaryTransactionData)
+    {
+        $this->container['supplementaryTransactionData'] = $supplementaryTransactionData;
+
+        return $this;
+    }
+
+    /**
+     * Gets cedpVerifiedIndicator
+     * @return string
+     */
+    public function getCedpVerifiedIndicator()
+    {
+        return $this->container['cedpVerifiedIndicator'];
+    }
+
+    /**
+     * Sets cedpVerifiedIndicator
+     * @param string $cedpVerifiedIndicator Merchant Commercial Enhanced Data Program (CEDP) verified indicator for capture/bill requests.  This field is used when the client is doing authorization with a different gateway and capture/settlement with CyberSource.  This field flows in ISO field 34, DSID 02 tag DA, in AN, EBCDIC format.  Possible values: - `Y`: Merchant CEDP verified  #### Used by **Capture Request** Request field for force capture/bill support when auth is done with a different gateway.
+     * @return $this
+     */
+    public function setCedpVerifiedIndicator($cedpVerifiedIndicator)
+    {
+        $this->container['cedpVerifiedIndicator'] = $cedpVerifiedIndicator;
 
         return $this;
     }

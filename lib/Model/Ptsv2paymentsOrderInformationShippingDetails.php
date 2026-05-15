@@ -56,7 +56,8 @@ class Ptsv2paymentsOrderInformationShippingDetails implements ArrayAccess
     protected static $swaggerTypes = [
         'giftWrap' => 'bool',
         'shippingMethod' => 'string',
-        'shipFromPostalCode' => 'string'
+        'shipFromPostalCode' => 'string',
+        'shippingCarrier' => 'string'
     ];
 
     /**
@@ -66,7 +67,8 @@ class Ptsv2paymentsOrderInformationShippingDetails implements ArrayAccess
     protected static $swaggerFormats = [
         'giftWrap' => null,
         'shippingMethod' => null,
-        'shipFromPostalCode' => null
+        'shipFromPostalCode' => null,
+        'shippingCarrier' => null
     ];
 
     public static function swaggerTypes()
@@ -86,7 +88,8 @@ class Ptsv2paymentsOrderInformationShippingDetails implements ArrayAccess
     protected static $attributeMap = [
         'giftWrap' => 'giftWrap',
         'shippingMethod' => 'shippingMethod',
-        'shipFromPostalCode' => 'shipFromPostalCode'
+        'shipFromPostalCode' => 'shipFromPostalCode',
+        'shippingCarrier' => 'shippingCarrier'
     ];
 
 
@@ -97,7 +100,8 @@ class Ptsv2paymentsOrderInformationShippingDetails implements ArrayAccess
     protected static $setters = [
         'giftWrap' => 'setGiftWrap',
         'shippingMethod' => 'setShippingMethod',
-        'shipFromPostalCode' => 'setShipFromPostalCode'
+        'shipFromPostalCode' => 'setShipFromPostalCode',
+        'shippingCarrier' => 'setShippingCarrier'
     ];
 
 
@@ -108,7 +112,8 @@ class Ptsv2paymentsOrderInformationShippingDetails implements ArrayAccess
     protected static $getters = [
         'giftWrap' => 'getGiftWrap',
         'shippingMethod' => 'getShippingMethod',
-        'shipFromPostalCode' => 'getShipFromPostalCode'
+        'shipFromPostalCode' => 'getShipFromPostalCode',
+        'shippingCarrier' => 'getShippingCarrier'
     ];
 
     public static function attributeMap()
@@ -145,6 +150,7 @@ class Ptsv2paymentsOrderInformationShippingDetails implements ArrayAccess
         $this->container['giftWrap'] = isset($data['giftWrap']) ? $data['giftWrap'] : null;
         $this->container['shippingMethod'] = isset($data['shippingMethod']) ? $data['shippingMethod'] : null;
         $this->container['shipFromPostalCode'] = isset($data['shipFromPostalCode']) ? $data['shipFromPostalCode'] : null;
+        $this->container['shippingCarrier'] = isset($data['shippingCarrier']) ? $data['shippingCarrier'] : null;
     }
 
     /**
@@ -204,7 +210,7 @@ class Ptsv2paymentsOrderInformationShippingDetails implements ArrayAccess
 
     /**
      * Sets shippingMethod
-     * @param string $shippingMethod Shipping method for the product. Possible values:   - `lowcost`: Lowest-cost service  - `sameday`: Courier or same-day service  - `oneday`: Next-day or overnight service  - `twoday`: Two-day service  - `threeday`: Three-day service  - `pickup`: Store pick-up  - `other`: Other shipping method  - `none`: No shipping method because product is a service or subscription
+     * @param string $shippingMethod Shipping method for the product. Possible values:   - `lowcost`: Lowest-cost service  - `sameday`: Courier or same-day service  - `oneday`: Next-day or overnight service  - `twoday`: Two-day service  - `threeday`: Three-day service  - `pickup`: Store pick-up  - `other`: Other shipping method  - `none`: No shipping method because product is a service or subscription  Klarna Advantage Plus additional values:  - `TO_DOOR`: Delivery to door  - `TO_CURB`: Delivery to curb  - `TO_MAILBOX`: Delivery to mailbox  - `PICKUP_BOX`: Pickup from box  - `PICKUP_POINT`: Pickup from point  - `PICKUP_STORE`: Pickup from store  - `PICKUP_WAREHOUSE`: Pickup from warehouse  - `DIGITAL_EMAIL`: Digital delivery via email  - `DIGITAL_DOWNLOAD`: Digital download  - `DIGITAL_OTHER`: Other digital delivery  - `PHYSICAL_OTHER`: Other physical delivery
      * @return $this
      */
     public function setShippingMethod($shippingMethod)
@@ -231,6 +237,27 @@ class Ptsv2paymentsOrderInformationShippingDetails implements ArrayAccess
     public function setShipFromPostalCode($shipFromPostalCode)
     {
         $this->container['shipFromPostalCode'] = $shipFromPostalCode;
+
+        return $this;
+    }
+
+    /**
+     * Gets shippingCarrier
+     * @return string
+     */
+    public function getShippingCarrier()
+    {
+        return $this->container['shippingCarrier'];
+    }
+
+    /**
+     * Sets shippingCarrier
+     * @param string $shippingCarrier Name of the shipping carrier/company handling the delivery.
+     * @return $this
+     */
+    public function setShippingCarrier($shippingCarrier)
+    {
+        $this->container['shippingCarrier'] = $shippingCarrier;
 
         return $this;
     }

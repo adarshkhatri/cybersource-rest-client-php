@@ -110,4 +110,11 @@ class Ucv1sessionsDataOrderInformationTest extends \PHPUnit_Framework_TestCase
     public function testPropertyInvoiceDetails()
     {
     }
+
+    /**
+     * Test attribute "shippingDetails"
+     */
+    public function testPropertyShippingDetails()
+    {
+    }
 }

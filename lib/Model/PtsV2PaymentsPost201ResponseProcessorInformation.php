@@ -99,7 +99,8 @@ class PtsV2PaymentsPost201ResponseProcessorInformation implements ArrayAccess
         'orderId' => 'string',
         'orderStatus' => 'string',
         'merchantRiskPrediction' => 'string',
-        'network' => '\CyberSource\Model\Ptsv2paymentsProcessorInformationReversalNetwork'
+        'network' => '\CyberSource\Model\Ptsv2paymentsProcessorInformationReversalNetwork',
+        'cedpVerifiedIndicator' => 'string'
     ];
 
     /**
@@ -153,7 +154,8 @@ class PtsV2PaymentsPost201ResponseProcessorInformation implements ArrayAccess
         'orderId' => null,
         'orderStatus' => null,
         'merchantRiskPrediction' => null,
-        'network' => null
+        'network' => null,
+        'cedpVerifiedIndicator' => null
     ];
 
     public static function swaggerTypes()
@@ -217,7 +219,8 @@ class PtsV2PaymentsPost201ResponseProcessorInformation implements ArrayAccess
         'orderId' => 'orderId',
         'orderStatus' => 'orderStatus',
         'merchantRiskPrediction' => 'merchantRiskPrediction',
-        'network' => 'network'
+        'network' => 'network',
+        'cedpVerifiedIndicator' => 'cedpVerifiedIndicator'
     ];
 
 
@@ -272,7 +275,8 @@ class PtsV2PaymentsPost201ResponseProcessorInformation implements ArrayAccess
         'orderId' => 'setOrderId',
         'orderStatus' => 'setOrderStatus',
         'merchantRiskPrediction' => 'setMerchantRiskPrediction',
-        'network' => 'setNetwork'
+        'network' => 'setNetwork',
+        'cedpVerifiedIndicator' => 'setCedpVerifiedIndicator'
     ];
 
 
@@ -327,7 +331,8 @@ class PtsV2PaymentsPost201ResponseProcessorInformation implements ArrayAccess
         'orderId' => 'getOrderId',
         'orderStatus' => 'getOrderStatus',
         'merchantRiskPrediction' => 'getMerchantRiskPrediction',
-        'network' => 'getNetwork'
+        'network' => 'getNetwork',
+        'cedpVerifiedIndicator' => 'getCedpVerifiedIndicator'
     ];
 
     public static function attributeMap()
@@ -408,6 +413,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformation implements ArrayAccess
         $this->container['orderStatus'] = isset($data['orderStatus']) ? $data['orderStatus'] : null;
         $this->container['merchantRiskPrediction'] = isset($data['merchantRiskPrediction']) ? $data['merchantRiskPrediction'] : null;
         $this->container['network'] = isset($data['network']) ? $data['network'] : null;
+        $this->container['cedpVerifiedIndicator'] = isset($data['cedpVerifiedIndicator']) ? $data['cedpVerifiedIndicator'] : null;
     }
 
     /**
@@ -1370,7 +1376,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformation implements ArrayAccess
 
     /**
      * Sets orderStatus
-     * @param string $orderStatus The order status.  Possible values: - `CREATED` - `VOIDED` - `COMPLETED` - `PAYER_ACTION_REQUIRED`
+     * @param string $orderStatus The order status.  Possible values: - `CREATED` - `VOIDED` - `COMPLETED` - `PAYER_ACTION_REQUIRED` - `STEP_UP_REQUIRED`
      * @return $this
      */
     public function setOrderStatus($orderStatus)
@@ -1418,6 +1424,27 @@ class PtsV2PaymentsPost201ResponseProcessorInformation implements ArrayAccess
     public function setNetwork($network)
     {
         $this->container['network'] = $network;
+
+        return $this;
+    }
+
+    /**
+     * Gets cedpVerifiedIndicator
+     * @return string
+     */
+    public function getCedpVerifiedIndicator()
+    {
+        return $this->container['cedpVerifiedIndicator'];
+    }
+
+    /**
+     * Sets cedpVerifiedIndicator
+     * @param string $cedpVerifiedIndicator Merchant Commercial Enhanced Data Program (CEDP) verified indicator received in authorization response messages for U.S. domestic transactions containing a credential for the commercial credit products.  This field flows in ISO field 34, DSID 02 tag DA, in AN, EBCDIC format.  Possible values: - `Y`: Merchant CEDP verified  This field is for internal processing only (TC33A usage) and is not sent back to the merchant.  #### Used by **Authorization Response** Response field only.
+     * @return $this
+     */
+    public function setCedpVerifiedIndicator($cedpVerifiedIndicator)
+    {
+        $this->container['cedpVerifiedIndicator'] = $cedpVerifiedIndicator;
 
         return $this;
     }

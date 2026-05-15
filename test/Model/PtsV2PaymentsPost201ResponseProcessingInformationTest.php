@@ -98,6 +98,13 @@ class PtsV2PaymentsPost201ResponseProcessingInformationTest extends \PHPUnit_Fra
     }
 
     /**
+     * Test attribute "digitalServiceIndicator"
+     */
+    public function testPropertyDigitalServiceIndicator()
+    {
+    }
+
+    /**
      * Test attribute "captureOptions"
      */
     public function testPropertyCaptureOptions()

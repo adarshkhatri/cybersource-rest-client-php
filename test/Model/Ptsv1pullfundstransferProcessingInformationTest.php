@@ -124,4 +124,11 @@ class Ptsv1pullfundstransferProcessingInformationTest extends \PHPUnit_Framework
     public function testPropertyLanguageCode()
     {
     }
+
+    /**
+     * Test attribute "accountVerificationCode"
+     */
+    public function testPropertyAccountVerificationCode()
+    {
+    }
 }

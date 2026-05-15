@@ -34,7 +34,7 @@ use \ArrayAccess;
  * Acpv1tokensPaymentInformation Class Doc Comment
  *
  * @category    Class
- * @description Payment Information data.
+ * @description Payment Information data. References the tokenized payment card to use for this transaction. At least one of customer, paymentInstrument, or instrumentIdentifier must be provided. The instrumentIdentifier is the most commonly used reference. If you have a TMS instrument identifier, provide it in instrumentIdentifier.id.
  * @package     CyberSource
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen

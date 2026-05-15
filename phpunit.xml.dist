@@ -6,9 +6,12 @@
          convertWarningsToExceptions="true"
          stopOnFailure="false">
     <testsuites>
-        <testsuite>
+        <testsuite name="default">
             <directory>./test/Api</directory>
             <directory>./test/Model</directory>
+        </testsuite>
+        <testsuite name="authentication">
+            <directory>./test/Authentication</directory>
         </testsuite>
     </testsuites>
 
