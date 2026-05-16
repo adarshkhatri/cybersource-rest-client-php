@@ -88,7 +88,7 @@ class JsonWebTokenGenerator implements TokenGenerator
         // Set the request method, host and resource path in the JWT body as per the specification for all request types
         $jwtPayload["request-method"] = strtoupper($method);
         $jwtPayload["request-host"] = $merchantConfig->getRunEnvironment();
-        $jwtPayload["request-resource-path"] = $this->extractResourcePath($resourcePath);
+        $jwtPayload["request-resource-path"] = $resourcePath;
 
         // Choose issuer claim in the JWT body as per the use_metakey flag in the config file
         if($merchantConfig->getUseMetaKey())
@@ -142,17 +142,6 @@ class JsonWebTokenGenerator implements TokenGenerator
             self::$logger->error("Error extracting serial number from certificate: " . $e->getMessage());
             throw new AuthException("Error extracting serial number from certificate: " . $e->getMessage());
         }
-    }
-
-    private function extractResourcePath($resourcePath)
-    {
-        if (empty($resourcePath)) {
-            return "";
-        }
-
-        // Split the string to remove the query params
-        $parts = explode('?', $resourcePath, 2);
-        return $parts[0];
     }
 
 }
