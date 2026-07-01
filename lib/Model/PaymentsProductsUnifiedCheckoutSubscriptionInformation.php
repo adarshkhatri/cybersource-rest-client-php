@@ -56,7 +56,7 @@ class PaymentsProductsUnifiedCheckoutSubscriptionInformation implements ArrayAcc
         'enabled' => 'bool',
         'enablementStatus' => 'string',
         'selfServiceability' => 'string',
-        'features' => '\CyberSource\Model\PaymentsProductsUnifiedCheckoutSubscriptionInformationFeatures'
+        'features' => '\CyberSource\Model\UcFeatureSubscription'
     ];
 
     /**
@@ -242,7 +242,7 @@ class PaymentsProductsUnifiedCheckoutSubscriptionInformation implements ArrayAcc
 
     /**
      * Gets features
-     * @return \CyberSource\Model\PaymentsProductsUnifiedCheckoutSubscriptionInformationFeatures
+     * @return \CyberSource\Model\UcFeatureSubscription
      */
     public function getFeatures()
     {
@@ -251,7 +251,7 @@ class PaymentsProductsUnifiedCheckoutSubscriptionInformation implements ArrayAcc
 
     /**
      * Sets features
-     * @param \CyberSource\Model\PaymentsProductsUnifiedCheckoutSubscriptionInformationFeatures $features
+     * @param \CyberSource\Model\UcFeatureSubscription $features
      * @return $this
      */
     public function setFeatures($features)

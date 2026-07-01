@@ -53,9 +53,9 @@ class InlineResponse2014SetupsRisk implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'fraudManagementEssentials' => '\CyberSource\Model\InlineResponse2014SetupsPaymentsCardProcessing',
-        'decisionManager' => '\CyberSource\Model\InlineResponse2014SetupsPaymentsCardProcessing',
-        'enhancedAuthentication' => '\CyberSource\Model\InlineResponse2014SetupsPaymentsCardProcessing'
+        'fraudManagementEssentials' => '\CyberSource\Model\PaymentsConfigurationSetupCardProcessing',
+        'decisionManager' => '\CyberSource\Model\PaymentsConfigurationSetupCardProcessing',
+        'enhancedAuthentication' => '\CyberSource\Model\PaymentsConfigurationSetupCardProcessing'
     ];
 
     /**
@@ -173,7 +173,7 @@ class InlineResponse2014SetupsRisk implements ArrayAccess
 
     /**
      * Gets fraudManagementEssentials
-     * @return \CyberSource\Model\InlineResponse2014SetupsPaymentsCardProcessing
+     * @return \CyberSource\Model\PaymentsConfigurationSetupCardProcessing
      */
     public function getFraudManagementEssentials()
     {
@@ -182,7 +182,7 @@ class InlineResponse2014SetupsRisk implements ArrayAccess
 
     /**
      * Sets fraudManagementEssentials
-     * @param \CyberSource\Model\InlineResponse2014SetupsPaymentsCardProcessing $fraudManagementEssentials
+     * @param \CyberSource\Model\PaymentsConfigurationSetupCardProcessing $fraudManagementEssentials
      * @return $this
      */
     public function setFraudManagementEssentials($fraudManagementEssentials)
@@ -194,7 +194,7 @@ class InlineResponse2014SetupsRisk implements ArrayAccess
 
     /**
      * Gets decisionManager
-     * @return \CyberSource\Model\InlineResponse2014SetupsPaymentsCardProcessing
+     * @return \CyberSource\Model\PaymentsConfigurationSetupCardProcessing
      */
     public function getDecisionManager()
     {
@@ -203,7 +203,7 @@ class InlineResponse2014SetupsRisk implements ArrayAccess
 
     /**
      * Sets decisionManager
-     * @param \CyberSource\Model\InlineResponse2014SetupsPaymentsCardProcessing $decisionManager
+     * @param \CyberSource\Model\PaymentsConfigurationSetupCardProcessing $decisionManager
      * @return $this
      */
     public function setDecisionManager($decisionManager)
@@ -215,7 +215,7 @@ class InlineResponse2014SetupsRisk implements ArrayAccess
 
     /**
      * Gets enhancedAuthentication
-     * @return \CyberSource\Model\InlineResponse2014SetupsPaymentsCardProcessing
+     * @return \CyberSource\Model\PaymentsConfigurationSetupCardProcessing
      */
     public function getEnhancedAuthentication()
     {
@@ -224,7 +224,7 @@ class InlineResponse2014SetupsRisk implements ArrayAccess
 
     /**
      * Sets enhancedAuthentication
-     * @param \CyberSource\Model\InlineResponse2014SetupsPaymentsCardProcessing $enhancedAuthentication
+     * @param \CyberSource\Model\PaymentsConfigurationSetupCardProcessing $enhancedAuthentication
      * @return $this
      */
     public function setEnhancedAuthentication($enhancedAuthentication)

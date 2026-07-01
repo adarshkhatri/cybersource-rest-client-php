@@ -59,7 +59,7 @@ class Boardingv1registrationsOrganizationInformation implements ArrayAccess
         'type' => 'string',
         'status' => 'string',
         'configurable' => 'bool',
-        'businessInformation' => '\CyberSource\Model\Boardingv1registrationsOrganizationInformationBusinessInformation',
+        'businessInformation' => '\CyberSource\Model\BoardingBusinessInformation',
         'kYC' => '\CyberSource\Model\Boardingv1registrationsOrganizationInformationKYC',
         'owners' => '\CyberSource\Model\Boardingv1registrationsOrganizationInformationOwners[]'
     ];
@@ -341,7 +341,7 @@ class Boardingv1registrationsOrganizationInformation implements ArrayAccess
 
     /**
      * Gets businessInformation
-     * @return \CyberSource\Model\Boardingv1registrationsOrganizationInformationBusinessInformation
+     * @return \CyberSource\Model\BoardingBusinessInformation
      */
     public function getBusinessInformation()
     {
@@ -350,7 +350,7 @@ class Boardingv1registrationsOrganizationInformation implements ArrayAccess
 
     /**
      * Sets businessInformation
-     * @param \CyberSource\Model\Boardingv1registrationsOrganizationInformationBusinessInformation $businessInformation
+     * @param \CyberSource\Model\BoardingBusinessInformation $businessInformation
      * @return $this
      */
     public function setBusinessInformation($businessInformation)

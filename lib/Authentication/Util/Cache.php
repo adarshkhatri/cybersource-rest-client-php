@@ -1,11 +1,11 @@
 <?php
 
 namespace CyberSource\Authentication\Util;
-use Jose\Component\KeyManagement\JWKFactory;
 use CyberSource\Authentication\Util\GlobalParameter as GlobalParameter;
 use CyberSource\Authentication\Core\AuthException as AuthException;
 use CyberSource\Logging\LogFactory as LogFactory;
 use CyberSource\Authentication\Util\MLEException as MLEException;
+use CyberSource\Authentication\Util\JWE\JWEUtility as JWEUtility;
 
 class Cache
 {
@@ -93,13 +93,10 @@ class Cache
 
     private function loadKeyFromPEMFile($path)
     {
-        return JWKFactory::createFromKeyFile(
-            $path,
-            '',                   // Secret if the key is encrypted
-            [
-                'use' => 'enc',         // Additional parameters
-            ]
-        );
+        // Build a SimpleJWT RSAKey (JWK) from the PEM file so the raw PEM
+        // private-key material is not retained as a string in the cache.
+        $pem = file_get_contents($path);
+        return JWEUtility::createRSAKeyFromPem($pem);
     }
 
     public function grabKeyFromPEM($filePath)

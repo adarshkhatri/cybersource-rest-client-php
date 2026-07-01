@@ -61,7 +61,7 @@ class PtsV2IncrementalAuthorizationPatch201ResponseProcessorInformation implemen
         'responseDetails' => 'string',
         'merchantAdvice' => '\CyberSource\Model\PtsV2PaymentsPost201ResponseProcessorInformationMerchantAdvice',
         'merchantRiskPrediction' => 'string',
-        'sellerProtection' => '\CyberSource\Model\PtsV2PaymentsPost201ResponseProcessorInformationSellerProtection',
+        'sellerProtection' => '\CyberSource\Model\ProcessorInformationSellerProtection',
         'network' => '\CyberSource\Model\Ptsv2paymentsProcessorInformationReversalNetwork'
     ];
 
@@ -383,7 +383,7 @@ class PtsV2IncrementalAuthorizationPatch201ResponseProcessorInformation implemen
 
     /**
      * Gets sellerProtection
-     * @return \CyberSource\Model\PtsV2PaymentsPost201ResponseProcessorInformationSellerProtection
+     * @return \CyberSource\Model\ProcessorInformationSellerProtection
      */
     public function getSellerProtection()
     {
@@ -392,7 +392,7 @@ class PtsV2IncrementalAuthorizationPatch201ResponseProcessorInformation implemen
 
     /**
      * Sets sellerProtection
-     * @param \CyberSource\Model\PtsV2PaymentsPost201ResponseProcessorInformationSellerProtection $sellerProtection
+     * @param \CyberSource\Model\ProcessorInformationSellerProtection $sellerProtection
      * @return $this
      */
     public function setSellerProtection($sellerProtection)

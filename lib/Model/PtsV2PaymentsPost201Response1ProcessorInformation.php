@@ -59,7 +59,7 @@ class PtsV2PaymentsPost201Response1ProcessorInformation implements ArrayAccess
         'rawResponseLocal' => 'string',
         'responseDetails' => 'string',
         'responseCode' => 'string',
-        'sellerProtection' => '\CyberSource\Model\PtsV2PaymentsPost201ResponseProcessorInformationSellerProtection',
+        'sellerProtection' => '\CyberSource\Model\ProcessorInformationSellerProtection',
         'avs' => '\CyberSource\Model\PtsV2PaymentsPost201Response1ProcessorInformationAvs'
     ];
 
@@ -329,7 +329,7 @@ class PtsV2PaymentsPost201Response1ProcessorInformation implements ArrayAccess
 
     /**
      * Gets sellerProtection
-     * @return \CyberSource\Model\PtsV2PaymentsPost201ResponseProcessorInformationSellerProtection
+     * @return \CyberSource\Model\ProcessorInformationSellerProtection
      */
     public function getSellerProtection()
     {
@@ -338,7 +338,7 @@ class PtsV2PaymentsPost201Response1ProcessorInformation implements ArrayAccess
 
     /**
      * Sets sellerProtection
-     * @param \CyberSource\Model\PtsV2PaymentsPost201ResponseProcessorInformationSellerProtection $sellerProtection
+     * @param \CyberSource\Model\ProcessorInformationSellerProtection $sellerProtection
      * @return $this
      */
     public function setSellerProtection($sellerProtection)

@@ -54,7 +54,7 @@ class Ptsv1pullfundstransferProcessingInformation implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'commerceIndicator' => 'string',
-        'fundingOptions' => '\CyberSource\Model\Ptsv1pullfundstransferProcessingInformationFundingOptions',
+        'fundingOptions' => '\CyberSource\Model\AftFundingOptions',
         'recurringOptions' => '\CyberSource\Model\Ptsv1pullfundstransferProcessingInformationRecurringOptions',
         'businessApplicationId' => 'string',
         'purposeOfPayment' => 'string',
@@ -230,7 +230,7 @@ class Ptsv1pullfundstransferProcessingInformation implements ArrayAccess
 
     /**
      * Gets fundingOptions
-     * @return \CyberSource\Model\Ptsv1pullfundstransferProcessingInformationFundingOptions
+     * @return \CyberSource\Model\AftFundingOptions
      */
     public function getFundingOptions()
     {
@@ -239,7 +239,7 @@ class Ptsv1pullfundstransferProcessingInformation implements ArrayAccess
 
     /**
      * Sets fundingOptions
-     * @param \CyberSource\Model\Ptsv1pullfundstransferProcessingInformationFundingOptions $fundingOptions
+     * @param \CyberSource\Model\AftFundingOptions $fundingOptions
      * @return $this
      */
     public function setFundingOptions($fundingOptions)

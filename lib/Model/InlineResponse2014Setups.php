@@ -53,7 +53,7 @@ class InlineResponse2014Setups implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'payments' => '\CyberSource\Model\InlineResponse2014SetupsPayments',
+        'payments' => '\CyberSource\Model\PaymentsConfigurationSetup',
         'risk' => '\CyberSource\Model\InlineResponse2014SetupsRisk',
         'commerceSolutions' => '\CyberSource\Model\InlineResponse2014SetupsCommerceSolutions',
         'valueAddedServices' => '\CyberSource\Model\InlineResponse2014SetupsValueAddedServices'
@@ -179,7 +179,7 @@ class InlineResponse2014Setups implements ArrayAccess
 
     /**
      * Gets payments
-     * @return \CyberSource\Model\InlineResponse2014SetupsPayments
+     * @return \CyberSource\Model\PaymentsConfigurationSetup
      */
     public function getPayments()
     {
@@ -188,7 +188,7 @@ class InlineResponse2014Setups implements ArrayAccess
 
     /**
      * Sets payments
-     * @param \CyberSource\Model\InlineResponse2014SetupsPayments $payments
+     * @param \CyberSource\Model\PaymentsConfigurationSetup $payments
      * @return $this
      */
     public function setPayments($payments)

@@ -72,7 +72,7 @@ class Upv1capturecontextsDataOrderInformationLineItems implements ArrayAccess
         'discountApplied' => 'bool',
         'discountRate' => 'string',
         'invoiceNumber' => 'string',
-        'taxDetails' => '\CyberSource\Model\Upv1capturecontextsDataOrderInformationLineItemsTaxDetails',
+        'taxDetails' => '\CyberSource\Model\Upv1capturecontextsDataOrderInformationTaxDetails',
         'fulfillmentType' => 'string',
         'weight' => 'string',
         'weightIdentifier' => 'string',
@@ -84,7 +84,7 @@ class Upv1capturecontextsDataOrderInformationLineItems implements ArrayAccess
         'giftCardCurrency' => 'string',
         'shippingDestinationTypes' => 'string',
         'gift' => 'bool',
-        'passenger' => '\CyberSource\Model\Upv1capturecontextsDataOrderInformationLineItemsPassenger'
+        'passenger' => '\CyberSource\Model\Upv1capturecontextsDataOrderInformationPassenger'
     ];
 
     /**
@@ -746,7 +746,7 @@ class Upv1capturecontextsDataOrderInformationLineItems implements ArrayAccess
 
     /**
      * Gets taxDetails
-     * @return \CyberSource\Model\Upv1capturecontextsDataOrderInformationLineItemsTaxDetails
+     * @return \CyberSource\Model\Upv1capturecontextsDataOrderInformationTaxDetails
      */
     public function getTaxDetails()
     {
@@ -755,7 +755,7 @@ class Upv1capturecontextsDataOrderInformationLineItems implements ArrayAccess
 
     /**
      * Sets taxDetails
-     * @param \CyberSource\Model\Upv1capturecontextsDataOrderInformationLineItemsTaxDetails $taxDetails
+     * @param \CyberSource\Model\Upv1capturecontextsDataOrderInformationTaxDetails $taxDetails
      * @return $this
      */
     public function setTaxDetails($taxDetails)
@@ -998,7 +998,7 @@ class Upv1capturecontextsDataOrderInformationLineItems implements ArrayAccess
 
     /**
      * Gets passenger
-     * @return \CyberSource\Model\Upv1capturecontextsDataOrderInformationLineItemsPassenger
+     * @return \CyberSource\Model\Upv1capturecontextsDataOrderInformationPassenger
      */
     public function getPassenger()
     {
@@ -1007,7 +1007,7 @@ class Upv1capturecontextsDataOrderInformationLineItems implements ArrayAccess
 
     /**
      * Sets passenger
-     * @param \CyberSource\Model\Upv1capturecontextsDataOrderInformationLineItemsPassenger $passenger
+     * @param \CyberSource\Model\Upv1capturecontextsDataOrderInformationPassenger $passenger
      * @return $this
      */
     public function setPassenger($passenger)

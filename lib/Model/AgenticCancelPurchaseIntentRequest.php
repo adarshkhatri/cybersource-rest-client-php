@@ -54,9 +54,9 @@ class AgenticCancelPurchaseIntentRequest implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'clientCorrelationId' => 'string',
-        'paymentInformation' => '\CyberSource\Model\Acpv1tokensPaymentInformation',
-        'deviceInformation' => '\CyberSource\Model\Acpv1tokensDeviceInformation',
-        'assuranceData' => '\CyberSource\Model\Acpv1tokensAssuranceData[]'
+        'paymentInformation' => '\CyberSource\Model\Iccv1tokensPaymentInformation',
+        'deviceInformation' => '\CyberSource\Model\Iccv1tokensDeviceInformation',
+        'assuranceData' => '\CyberSource\Model\Iccv1tokensAssuranceData[]'
     ];
 
     /**
@@ -218,7 +218,7 @@ class AgenticCancelPurchaseIntentRequest implements ArrayAccess
 
     /**
      * Gets paymentInformation
-     * @return \CyberSource\Model\Acpv1tokensPaymentInformation
+     * @return \CyberSource\Model\Iccv1tokensPaymentInformation
      */
     public function getPaymentInformation()
     {
@@ -227,7 +227,7 @@ class AgenticCancelPurchaseIntentRequest implements ArrayAccess
 
     /**
      * Sets paymentInformation
-     * @param \CyberSource\Model\Acpv1tokensPaymentInformation $paymentInformation
+     * @param \CyberSource\Model\Iccv1tokensPaymentInformation $paymentInformation
      * @return $this
      */
     public function setPaymentInformation($paymentInformation)
@@ -239,7 +239,7 @@ class AgenticCancelPurchaseIntentRequest implements ArrayAccess
 
     /**
      * Gets deviceInformation
-     * @return \CyberSource\Model\Acpv1tokensDeviceInformation
+     * @return \CyberSource\Model\Iccv1tokensDeviceInformation
      */
     public function getDeviceInformation()
     {
@@ -248,7 +248,7 @@ class AgenticCancelPurchaseIntentRequest implements ArrayAccess
 
     /**
      * Sets deviceInformation
-     * @param \CyberSource\Model\Acpv1tokensDeviceInformation $deviceInformation
+     * @param \CyberSource\Model\Iccv1tokensDeviceInformation $deviceInformation
      * @return $this
      */
     public function setDeviceInformation($deviceInformation)
@@ -260,7 +260,7 @@ class AgenticCancelPurchaseIntentRequest implements ArrayAccess
 
     /**
      * Gets assuranceData
-     * @return \CyberSource\Model\Acpv1tokensAssuranceData[]
+     * @return \CyberSource\Model\Iccv1tokensAssuranceData[]
      */
     public function getAssuranceData()
     {
@@ -269,7 +269,7 @@ class AgenticCancelPurchaseIntentRequest implements ArrayAccess
 
     /**
      * Sets assuranceData
-     * @param \CyberSource\Model\Acpv1tokensAssuranceData[] $assuranceData Assurance data.
+     * @param \CyberSource\Model\Iccv1tokensAssuranceData[] $assuranceData Assurance data.
      * @return $this
      */
     public function setAssuranceData($assuranceData)

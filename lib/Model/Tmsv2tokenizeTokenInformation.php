@@ -56,8 +56,8 @@ class Tmsv2tokenizeTokenInformation implements ArrayAccess
         'jti' => 'string',
         'transientTokenJwt' => 'string',
         'customer' => '\CyberSource\Model\Tmsv2tokenizeTokenInformationCustomer',
-        'shippingAddress' => '\CyberSource\Model\Tmsv2tokenizeTokenInformationCustomerEmbeddedDefaultShippingAddress',
-        'paymentInstrument' => '\CyberSource\Model\Tmsv2tokenizeTokenInformationCustomerEmbeddedDefaultPaymentInstrument',
+        'shippingAddress' => '\CyberSource\Model\DefaultShippingAddress',
+        'paymentInstrument' => '\CyberSource\Model\DefaultPaymentInstrument',
         'instrumentIdentifier' => '\CyberSource\Model\TmsEmbeddedInstrumentIdentifier'
     ];
 
@@ -254,7 +254,7 @@ class Tmsv2tokenizeTokenInformation implements ArrayAccess
 
     /**
      * Gets shippingAddress
-     * @return \CyberSource\Model\Tmsv2tokenizeTokenInformationCustomerEmbeddedDefaultShippingAddress
+     * @return \CyberSource\Model\DefaultShippingAddress
      */
     public function getShippingAddress()
     {
@@ -263,7 +263,7 @@ class Tmsv2tokenizeTokenInformation implements ArrayAccess
 
     /**
      * Sets shippingAddress
-     * @param \CyberSource\Model\Tmsv2tokenizeTokenInformationCustomerEmbeddedDefaultShippingAddress $shippingAddress
+     * @param \CyberSource\Model\DefaultShippingAddress $shippingAddress
      * @return $this
      */
     public function setShippingAddress($shippingAddress)
@@ -275,7 +275,7 @@ class Tmsv2tokenizeTokenInformation implements ArrayAccess
 
     /**
      * Gets paymentInstrument
-     * @return \CyberSource\Model\Tmsv2tokenizeTokenInformationCustomerEmbeddedDefaultPaymentInstrument
+     * @return \CyberSource\Model\DefaultPaymentInstrument
      */
     public function getPaymentInstrument()
     {
@@ -284,7 +284,7 @@ class Tmsv2tokenizeTokenInformation implements ArrayAccess
 
     /**
      * Sets paymentInstrument
-     * @param \CyberSource\Model\Tmsv2tokenizeTokenInformationCustomerEmbeddedDefaultPaymentInstrument $paymentInstrument
+     * @param \CyberSource\Model\DefaultPaymentInstrument $paymentInstrument
      * @return $this
      */
     public function setPaymentInstrument($paymentInstrument)

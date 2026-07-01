@@ -65,6 +65,7 @@ class PushFunds201Response implements ArrayAccess
         'orderInformation' => '\CyberSource\Model\PushFunds201ResponseOrderInformation',
         'paymentInformation' => '\CyberSource\Model\PushFunds201ResponsePaymentInformation',
         'processingInformation' => '\CyberSource\Model\PushFunds201ResponseProcessingInformation',
+        'issuerInformation' => '\CyberSource\Model\PushFunds201ResponseIssuerInformation',
         'links' => '\CyberSource\Model\PushFunds201ResponseLinks'
     ];
 
@@ -85,6 +86,7 @@ class PushFunds201Response implements ArrayAccess
         'orderInformation' => null,
         'paymentInformation' => null,
         'processingInformation' => null,
+        'issuerInformation' => null,
         'links' => null
     ];
 
@@ -115,6 +117,7 @@ class PushFunds201Response implements ArrayAccess
         'orderInformation' => 'orderInformation',
         'paymentInformation' => 'paymentInformation',
         'processingInformation' => 'processingInformation',
+        'issuerInformation' => 'issuerInformation',
         'links' => '_links'
     ];
 
@@ -136,6 +139,7 @@ class PushFunds201Response implements ArrayAccess
         'orderInformation' => 'setOrderInformation',
         'paymentInformation' => 'setPaymentInformation',
         'processingInformation' => 'setProcessingInformation',
+        'issuerInformation' => 'setIssuerInformation',
         'links' => 'setLinks'
     ];
 
@@ -157,6 +161,7 @@ class PushFunds201Response implements ArrayAccess
         'orderInformation' => 'getOrderInformation',
         'paymentInformation' => 'getPaymentInformation',
         'processingInformation' => 'getProcessingInformation',
+        'issuerInformation' => 'getIssuerInformation',
         'links' => 'getLinks'
     ];
 
@@ -203,6 +208,7 @@ class PushFunds201Response implements ArrayAccess
         $this->container['orderInformation'] = isset($data['orderInformation']) ? $data['orderInformation'] : null;
         $this->container['paymentInformation'] = isset($data['paymentInformation']) ? $data['paymentInformation'] : null;
         $this->container['processingInformation'] = isset($data['processingInformation']) ? $data['processingInformation'] : null;
+        $this->container['issuerInformation'] = isset($data['issuerInformation']) ? $data['issuerInformation'] : null;
         $this->container['links'] = isset($data['links']) ? $data['links'] : null;
     }
 
@@ -479,6 +485,27 @@ class PushFunds201Response implements ArrayAccess
     public function setProcessingInformation($processingInformation)
     {
         $this->container['processingInformation'] = $processingInformation;
+
+        return $this;
+    }
+
+    /**
+     * Gets issuerInformation
+     * @return \CyberSource\Model\PushFunds201ResponseIssuerInformation
+     */
+    public function getIssuerInformation()
+    {
+        return $this->container['issuerInformation'];
+    }
+
+    /**
+     * Sets issuerInformation
+     * @param \CyberSource\Model\PushFunds201ResponseIssuerInformation $issuerInformation
+     * @return $this
+     */
+    public function setIssuerInformation($issuerInformation)
+    {
+        $this->container['issuerInformation'] = $issuerInformation;
 
         return $this;
     }

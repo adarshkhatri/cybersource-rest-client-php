@@ -56,7 +56,7 @@ class Ucv1sessionsData implements ArrayAccess
         'aggregatorInformation' => '\CyberSource\Model\Ucv1sessionsDataAggregatorInformation',
         'orderInformation' => '\CyberSource\Model\Ucv1sessionsDataOrderInformation',
         'buyerInformation' => '\CyberSource\Model\Ucv1sessionsDataBuyerInformation',
-        'clientReferenceInformation' => '\CyberSource\Model\Upv1capturecontextsDataClientReferenceInformation',
+        'clientReferenceInformation' => '\CyberSource\Model\Ucv1sessionsDataClientReferenceInformation',
         'consumerAuthenticationInformation' => '\CyberSource\Model\Ucv1sessionsDataConsumerAuthenticationInformation',
         'merchantInformation' => '\CyberSource\Model\Ucv1sessionsDataMerchantInformation',
         'processingInformation' => '\CyberSource\Model\Ucv1sessionsDataProcessingInformation',
@@ -296,7 +296,7 @@ class Ucv1sessionsData implements ArrayAccess
 
     /**
      * Gets clientReferenceInformation
-     * @return \CyberSource\Model\Upv1capturecontextsDataClientReferenceInformation
+     * @return \CyberSource\Model\Ucv1sessionsDataClientReferenceInformation
      */
     public function getClientReferenceInformation()
     {
@@ -305,7 +305,7 @@ class Ucv1sessionsData implements ArrayAccess
 
     /**
      * Sets clientReferenceInformation
-     * @param \CyberSource\Model\Upv1capturecontextsDataClientReferenceInformation $clientReferenceInformation
+     * @param \CyberSource\Model\Ucv1sessionsDataClientReferenceInformation $clientReferenceInformation
      * @return $this
      */
     public function setClientReferenceInformation($clientReferenceInformation)

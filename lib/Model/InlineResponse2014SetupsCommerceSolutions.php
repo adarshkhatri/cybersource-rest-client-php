@@ -53,10 +53,10 @@ class InlineResponse2014SetupsCommerceSolutions implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'tokenManagement' => '\CyberSource\Model\InlineResponse2014SetupsPaymentsCardProcessing',
-        'accountUpdater' => '\CyberSource\Model\InlineResponse2014SetupsPaymentsCardProcessing',
-        'binLookup' => '\CyberSource\Model\InlineResponse2014SetupsPaymentsCardProcessing',
-        'agenticCommerce' => '\CyberSource\Model\InlineResponse2014SetupsPaymentsCardProcessing'
+        'tokenManagement' => '\CyberSource\Model\PaymentsConfigurationSetupCardProcessing',
+        'accountUpdater' => '\CyberSource\Model\PaymentsConfigurationSetupCardProcessing',
+        'binLookup' => '\CyberSource\Model\PaymentsConfigurationSetupCardProcessing',
+        'agenticCommerce' => '\CyberSource\Model\PaymentsConfigurationSetupCardProcessing'
     ];
 
     /**
@@ -179,7 +179,7 @@ class InlineResponse2014SetupsCommerceSolutions implements ArrayAccess
 
     /**
      * Gets tokenManagement
-     * @return \CyberSource\Model\InlineResponse2014SetupsPaymentsCardProcessing
+     * @return \CyberSource\Model\PaymentsConfigurationSetupCardProcessing
      */
     public function getTokenManagement()
     {
@@ -188,7 +188,7 @@ class InlineResponse2014SetupsCommerceSolutions implements ArrayAccess
 
     /**
      * Sets tokenManagement
-     * @param \CyberSource\Model\InlineResponse2014SetupsPaymentsCardProcessing $tokenManagement
+     * @param \CyberSource\Model\PaymentsConfigurationSetupCardProcessing $tokenManagement
      * @return $this
      */
     public function setTokenManagement($tokenManagement)
@@ -200,7 +200,7 @@ class InlineResponse2014SetupsCommerceSolutions implements ArrayAccess
 
     /**
      * Gets accountUpdater
-     * @return \CyberSource\Model\InlineResponse2014SetupsPaymentsCardProcessing
+     * @return \CyberSource\Model\PaymentsConfigurationSetupCardProcessing
      */
     public function getAccountUpdater()
     {
@@ -209,7 +209,7 @@ class InlineResponse2014SetupsCommerceSolutions implements ArrayAccess
 
     /**
      * Sets accountUpdater
-     * @param \CyberSource\Model\InlineResponse2014SetupsPaymentsCardProcessing $accountUpdater
+     * @param \CyberSource\Model\PaymentsConfigurationSetupCardProcessing $accountUpdater
      * @return $this
      */
     public function setAccountUpdater($accountUpdater)
@@ -221,7 +221,7 @@ class InlineResponse2014SetupsCommerceSolutions implements ArrayAccess
 
     /**
      * Gets binLookup
-     * @return \CyberSource\Model\InlineResponse2014SetupsPaymentsCardProcessing
+     * @return \CyberSource\Model\PaymentsConfigurationSetupCardProcessing
      */
     public function getBinLookup()
     {
@@ -230,7 +230,7 @@ class InlineResponse2014SetupsCommerceSolutions implements ArrayAccess
 
     /**
      * Sets binLookup
-     * @param \CyberSource\Model\InlineResponse2014SetupsPaymentsCardProcessing $binLookup
+     * @param \CyberSource\Model\PaymentsConfigurationSetupCardProcessing $binLookup
      * @return $this
      */
     public function setBinLookup($binLookup)
@@ -242,7 +242,7 @@ class InlineResponse2014SetupsCommerceSolutions implements ArrayAccess
 
     /**
      * Gets agenticCommerce
-     * @return \CyberSource\Model\InlineResponse2014SetupsPaymentsCardProcessing
+     * @return \CyberSource\Model\PaymentsConfigurationSetupCardProcessing
      */
     public function getAgenticCommerce()
     {
@@ -251,7 +251,7 @@ class InlineResponse2014SetupsCommerceSolutions implements ArrayAccess
 
     /**
      * Sets agenticCommerce
-     * @param \CyberSource\Model\InlineResponse2014SetupsPaymentsCardProcessing $agenticCommerce
+     * @param \CyberSource\Model\PaymentsConfigurationSetupCardProcessing $agenticCommerce
      * @return $this
      */
     public function setAgenticCommerce($agenticCommerce)

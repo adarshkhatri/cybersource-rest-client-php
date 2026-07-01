@@ -24,7 +24,7 @@ Name | Type | Description | Notes
 **address** | [**\CyberSource\Model\UnderwritingConfigurationOrganizationInformationBusinessInformationAddress**](UnderwritingConfigurationOrganizationInformationBusinessInformationAddress.md) |  | [optional] 
 **tradingAddress** | [**\CyberSource\Model\UnderwritingConfigurationOrganizationInformationBusinessInformationTradingAddress**](UnderwritingConfigurationOrganizationInformationBusinessInformationTradingAddress.md) |  | [optional] 
 **businessContact** | [**\CyberSource\Model\UnderwritingConfigurationOrganizationInformationBusinessInformationBusinessContact**](UnderwritingConfigurationOrganizationInformationBusinessInformationBusinessContact.md) |  | [optional] 
-**businessDetails** | [**\CyberSource\Model\UnderwritingConfigurationOrganizationInformationBusinessInformationBusinessDetails**](UnderwritingConfigurationOrganizationInformationBusinessInformationBusinessDetails.md) |  | [optional] 
+**businessDetails** | [**\CyberSource\Model\UnderwritingConfigurationBusinessDetails**](UnderwritingConfigurationBusinessDetails.md) |  | [optional] 
 **ownerInformation** | [**\CyberSource\Model\UnderwritingConfigurationOrganizationInformationBusinessInformationOwnerInformation[]**](UnderwritingConfigurationOrganizationInformationBusinessInformationOwnerInformation.md) |  | [optional] 
 **directorInformation** | [**\CyberSource\Model\UnderwritingConfigurationOrganizationInformationBusinessInformationDirectorInformation[]**](UnderwritingConfigurationOrganizationInformationBusinessInformationDirectorInformation.md) |  | [optional] 
 

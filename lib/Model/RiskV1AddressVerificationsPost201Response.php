@@ -60,7 +60,7 @@ class RiskV1AddressVerificationsPost201Response implements ArrayAccess
         'status' => 'string',
         'message' => 'string',
         'clientReferenceInformation' => '\CyberSource\Model\RiskV1DecisionsPost201ResponseClientReferenceInformation',
-        'addressVerificationInformation' => '\CyberSource\Model\RiskV1AddressVerificationsPost201ResponseAddressVerificationInformation',
+        'addressVerificationInformation' => '\CyberSource\Model\RiskAddressVerificationInformation',
         'errorInformation' => '\CyberSource\Model\RiskV1AddressVerificationsPost201ResponseErrorInformation'
     ];
 
@@ -356,7 +356,7 @@ class RiskV1AddressVerificationsPost201Response implements ArrayAccess
 
     /**
      * Gets addressVerificationInformation
-     * @return \CyberSource\Model\RiskV1AddressVerificationsPost201ResponseAddressVerificationInformation
+     * @return \CyberSource\Model\RiskAddressVerificationInformation
      */
     public function getAddressVerificationInformation()
     {
@@ -365,7 +365,7 @@ class RiskV1AddressVerificationsPost201Response implements ArrayAccess
 
     /**
      * Sets addressVerificationInformation
-     * @param \CyberSource\Model\RiskV1AddressVerificationsPost201ResponseAddressVerificationInformation $addressVerificationInformation
+     * @param \CyberSource\Model\RiskAddressVerificationInformation $addressVerificationInformation
      * @return $this
      */
     public function setAddressVerificationInformation($addressVerificationInformation)

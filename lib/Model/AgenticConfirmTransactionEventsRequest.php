@@ -54,8 +54,8 @@ class AgenticConfirmTransactionEventsRequest implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'clientCorrelationId' => 'string',
-        'paymentInformation' => '\CyberSource\Model\Acpv1tokensPaymentInformation',
-        'confirmationData' => '\CyberSource\Model\Acpv1instructionsinstructionIdconfirmationsConfirmationData[]'
+        'paymentInformation' => '\CyberSource\Model\Iccv1tokensPaymentInformation',
+        'confirmationData' => '\CyberSource\Model\Iccv1instructionsinstructionIdconfirmationsConfirmationData[]'
     ];
 
     /**
@@ -212,7 +212,7 @@ class AgenticConfirmTransactionEventsRequest implements ArrayAccess
 
     /**
      * Gets paymentInformation
-     * @return \CyberSource\Model\Acpv1tokensPaymentInformation
+     * @return \CyberSource\Model\Iccv1tokensPaymentInformation
      */
     public function getPaymentInformation()
     {
@@ -221,7 +221,7 @@ class AgenticConfirmTransactionEventsRequest implements ArrayAccess
 
     /**
      * Sets paymentInformation
-     * @param \CyberSource\Model\Acpv1tokensPaymentInformation $paymentInformation
+     * @param \CyberSource\Model\Iccv1tokensPaymentInformation $paymentInformation
      * @return $this
      */
     public function setPaymentInformation($paymentInformation)
@@ -233,7 +233,7 @@ class AgenticConfirmTransactionEventsRequest implements ArrayAccess
 
     /**
      * Gets confirmationData
-     * @return \CyberSource\Model\Acpv1instructionsinstructionIdconfirmationsConfirmationData[]
+     * @return \CyberSource\Model\Iccv1instructionsinstructionIdconfirmationsConfirmationData[]
      */
     public function getConfirmationData()
     {
@@ -242,7 +242,7 @@ class AgenticConfirmTransactionEventsRequest implements ArrayAccess
 
     /**
      * Sets confirmationData
-     * @param \CyberSource\Model\Acpv1instructionsinstructionIdconfirmationsConfirmationData[] $confirmationData (Required) Contains Transaction, Order and Payment Confirmation Events.
+     * @param \CyberSource\Model\Iccv1instructionsinstructionIdconfirmationsConfirmationData[] $confirmationData (Required) Contains Transaction, Order and Payment Confirmation Events.
      * @return $this
      */
     public function setConfirmationData($confirmationData)

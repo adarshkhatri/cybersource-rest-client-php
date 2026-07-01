@@ -9,7 +9,7 @@ Method | HTTP request | Description
 [**createSessionRequest**](PaymentsApi.md#createSessionRequest) | **POST** /pts/v2/payment-references | Create Alternative Payments Sessions Request
 [**incrementAuth**](PaymentsApi.md#incrementAuth) | **PATCH** /pts/v2/payments/{id} | Increment an Authorization
 [**refreshPaymentStatus**](PaymentsApi.md#refreshPaymentStatus) | **POST** /pts/v2/refresh-payment-status/{id} | Check a Payment Status
-[**updateSessionReq**](PaymentsApi.md#updateSessionReq) | **PATCH** /pts/v2/payment-references/{id} | Update Alternative Payments Sessions Request
+[**updateSessionRequest**](PaymentsApi.md#updateSessionRequest) | **PATCH** /pts/v2/payment-references/{id} | Update Alternative Payments Sessions Request
 
 
 # **createOrderRequest**
@@ -54,8 +54,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json;charset=utf-8
- - **Accept**: application/hal+json;charset=utf-8
+ - **Content-Type**: application/json, application/json; charset=utf-8
+ - **Accept**: application/hal+json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -99,8 +99,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json;charset=utf-8
- - **Accept**: application/hal+json;charset=utf-8
+ - **Content-Type**: application/json, application/json; charset=utf-8
+ - **Accept**: application/hal+json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -144,8 +144,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json;charset=utf-8
- - **Accept**: application/hal+json;charset=utf-8
+ - **Content-Type**: application/json, application/json; charset=utf-8
+ - **Accept**: application/hal+json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -191,8 +191,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json;charset=utf-8
- - **Accept**: application/hal+json;charset=utf-8
+ - **Content-Type**: application/json, application/json; charset=utf-8
+ - **Accept**: application/hal+json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -238,13 +238,13 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json;charset=utf-8
- - **Accept**: application/hal+json;charset=utf-8
+ - **Content-Type**: application/json, application/json; charset=utf-8
+ - **Accept**: application/hal+json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **updateSessionReq**
-> \CyberSource\Model\PtsV2PaymentsPost201Response2 updateSessionReq($createSessionRequest, $id)
+# **updateSessionRequest**
+> \CyberSource\Model\PtsV2PaymentsPost201Response2 updateSessionRequest($createSessionRequest, $id)
 
 Update Alternative Payments Sessions Request
 
@@ -260,10 +260,10 @@ $createSessionRequest = new \CyberSource\Model\CreateSessionRequest(); // \Cyber
 $id = "id_example"; // string | The payment ID. This ID is returned from a previous payment request.
 
 try {
-    $result = $api_instance->updateSessionReq($createSessionRequest, $id);
+    $result = $api_instance->updateSessionRequest($createSessionRequest, $id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling PaymentsApi->updateSessionReq: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling PaymentsApi->updateSessionRequest: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -285,8 +285,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json;charset=utf-8
- - **Accept**: application/hal+json;charset=utf-8
+ - **Content-Type**: application/json, application/json; charset=utf-8
+ - **Accept**: application/hal+json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 

@@ -56,7 +56,7 @@ class Upv1capturecontextsDataOrderInformation implements ArrayAccess
         'amountDetails' => '\CyberSource\Model\Upv1capturecontextsDataOrderInformationAmountDetails',
         'billTo' => '\CyberSource\Model\Upv1capturecontextsDataOrderInformationBillTo',
         'shipTo' => '\CyberSource\Model\Upv1capturecontextsDataOrderInformationShipTo',
-        'lineItems' => '\CyberSource\Model\Upv1capturecontextsDataOrderInformationLineItems',
+        'lineItems' => '\CyberSource\Model\Upv1capturecontextsDataOrderInformationLineItems[]',
         'invoiceDetails' => '\CyberSource\Model\Upv1capturecontextsDataOrderInformationInvoiceDetails'
     ];
 
@@ -248,7 +248,7 @@ class Upv1capturecontextsDataOrderInformation implements ArrayAccess
 
     /**
      * Gets lineItems
-     * @return \CyberSource\Model\Upv1capturecontextsDataOrderInformationLineItems
+     * @return \CyberSource\Model\Upv1capturecontextsDataOrderInformationLineItems[]
      */
     public function getLineItems()
     {
@@ -257,7 +257,7 @@ class Upv1capturecontextsDataOrderInformation implements ArrayAccess
 
     /**
      * Sets lineItems
-     * @param \CyberSource\Model\Upv1capturecontextsDataOrderInformationLineItems $lineItems
+     * @param \CyberSource\Model\Upv1capturecontextsDataOrderInformationLineItems[] $lineItems
      * @return $this
      */
     public function setLineItems($lineItems)

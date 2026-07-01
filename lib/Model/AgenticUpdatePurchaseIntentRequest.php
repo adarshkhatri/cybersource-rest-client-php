@@ -54,11 +54,11 @@ class AgenticUpdatePurchaseIntentRequest implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'clientCorrelationId' => 'string',
-        'paymentInformation' => '\CyberSource\Model\Acpv1tokensPaymentInformation',
-        'deviceInformation' => '\CyberSource\Model\Acpv1tokensDeviceInformation',
-        'assuranceData' => '\CyberSource\Model\Acpv1tokensAssuranceData[]',
-        'mandates' => '\CyberSource\Model\Acpv1instructionsMandates[]',
-        'buyerInformation' => '\CyberSource\Model\Acpv1tokensBuyerInformation',
+        'paymentInformation' => '\CyberSource\Model\Iccv1tokensPaymentInformation',
+        'deviceInformation' => '\CyberSource\Model\Iccv1tokensDeviceInformation',
+        'assuranceData' => '\CyberSource\Model\Iccv1tokensAssuranceData[]',
+        'mandates' => '\CyberSource\Model\Iccv1instructionsMandates[]',
+        'buyerInformation' => '\CyberSource\Model\Iccv1tokensBuyerInformation',
         'consumerPrompt' => 'string'
     ];
 
@@ -248,7 +248,7 @@ class AgenticUpdatePurchaseIntentRequest implements ArrayAccess
 
     /**
      * Gets paymentInformation
-     * @return \CyberSource\Model\Acpv1tokensPaymentInformation
+     * @return \CyberSource\Model\Iccv1tokensPaymentInformation
      */
     public function getPaymentInformation()
     {
@@ -257,7 +257,7 @@ class AgenticUpdatePurchaseIntentRequest implements ArrayAccess
 
     /**
      * Sets paymentInformation
-     * @param \CyberSource\Model\Acpv1tokensPaymentInformation $paymentInformation
+     * @param \CyberSource\Model\Iccv1tokensPaymentInformation $paymentInformation
      * @return $this
      */
     public function setPaymentInformation($paymentInformation)
@@ -269,7 +269,7 @@ class AgenticUpdatePurchaseIntentRequest implements ArrayAccess
 
     /**
      * Gets deviceInformation
-     * @return \CyberSource\Model\Acpv1tokensDeviceInformation
+     * @return \CyberSource\Model\Iccv1tokensDeviceInformation
      */
     public function getDeviceInformation()
     {
@@ -278,7 +278,7 @@ class AgenticUpdatePurchaseIntentRequest implements ArrayAccess
 
     /**
      * Sets deviceInformation
-     * @param \CyberSource\Model\Acpv1tokensDeviceInformation $deviceInformation
+     * @param \CyberSource\Model\Iccv1tokensDeviceInformation $deviceInformation
      * @return $this
      */
     public function setDeviceInformation($deviceInformation)
@@ -290,7 +290,7 @@ class AgenticUpdatePurchaseIntentRequest implements ArrayAccess
 
     /**
      * Gets assuranceData
-     * @return \CyberSource\Model\Acpv1tokensAssuranceData[]
+     * @return \CyberSource\Model\Iccv1tokensAssuranceData[]
      */
     public function getAssuranceData()
     {
@@ -299,7 +299,7 @@ class AgenticUpdatePurchaseIntentRequest implements ArrayAccess
 
     /**
      * Sets assuranceData
-     * @param \CyberSource\Model\Acpv1tokensAssuranceData[] $assuranceData Assurance data.
+     * @param \CyberSource\Model\Iccv1tokensAssuranceData[] $assuranceData Assurance data.
      * @return $this
      */
     public function setAssuranceData($assuranceData)
@@ -311,7 +311,7 @@ class AgenticUpdatePurchaseIntentRequest implements ArrayAccess
 
     /**
      * Gets mandates
-     * @return \CyberSource\Model\Acpv1instructionsMandates[]
+     * @return \CyberSource\Model\Iccv1instructionsMandates[]
      */
     public function getMandates()
     {
@@ -320,7 +320,7 @@ class AgenticUpdatePurchaseIntentRequest implements ArrayAccess
 
     /**
      * Sets mandates
-     * @param \CyberSource\Model\Acpv1instructionsMandates[] $mandates
+     * @param \CyberSource\Model\Iccv1instructionsMandates[] $mandates
      * @return $this
      */
     public function setMandates($mandates)
@@ -332,7 +332,7 @@ class AgenticUpdatePurchaseIntentRequest implements ArrayAccess
 
     /**
      * Gets buyerInformation
-     * @return \CyberSource\Model\Acpv1tokensBuyerInformation
+     * @return \CyberSource\Model\Iccv1tokensBuyerInformation
      */
     public function getBuyerInformation()
     {
@@ -341,7 +341,7 @@ class AgenticUpdatePurchaseIntentRequest implements ArrayAccess
 
     /**
      * Sets buyerInformation
-     * @param \CyberSource\Model\Acpv1tokensBuyerInformation $buyerInformation
+     * @param \CyberSource\Model\Iccv1tokensBuyerInformation $buyerInformation
      * @return $this
      */
     public function setBuyerInformation($buyerInformation)

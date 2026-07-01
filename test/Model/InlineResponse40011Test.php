@@ -77,16 +77,23 @@ class InlineResponse40011Test extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "submitTimeUtc"
+     * Test attribute "correlationId"
      */
-    public function testPropertySubmitTimeUtc()
+    public function testPropertyCorrelationId()
     {
     }
 
     /**
-     * Test attribute "status"
+     * Test attribute "details"
      */
-    public function testPropertyStatus()
+    public function testPropertyDetails()
+    {
+    }
+
+    /**
+     * Test attribute "informationLink"
+     */
+    public function testPropertyInformationLink()
     {
     }
 
@@ -101,13 +108,6 @@ class InlineResponse40011Test extends \PHPUnit_Framework_TestCase
      * Test attribute "reason"
      */
     public function testPropertyReason()
-    {
-    }
-
-    /**
-     * Test attribute "details"
-     */
-    public function testPropertyDetails()
     {
     }
 }

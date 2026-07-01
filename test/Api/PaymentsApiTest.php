@@ -122,12 +122,12 @@ class PaymentsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for updateSessionReq
+     * Test case for updateSessionRequest
      *
      * Update Alternative Payments Sessions Request.
      *
      */
-    public function testUpdateSessionReq()
+    public function testUpdateSessionRequest()
     {
     }
 }

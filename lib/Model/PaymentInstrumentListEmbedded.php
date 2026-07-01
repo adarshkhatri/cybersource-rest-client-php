@@ -54,7 +54,7 @@ class PaymentInstrumentListEmbedded implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'paymentInstruments' => '\CyberSource\Model\PaymentInstrumentListEmbeddedPaymentInstruments[]'
+        'paymentInstruments' => '\CyberSource\Model\PaymentInstrument[]'
     ];
 
     /**
@@ -162,7 +162,7 @@ class PaymentInstrumentListEmbedded implements ArrayAccess
 
     /**
      * Gets paymentInstruments
-     * @return \CyberSource\Model\PaymentInstrumentListEmbeddedPaymentInstruments[]
+     * @return \CyberSource\Model\PaymentInstrument[]
      */
     public function getPaymentInstruments()
     {
@@ -171,7 +171,7 @@ class PaymentInstrumentListEmbedded implements ArrayAccess
 
     /**
      * Sets paymentInstruments
-     * @param \CyberSource\Model\PaymentInstrumentListEmbeddedPaymentInstruments[] $paymentInstruments
+     * @param \CyberSource\Model\PaymentInstrument[] $paymentInstruments
      * @return $this
      */
     public function setPaymentInstruments($paymentInstruments)

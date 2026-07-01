@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**payments** | [**\CyberSource\Model\InlineResponse2014SetupsPayments**](InlineResponse2014SetupsPayments.md) |  | [optional] 
+**payments** | [**\CyberSource\Model\PaymentsConfigurationSetup**](PaymentsConfigurationSetup.md) |  | [optional] 
 **risk** | [**\CyberSource\Model\InlineResponse2014SetupsRisk**](InlineResponse2014SetupsRisk.md) |  | [optional] 
 **commerceSolutions** | [**\CyberSource\Model\InlineResponse2014SetupsCommerceSolutions**](InlineResponse2014SetupsCommerceSolutions.md) |  | [optional] 
 **valueAddedServices** | [**\CyberSource\Model\InlineResponse2014SetupsValueAddedServices**](InlineResponse2014SetupsValueAddedServices.md) |  | [optional] 

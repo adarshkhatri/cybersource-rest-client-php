@@ -61,7 +61,7 @@ class PatchInstrumentIdentifierRequest implements ArrayAccess
         'source' => 'string',
         'tokenProvisioningInformation' => '\CyberSource\Model\Ptsv2paymentsTokenInformationTokenProvisioningInformation',
         'card' => '\CyberSource\Model\TmsEmbeddedInstrumentIdentifierCard',
-        'pointOfSaleInformation' => '\CyberSource\Model\TmsEmbeddedInstrumentIdentifierPointOfSaleInformation',
+        'pointOfSaleInformation' => '\CyberSource\Model\TmsPointOfSaleInformation',
         'bankAccount' => '\CyberSource\Model\TmsEmbeddedInstrumentIdentifierBankAccount',
         'tokenizedCard' => '\CyberSource\Model\Tmsv2TokenizedCard',
         'issuer' => '\CyberSource\Model\TmsEmbeddedInstrumentIdentifierIssuer',
@@ -419,7 +419,7 @@ class PatchInstrumentIdentifierRequest implements ArrayAccess
 
     /**
      * Gets pointOfSaleInformation
-     * @return \CyberSource\Model\TmsEmbeddedInstrumentIdentifierPointOfSaleInformation
+     * @return \CyberSource\Model\TmsPointOfSaleInformation
      */
     public function getPointOfSaleInformation()
     {
@@ -428,7 +428,7 @@ class PatchInstrumentIdentifierRequest implements ArrayAccess
 
     /**
      * Sets pointOfSaleInformation
-     * @param \CyberSource\Model\TmsEmbeddedInstrumentIdentifierPointOfSaleInformation $pointOfSaleInformation
+     * @param \CyberSource\Model\TmsPointOfSaleInformation $pointOfSaleInformation
      * @return $this
      */
     public function setPointOfSaleInformation($pointOfSaleInformation)

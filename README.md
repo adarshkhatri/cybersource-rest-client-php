@@ -15,6 +15,8 @@ The CyberSource PHP client provides convenient access to the [CyberSource REST A
 * OpenSSL PHP Extension
 * Zip PHP Extension
 * MBString PHP Extension
+* Hash PHP Extension
+* GMP PHP Extension (required for message-level encryption (MLE) / JWE support)
 * Sodium PHP Extension
 * PHP_APCU PHP Extension. You will need to download it for your platform (Windows/Linux/Mac)
 
@@ -29,7 +31,7 @@ override the new secure-http default setting)*.
 {
   "require": {
     "php": ">=8.0.0", 
-    "cybersource/rest-client-php": "0.0.73"
+    "cybersource/rest-client-php": "0.0.74"
   }
 }
 ```

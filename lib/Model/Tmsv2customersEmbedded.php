@@ -55,7 +55,7 @@ class Tmsv2customersEmbedded implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'defaultPaymentInstrument' => '\CyberSource\Model\PatchPaymentInstrumentRequest',
-        'defaultShippingAddress' => '\CyberSource\Model\Tmsv2tokenizeTokenInformationCustomerEmbeddedDefaultShippingAddress'
+        'defaultShippingAddress' => '\CyberSource\Model\DefaultShippingAddress'
     ];
 
     /**
@@ -189,7 +189,7 @@ class Tmsv2customersEmbedded implements ArrayAccess
 
     /**
      * Gets defaultShippingAddress
-     * @return \CyberSource\Model\Tmsv2tokenizeTokenInformationCustomerEmbeddedDefaultShippingAddress
+     * @return \CyberSource\Model\DefaultShippingAddress
      */
     public function getDefaultShippingAddress()
     {
@@ -198,7 +198,7 @@ class Tmsv2customersEmbedded implements ArrayAccess
 
     /**
      * Sets defaultShippingAddress
-     * @param \CyberSource\Model\Tmsv2tokenizeTokenInformationCustomerEmbeddedDefaultShippingAddress $defaultShippingAddress
+     * @param \CyberSource\Model\DefaultShippingAddress $defaultShippingAddress
      * @return $this
      */
     public function setDefaultShippingAddress($defaultShippingAddress)

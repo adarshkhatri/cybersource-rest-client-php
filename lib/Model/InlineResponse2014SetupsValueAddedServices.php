@@ -53,11 +53,11 @@ class InlineResponse2014SetupsValueAddedServices implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'reporting' => '\CyberSource\Model\InlineResponse2014SetupsPaymentsDigitalPayments',
-        'transactionSearch' => '\CyberSource\Model\InlineResponse2014SetupsPaymentsDigitalPayments',
-        'bankAccountValidation' => '\CyberSource\Model\InlineResponse2014SetupsPaymentsDigitalPayments',
-        'flexapi' => '\CyberSource\Model\InlineResponse2014SetupsPaymentsDigitalPayments',
-        'webhooks' => '\CyberSource\Model\InlineResponse2014SetupsPaymentsDigitalPayments'
+        'reporting' => '\CyberSource\Model\PaymentsConfigurationSetupDigitalPayments',
+        'transactionSearch' => '\CyberSource\Model\PaymentsConfigurationSetupDigitalPayments',
+        'bankAccountValidation' => '\CyberSource\Model\PaymentsConfigurationSetupDigitalPayments',
+        'flexapi' => '\CyberSource\Model\PaymentsConfigurationSetupDigitalPayments',
+        'webhooks' => '\CyberSource\Model\PaymentsConfigurationSetupDigitalPayments'
     ];
 
     /**
@@ -185,7 +185,7 @@ class InlineResponse2014SetupsValueAddedServices implements ArrayAccess
 
     /**
      * Gets reporting
-     * @return \CyberSource\Model\InlineResponse2014SetupsPaymentsDigitalPayments
+     * @return \CyberSource\Model\PaymentsConfigurationSetupDigitalPayments
      */
     public function getReporting()
     {
@@ -194,7 +194,7 @@ class InlineResponse2014SetupsValueAddedServices implements ArrayAccess
 
     /**
      * Sets reporting
-     * @param \CyberSource\Model\InlineResponse2014SetupsPaymentsDigitalPayments $reporting
+     * @param \CyberSource\Model\PaymentsConfigurationSetupDigitalPayments $reporting
      * @return $this
      */
     public function setReporting($reporting)
@@ -206,7 +206,7 @@ class InlineResponse2014SetupsValueAddedServices implements ArrayAccess
 
     /**
      * Gets transactionSearch
-     * @return \CyberSource\Model\InlineResponse2014SetupsPaymentsDigitalPayments
+     * @return \CyberSource\Model\PaymentsConfigurationSetupDigitalPayments
      */
     public function getTransactionSearch()
     {
@@ -215,7 +215,7 @@ class InlineResponse2014SetupsValueAddedServices implements ArrayAccess
 
     /**
      * Sets transactionSearch
-     * @param \CyberSource\Model\InlineResponse2014SetupsPaymentsDigitalPayments $transactionSearch
+     * @param \CyberSource\Model\PaymentsConfigurationSetupDigitalPayments $transactionSearch
      * @return $this
      */
     public function setTransactionSearch($transactionSearch)
@@ -227,7 +227,7 @@ class InlineResponse2014SetupsValueAddedServices implements ArrayAccess
 
     /**
      * Gets bankAccountValidation
-     * @return \CyberSource\Model\InlineResponse2014SetupsPaymentsDigitalPayments
+     * @return \CyberSource\Model\PaymentsConfigurationSetupDigitalPayments
      */
     public function getBankAccountValidation()
     {
@@ -236,7 +236,7 @@ class InlineResponse2014SetupsValueAddedServices implements ArrayAccess
 
     /**
      * Sets bankAccountValidation
-     * @param \CyberSource\Model\InlineResponse2014SetupsPaymentsDigitalPayments $bankAccountValidation
+     * @param \CyberSource\Model\PaymentsConfigurationSetupDigitalPayments $bankAccountValidation
      * @return $this
      */
     public function setBankAccountValidation($bankAccountValidation)
@@ -248,7 +248,7 @@ class InlineResponse2014SetupsValueAddedServices implements ArrayAccess
 
     /**
      * Gets flexapi
-     * @return \CyberSource\Model\InlineResponse2014SetupsPaymentsDigitalPayments
+     * @return \CyberSource\Model\PaymentsConfigurationSetupDigitalPayments
      */
     public function getFlexapi()
     {
@@ -257,7 +257,7 @@ class InlineResponse2014SetupsValueAddedServices implements ArrayAccess
 
     /**
      * Sets flexapi
-     * @param \CyberSource\Model\InlineResponse2014SetupsPaymentsDigitalPayments $flexapi
+     * @param \CyberSource\Model\PaymentsConfigurationSetupDigitalPayments $flexapi
      * @return $this
      */
     public function setFlexapi($flexapi)
@@ -269,7 +269,7 @@ class InlineResponse2014SetupsValueAddedServices implements ArrayAccess
 
     /**
      * Gets webhooks
-     * @return \CyberSource\Model\InlineResponse2014SetupsPaymentsDigitalPayments
+     * @return \CyberSource\Model\PaymentsConfigurationSetupDigitalPayments
      */
     public function getWebhooks()
     {
@@ -278,7 +278,7 @@ class InlineResponse2014SetupsValueAddedServices implements ArrayAccess
 
     /**
      * Sets webhooks
-     * @param \CyberSource\Model\InlineResponse2014SetupsPaymentsDigitalPayments $webhooks
+     * @param \CyberSource\Model\PaymentsConfigurationSetupDigitalPayments $webhooks
      * @return $this
      */
     public function setWebhooks($webhooks)

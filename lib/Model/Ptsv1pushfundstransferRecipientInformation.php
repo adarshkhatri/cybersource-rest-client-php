@@ -53,7 +53,7 @@ class Ptsv1pushfundstransferRecipientInformation implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'paymentInformation' => '\CyberSource\Model\Ptsv1pushfundstransferRecipientInformationPaymentInformation',
+        'paymentInformation' => '\CyberSource\Model\PushFundsTransferPaymentInformation',
         'address1' => 'string',
         'address2' => 'string',
         'locality' => 'string',
@@ -251,7 +251,7 @@ class Ptsv1pushfundstransferRecipientInformation implements ArrayAccess
 
     /**
      * Gets paymentInformation
-     * @return \CyberSource\Model\Ptsv1pushfundstransferRecipientInformationPaymentInformation
+     * @return \CyberSource\Model\PushFundsTransferPaymentInformation
      */
     public function getPaymentInformation()
     {
@@ -260,7 +260,7 @@ class Ptsv1pushfundstransferRecipientInformation implements ArrayAccess
 
     /**
      * Sets paymentInformation
-     * @param \CyberSource\Model\Ptsv1pushfundstransferRecipientInformationPaymentInformation $paymentInformation
+     * @param \CyberSource\Model\PushFundsTransferPaymentInformation $paymentInformation
      * @return $this
      */
     public function setPaymentInformation($paymentInformation)

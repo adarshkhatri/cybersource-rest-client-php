@@ -54,7 +54,7 @@ class Ucv1sessionsDataProcessingInformationAuthorizationOptionsInitiator impleme
       */
     protected static $swaggerTypes = [
         'credentialStoredOnFile' => 'bool',
-        'merchantInitiatedTransaction' => '\CyberSource\Model\Upv1capturecontextsDataProcessingInformationAuthorizationOptionsInitiatorMerchantInitiatedTransaction'
+        'merchantInitiatedTransaction' => '\CyberSource\Model\UnifiedCheckoutMerchantInitiatedTransaction'
     ];
 
     /**
@@ -188,7 +188,7 @@ class Ucv1sessionsDataProcessingInformationAuthorizationOptionsInitiator impleme
 
     /**
      * Gets merchantInitiatedTransaction
-     * @return \CyberSource\Model\Upv1capturecontextsDataProcessingInformationAuthorizationOptionsInitiatorMerchantInitiatedTransaction
+     * @return \CyberSource\Model\UnifiedCheckoutMerchantInitiatedTransaction
      */
     public function getMerchantInitiatedTransaction()
     {
@@ -197,7 +197,7 @@ class Ucv1sessionsDataProcessingInformationAuthorizationOptionsInitiator impleme
 
     /**
      * Sets merchantInitiatedTransaction
-     * @param \CyberSource\Model\Upv1capturecontextsDataProcessingInformationAuthorizationOptionsInitiatorMerchantInitiatedTransaction $merchantInitiatedTransaction
+     * @param \CyberSource\Model\UnifiedCheckoutMerchantInitiatedTransaction $merchantInitiatedTransaction
      * @return $this
      */
     public function setMerchantInitiatedTransaction($merchantInitiatedTransaction)

@@ -54,14 +54,14 @@ class AgenticCardEnrollmentRequest implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'clientCorrelationId' => 'string',
-        'deviceInformation' => '\CyberSource\Model\Acpv1tokensDeviceInformation',
-        'buyerInformation' => '\CyberSource\Model\Acpv1tokensBuyerInformation',
-        'billTo' => '\CyberSource\Model\Acpv1tokensBillTo',
-        'consumerIdentity' => '\CyberSource\Model\Acpv1tokensConsumerIdentity',
-        'paymentInformation' => '\CyberSource\Model\Acpv1tokensPaymentInformation',
-        'enrollmentReferenceData' => '\CyberSource\Model\Acpv1tokensEnrollmentReferenceData',
-        'assuranceData' => '\CyberSource\Model\Acpv1tokensAssuranceData[]',
-        'consentData' => '\CyberSource\Model\Acpv1tokensConsentData[]'
+        'deviceInformation' => '\CyberSource\Model\Iccv1tokensDeviceInformation',
+        'buyerInformation' => '\CyberSource\Model\Iccv1tokensBuyerInformation',
+        'billTo' => '\CyberSource\Model\Iccv1tokensBillTo',
+        'consumerIdentity' => '\CyberSource\Model\Iccv1tokensConsumerIdentity',
+        'paymentInformation' => '\CyberSource\Model\Iccv1tokensPaymentInformation',
+        'enrollmentReferenceData' => '\CyberSource\Model\Iccv1tokensEnrollmentReferenceData',
+        'assuranceData' => '\CyberSource\Model\Iccv1tokensAssuranceData[]',
+        'consentData' => '\CyberSource\Model\Iccv1tokensConsentData[]'
     ];
 
     /**
@@ -266,7 +266,7 @@ class AgenticCardEnrollmentRequest implements ArrayAccess
 
     /**
      * Gets deviceInformation
-     * @return \CyberSource\Model\Acpv1tokensDeviceInformation
+     * @return \CyberSource\Model\Iccv1tokensDeviceInformation
      */
     public function getDeviceInformation()
     {
@@ -275,7 +275,7 @@ class AgenticCardEnrollmentRequest implements ArrayAccess
 
     /**
      * Sets deviceInformation
-     * @param \CyberSource\Model\Acpv1tokensDeviceInformation $deviceInformation
+     * @param \CyberSource\Model\Iccv1tokensDeviceInformation $deviceInformation
      * @return $this
      */
     public function setDeviceInformation($deviceInformation)
@@ -287,7 +287,7 @@ class AgenticCardEnrollmentRequest implements ArrayAccess
 
     /**
      * Gets buyerInformation
-     * @return \CyberSource\Model\Acpv1tokensBuyerInformation
+     * @return \CyberSource\Model\Iccv1tokensBuyerInformation
      */
     public function getBuyerInformation()
     {
@@ -296,7 +296,7 @@ class AgenticCardEnrollmentRequest implements ArrayAccess
 
     /**
      * Sets buyerInformation
-     * @param \CyberSource\Model\Acpv1tokensBuyerInformation $buyerInformation
+     * @param \CyberSource\Model\Iccv1tokensBuyerInformation $buyerInformation
      * @return $this
      */
     public function setBuyerInformation($buyerInformation)
@@ -308,7 +308,7 @@ class AgenticCardEnrollmentRequest implements ArrayAccess
 
     /**
      * Gets billTo
-     * @return \CyberSource\Model\Acpv1tokensBillTo
+     * @return \CyberSource\Model\Iccv1tokensBillTo
      */
     public function getBillTo()
     {
@@ -317,7 +317,7 @@ class AgenticCardEnrollmentRequest implements ArrayAccess
 
     /**
      * Sets billTo
-     * @param \CyberSource\Model\Acpv1tokensBillTo $billTo
+     * @param \CyberSource\Model\Iccv1tokensBillTo $billTo
      * @return $this
      */
     public function setBillTo($billTo)
@@ -329,7 +329,7 @@ class AgenticCardEnrollmentRequest implements ArrayAccess
 
     /**
      * Gets consumerIdentity
-     * @return \CyberSource\Model\Acpv1tokensConsumerIdentity
+     * @return \CyberSource\Model\Iccv1tokensConsumerIdentity
      */
     public function getConsumerIdentity()
     {
@@ -338,7 +338,7 @@ class AgenticCardEnrollmentRequest implements ArrayAccess
 
     /**
      * Sets consumerIdentity
-     * @param \CyberSource\Model\Acpv1tokensConsumerIdentity $consumerIdentity
+     * @param \CyberSource\Model\Iccv1tokensConsumerIdentity $consumerIdentity
      * @return $this
      */
     public function setConsumerIdentity($consumerIdentity)
@@ -350,7 +350,7 @@ class AgenticCardEnrollmentRequest implements ArrayAccess
 
     /**
      * Gets paymentInformation
-     * @return \CyberSource\Model\Acpv1tokensPaymentInformation
+     * @return \CyberSource\Model\Iccv1tokensPaymentInformation
      */
     public function getPaymentInformation()
     {
@@ -359,7 +359,7 @@ class AgenticCardEnrollmentRequest implements ArrayAccess
 
     /**
      * Sets paymentInformation
-     * @param \CyberSource\Model\Acpv1tokensPaymentInformation $paymentInformation
+     * @param \CyberSource\Model\Iccv1tokensPaymentInformation $paymentInformation
      * @return $this
      */
     public function setPaymentInformation($paymentInformation)
@@ -371,7 +371,7 @@ class AgenticCardEnrollmentRequest implements ArrayAccess
 
     /**
      * Gets enrollmentReferenceData
-     * @return \CyberSource\Model\Acpv1tokensEnrollmentReferenceData
+     * @return \CyberSource\Model\Iccv1tokensEnrollmentReferenceData
      */
     public function getEnrollmentReferenceData()
     {
@@ -380,7 +380,7 @@ class AgenticCardEnrollmentRequest implements ArrayAccess
 
     /**
      * Sets enrollmentReferenceData
-     * @param \CyberSource\Model\Acpv1tokensEnrollmentReferenceData $enrollmentReferenceData
+     * @param \CyberSource\Model\Iccv1tokensEnrollmentReferenceData $enrollmentReferenceData
      * @return $this
      */
     public function setEnrollmentReferenceData($enrollmentReferenceData)
@@ -392,7 +392,7 @@ class AgenticCardEnrollmentRequest implements ArrayAccess
 
     /**
      * Gets assuranceData
-     * @return \CyberSource\Model\Acpv1tokensAssuranceData[]
+     * @return \CyberSource\Model\Iccv1tokensAssuranceData[]
      */
     public function getAssuranceData()
     {
@@ -401,7 +401,7 @@ class AgenticCardEnrollmentRequest implements ArrayAccess
 
     /**
      * Sets assuranceData
-     * @param \CyberSource\Model\Acpv1tokensAssuranceData[] $assuranceData Assurance data.
+     * @param \CyberSource\Model\Iccv1tokensAssuranceData[] $assuranceData Assurance data.
      * @return $this
      */
     public function setAssuranceData($assuranceData)
@@ -413,7 +413,7 @@ class AgenticCardEnrollmentRequest implements ArrayAccess
 
     /**
      * Gets consentData
-     * @return \CyberSource\Model\Acpv1tokensConsentData[]
+     * @return \CyberSource\Model\Iccv1tokensConsentData[]
      */
     public function getConsentData()
     {
@@ -422,7 +422,7 @@ class AgenticCardEnrollmentRequest implements ArrayAccess
 
     /**
      * Sets consentData
-     * @param \CyberSource\Model\Acpv1tokensConsentData[] $consentData Consent data.
+     * @param \CyberSource\Model\Iccv1tokensConsentData[] $consentData Consent data.
      * @return $this
      */
     public function setConsentData($consentData)

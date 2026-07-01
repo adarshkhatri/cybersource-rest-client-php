@@ -54,7 +54,7 @@ class Rbsv1subscriptionsProcessingInformation implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'commerceIndicator' => 'string',
-        'authorizationOptions' => '\CyberSource\Model\Rbsv1subscriptionsProcessingInformationAuthorizationOptions'
+        'authorizationOptions' => '\CyberSource\Model\RbsAuthorizationOptions'
     ];
 
     /**
@@ -188,7 +188,7 @@ class Rbsv1subscriptionsProcessingInformation implements ArrayAccess
 
     /**
      * Gets authorizationOptions
-     * @return \CyberSource\Model\Rbsv1subscriptionsProcessingInformationAuthorizationOptions
+     * @return \CyberSource\Model\RbsAuthorizationOptions
      */
     public function getAuthorizationOptions()
     {
@@ -197,7 +197,7 @@ class Rbsv1subscriptionsProcessingInformation implements ArrayAccess
 
     /**
      * Sets authorizationOptions
-     * @param \CyberSource\Model\Rbsv1subscriptionsProcessingInformationAuthorizationOptions $authorizationOptions
+     * @param \CyberSource\Model\RbsAuthorizationOptions $authorizationOptions
      * @return $this
      */
     public function setAuthorizationOptions($authorizationOptions)

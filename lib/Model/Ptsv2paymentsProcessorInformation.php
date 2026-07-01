@@ -61,7 +61,8 @@ class Ptsv2paymentsProcessorInformation implements ArrayAccess
         'authApprovalToken' => 'string',
         'supplementaryTransactionData' => 'string',
         'responseSourceCode' => 'string',
-        'cedpVerifiedIndicator' => 'string'
+        'cedpVerifiedIndicator' => 'string',
+        'feeProgramIndicator' => 'string'
     ];
 
     /**
@@ -76,7 +77,8 @@ class Ptsv2paymentsProcessorInformation implements ArrayAccess
         'authApprovalToken' => null,
         'supplementaryTransactionData' => null,
         'responseSourceCode' => null,
-        'cedpVerifiedIndicator' => null
+        'cedpVerifiedIndicator' => null,
+        'feeProgramIndicator' => null
     ];
 
     public static function swaggerTypes()
@@ -101,7 +103,8 @@ class Ptsv2paymentsProcessorInformation implements ArrayAccess
         'authApprovalToken' => 'authApprovalToken',
         'supplementaryTransactionData' => 'supplementaryTransactionData',
         'responseSourceCode' => 'responseSourceCode',
-        'cedpVerifiedIndicator' => 'cedpVerifiedIndicator'
+        'cedpVerifiedIndicator' => 'cedpVerifiedIndicator',
+        'feeProgramIndicator' => 'feeProgramIndicator'
     ];
 
 
@@ -117,7 +120,8 @@ class Ptsv2paymentsProcessorInformation implements ArrayAccess
         'authApprovalToken' => 'setAuthApprovalToken',
         'supplementaryTransactionData' => 'setSupplementaryTransactionData',
         'responseSourceCode' => 'setResponseSourceCode',
-        'cedpVerifiedIndicator' => 'setCedpVerifiedIndicator'
+        'cedpVerifiedIndicator' => 'setCedpVerifiedIndicator',
+        'feeProgramIndicator' => 'setFeeProgramIndicator'
     ];
 
 
@@ -133,7 +137,8 @@ class Ptsv2paymentsProcessorInformation implements ArrayAccess
         'authApprovalToken' => 'getAuthApprovalToken',
         'supplementaryTransactionData' => 'getSupplementaryTransactionData',
         'responseSourceCode' => 'getResponseSourceCode',
-        'cedpVerifiedIndicator' => 'getCedpVerifiedIndicator'
+        'cedpVerifiedIndicator' => 'getCedpVerifiedIndicator',
+        'feeProgramIndicator' => 'getFeeProgramIndicator'
     ];
 
     public static function attributeMap()
@@ -175,6 +180,7 @@ class Ptsv2paymentsProcessorInformation implements ArrayAccess
         $this->container['supplementaryTransactionData'] = isset($data['supplementaryTransactionData']) ? $data['supplementaryTransactionData'] : null;
         $this->container['responseSourceCode'] = isset($data['responseSourceCode']) ? $data['responseSourceCode'] : null;
         $this->container['cedpVerifiedIndicator'] = isset($data['cedpVerifiedIndicator']) ? $data['cedpVerifiedIndicator'] : null;
+        $this->container['feeProgramIndicator'] = isset($data['feeProgramIndicator']) ? $data['feeProgramIndicator'] : null;
     }
 
     /**
@@ -366,6 +372,27 @@ class Ptsv2paymentsProcessorInformation implements ArrayAccess
     public function setCedpVerifiedIndicator($cedpVerifiedIndicator)
     {
         $this->container['cedpVerifiedIndicator'] = $cedpVerifiedIndicator;
+
+        return $this;
+    }
+
+    /**
+     * Gets feeProgramIndicator
+     * @return string
+     */
+    public function getFeeProgramIndicator()
+    {
+        return $this->container['feeProgramIndicator'];
+    }
+
+    /**
+     * Sets feeProgramIndicator
+     * @param string $feeProgramIndicator Interchange reimbursement fee program indicator (FPI), which is used when assessing the fee applied to a cross-border or domestic Asia Pacific financial transaction. Acquirers and issues retain and return the FPI value in chargeback and representments.
+     * @return $this
+     */
+    public function setFeeProgramIndicator($feeProgramIndicator)
+    {
+        $this->container['feeProgramIndicator'] = $feeProgramIndicator;
 
         return $this;
     }

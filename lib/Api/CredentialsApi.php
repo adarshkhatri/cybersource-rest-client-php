@@ -131,7 +131,7 @@ class CredentialsApi
             throw new \InvalidArgumentException('Missing the required parameter $mppCredentialsRequest when calling provisionMppCredentials');
         }
         // parse inputs
-        $resourcePath = "/acp/v1/mpp/credentials";
+        $resourcePath = "/icc/v1/mpp/credentials";
         $httpBody = '';
         $queryParams = [];
         $headerParams = [];
@@ -200,7 +200,7 @@ class CredentialsApi
                 $httpBody,
                 $headerParams,
                 '\CyberSource\Model\MppCredentialsResponse200',
-                '/acp/v1/mpp/credentials',
+                '/icc/v1/mpp/credentials',
                 $isResponseMLEForAPI
             );
             

@@ -54,8 +54,8 @@ class AgenticRetrievePaymentCredentialsRequest implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'clientCorrelationId' => 'string',
-        'paymentInformation' => '\CyberSource\Model\Acpv1tokensPaymentInformation',
-        'transactionData' => '\CyberSource\Model\Acpv1instructionsinstructionIdcredentialsTransactionData[]'
+        'paymentInformation' => '\CyberSource\Model\Iccv1tokensPaymentInformation',
+        'transactionData' => '\CyberSource\Model\Iccv1instructionsinstructionIdcredentialsTransactionData[]'
     ];
 
     /**
@@ -212,7 +212,7 @@ class AgenticRetrievePaymentCredentialsRequest implements ArrayAccess
 
     /**
      * Gets paymentInformation
-     * @return \CyberSource\Model\Acpv1tokensPaymentInformation
+     * @return \CyberSource\Model\Iccv1tokensPaymentInformation
      */
     public function getPaymentInformation()
     {
@@ -221,7 +221,7 @@ class AgenticRetrievePaymentCredentialsRequest implements ArrayAccess
 
     /**
      * Sets paymentInformation
-     * @param \CyberSource\Model\Acpv1tokensPaymentInformation $paymentInformation
+     * @param \CyberSource\Model\Iccv1tokensPaymentInformation $paymentInformation
      * @return $this
      */
     public function setPaymentInformation($paymentInformation)
@@ -233,7 +233,7 @@ class AgenticRetrievePaymentCredentialsRequest implements ArrayAccess
 
     /**
      * Gets transactionData
-     * @return \CyberSource\Model\Acpv1instructionsinstructionIdcredentialsTransactionData[]
+     * @return \CyberSource\Model\Iccv1instructionsinstructionIdcredentialsTransactionData[]
      */
     public function getTransactionData()
     {
@@ -242,7 +242,7 @@ class AgenticRetrievePaymentCredentialsRequest implements ArrayAccess
 
     /**
      * Sets transactionData
-     * @param \CyberSource\Model\Acpv1instructionsinstructionIdcredentialsTransactionData[] $transactionData List of transaction data.
+     * @param \CyberSource\Model\Iccv1instructionsinstructionIdcredentialsTransactionData[] $transactionData List of transaction data.
      * @return $this
      */
     public function setTransactionData($transactionData)

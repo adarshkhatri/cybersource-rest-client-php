@@ -6,16 +6,9 @@ use CyberSource\Authentication\Util\GlobalParameter;
 use CyberSource\Authentication\Util\Cache as Cache;
 use \CyberSource\Logging\LogFactory as LogFactory;
 use CyberSource\Logging\LogConfiguration;
-use Jose\Component\Core\JWK;
-use Jose\Component\Core\AlgorithmManager;
-use Jose\Component\Encryption\JWEBuilder;
-use Jose\Component\Encryption\Serializer\CompactSerializer;
-use Jose\Component\KeyManagement\JWKFactory;
-use Jose\Component\Encryption\Algorithm\KeyEncryption\RSAOAEP;
-use Jose\Component\Encryption\Algorithm\KeyEncryption\RSAOAEP256;
-use Jose\Component\Encryption\Algorithm\ContentEncryption\A256GCM;
-use Jose\Component\Encryption\Compression\CompressionMethodManager;
-use Jose\Component\Encryption\Compression\Deflate;
+use SimpleJWT\JWE;
+use SimpleJWT\Keys\RSAKey;
+use SimpleJWT\Keys\KeySet;
 use CyberSource\Authentication\Util\MLEException;
 use \CyberSource\Authentication\Util\JWE\JWEUtility;
 
@@ -194,9 +187,14 @@ class MLEUtility
 
             $publicKey = openssl_pkey_get_details(openssl_pkey_get_public($cert))['key'];
 
-            $jwk = JWKFactory::createFromKey($publicKey, null, [
-                'kid' => $serialNumber,
-            ]);
+            // Build the RSA public key and tag it with the certificate serial number as
+            // the key id (kid). SimpleJWT derives the JWE 'kid' header from the selected
+            // key's id, so this must be set for CyberSource to identify the cert.
+            $jwk = new RSAKey($publicKey, 'pem');
+            $jwk->setKeyId($serialNumber);
+
+            $keySet = new KeySet();
+            $keySet->add($jwk);
 
             $header = [
                 'alg' => 'RSA-OAEP-256',
@@ -206,31 +204,11 @@ class MLEUtility
                 'iat' => time(),
             ];
 
-            $algorithmManager = new AlgorithmManager([
-                new RSAOAEP(),
-                new RSAOAEP256(),
-                new A256GCM()
-            ]);
+            $jwe = new JWE($header, $requestBody);
 
-            $compressionManager = new CompressionMethodManager([
-                new Deflate()
-            ]);
-
-            $jweBuilder = new JWEBuilder(
-                $algorithmManager,
-                $algorithmManager,
-                $compressionManager
-            );
-
-            $jwe = $jweBuilder
-                ->create()
-                ->withPayload($requestBody)
-                ->withSharedProtectedHeader($header)
-                ->addRecipient($jwk)
-                ->build();
-
-            $serializer = new CompactSerializer();
-            return $serializer->serialize($jwe);
+            // Passing the kid explicitly selects the matching key from the key set and
+            // produces JWE Compact Serialization.
+            return $jwe->encrypt($keySet, $serialNumber);
         } catch (\Exception $e) {
             self::$logger->error("Error encrypting request payload: " . $e->getMessage());
             throw new MLEException("Error encrypting request payload: " . $e->getMessage());
