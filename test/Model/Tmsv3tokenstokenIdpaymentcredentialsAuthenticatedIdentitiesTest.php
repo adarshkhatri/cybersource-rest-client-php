@@ -103,4 +103,11 @@ class Tmsv3tokenstokenIdpaymentcredentialsAuthenticatedIdentitiesTest extends \P
     public function testPropertyRelyingPartyId()
     {
     }
+
+    /**
+     * Test attribute "userAuthenticationMethod"
+     */
+    public function testPropertyUserAuthenticationMethod()
+    {
+    }
 }

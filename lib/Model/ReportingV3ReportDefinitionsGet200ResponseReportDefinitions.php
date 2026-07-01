@@ -58,7 +58,7 @@ class ReportingV3ReportDefinitionsGet200ResponseReportDefinitions implements Arr
         'reportDefintionName' => 'string',
         'supportedFormats' => 'string[]',
         'description' => 'string',
-        'defaultSettings' => '\CyberSource\Model\ReportingV3ReportDefinitionsNameGet200ResponseDefaultSettings',
+        'defaultSettings' => '\CyberSource\Model\ReportDefinitionDefaultSettings',
         'subscriptionType' => 'string'
     ];
 
@@ -302,7 +302,7 @@ class ReportingV3ReportDefinitionsGet200ResponseReportDefinitions implements Arr
 
     /**
      * Gets defaultSettings
-     * @return \CyberSource\Model\ReportingV3ReportDefinitionsNameGet200ResponseDefaultSettings
+     * @return \CyberSource\Model\ReportDefinitionDefaultSettings
      */
     public function getDefaultSettings()
     {
@@ -311,7 +311,7 @@ class ReportingV3ReportDefinitionsGet200ResponseReportDefinitions implements Arr
 
     /**
      * Sets defaultSettings
-     * @param \CyberSource\Model\ReportingV3ReportDefinitionsNameGet200ResponseDefaultSettings $defaultSettings
+     * @param \CyberSource\Model\ReportDefinitionDefaultSettings $defaultSettings
      * @return $this
      */
     public function setDefaultSettings($defaultSettings)

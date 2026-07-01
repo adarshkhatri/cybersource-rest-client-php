@@ -71,7 +71,7 @@ class Ptsv2paymentsProcessingInformation implements ArrayAccess
         'reportGroup' => 'string',
         'visaCheckoutId' => 'string',
         'industryDataType' => 'string',
-        'authorizationOptions' => '\CyberSource\Model\Ptsv2paymentsProcessingInformationAuthorizationOptions',
+        'authorizationOptions' => '\CyberSource\Model\ProcessingInfoAuthorizationOptions',
         'captureOptions' => '\CyberSource\Model\Ptsv2paymentsProcessingInformationCaptureOptions',
         'recurringOptions' => '\CyberSource\Model\Ptsv2paymentsProcessingInformationRecurringOptions',
         'bankTransferOptions' => '\CyberSource\Model\Ptsv2paymentsProcessingInformationBankTransferOptions',
@@ -683,7 +683,7 @@ class Ptsv2paymentsProcessingInformation implements ArrayAccess
 
     /**
      * Sets linkId
-     * @param string $linkId Value that links the current authorization request to the original authorization request. Set this value to the ID that was returned in the reply message from the original authorization request.  This value is used for:  - Partial authorizations - Split shipments
+     * @param string $linkId Value that links the current authorization request to the original authorization request or previous declined Merchant Initiated Debt Recovery Transactions . Set this value to the ID that was returned in the reply message from the original authorization request or previous declined Merchant Initiated Debt Recovery Transactions.  This value is used for:  - Partial authorizations - Split shipments - Merchant Initiated Debt Recovery Transactions for Visa Platform Connect and China Union Pay merchants
      * @return $this
      */
     public function setLinkId($linkId)
@@ -821,7 +821,7 @@ class Ptsv2paymentsProcessingInformation implements ArrayAccess
 
     /**
      * Gets authorizationOptions
-     * @return \CyberSource\Model\Ptsv2paymentsProcessingInformationAuthorizationOptions
+     * @return \CyberSource\Model\ProcessingInfoAuthorizationOptions
      */
     public function getAuthorizationOptions()
     {
@@ -830,7 +830,7 @@ class Ptsv2paymentsProcessingInformation implements ArrayAccess
 
     /**
      * Sets authorizationOptions
-     * @param \CyberSource\Model\Ptsv2paymentsProcessingInformationAuthorizationOptions $authorizationOptions
+     * @param \CyberSource\Model\ProcessingInfoAuthorizationOptions $authorizationOptions
      * @return $this
      */
     public function setAuthorizationOptions($authorizationOptions)

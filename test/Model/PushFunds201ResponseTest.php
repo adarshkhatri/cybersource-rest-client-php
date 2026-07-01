@@ -161,6 +161,13 @@ class PushFunds201ResponseTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "issuerInformation"
+     */
+    public function testPropertyIssuerInformation()
+    {
+    }
+
+    /**
      * Test attribute "links"
      */
     public function testPropertyLinks()

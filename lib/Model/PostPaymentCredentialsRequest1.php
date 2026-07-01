@@ -57,7 +57,7 @@ class PostPaymentCredentialsRequest1 implements ArrayAccess
         'transactionType' => 'string',
         'clientCorrelationId' => 'string',
         'orderInformation' => '\CyberSource\Model\Tmsv3tokenstokenIdpaymentcredentialsOrderInformation',
-        'merchantInformation' => '\CyberSource\Model\Tmsv3tokenstokenIdpaymentcredentialsMerchantInformation',
+        'merchantInformation' => '\CyberSource\Model\TmsMerchantInformation',
         'deviceInformation' => '\CyberSource\Model\Tmsv3tokenstokenIdpaymentcredentialsDeviceInformation',
         'authenticatedIdentities' => '\CyberSource\Model\Tmsv3tokenstokenIdpaymentcredentialsAuthenticatedIdentities[]'
     ];
@@ -281,7 +281,7 @@ class PostPaymentCredentialsRequest1 implements ArrayAccess
 
     /**
      * Gets merchantInformation
-     * @return \CyberSource\Model\Tmsv3tokenstokenIdpaymentcredentialsMerchantInformation
+     * @return \CyberSource\Model\TmsMerchantInformation
      */
     public function getMerchantInformation()
     {
@@ -290,7 +290,7 @@ class PostPaymentCredentialsRequest1 implements ArrayAccess
 
     /**
      * Sets merchantInformation
-     * @param \CyberSource\Model\Tmsv3tokenstokenIdpaymentcredentialsMerchantInformation $merchantInformation
+     * @param \CyberSource\Model\TmsMerchantInformation $merchantInformation
      * @return $this
      */
     public function setMerchantInformation($merchantInformation)

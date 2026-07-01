@@ -22,7 +22,7 @@ Name | Type | Description | Notes
 **discountApplied** | **bool** | Indicates if discount applied | [optional] 
 **discountRate** | **string** | Discount rate applied | [optional] 
 **invoiceNumber** | **string** | Invoice number for the line item | [optional] 
-**taxDetails** | [**\CyberSource\Model\Upv1capturecontextsDataOrderInformationLineItemsTaxDetails**](Upv1capturecontextsDataOrderInformationLineItemsTaxDetails.md) |  | [optional] 
+**taxDetails** | [**\CyberSource\Model\Upv1capturecontextsDataOrderInformationTaxDetails**](Upv1capturecontextsDataOrderInformationTaxDetails.md) |  | [optional] 
 **fulfillmentType** | **string** | Fulfillment type | [optional] 
 **weight** | **string** | Weight of the product | [optional] 
 **weightIdentifier** | **string** | Weight identifier | [optional] 
@@ -34,7 +34,7 @@ Name | Type | Description | Notes
 **giftCardCurrency** | **string** | Gift card currency | [optional] 
 **shippingDestinationTypes** | **string** | Shipping destination types | [optional] 
 **gift** | **bool** | Indicates if item is a gift | [optional] 
-**passenger** | [**\CyberSource\Model\Upv1capturecontextsDataOrderInformationLineItemsPassenger**](Upv1capturecontextsDataOrderInformationLineItemsPassenger.md) |  | [optional] 
+**passenger** | [**\CyberSource\Model\Upv1capturecontextsDataOrderInformationPassenger**](Upv1capturecontextsDataOrderInformationPassenger.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

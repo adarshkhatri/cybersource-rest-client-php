@@ -53,7 +53,7 @@ class PaymentsProductsUnifiedCheckoutConfigurationInformation implements ArrayAc
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'configurations' => '\CyberSource\Model\PaymentsProductsUnifiedCheckoutConfigurationInformationConfigurations'
+        'configurations' => '\CyberSource\Model\UcConfigurations'
     ];
 
     /**
@@ -161,7 +161,7 @@ class PaymentsProductsUnifiedCheckoutConfigurationInformation implements ArrayAc
 
     /**
      * Gets configurations
-     * @return \CyberSource\Model\PaymentsProductsUnifiedCheckoutConfigurationInformationConfigurations
+     * @return \CyberSource\Model\UcConfigurations
      */
     public function getConfigurations()
     {
@@ -170,7 +170,7 @@ class PaymentsProductsUnifiedCheckoutConfigurationInformation implements ArrayAc
 
     /**
      * Sets configurations
-     * @param \CyberSource\Model\PaymentsProductsUnifiedCheckoutConfigurationInformationConfigurations $configurations
+     * @param \CyberSource\Model\UcConfigurations $configurations
      * @return $this
      */
     public function setConfigurations($configurations)

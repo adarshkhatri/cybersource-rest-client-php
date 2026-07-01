@@ -66,7 +66,7 @@ class Boardingv1registrationsOrganizationInformationOwners implements ArrayAcces
         'ownershipPercentage' => 'float',
         'phoneNumber' => 'string',
         'email' => 'string',
-        'address' => '\CyberSource\Model\Boardingv1registrationsOrganizationInformationBusinessInformationAddress'
+        'address' => '\CyberSource\Model\BoardingBusinessInformationAddress'
     ];
 
     /**
@@ -572,7 +572,7 @@ class Boardingv1registrationsOrganizationInformationOwners implements ArrayAcces
 
     /**
      * Gets address
-     * @return \CyberSource\Model\Boardingv1registrationsOrganizationInformationBusinessInformationAddress
+     * @return \CyberSource\Model\BoardingBusinessInformationAddress
      */
     public function getAddress()
     {
@@ -581,7 +581,7 @@ class Boardingv1registrationsOrganizationInformationOwners implements ArrayAcces
 
     /**
      * Sets address
-     * @param \CyberSource\Model\Boardingv1registrationsOrganizationInformationBusinessInformationAddress $address
+     * @param \CyberSource\Model\BoardingBusinessInformationAddress $address
      * @return $this
      */
     public function setAddress($address)

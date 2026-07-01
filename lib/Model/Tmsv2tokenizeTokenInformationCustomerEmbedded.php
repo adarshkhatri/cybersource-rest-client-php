@@ -54,8 +54,8 @@ class Tmsv2tokenizeTokenInformationCustomerEmbedded implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'defaultPaymentInstrument' => '\CyberSource\Model\Tmsv2tokenizeTokenInformationCustomerEmbeddedDefaultPaymentInstrument',
-        'defaultShippingAddress' => '\CyberSource\Model\Tmsv2tokenizeTokenInformationCustomerEmbeddedDefaultShippingAddress'
+        'defaultPaymentInstrument' => '\CyberSource\Model\DefaultPaymentInstrument',
+        'defaultShippingAddress' => '\CyberSource\Model\DefaultShippingAddress'
     ];
 
     /**
@@ -168,7 +168,7 @@ class Tmsv2tokenizeTokenInformationCustomerEmbedded implements ArrayAccess
 
     /**
      * Gets defaultPaymentInstrument
-     * @return \CyberSource\Model\Tmsv2tokenizeTokenInformationCustomerEmbeddedDefaultPaymentInstrument
+     * @return \CyberSource\Model\DefaultPaymentInstrument
      */
     public function getDefaultPaymentInstrument()
     {
@@ -177,7 +177,7 @@ class Tmsv2tokenizeTokenInformationCustomerEmbedded implements ArrayAccess
 
     /**
      * Sets defaultPaymentInstrument
-     * @param \CyberSource\Model\Tmsv2tokenizeTokenInformationCustomerEmbeddedDefaultPaymentInstrument $defaultPaymentInstrument
+     * @param \CyberSource\Model\DefaultPaymentInstrument $defaultPaymentInstrument
      * @return $this
      */
     public function setDefaultPaymentInstrument($defaultPaymentInstrument)
@@ -189,7 +189,7 @@ class Tmsv2tokenizeTokenInformationCustomerEmbedded implements ArrayAccess
 
     /**
      * Gets defaultShippingAddress
-     * @return \CyberSource\Model\Tmsv2tokenizeTokenInformationCustomerEmbeddedDefaultShippingAddress
+     * @return \CyberSource\Model\DefaultShippingAddress
      */
     public function getDefaultShippingAddress()
     {
@@ -198,7 +198,7 @@ class Tmsv2tokenizeTokenInformationCustomerEmbedded implements ArrayAccess
 
     /**
      * Sets defaultShippingAddress
-     * @param \CyberSource\Model\Tmsv2tokenizeTokenInformationCustomerEmbeddedDefaultShippingAddress $defaultShippingAddress
+     * @param \CyberSource\Model\DefaultShippingAddress $defaultShippingAddress
      * @return $this
      */
     public function setDefaultShippingAddress($defaultShippingAddress)

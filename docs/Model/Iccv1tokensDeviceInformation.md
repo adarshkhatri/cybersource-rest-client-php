@@ -1,0 +1,16 @@
+# Iccv1tokensDeviceInformation
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**userAgent** | **string** | Base64 Encoded userAgent string of the connecting client application, with no padding.   User agent string of the connecting client application.   Conditionality:   - Required for browsers - Optional for non-browsers | [optional] 
+**applicationName** | **string** | Name of the connecting client application. | 
+**fingerprintSessionId** | **string** | Device Fingerprinting Session identifier. | 
+**country** | **string** | ISO 3166-1 alpha-2 country code. The country where the Consumer is accessing the service from. | [optional] 
+**deviceData** | [**\CyberSource\Model\Iccv1tokensDeviceInformationDeviceData**](Iccv1tokensDeviceInformationDeviceData.md) |  | 
+**ipAddress** | **string** | IP address of the consumer&#39;s device. | 
+**clientDeviceId** | **string** | Unique identifier of the consumer&#39;s device. | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+

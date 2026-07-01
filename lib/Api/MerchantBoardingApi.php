@@ -164,7 +164,7 @@ class MerchantBoardingApi
         }
 
         //MLE check and mle encryption for req body
-        $inboundMLEStatus = 'false';
+        $inboundMLEStatus = 'mandatory';
         if (MLEUtility::checkIsMLEForAPI($this->apiClient->merchantConfig, $inboundMLEStatus, "getRegistration,getRegistrationWithHttpInfo")) {
             try {
                 $httpBody = MLEUtility::encryptRequestPayload($this->apiClient->merchantConfig, $httpBody);
@@ -306,7 +306,7 @@ class MerchantBoardingApi
         }
 
         //MLE check and mle encryption for req body
-        $inboundMLEStatus = 'false';
+        $inboundMLEStatus = 'mandatory';
         if (MLEUtility::checkIsMLEForAPI($this->apiClient->merchantConfig, $inboundMLEStatus, "postRegistration,postRegistrationWithHttpInfo")) {
             try {
                 $httpBody = MLEUtility::encryptRequestPayload($this->apiClient->merchantConfig, $httpBody);

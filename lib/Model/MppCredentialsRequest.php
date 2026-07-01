@@ -55,7 +55,7 @@ class MppCredentialsRequest implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'instrumentId' => 'string',
-        'challenge' => '\CyberSource\Model\Acpv1mppcredentialsChallenge'
+        'challenge' => '\CyberSource\Model\Iccv1mppcredentialsChallenge'
     ];
 
     /**
@@ -201,7 +201,7 @@ class MppCredentialsRequest implements ArrayAccess
 
     /**
      * Gets challenge
-     * @return \CyberSource\Model\Acpv1mppcredentialsChallenge
+     * @return \CyberSource\Model\Iccv1mppcredentialsChallenge
      */
     public function getChallenge()
     {
@@ -210,7 +210,7 @@ class MppCredentialsRequest implements ArrayAccess
 
     /**
      * Sets challenge
-     * @param \CyberSource\Model\Acpv1mppcredentialsChallenge $challenge
+     * @param \CyberSource\Model\Iccv1mppcredentialsChallenge $challenge
      * @return $this
      */
     public function setChallenge($challenge)

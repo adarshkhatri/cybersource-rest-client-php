@@ -82,4 +82,11 @@ class Ptsv2creditsProcessingInformationRefundOptionsTest extends \PHPUnit_Framew
     public function testPropertyReason()
     {
     }
+
+    /**
+     * Test attribute "reconciliationIdAlternate"
+     */
+    public function testPropertyReconciliationIdAlternate()
+    {
+    }
 }

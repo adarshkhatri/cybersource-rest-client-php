@@ -55,7 +55,7 @@ class PtsV2PaymentsPost201ResponseWatchlistScreeningInformation implements Array
     protected static $swaggerTypes = [
         'ipCountryConfidence' => 'int',
         'infoCodes' => 'string[]',
-        'watchList' => '\CyberSource\Model\PtsV2PaymentsPost201ResponseWatchlistScreeningInformationWatchList'
+        'watchList' => '\CyberSource\Model\ExportComplianceWatchList'
     ];
 
     /**
@@ -215,7 +215,7 @@ class PtsV2PaymentsPost201ResponseWatchlistScreeningInformation implements Array
 
     /**
      * Gets watchList
-     * @return \CyberSource\Model\PtsV2PaymentsPost201ResponseWatchlistScreeningInformationWatchList
+     * @return \CyberSource\Model\ExportComplianceWatchList
      */
     public function getWatchList()
     {
@@ -224,7 +224,7 @@ class PtsV2PaymentsPost201ResponseWatchlistScreeningInformation implements Array
 
     /**
      * Sets watchList
-     * @param \CyberSource\Model\PtsV2PaymentsPost201ResponseWatchlistScreeningInformationWatchList $watchList
+     * @param \CyberSource\Model\ExportComplianceWatchList $watchList
      * @return $this
      */
     public function setWatchList($watchList)

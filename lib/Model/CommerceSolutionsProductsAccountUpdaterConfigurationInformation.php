@@ -54,7 +54,7 @@ class CommerceSolutionsProductsAccountUpdaterConfigurationInformation implements
       */
     protected static $swaggerTypes = [
         'templateId' => 'string',
-        'configurations' => '\CyberSource\Model\CommerceSolutionsProductsAccountUpdaterConfigurationInformationConfigurations'
+        'configurations' => '\CyberSource\Model\AccountUpdaterConfigurations'
     ];
 
     /**
@@ -188,7 +188,7 @@ class CommerceSolutionsProductsAccountUpdaterConfigurationInformation implements
 
     /**
      * Gets configurations
-     * @return \CyberSource\Model\CommerceSolutionsProductsAccountUpdaterConfigurationInformationConfigurations
+     * @return \CyberSource\Model\AccountUpdaterConfigurations
      */
     public function getConfigurations()
     {
@@ -197,7 +197,7 @@ class CommerceSolutionsProductsAccountUpdaterConfigurationInformation implements
 
     /**
      * Sets configurations
-     * @param \CyberSource\Model\CommerceSolutionsProductsAccountUpdaterConfigurationInformationConfigurations $configurations
+     * @param \CyberSource\Model\AccountUpdaterConfigurations $configurations
      * @return $this
      */
     public function setConfigurations($configurations)

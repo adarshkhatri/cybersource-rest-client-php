@@ -54,7 +54,7 @@ class PaymentsProductsAlternativePaymentMethodsConfigurationInformationConfigura
       */
     protected static $swaggerTypes = [
         'merchantCategoryCode' => 'string',
-        'processors' => 'map[string,\CyberSource\Model\PaymentsProductsAlternativePaymentMethodsConfigurationInformationConfigurationsProcessors]'
+        'processors' => 'map[string,\CyberSource\Model\AlternativePaymentsProcessorConfiguration]'
     ];
 
     /**
@@ -188,7 +188,7 @@ class PaymentsProductsAlternativePaymentMethodsConfigurationInformationConfigura
 
     /**
      * Gets processors
-     * @return map[string,\CyberSource\Model\PaymentsProductsAlternativePaymentMethodsConfigurationInformationConfigurationsProcessors]
+     * @return map[string,\CyberSource\Model\AlternativePaymentsProcessorConfiguration]
      */
     public function getProcessors()
     {
@@ -197,7 +197,7 @@ class PaymentsProductsAlternativePaymentMethodsConfigurationInformationConfigura
 
     /**
      * Sets processors
-     * @param map[string,\CyberSource\Model\PaymentsProductsAlternativePaymentMethodsConfigurationInformationConfigurationsProcessors] $processors This is a map. The allowed keys are below. Value should be an object containing a sole boolean property - enabled. <table>   <tr>     <td>klarna</td>   </tr>   <tr>     <td>payPal</td>   </tr>   <tr>     <td>alipay</td>   </tr>   <tr>     <td>bancontact</td>   </tr>   <tr>     <td>giropay</td>   </tr>   <tr>     <td>ideal</td>   </tr> </table>
+     * @param map[string,\CyberSource\Model\AlternativePaymentsProcessorConfiguration] $processors This is a map. The allowed keys are below. Value should be an object containing a sole boolean property - enabled. <table>   <tr>     <td>klarna</td>   </tr>   <tr>     <td>payPal</td>   </tr>   <tr>     <td>alipay</td>   </tr>   <tr>     <td>bancontact</td>   </tr>   <tr>     <td>giropay</td>   </tr>   <tr>     <td>ideal</td>   </tr> </table>
      * @return $this
      */
     public function setProcessors($processors)

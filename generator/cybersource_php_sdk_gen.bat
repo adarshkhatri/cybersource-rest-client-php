@@ -16,6 +16,9 @@ xcopy ..\CyberSource ..\ /s /e /y
 
 rd /s /q ..\CyberSource
 
+REM normalize backslashes to forward slashes in phpunit.xml.dist (generator emits host OS File.separator)
+powershell -Command "(Get-Content ..\phpunit.xml.dist) | ForEach-Object { if ($_ -match '<directory') { $_ -replace '\\', '/' } else { $_ } } | Set-Content ..\phpunit.xml.dist"
+
 powershell -Command "(Get-Content ..\lib\Api\SearchTransactionsApi.php) | ForEach-Object { $_ -replace 'selectHeaderAccept\(\[''application/json;charset=utf-8', 'selectHeaderAccept([''*/*'} | Set-Content ..\lib\Api\SearchTransactionsApi.php"
 
 REM renaming long file name

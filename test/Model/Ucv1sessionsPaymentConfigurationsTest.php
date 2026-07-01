@@ -91,6 +91,13 @@ class Ucv1sessionsPaymentConfigurationsTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "pAYPAL"
+     */
+    public function testPropertyPAYPAL()
+    {
+    }
+
+    /**
      * Test attribute "tMSTOKEN"
      */
     public function testPropertyTMSTOKEN()

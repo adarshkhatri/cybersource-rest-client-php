@@ -53,7 +53,7 @@ class PaymentsProductsPayoutsConfigurationInformation implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'configurations' => '\CyberSource\Model\PaymentsProductsPayoutsConfigurationInformationConfigurations'
+        'configurations' => '\CyberSource\Model\BoardingPayoutsConfigurations'
     ];
 
     /**
@@ -161,7 +161,7 @@ class PaymentsProductsPayoutsConfigurationInformation implements ArrayAccess
 
     /**
      * Gets configurations
-     * @return \CyberSource\Model\PaymentsProductsPayoutsConfigurationInformationConfigurations
+     * @return \CyberSource\Model\BoardingPayoutsConfigurations
      */
     public function getConfigurations()
     {
@@ -170,7 +170,7 @@ class PaymentsProductsPayoutsConfigurationInformation implements ArrayAccess
 
     /**
      * Sets configurations
-     * @param \CyberSource\Model\PaymentsProductsPayoutsConfigurationInformationConfigurations $configurations
+     * @param \CyberSource\Model\BoardingPayoutsConfigurations $configurations
      * @return $this
      */
     public function setConfigurations($configurations)

@@ -56,6 +56,7 @@ class Ucv1sessionsPaymentConfigurations implements ArrayAccess
     protected static $swaggerTypes = [
         'gOOGLEPAY' => '\CyberSource\Model\Ucv1sessionsPaymentConfigurationsGOOGLEPAY',
         'cLICKTOPAY' => '\CyberSource\Model\Ucv1sessionsPaymentConfigurationsCLICKTOPAY',
+        'pAYPAL' => '\CyberSource\Model\Ucv1sessionsPaymentConfigurationsPAYPAL',
         'tMSTOKEN' => '\CyberSource\Model\Ucv1sessionsPaymentConfigurationsTMSTOKEN'
     ];
 
@@ -66,6 +67,7 @@ class Ucv1sessionsPaymentConfigurations implements ArrayAccess
     protected static $swaggerFormats = [
         'gOOGLEPAY' => null,
         'cLICKTOPAY' => null,
+        'pAYPAL' => null,
         'tMSTOKEN' => null
     ];
 
@@ -86,6 +88,7 @@ class Ucv1sessionsPaymentConfigurations implements ArrayAccess
     protected static $attributeMap = [
         'gOOGLEPAY' => 'GOOGLEPAY',
         'cLICKTOPAY' => 'CLICKTOPAY',
+        'pAYPAL' => 'PAYPAL',
         'tMSTOKEN' => 'TMS_TOKEN'
     ];
 
@@ -97,6 +100,7 @@ class Ucv1sessionsPaymentConfigurations implements ArrayAccess
     protected static $setters = [
         'gOOGLEPAY' => 'setGOOGLEPAY',
         'cLICKTOPAY' => 'setCLICKTOPAY',
+        'pAYPAL' => 'setPAYPAL',
         'tMSTOKEN' => 'setTMSTOKEN'
     ];
 
@@ -108,6 +112,7 @@ class Ucv1sessionsPaymentConfigurations implements ArrayAccess
     protected static $getters = [
         'gOOGLEPAY' => 'getGOOGLEPAY',
         'cLICKTOPAY' => 'getCLICKTOPAY',
+        'pAYPAL' => 'getPAYPAL',
         'tMSTOKEN' => 'getTMSTOKEN'
     ];
 
@@ -144,6 +149,7 @@ class Ucv1sessionsPaymentConfigurations implements ArrayAccess
     {
         $this->container['gOOGLEPAY'] = isset($data['gOOGLEPAY']) ? $data['gOOGLEPAY'] : null;
         $this->container['cLICKTOPAY'] = isset($data['cLICKTOPAY']) ? $data['cLICKTOPAY'] : null;
+        $this->container['pAYPAL'] = isset($data['pAYPAL']) ? $data['pAYPAL'] : null;
         $this->container['tMSTOKEN'] = isset($data['tMSTOKEN']) ? $data['tMSTOKEN'] : null;
     }
 
@@ -210,6 +216,27 @@ class Ucv1sessionsPaymentConfigurations implements ArrayAccess
     public function setCLICKTOPAY($cLICKTOPAY)
     {
         $this->container['cLICKTOPAY'] = $cLICKTOPAY;
+
+        return $this;
+    }
+
+    /**
+     * Gets pAYPAL
+     * @return \CyberSource\Model\Ucv1sessionsPaymentConfigurationsPAYPAL
+     */
+    public function getPAYPAL()
+    {
+        return $this->container['pAYPAL'];
+    }
+
+    /**
+     * Sets pAYPAL
+     * @param \CyberSource\Model\Ucv1sessionsPaymentConfigurationsPAYPAL $pAYPAL
+     * @return $this
+     */
+    public function setPAYPAL($pAYPAL)
+    {
+        $this->container['pAYPAL'] = $pAYPAL;
 
         return $this;
     }

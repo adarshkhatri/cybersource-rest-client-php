@@ -59,7 +59,7 @@ class ReportingV3ReportDefinitionsNameGet200Response implements ArrayAccess
         'attributes' => '\CyberSource\Model\ReportingV3ReportDefinitionsNameGet200ResponseAttributes[]',
         'supportedFormats' => 'string[]',
         'description' => 'string',
-        'defaultSettings' => '\CyberSource\Model\ReportingV3ReportDefinitionsNameGet200ResponseDefaultSettings',
+        'defaultSettings' => '\CyberSource\Model\ReportDefinitionDefaultSettings',
         'subscriptionType' => 'string'
     ];
 
@@ -329,7 +329,7 @@ class ReportingV3ReportDefinitionsNameGet200Response implements ArrayAccess
 
     /**
      * Gets defaultSettings
-     * @return \CyberSource\Model\ReportingV3ReportDefinitionsNameGet200ResponseDefaultSettings
+     * @return \CyberSource\Model\ReportDefinitionDefaultSettings
      */
     public function getDefaultSettings()
     {
@@ -338,7 +338,7 @@ class ReportingV3ReportDefinitionsNameGet200Response implements ArrayAccess
 
     /**
      * Sets defaultSettings
-     * @param \CyberSource\Model\ReportingV3ReportDefinitionsNameGet200ResponseDefaultSettings $defaultSettings
+     * @param \CyberSource\Model\ReportDefinitionDefaultSettings $defaultSettings
      * @return $this
      */
     public function setDefaultSettings($defaultSettings)

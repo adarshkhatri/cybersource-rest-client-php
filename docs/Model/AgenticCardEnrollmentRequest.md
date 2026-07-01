@@ -4,14 +4,14 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **clientCorrelationId** | **string** | Client Correlation Id used during the tokenization or during FIDO assertion. | 
-**deviceInformation** | [**\CyberSource\Model\Acpv1tokensDeviceInformation**](Acpv1tokensDeviceInformation.md) |  | 
-**buyerInformation** | [**\CyberSource\Model\Acpv1tokensBuyerInformation**](Acpv1tokensBuyerInformation.md) |  | 
-**billTo** | [**\CyberSource\Model\Acpv1tokensBillTo**](Acpv1tokensBillTo.md) |  | 
-**consumerIdentity** | [**\CyberSource\Model\Acpv1tokensConsumerIdentity**](Acpv1tokensConsumerIdentity.md) |  | 
-**paymentInformation** | [**\CyberSource\Model\Acpv1tokensPaymentInformation**](Acpv1tokensPaymentInformation.md) |  | 
-**enrollmentReferenceData** | [**\CyberSource\Model\Acpv1tokensEnrollmentReferenceData**](Acpv1tokensEnrollmentReferenceData.md) |  | [optional] 
-**assuranceData** | [**\CyberSource\Model\Acpv1tokensAssuranceData[]**](Acpv1tokensAssuranceData.md) | Assurance data. | [optional] 
-**consentData** | [**\CyberSource\Model\Acpv1tokensConsentData[]**](Acpv1tokensConsentData.md) | Consent data. | [optional] 
+**deviceInformation** | [**\CyberSource\Model\Iccv1tokensDeviceInformation**](Iccv1tokensDeviceInformation.md) |  | 
+**buyerInformation** | [**\CyberSource\Model\Iccv1tokensBuyerInformation**](Iccv1tokensBuyerInformation.md) |  | 
+**billTo** | [**\CyberSource\Model\Iccv1tokensBillTo**](Iccv1tokensBillTo.md) |  | 
+**consumerIdentity** | [**\CyberSource\Model\Iccv1tokensConsumerIdentity**](Iccv1tokensConsumerIdentity.md) |  | 
+**paymentInformation** | [**\CyberSource\Model\Iccv1tokensPaymentInformation**](Iccv1tokensPaymentInformation.md) |  | 
+**enrollmentReferenceData** | [**\CyberSource\Model\Iccv1tokensEnrollmentReferenceData**](Iccv1tokensEnrollmentReferenceData.md) |  | [optional] 
+**assuranceData** | [**\CyberSource\Model\Iccv1tokensAssuranceData[]**](Iccv1tokensAssuranceData.md) | Assurance data. | [optional] 
+**consentData** | [**\CyberSource\Model\Iccv1tokensConsentData[]**](Iccv1tokensConsentData.md) | Consent data. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

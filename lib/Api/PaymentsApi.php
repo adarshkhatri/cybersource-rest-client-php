@@ -144,12 +144,12 @@ class PaymentsApi
         $headerParams = [];
         $formParams = [];
         
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/hal+json;charset=utf-8']);
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/hal+json']);
         if (!is_null($_header_accept)) {
             $headerParams['Accept'] = $_header_accept;
         }
         
-        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json;charset=utf-8']);
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json', 'application/json; charset=utf-8']);
 
         // path params
         if ($id !== null) {
@@ -284,12 +284,12 @@ class PaymentsApi
         $headerParams = [];
         $formParams = [];
         
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/hal+json;charset=utf-8']);
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/hal+json']);
         if (!is_null($_header_accept)) {
             $headerParams['Accept'] = $_header_accept;
         }
         
-        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json;charset=utf-8']);
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json', 'application/json; charset=utf-8']);
 
         // body params
         $_tempBody = null;
@@ -416,12 +416,12 @@ class PaymentsApi
         $headerParams = [];
         $formParams = [];
         
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/hal+json;charset=utf-8']);
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/hal+json']);
         if (!is_null($_header_accept)) {
             $headerParams['Accept'] = $_header_accept;
         }
         
-        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json;charset=utf-8']);
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json', 'application/json; charset=utf-8']);
 
         // body params
         $_tempBody = null;
@@ -555,12 +555,12 @@ class PaymentsApi
         $headerParams = [];
         $formParams = [];
         
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/hal+json;charset=utf-8']);
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/hal+json']);
         if (!is_null($_header_accept)) {
             $headerParams['Accept'] = $_header_accept;
         }
         
-        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json;charset=utf-8']);
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json', 'application/json; charset=utf-8']);
 
         // path params
         if ($id !== null) {
@@ -702,12 +702,12 @@ class PaymentsApi
         $headerParams = [];
         $formParams = [];
         
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/hal+json;charset=utf-8']);
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/hal+json']);
         if (!is_null($_header_accept)) {
             $headerParams['Accept'] = $_header_accept;
         }
         
-        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json;charset=utf-8']);
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json', 'application/json; charset=utf-8']);
 
         // path params
         if ($id !== null) {
@@ -802,7 +802,7 @@ class PaymentsApi
     }
 
     /**
-     * Operation updateSessionReq
+     * Operation updateSessionRequest
      *
      * Update Alternative Payments Sessions Request
      *
@@ -811,17 +811,17 @@ class PaymentsApi
      * @throws \CyberSource\ApiException on non-2xx response
      * @return array of \CyberSource\Model\PtsV2PaymentsPost201Response2, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateSessionReq($createSessionRequest, $id)
+    public function updateSessionRequest($createSessionRequest, $id)
     {
-        self::$logger->info('CALL TO METHOD updateSessionReq STARTED');
-        list($response, $statusCode, $httpHeader) = $this->updateSessionReqWithHttpInfo($createSessionRequest, $id);
-        self::$logger->info('CALL TO METHOD updateSessionReq ENDED');
+        self::$logger->info('CALL TO METHOD updateSessionRequest STARTED');
+        list($response, $statusCode, $httpHeader) = $this->updateSessionRequestWithHttpInfo($createSessionRequest, $id);
+        self::$logger->info('CALL TO METHOD updateSessionRequest ENDED');
         self::$logger->close();
         return [$response, $statusCode, $httpHeader];
     }
 
     /**
-     * Operation updateSessionReqWithHttpInfo
+     * Operation updateSessionRequestWithHttpInfo
      *
      * Update Alternative Payments Sessions Request
      *
@@ -830,17 +830,17 @@ class PaymentsApi
      * @throws \CyberSource\ApiException on non-2xx response
      * @return array of \CyberSource\Model\PtsV2PaymentsPost201Response2, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateSessionReqWithHttpInfo($createSessionRequest, $id)
+    public function updateSessionRequestWithHttpInfo($createSessionRequest, $id)
     {
         // verify the required parameter 'createSessionRequest' is set
         if ($createSessionRequest === null) {
-            self::$logger->error("InvalidArgumentException : Missing the required parameter $createSessionRequest when calling updateSessionReq");
-            throw new \InvalidArgumentException('Missing the required parameter $createSessionRequest when calling updateSessionReq');
+            self::$logger->error("InvalidArgumentException : Missing the required parameter $createSessionRequest when calling updateSessionRequest");
+            throw new \InvalidArgumentException('Missing the required parameter $createSessionRequest when calling updateSessionRequest');
         }
         // verify the required parameter 'id' is set
         if ($id === null) {
-            self::$logger->error("InvalidArgumentException : Missing the required parameter $id when calling updateSessionReq");
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling updateSessionReq');
+            self::$logger->error("InvalidArgumentException : Missing the required parameter $id when calling updateSessionRequest");
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling updateSessionRequest');
         }
         // parse inputs
         $resourcePath = "/pts/v2/payment-references/{id}";
@@ -849,12 +849,12 @@ class PaymentsApi
         $headerParams = [];
         $formParams = [];
         
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/hal+json;charset=utf-8']);
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/hal+json']);
         if (!is_null($_header_accept)) {
             $headerParams['Accept'] = $_header_accept;
         }
         
-        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json;charset=utf-8']);
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json', 'application/json; charset=utf-8']);
 
         // path params
         if ($id !== null) {
@@ -884,7 +884,7 @@ class PaymentsApi
 
         //MLE check and mle encryption for req body
         $inboundMLEStatus = 'optional';
-        if (MLEUtility::checkIsMLEForAPI($this->apiClient->merchantConfig, $inboundMLEStatus, "updateSessionReq,updateSessionReqWithHttpInfo")) {
+        if (MLEUtility::checkIsMLEForAPI($this->apiClient->merchantConfig, $inboundMLEStatus, "updateSessionRequest,updateSessionRequestWithHttpInfo")) {
             try {
                 $httpBody = MLEUtility::encryptRequestPayload($this->apiClient->merchantConfig, $httpBody);
             } catch (Exception $e) {
@@ -909,7 +909,7 @@ class PaymentsApi
         self::$logger->debug("Return Type : \CyberSource\Model\PtsV2PaymentsPost201Response2");
         
         // Response MLE check
-        $isResponseMLEForAPI = MLEUtility::checkIsResponseMLEForAPI($this->apiClient->merchantConfig, "updateSessionReq,updateSessionReqWithHttpInfo");
+        $isResponseMLEForAPI = MLEUtility::checkIsResponseMLEForAPI($this->apiClient->merchantConfig, "updateSessionRequest,updateSessionRequestWithHttpInfo");
         
         // make the API Call
         try {

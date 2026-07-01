@@ -77,6 +77,111 @@ class PtsV2PayoutsPost201ResponseIssuerInformationTest extends \PHPUnit_Framewor
     }
 
     /**
+     * Test attribute "octDomesticParticipantIndicator"
+     */
+    public function testPropertyOctDomesticParticipantIndicator()
+    {
+    }
+
+    /**
+     * Test attribute "octCrossBorderParticipantIndicator"
+     */
+    public function testPropertyOctCrossBorderParticipantIndicator()
+    {
+    }
+
+    /**
+     * Test attribute "octMoneyTransferDomesticIndicator"
+     */
+    public function testPropertyOctMoneyTransferDomesticIndicator()
+    {
+    }
+
+    /**
+     * Test attribute "octMoneyTransferCrossBorderIndicator"
+     */
+    public function testPropertyOctMoneyTransferCrossBorderIndicator()
+    {
+    }
+
+    /**
+     * Test attribute "octMoneyTransferFastFundsDomesticIndicator"
+     */
+    public function testPropertyOctMoneyTransferFastFundsDomesticIndicator()
+    {
+    }
+
+    /**
+     * Test attribute "octMoneyTransferFastFundsCrossBorderIndicator"
+     */
+    public function testPropertyOctMoneyTransferFastFundsCrossBorderIndicator()
+    {
+    }
+
+    /**
+     * Test attribute "octMoneyTransferMerchantCountryRestricted"
+     */
+    public function testPropertyOctMoneyTransferMerchantCountryRestricted()
+    {
+    }
+
+    /**
+     * Test attribute "octNonMoneyTransferDomesticIndicator"
+     */
+    public function testPropertyOctNonMoneyTransferDomesticIndicator()
+    {
+    }
+
+    /**
+     * Test attribute "octNonMoneyTransferCrossBorderIndicator"
+     */
+    public function testPropertyOctNonMoneyTransferCrossBorderIndicator()
+    {
+    }
+
+    /**
+     * Test attribute "octNonMoneyTransferFastFundsDomesticIndicator"
+     */
+    public function testPropertyOctNonMoneyTransferFastFundsDomesticIndicator()
+    {
+    }
+
+    /**
+     * Test attribute "octNonMoneyTransferFastFundsCrossBorderIndicator"
+     */
+    public function testPropertyOctNonMoneyTransferFastFundsCrossBorderIndicator()
+    {
+    }
+
+    /**
+     * Test attribute "octOnlineGamblingDomesticIndicator"
+     */
+    public function testPropertyOctOnlineGamblingDomesticIndicator()
+    {
+    }
+
+    /**
+     * Test attribute "octOnlineGamblingCrossBorderIndicator"
+     */
+    public function testPropertyOctOnlineGamblingCrossBorderIndicator()
+    {
+    }
+
+    /**
+     * Test attribute "octOnlineGamblingFastFundsDomesticIndicator"
+     */
+    public function testPropertyOctOnlineGamblingFastFundsDomesticIndicator()
+    {
+    }
+
+    /**
+     * Test attribute "octOnlineGamblingFastFundsCrossBorderIndicator"
+     */
+    public function testPropertyOctOnlineGamblingFastFundsCrossBorderIndicator()
+    {
+    }
+
+    /**
      * Test attribute "serviceProcessingType"
      */
     public function testPropertyServiceProcessingType()

@@ -53,7 +53,7 @@ class PaymentsProductsMicroformConfigurationInformationConfigurations implements
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'features' => '\CyberSource\Model\PaymentsProductsMicroformConfigurationInformationConfigurationsFeatures'
+        'features' => '\CyberSource\Model\MicroformConfigFeatures'
     ];
 
     /**
@@ -161,7 +161,7 @@ class PaymentsProductsMicroformConfigurationInformationConfigurations implements
 
     /**
      * Gets features
-     * @return \CyberSource\Model\PaymentsProductsMicroformConfigurationInformationConfigurationsFeatures
+     * @return \CyberSource\Model\MicroformConfigFeatures
      */
     public function getFeatures()
     {
@@ -170,7 +170,7 @@ class PaymentsProductsMicroformConfigurationInformationConfigurations implements
 
     /**
      * Sets features
-     * @param \CyberSource\Model\PaymentsProductsMicroformConfigurationInformationConfigurationsFeatures $features
+     * @param \CyberSource\Model\MicroformConfigFeatures $features
      * @return $this
      */
     public function setFeatures($features)

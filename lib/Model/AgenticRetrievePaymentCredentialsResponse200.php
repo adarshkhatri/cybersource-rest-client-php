@@ -55,7 +55,7 @@ class AgenticRetrievePaymentCredentialsResponse200 implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'transactionResponseComplete' => '\CyberSource\Model\AgenticRetrievePaymentCredentialsResponse200TransactionResponseComplete',
-        'transactionResponseWithPendingEvents' => '\CyberSource\Model\AgenticRetrievePaymentCredentialsResponse200TransactionResponseWithPendingEvents'
+        'transactionResponseWithPendingEvents' => '\CyberSource\Model\IccTransactionResponsePendingEvents'
     ];
 
     /**
@@ -189,7 +189,7 @@ class AgenticRetrievePaymentCredentialsResponse200 implements ArrayAccess
 
     /**
      * Gets transactionResponseWithPendingEvents
-     * @return \CyberSource\Model\AgenticRetrievePaymentCredentialsResponse200TransactionResponseWithPendingEvents
+     * @return \CyberSource\Model\IccTransactionResponsePendingEvents
      */
     public function getTransactionResponseWithPendingEvents()
     {
@@ -198,7 +198,7 @@ class AgenticRetrievePaymentCredentialsResponse200 implements ArrayAccess
 
     /**
      * Sets transactionResponseWithPendingEvents
-     * @param \CyberSource\Model\AgenticRetrievePaymentCredentialsResponse200TransactionResponseWithPendingEvents $transactionResponseWithPendingEvents
+     * @param \CyberSource\Model\IccTransactionResponsePendingEvents $transactionResponseWithPendingEvents
      * @return $this
      */
     public function setTransactionResponseWithPendingEvents($transactionResponseWithPendingEvents)

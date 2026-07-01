@@ -55,7 +55,7 @@ class Ucv1sessionsDataOrderInformation implements ArrayAccess
     protected static $swaggerTypes = [
         'amountDetails' => '\CyberSource\Model\Ucv1sessionsDataOrderInformationAmountDetails',
         'billTo' => '\CyberSource\Model\Ucv1sessionsDataOrderInformationBillTo',
-        'shipTo' => '\CyberSource\Model\Upv1capturecontextsDataOrderInformationShipTo',
+        'shipTo' => '\CyberSource\Model\Ucv1sessionsDataOrderInformationShipTo',
         'lineItems' => '\CyberSource\Model\Ucv1sessionsDataOrderInformationLineItems[]',
         'invoiceDetails' => '\CyberSource\Model\Ucv1sessionsDataOrderInformationInvoiceDetails',
         'shippingDetails' => '\CyberSource\Model\Ucv1sessionsDataOrderInformationShippingDetails'
@@ -233,7 +233,7 @@ class Ucv1sessionsDataOrderInformation implements ArrayAccess
 
     /**
      * Gets shipTo
-     * @return \CyberSource\Model\Upv1capturecontextsDataOrderInformationShipTo
+     * @return \CyberSource\Model\Ucv1sessionsDataOrderInformationShipTo
      */
     public function getShipTo()
     {
@@ -242,7 +242,7 @@ class Ucv1sessionsDataOrderInformation implements ArrayAccess
 
     /**
      * Sets shipTo
-     * @param \CyberSource\Model\Upv1capturecontextsDataOrderInformationShipTo $shipTo
+     * @param \CyberSource\Model\Ucv1sessionsDataOrderInformationShipTo $shipTo
      * @return $this
      */
     public function setShipTo($shipTo)

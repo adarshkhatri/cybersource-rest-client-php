@@ -329,7 +329,7 @@ class PtsV2CreditsPost201Response implements ArrayAccess
 
     /**
      * Sets status
-     * @param string $status The status of the submitted transaction.  Possible values:  - PENDING  - COMPLETED (as in the case of PIN Debit Full Financial Credit)
+     * @param string $status The status of the submitted transaction.  Possible values:  - PENDING  - AUTHORIZED  - DECLINED  - INVALID_REQUEST  - COMPLETED (as in the case of PIN Debit Full Financial Credit)
      * @return $this
      */
     public function setStatus($status)

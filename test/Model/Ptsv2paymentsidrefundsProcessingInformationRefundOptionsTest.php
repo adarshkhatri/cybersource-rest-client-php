@@ -82,4 +82,11 @@ class Ptsv2paymentsidrefundsProcessingInformationRefundOptionsTest extends \PHPU
     public function testPropertyReason()
     {
     }
+
+    /**
+     * Test attribute "reconciliationIdAlternate"
+     */
+    public function testPropertyReconciliationIdAlternate()
+    {
+    }
 }

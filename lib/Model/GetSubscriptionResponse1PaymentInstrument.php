@@ -57,8 +57,8 @@ class GetSubscriptionResponse1PaymentInstrument implements ArrayAccess
         'id' => 'string',
         'bankAccount' => '\CyberSource\Model\GetSubscriptionResponse1PaymentInstrumentBankAccount',
         'card' => '\CyberSource\Model\GetSubscriptionResponse1PaymentInstrumentCard',
-        'billTo' => '\CyberSource\Model\Tmsv2tokenizeTokenInformationCustomerEmbeddedDefaultPaymentInstrumentBillTo',
-        'buyerInformation' => '\CyberSource\Model\GetSubscriptionResponse1PaymentInstrumentBuyerInformation'
+        'billTo' => '\CyberSource\Model\DefaultPaymentInstrumentBillTo',
+        'buyerInformation' => '\CyberSource\Model\FollowOnTransactionBuyerInformation'
     ];
 
     /**
@@ -249,7 +249,7 @@ class GetSubscriptionResponse1PaymentInstrument implements ArrayAccess
 
     /**
      * Gets billTo
-     * @return \CyberSource\Model\Tmsv2tokenizeTokenInformationCustomerEmbeddedDefaultPaymentInstrumentBillTo
+     * @return \CyberSource\Model\DefaultPaymentInstrumentBillTo
      */
     public function getBillTo()
     {
@@ -258,7 +258,7 @@ class GetSubscriptionResponse1PaymentInstrument implements ArrayAccess
 
     /**
      * Sets billTo
-     * @param \CyberSource\Model\Tmsv2tokenizeTokenInformationCustomerEmbeddedDefaultPaymentInstrumentBillTo $billTo
+     * @param \CyberSource\Model\DefaultPaymentInstrumentBillTo $billTo
      * @return $this
      */
     public function setBillTo($billTo)
@@ -270,7 +270,7 @@ class GetSubscriptionResponse1PaymentInstrument implements ArrayAccess
 
     /**
      * Gets buyerInformation
-     * @return \CyberSource\Model\GetSubscriptionResponse1PaymentInstrumentBuyerInformation
+     * @return \CyberSource\Model\FollowOnTransactionBuyerInformation
      */
     public function getBuyerInformation()
     {
@@ -279,7 +279,7 @@ class GetSubscriptionResponse1PaymentInstrument implements ArrayAccess
 
     /**
      * Sets buyerInformation
-     * @param \CyberSource\Model\GetSubscriptionResponse1PaymentInstrumentBuyerInformation $buyerInformation
+     * @param \CyberSource\Model\FollowOnTransactionBuyerInformation $buyerInformation
      * @return $this
      */
     public function setBuyerInformation($buyerInformation)

@@ -77,13 +77,6 @@ class InlineResponse5022Test extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "id"
-     */
-    public function testPropertyId()
-    {
-    }
-
-    /**
      * Test attribute "submitTimeUtc"
      */
     public function testPropertySubmitTimeUtc()
@@ -98,16 +91,16 @@ class InlineResponse5022Test extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "reason"
+     * Test attribute "message"
      */
-    public function testPropertyReason()
+    public function testPropertyMessage()
     {
     }
 
     /**
-     * Test attribute "message"
+     * Test attribute "reason"
      */
-    public function testPropertyMessage()
+    public function testPropertyReason()
     {
     }
 }

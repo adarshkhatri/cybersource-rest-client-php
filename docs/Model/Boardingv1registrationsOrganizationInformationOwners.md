@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 **ownershipPercentage** | **float** | Determines the percentage of ownership this owner has. For the primary owner the percentage can be from 0-100; for other owners the percentage can be from 25-100 and the sum of ownership accross owners cannot exceed 100 | 
 **phoneNumber** | **string** |  | 
 **email** | **string** |  | 
-**address** | [**\CyberSource\Model\Boardingv1registrationsOrganizationInformationBusinessInformationAddress**](Boardingv1registrationsOrganizationInformationBusinessInformationAddress.md) |  | 
+**address** | [**\CyberSource\Model\BoardingBusinessInformationAddress**](BoardingBusinessInformationAddress.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

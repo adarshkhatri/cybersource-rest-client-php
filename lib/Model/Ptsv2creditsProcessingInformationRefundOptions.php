@@ -53,7 +53,8 @@ class Ptsv2creditsProcessingInformationRefundOptions implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'reason' => 'string'
+        'reason' => 'string',
+        'reconciliationIdAlternate' => 'string'
     ];
 
     /**
@@ -61,7 +62,8 @@ class Ptsv2creditsProcessingInformationRefundOptions implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'reason' => null
+        'reason' => null,
+        'reconciliationIdAlternate' => null
     ];
 
     public static function swaggerTypes()
@@ -79,7 +81,8 @@ class Ptsv2creditsProcessingInformationRefundOptions implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'reason' => 'reason'
+        'reason' => 'reason',
+        'reconciliationIdAlternate' => 'reconciliationIdAlternate'
     ];
 
 
@@ -88,7 +91,8 @@ class Ptsv2creditsProcessingInformationRefundOptions implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'reason' => 'setReason'
+        'reason' => 'setReason',
+        'reconciliationIdAlternate' => 'setReconciliationIdAlternate'
     ];
 
 
@@ -97,7 +101,8 @@ class Ptsv2creditsProcessingInformationRefundOptions implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'reason' => 'getReason'
+        'reason' => 'getReason',
+        'reconciliationIdAlternate' => 'getReconciliationIdAlternate'
     ];
 
     public static function attributeMap()
@@ -132,6 +137,7 @@ class Ptsv2creditsProcessingInformationRefundOptions implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['reason'] = isset($data['reason']) ? $data['reason'] : null;
+        $this->container['reconciliationIdAlternate'] = isset($data['reconciliationIdAlternate']) ? $data['reconciliationIdAlternate'] : null;
     }
 
     /**
@@ -176,6 +182,27 @@ class Ptsv2creditsProcessingInformationRefundOptions implements ArrayAccess
     public function setReason($reason)
     {
         $this->container['reason'] = $reason;
+
+        return $this;
+    }
+
+    /**
+     * Gets reconciliationIdAlternate
+     * @return string
+     */
+    public function getReconciliationIdAlternate()
+    {
+        return $this->container['reconciliationIdAlternate'];
+    }
+
+    /**
+     * Sets reconciliationIdAlternate
+     * @param string $reconciliationIdAlternate Alternative reference number that can be up to 12 characters in length. If this field is used, it overrides any data added to the ccCaptureService_reconciliationID field. You can use this value to reconcile Cybersource reports with processor reports.
+     * @return $this
+     */
+    public function setReconciliationIdAlternate($reconciliationIdAlternate)
+    {
+        $this->container['reconciliationIdAlternate'] = $reconciliationIdAlternate;
 
         return $this;
     }

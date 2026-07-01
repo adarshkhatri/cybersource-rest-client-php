@@ -91,6 +91,13 @@ class InlineResponse5021Test extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "reason"
+     */
+    public function testPropertyReason()
+    {
+    }
+
+    /**
      * Test attribute "message"
      */
     public function testPropertyMessage()
@@ -98,9 +105,9 @@ class InlineResponse5021Test extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "reason"
+     * Test attribute "details"
      */
-    public function testPropertyReason()
+    public function testPropertyDetails()
     {
     }
 }

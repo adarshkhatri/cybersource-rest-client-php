@@ -88,7 +88,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformation implements ArrayAccess
         'completeUrl' => 'string',
         'signature' => 'string',
         'publicKey' => 'string',
-        'sellerProtection' => '\CyberSource\Model\PtsV2PaymentsPost201ResponseProcessorInformationSellerProtection',
+        'sellerProtection' => '\CyberSource\Model\ProcessorInformationSellerProtection',
         'transactionExpiryDate' => 'string',
         'customUrl' => 'string',
         'schemeAssignedId' => 'string',
@@ -1178,7 +1178,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformation implements ArrayAccess
 
     /**
      * Gets sellerProtection
-     * @return \CyberSource\Model\PtsV2PaymentsPost201ResponseProcessorInformationSellerProtection
+     * @return \CyberSource\Model\ProcessorInformationSellerProtection
      */
     public function getSellerProtection()
     {
@@ -1187,7 +1187,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformation implements ArrayAccess
 
     /**
      * Sets sellerProtection
-     * @param \CyberSource\Model\PtsV2PaymentsPost201ResponseProcessorInformationSellerProtection $sellerProtection
+     * @param \CyberSource\Model\ProcessorInformationSellerProtection $sellerProtection
      * @return $this
      */
     public function setSellerProtection($sellerProtection)

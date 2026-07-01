@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**acquirerCode** | [**\CyberSource\Model\CardProcessingConfigCommonAcquirerAgreementAcquirerCode**](CardProcessingConfigCommonAcquirerAgreementAcquirerCode.md) |  | [optional] 
+**acquirerCode** | [**\CyberSource\Model\BoardingAcquirerDetails**](BoardingAcquirerDetails.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

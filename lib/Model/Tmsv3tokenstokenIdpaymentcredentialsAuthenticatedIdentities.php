@@ -56,7 +56,8 @@ class Tmsv3tokenstokenIdpaymentcredentialsAuthenticatedIdentities implements Arr
         'id' => 'string',
         'provider' => 'string',
         'data' => 'string',
-        'relyingPartyId' => 'string'
+        'relyingPartyId' => 'string',
+        'userAuthenticationMethod' => 'string'
     ];
 
     /**
@@ -67,7 +68,8 @@ class Tmsv3tokenstokenIdpaymentcredentialsAuthenticatedIdentities implements Arr
         'id' => null,
         'provider' => null,
         'data' => null,
-        'relyingPartyId' => null
+        'relyingPartyId' => null,
+        'userAuthenticationMethod' => null
     ];
 
     public static function swaggerTypes()
@@ -88,7 +90,8 @@ class Tmsv3tokenstokenIdpaymentcredentialsAuthenticatedIdentities implements Arr
         'id' => 'id',
         'provider' => 'provider',
         'data' => 'data',
-        'relyingPartyId' => 'relyingPartyId'
+        'relyingPartyId' => 'relyingPartyId',
+        'userAuthenticationMethod' => 'userAuthenticationMethod'
     ];
 
 
@@ -100,7 +103,8 @@ class Tmsv3tokenstokenIdpaymentcredentialsAuthenticatedIdentities implements Arr
         'id' => 'setId',
         'provider' => 'setProvider',
         'data' => 'setData',
-        'relyingPartyId' => 'setRelyingPartyId'
+        'relyingPartyId' => 'setRelyingPartyId',
+        'userAuthenticationMethod' => 'setUserAuthenticationMethod'
     ];
 
 
@@ -112,7 +116,8 @@ class Tmsv3tokenstokenIdpaymentcredentialsAuthenticatedIdentities implements Arr
         'id' => 'getId',
         'provider' => 'getProvider',
         'data' => 'getData',
-        'relyingPartyId' => 'getRelyingPartyId'
+        'relyingPartyId' => 'getRelyingPartyId',
+        'userAuthenticationMethod' => 'getUserAuthenticationMethod'
     ];
 
     public static function attributeMap()
@@ -150,6 +155,7 @@ class Tmsv3tokenstokenIdpaymentcredentialsAuthenticatedIdentities implements Arr
         $this->container['provider'] = isset($data['provider']) ? $data['provider'] : null;
         $this->container['data'] = isset($data['data']) ? $data['data'] : null;
         $this->container['relyingPartyId'] = isset($data['relyingPartyId']) ? $data['relyingPartyId'] : null;
+        $this->container['userAuthenticationMethod'] = isset($data['userAuthenticationMethod']) ? $data['userAuthenticationMethod'] : null;
     }
 
     /**
@@ -209,7 +215,7 @@ class Tmsv3tokenstokenIdpaymentcredentialsAuthenticatedIdentities implements Arr
 
     /**
      * Sets provider
-     * @param string $provider The provider of the authenticated identity.  Possible Values:   - VISA_PAYMENT_PASSKEY
+     * @param string $provider The provider of the authenticated identity.  Possible Values:   - VISA_PAYMENT_PASSKEY   - CLIENT_DEVICE_CERT_JWS
      * @return $this
      */
     public function setProvider($provider)
@@ -230,7 +236,7 @@ class Tmsv3tokenstokenIdpaymentcredentialsAuthenticatedIdentities implements Arr
 
     /**
      * Sets data
-     * @param string $data The data from the authenticated identity, for FIDO this could be the Attestation. Base64URL encoded string (RFC4648).  The encoding is the same as Base64, but uses '-' characters instead of '+' and '_' characters instead of '/'.
+     * @param string $data The data from the authenticated identity. For Passkey this could be the FIDO Attestation. For Classic Cloud Token Framework (CTF) this could be a JWS containing device authentication information signed by a devices private key. Base64URL encoded string (RFC4648). The encoding is the same as Base64, but uses '-' characters instead of '+' and '_' characters instead of '/'.
      * @return $this
      */
     public function setData($data)
@@ -251,12 +257,33 @@ class Tmsv3tokenstokenIdpaymentcredentialsAuthenticatedIdentities implements Arr
 
     /**
      * Sets relyingPartyId
-     * @param string $relyingPartyId The id of the Relying Party.  Base64URL encoded string (RFC4648).   The encoding is the same as Base64, but uses '-' characters instead of '+' and '_' characters instead of '/'.
+     * @param string $relyingPartyId The id of the Relying Party.  Base64URL encoded string (RFC4648).  The encoding is the same as Base64, but uses '-' characters instead of '+' and '_' characters instead of '/'.
      * @return $this
      */
     public function setRelyingPartyId($relyingPartyId)
     {
         $this->container['relyingPartyId'] = $relyingPartyId;
+
+        return $this;
+    }
+
+    /**
+     * Gets userAuthenticationMethod
+     * @return string
+     */
+    public function getUserAuthenticationMethod()
+    {
+        return $this->container['userAuthenticationMethod'];
+    }
+
+    /**
+     * Sets userAuthenticationMethod
+     * @param string $userAuthenticationMethod The method used to authenticate the user.  Possible Values:   - USERNAME_PASSWORD   - PASSCODE_PASSWORD   - PASSCODE   - PASSWORD   - PATTERN   - BIOMETRIC_FINGERPRINT   - BIOMETRIC_FACIAL   - BIOMETRIC_IRIS   - BIOMETRIC_VOICE   - BIOMETRIC_BEHAVIORAL   - DEVICE_UNLOCKED_METHOD_UNKNOWN   - OTP_SMS   - OTP_EMAIL   - OTP_SMS_KNOWLEDGE   - KNOWLEDGE_BASED_AUTHENTICATION   - USER_UNVERIFIED   - BIOMETRIC
+     * @return $this
+     */
+    public function setUserAuthenticationMethod($userAuthenticationMethod)
+    {
+        $this->container['userAuthenticationMethod'] = $userAuthenticationMethod;
 
         return $this;
     }

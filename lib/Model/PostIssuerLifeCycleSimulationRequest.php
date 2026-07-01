@@ -56,7 +56,7 @@ class PostIssuerLifeCycleSimulationRequest implements ArrayAccess
     protected static $swaggerTypes = [
         'state' => 'string',
         'card' => '\CyberSource\Model\Tmsv2tokenizedcardstokenizedCardIdissuerlifecycleeventsimulationsCard',
-        'metadata' => '\CyberSource\Model\Tmsv2tokenizedcardstokenizedCardIdissuerlifecycleeventsimulationsMetadata'
+        'metadata' => '\CyberSource\Model\TmsIssuerLifeCycleEventSimulationMetadata'
     ];
 
     /**
@@ -216,7 +216,7 @@ class PostIssuerLifeCycleSimulationRequest implements ArrayAccess
 
     /**
      * Gets metadata
-     * @return \CyberSource\Model\Tmsv2tokenizedcardstokenizedCardIdissuerlifecycleeventsimulationsMetadata
+     * @return \CyberSource\Model\TmsIssuerLifeCycleEventSimulationMetadata
      */
     public function getMetadata()
     {
@@ -225,7 +225,7 @@ class PostIssuerLifeCycleSimulationRequest implements ArrayAccess
 
     /**
      * Sets metadata
-     * @param \CyberSource\Model\Tmsv2tokenizedcardstokenizedCardIdissuerlifecycleeventsimulationsMetadata $metadata
+     * @param \CyberSource\Model\TmsIssuerLifeCycleEventSimulationMetadata $metadata
      * @return $this
      */
     public function setMetadata($metadata)

@@ -74,7 +74,7 @@ class UnderwritingConfigurationOrganizationInformationBusinessInformation implem
         'address' => '\CyberSource\Model\UnderwritingConfigurationOrganizationInformationBusinessInformationAddress',
         'tradingAddress' => '\CyberSource\Model\UnderwritingConfigurationOrganizationInformationBusinessInformationTradingAddress',
         'businessContact' => '\CyberSource\Model\UnderwritingConfigurationOrganizationInformationBusinessInformationBusinessContact',
-        'businessDetails' => '\CyberSource\Model\UnderwritingConfigurationOrganizationInformationBusinessInformationBusinessDetails',
+        'businessDetails' => '\CyberSource\Model\UnderwritingConfigurationBusinessDetails',
         'ownerInformation' => '\CyberSource\Model\UnderwritingConfigurationOrganizationInformationBusinessInformationOwnerInformation[]',
         'directorInformation' => '\CyberSource\Model\UnderwritingConfigurationOrganizationInformationBusinessInformationDirectorInformation[]'
     ];
@@ -806,7 +806,7 @@ class UnderwritingConfigurationOrganizationInformationBusinessInformation implem
 
     /**
      * Gets businessDetails
-     * @return \CyberSource\Model\UnderwritingConfigurationOrganizationInformationBusinessInformationBusinessDetails
+     * @return \CyberSource\Model\UnderwritingConfigurationBusinessDetails
      */
     public function getBusinessDetails()
     {
@@ -815,7 +815,7 @@ class UnderwritingConfigurationOrganizationInformationBusinessInformation implem
 
     /**
      * Sets businessDetails
-     * @param \CyberSource\Model\UnderwritingConfigurationOrganizationInformationBusinessInformationBusinessDetails $businessDetails
+     * @param \CyberSource\Model\UnderwritingConfigurationBusinessDetails $businessDetails
      * @return $this
      */
     public function setBusinessDetails($businessDetails)

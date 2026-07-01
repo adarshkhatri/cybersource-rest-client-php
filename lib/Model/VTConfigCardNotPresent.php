@@ -53,7 +53,7 @@ class VTConfigCardNotPresent implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'globalPaymentInformation' => '\CyberSource\Model\VTConfigCardNotPresentGlobalPaymentInformation',
+        'globalPaymentInformation' => '\CyberSource\Model\VirtualTerminalGlobalPaymentSettings',
         'receiptInformation' => '\CyberSource\Model\VTConfigCardNotPresentReceiptInformation'
     ];
 
@@ -167,7 +167,7 @@ class VTConfigCardNotPresent implements ArrayAccess
 
     /**
      * Gets globalPaymentInformation
-     * @return \CyberSource\Model\VTConfigCardNotPresentGlobalPaymentInformation
+     * @return \CyberSource\Model\VirtualTerminalGlobalPaymentSettings
      */
     public function getGlobalPaymentInformation()
     {
@@ -176,7 +176,7 @@ class VTConfigCardNotPresent implements ArrayAccess
 
     /**
      * Sets globalPaymentInformation
-     * @param \CyberSource\Model\VTConfigCardNotPresentGlobalPaymentInformation $globalPaymentInformation
+     * @param \CyberSource\Model\VirtualTerminalGlobalPaymentSettings $globalPaymentInformation
      * @return $this
      */
     public function setGlobalPaymentInformation($globalPaymentInformation)

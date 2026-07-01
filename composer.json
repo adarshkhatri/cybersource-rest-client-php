@@ -1,6 +1,6 @@
 {
     "name": "cybersource/rest-client-php",
-    "version": "0.0.73",
+    "version": "0.0.74",
     "description": "Client SDK for CyberSource REST APIs",
     "keywords": [
         "cybersource", "payments", "ecommerce", "merchant", "merchants", "authorize", "visa", "payment", "payment-gateway", "payment-integration", "payment-module", "payment-processing", "payment-service", "payment-methods"
@@ -18,9 +18,13 @@
         "ext-curl": "*",
         "ext-json": "*",
         "ext-mbstring": "*",
+        "ext-openssl": "*",
+        "ext-hash": "*",
+        "ext-gmp": "*",
         "firebase/php-jwt": "^7.0.0",
         "monolog/monolog": ">=1.25.0",
-        "web-token/jwt-framework": "^2.2.11|^3.3.5",
+        "kelvinmo/simplejwt": "^1.1.1",
+        "phpseclib/phpseclib": "^3.0.54",
         "singpolyma/openpgp-php": "0.7.0",
         "ramsey/uuid": "^4.0"
     },

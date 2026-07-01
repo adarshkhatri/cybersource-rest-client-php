@@ -54,7 +54,7 @@ class CardProcessingConfigCommonAcquirerAgreement implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'acquirerCode' => '\CyberSource\Model\CardProcessingConfigCommonAcquirerAgreementAcquirerCode'
+        'acquirerCode' => '\CyberSource\Model\BoardingAcquirerDetails'
     ];
 
     /**
@@ -162,7 +162,7 @@ class CardProcessingConfigCommonAcquirerAgreement implements ArrayAccess
 
     /**
      * Gets acquirerCode
-     * @return \CyberSource\Model\CardProcessingConfigCommonAcquirerAgreementAcquirerCode
+     * @return \CyberSource\Model\BoardingAcquirerDetails
      */
     public function getAcquirerCode()
     {
@@ -171,7 +171,7 @@ class CardProcessingConfigCommonAcquirerAgreement implements ArrayAccess
 
     /**
      * Sets acquirerCode
-     * @param \CyberSource\Model\CardProcessingConfigCommonAcquirerAgreementAcquirerCode $acquirerCode
+     * @param \CyberSource\Model\BoardingAcquirerDetails $acquirerCode
      * @return $this
      */
     public function setAcquirerCode($acquirerCode)
