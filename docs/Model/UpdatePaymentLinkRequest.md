@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **processingInformation** | [**\CyberSource\Model\Iplv2paymentlinksidProcessingInformation**](Iplv2paymentlinksidProcessingInformation.md) |  | [optional] 
 **purchaseInformation** | [**\CyberSource\Model\Iplv2paymentlinksidPurchaseInformation**](Iplv2paymentlinksidPurchaseInformation.md) |  | [optional] 
 **orderInformation** | [**\CyberSource\Model\Iplv2paymentlinksidOrderInformation**](Iplv2paymentlinksidOrderInformation.md) |  | [optional] 
+**merchantDefinedFieldValues** | [**\CyberSource\Model\Invoicingv2invoicesMerchantDefinedFieldValues[]**](Invoicingv2invoicesMerchantDefinedFieldValues.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

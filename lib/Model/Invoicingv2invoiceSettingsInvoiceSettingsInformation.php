@@ -67,6 +67,7 @@ class Invoicingv2invoiceSettingsInvoiceSettingsInformation implements ArrayAcces
         'phoneNumber' => 'bool',
         'email' => 'bool',
         'enableMerchantEmailNotifications' => 'bool',
+        'merchantEmail' => 'string',
         'customLabels' => '\CyberSource\Model\InvoicingV2InvoicesPost201ResponseInvoiceInformationCustomLabels[]',
         'customRedirectUrls' => '\CyberSource\Model\InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformationCustomRedirectUrls'
     ];
@@ -90,6 +91,7 @@ class Invoicingv2invoiceSettingsInvoiceSettingsInformation implements ArrayAcces
         'phoneNumber' => null,
         'email' => null,
         'enableMerchantEmailNotifications' => null,
+        'merchantEmail' => null,
         'customLabels' => null,
         'customRedirectUrls' => null
     ];
@@ -123,6 +125,7 @@ class Invoicingv2invoiceSettingsInvoiceSettingsInformation implements ArrayAcces
         'phoneNumber' => 'phoneNumber',
         'email' => 'email',
         'enableMerchantEmailNotifications' => 'enableMerchantEmailNotifications',
+        'merchantEmail' => 'merchantEmail',
         'customLabels' => 'customLabels',
         'customRedirectUrls' => 'customRedirectUrls'
     ];
@@ -147,6 +150,7 @@ class Invoicingv2invoiceSettingsInvoiceSettingsInformation implements ArrayAcces
         'phoneNumber' => 'setPhoneNumber',
         'email' => 'setEmail',
         'enableMerchantEmailNotifications' => 'setEnableMerchantEmailNotifications',
+        'merchantEmail' => 'setMerchantEmail',
         'customLabels' => 'setCustomLabels',
         'customRedirectUrls' => 'setCustomRedirectUrls'
     ];
@@ -171,6 +175,7 @@ class Invoicingv2invoiceSettingsInvoiceSettingsInformation implements ArrayAcces
         'phoneNumber' => 'getPhoneNumber',
         'email' => 'getEmail',
         'enableMerchantEmailNotifications' => 'getEnableMerchantEmailNotifications',
+        'merchantEmail' => 'getMerchantEmail',
         'customLabels' => 'getCustomLabels',
         'customRedirectUrls' => 'getCustomRedirectUrls'
     ];
@@ -220,6 +225,7 @@ class Invoicingv2invoiceSettingsInvoiceSettingsInformation implements ArrayAcces
         $this->container['phoneNumber'] = isset($data['phoneNumber']) ? $data['phoneNumber'] : false;
         $this->container['email'] = isset($data['email']) ? $data['email'] : false;
         $this->container['enableMerchantEmailNotifications'] = isset($data['enableMerchantEmailNotifications']) ? $data['enableMerchantEmailNotifications'] : false;
+        $this->container['merchantEmail'] = isset($data['merchantEmail']) ? $data['merchantEmail'] : null;
         $this->container['customLabels'] = isset($data['customLabels']) ? $data['customLabels'] : null;
         $this->container['customRedirectUrls'] = isset($data['customRedirectUrls']) ? $data['customRedirectUrls'] : null;
     }
@@ -539,6 +545,27 @@ class Invoicingv2invoiceSettingsInvoiceSettingsInformation implements ArrayAcces
     public function setEnableMerchantEmailNotifications($enableMerchantEmailNotifications)
     {
         $this->container['enableMerchantEmailNotifications'] = $enableMerchantEmailNotifications;
+
+        return $this;
+    }
+
+    /**
+     * Gets merchantEmail
+     * @return string
+     */
+    public function getMerchantEmail()
+    {
+        return $this->container['merchantEmail'];
+    }
+
+    /**
+     * Sets merchantEmail
+     * @param string $merchantEmail The merchant's email address for receiving payment notifications.
+     * @return $this
+     */
+    public function setMerchantEmail($merchantEmail)
+    {
+        $this->container['merchantEmail'] = $merchantEmail;
 
         return $this;
     }

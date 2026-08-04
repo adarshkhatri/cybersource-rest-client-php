@@ -57,6 +57,8 @@ class Ptsv1pushfundstransferProcessingInformation implements ArrayAccess
         'payoutsOptions' => '\CyberSource\Model\Ptsv1pushfundstransferProcessingInformationPayoutsOptions',
         'feeProgramId' => 'string',
         'networkPartnerId' => 'string',
+        'transactionTypeIndicator' => 'string',
+        'interchangeRateDesignator' => 'string',
         'processingCode' => 'string',
         'sharingGroupCode' => 'string',
         'purposeOfPayment' => 'string',
@@ -73,6 +75,8 @@ class Ptsv1pushfundstransferProcessingInformation implements ArrayAccess
         'payoutsOptions' => null,
         'feeProgramId' => null,
         'networkPartnerId' => null,
+        'transactionTypeIndicator' => null,
+        'interchangeRateDesignator' => null,
         'processingCode' => null,
         'sharingGroupCode' => null,
         'purposeOfPayment' => null,
@@ -99,6 +103,8 @@ class Ptsv1pushfundstransferProcessingInformation implements ArrayAccess
         'payoutsOptions' => 'payoutsOptions',
         'feeProgramId' => 'feeProgramId',
         'networkPartnerId' => 'networkPartnerId',
+        'transactionTypeIndicator' => 'transactionTypeIndicator',
+        'interchangeRateDesignator' => 'interchangeRateDesignator',
         'processingCode' => 'processingCode',
         'sharingGroupCode' => 'sharingGroupCode',
         'purposeOfPayment' => 'purposeOfPayment',
@@ -116,6 +122,8 @@ class Ptsv1pushfundstransferProcessingInformation implements ArrayAccess
         'payoutsOptions' => 'setPayoutsOptions',
         'feeProgramId' => 'setFeeProgramId',
         'networkPartnerId' => 'setNetworkPartnerId',
+        'transactionTypeIndicator' => 'setTransactionTypeIndicator',
+        'interchangeRateDesignator' => 'setInterchangeRateDesignator',
         'processingCode' => 'setProcessingCode',
         'sharingGroupCode' => 'setSharingGroupCode',
         'purposeOfPayment' => 'setPurposeOfPayment',
@@ -133,6 +141,8 @@ class Ptsv1pushfundstransferProcessingInformation implements ArrayAccess
         'payoutsOptions' => 'getPayoutsOptions',
         'feeProgramId' => 'getFeeProgramId',
         'networkPartnerId' => 'getNetworkPartnerId',
+        'transactionTypeIndicator' => 'getTransactionTypeIndicator',
+        'interchangeRateDesignator' => 'getInterchangeRateDesignator',
         'processingCode' => 'getProcessingCode',
         'sharingGroupCode' => 'getSharingGroupCode',
         'purposeOfPayment' => 'getPurposeOfPayment',
@@ -175,6 +185,8 @@ class Ptsv1pushfundstransferProcessingInformation implements ArrayAccess
         $this->container['payoutsOptions'] = isset($data['payoutsOptions']) ? $data['payoutsOptions'] : null;
         $this->container['feeProgramId'] = isset($data['feeProgramId']) ? $data['feeProgramId'] : null;
         $this->container['networkPartnerId'] = isset($data['networkPartnerId']) ? $data['networkPartnerId'] : null;
+        $this->container['transactionTypeIndicator'] = isset($data['transactionTypeIndicator']) ? $data['transactionTypeIndicator'] : null;
+        $this->container['interchangeRateDesignator'] = isset($data['interchangeRateDesignator']) ? $data['interchangeRateDesignator'] : null;
         $this->container['processingCode'] = isset($data['processingCode']) ? $data['processingCode'] : null;
         $this->container['sharingGroupCode'] = isset($data['sharingGroupCode']) ? $data['sharingGroupCode'] : null;
         $this->container['purposeOfPayment'] = isset($data['purposeOfPayment']) ? $data['purposeOfPayment'] : null;
@@ -218,7 +230,7 @@ class Ptsv1pushfundstransferProcessingInformation implements ArrayAccess
 
     /**
      * Sets businessApplicationId
-     * @param string $businessApplicationId Money Transfer (MT) - `AA`: Account to Account - `BI`: Bank-Initiated Money Transfer - `CD`: Cash Deposit - `FT`: Funds Transfer - `TU`: Prepaid Card Loan - `WT`: Wallet Transfer-Staged Digital Wallet (SDW) Transfer - `PP`: P2P Money Transfer  Funds Disbursement (FD) - `BB`: Business-to-business Supplier Payments - `BP`: Non-Card Bill Pay  - `CP`: Credit Card Bill Pay - `FD`: General Funds Disbursements - `GD`: Government Disbursements and Government Initiated Tax Refunds - `GP`: Gambling/Gaming Payouts (other than online gaming) - `LO`: Loyalty Payments - `MD`: Merchant Settlement - `MI`: Faster Refunds - `OG`: Online Gambling Payouts - `PD`: Payroll and Pension Disbursements - `RP`: Request-to-Pay Service
+     * @param string $businessApplicationId Payouts transaction type.  Money Transfer (MT) - `AA`: Account to Account - `BI`: Bank-Initiated Money Transfer - `CD`: Cash Deposit - `FT`: Funds Transfer - `LA`: Liquid Assets - `PP`: P2P Money Transfer - `WT`: Wallet Transfer-Staged Digital Wallet (SDW) Transfer  Funds Disbursement (FD) - `BB`: Business-to-business Supplier Payments - `BP`: Non-Card Bill Pay - `CP`: Credit Card Bill Pay - `FD`: General Funds Disbursements - `GD`: Government Disbursements and Government Initiated Tax Refunds - `GP`: Gambling/Gaming Payouts (other than online gaming) - `LO`: Loyalty Payments - `MD`: Merchant Settlement - `MI`: Faster Refunds - `OG`: Online Gambling Payouts - `PD`: Payroll and Pension Disbursements - `RP`: Request-to-Pay Service - `TU`: Prepaid Card Load  Supported BAIs vary by payment gateway and configuration. Clients are responsible for confirming gateway specific BAI availability. Conditional - If not provided in payload, the value is picked from Merchant Configuration.
      * @return $this
      */
     public function setBusinessApplicationId($businessApplicationId)
@@ -281,12 +293,54 @@ class Ptsv1pushfundstransferProcessingInformation implements ArrayAccess
 
     /**
      * Sets networkPartnerId
-     * @param string $networkPartnerId Merchant payment gateway ID that is assigned by Mastercard and is provided by the acquirer when a registered merchant payment gateway service provider is involved in the transaction.  This field is supported for Visa Platform Connect, Chase Paymentech Salem.
+     * @param string $networkPartnerId Merchant payment gateway ID that is assigned by Mastercard and is provided by the acquirer when a registered merchant payment gateway service provider is involved in the transaction.
      * @return $this
      */
     public function setNetworkPartnerId($networkPartnerId)
     {
         $this->container['networkPartnerId'] = $networkPartnerId;
+
+        return $this;
+    }
+
+    /**
+     * Gets transactionTypeIndicator
+     * @return string
+     */
+    public function getTransactionTypeIndicator()
+    {
+        return $this->container['transactionTypeIndicator'];
+    }
+
+    /**
+     * Sets transactionTypeIndicator
+     * @param string $transactionTypeIndicator Transaction Type Identifier for Mastercard Send. 3-character code that identifies the transaction type on the Mastercard network. When provided, this value takes priority over businessApplicationId for determining the payment type.
+     * @return $this
+     */
+    public function setTransactionTypeIndicator($transactionTypeIndicator)
+    {
+        $this->container['transactionTypeIndicator'] = $transactionTypeIndicator;
+
+        return $this;
+    }
+
+    /**
+     * Gets interchangeRateDesignator
+     * @return string
+     */
+    public function getInterchangeRateDesignator()
+    {
+        return $this->container['interchangeRateDesignator'];
+    }
+
+    /**
+     * Sets interchangeRateDesignator
+     * @param string $interchangeRateDesignator The IRD used for clearing the transaction on the Mastercard network. Details - Alphanumeric, length 2 characters.  This field is supported for Visa Platform Connect, Chase Paymentech Salem.
+     * @return $this
+     */
+    public function setInterchangeRateDesignator($interchangeRateDesignator)
+    {
+        $this->container['interchangeRateDesignator'] = $interchangeRateDesignator;
 
         return $this;
     }

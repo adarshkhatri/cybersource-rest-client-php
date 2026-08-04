@@ -56,7 +56,8 @@ class CreatePaymentLinkRequest implements ArrayAccess
         'clientReferenceInformation' => '\CyberSource\Model\Invoicingv2invoicesClientReferenceInformation',
         'processingInformation' => '\CyberSource\Model\Iplv2paymentlinksProcessingInformation',
         'purchaseInformation' => '\CyberSource\Model\Iplv2paymentlinksPurchaseInformation',
-        'orderInformation' => '\CyberSource\Model\Iplv2paymentlinksOrderInformation'
+        'orderInformation' => '\CyberSource\Model\Iplv2paymentlinksOrderInformation',
+        'merchantDefinedFieldValues' => '\CyberSource\Model\Invoicingv2invoicesMerchantDefinedFieldValues[]'
     ];
 
     /**
@@ -67,7 +68,8 @@ class CreatePaymentLinkRequest implements ArrayAccess
         'clientReferenceInformation' => null,
         'processingInformation' => null,
         'purchaseInformation' => null,
-        'orderInformation' => null
+        'orderInformation' => null,
+        'merchantDefinedFieldValues' => null
     ];
 
     public static function swaggerTypes()
@@ -88,7 +90,8 @@ class CreatePaymentLinkRequest implements ArrayAccess
         'clientReferenceInformation' => 'clientReferenceInformation',
         'processingInformation' => 'processingInformation',
         'purchaseInformation' => 'purchaseInformation',
-        'orderInformation' => 'orderInformation'
+        'orderInformation' => 'orderInformation',
+        'merchantDefinedFieldValues' => 'merchantDefinedFieldValues'
     ];
 
 
@@ -100,7 +103,8 @@ class CreatePaymentLinkRequest implements ArrayAccess
         'clientReferenceInformation' => 'setClientReferenceInformation',
         'processingInformation' => 'setProcessingInformation',
         'purchaseInformation' => 'setPurchaseInformation',
-        'orderInformation' => 'setOrderInformation'
+        'orderInformation' => 'setOrderInformation',
+        'merchantDefinedFieldValues' => 'setMerchantDefinedFieldValues'
     ];
 
 
@@ -112,7 +116,8 @@ class CreatePaymentLinkRequest implements ArrayAccess
         'clientReferenceInformation' => 'getClientReferenceInformation',
         'processingInformation' => 'getProcessingInformation',
         'purchaseInformation' => 'getPurchaseInformation',
-        'orderInformation' => 'getOrderInformation'
+        'orderInformation' => 'getOrderInformation',
+        'merchantDefinedFieldValues' => 'getMerchantDefinedFieldValues'
     ];
 
     public static function attributeMap()
@@ -150,6 +155,7 @@ class CreatePaymentLinkRequest implements ArrayAccess
         $this->container['processingInformation'] = isset($data['processingInformation']) ? $data['processingInformation'] : null;
         $this->container['purchaseInformation'] = isset($data['purchaseInformation']) ? $data['purchaseInformation'] : null;
         $this->container['orderInformation'] = isset($data['orderInformation']) ? $data['orderInformation'] : null;
+        $this->container['merchantDefinedFieldValues'] = isset($data['merchantDefinedFieldValues']) ? $data['merchantDefinedFieldValues'] : null;
     }
 
     /**
@@ -275,6 +281,27 @@ class CreatePaymentLinkRequest implements ArrayAccess
     public function setOrderInformation($orderInformation)
     {
         $this->container['orderInformation'] = $orderInformation;
+
+        return $this;
+    }
+
+    /**
+     * Gets merchantDefinedFieldValues
+     * @return \CyberSource\Model\Invoicingv2invoicesMerchantDefinedFieldValues[]
+     */
+    public function getMerchantDefinedFieldValues()
+    {
+        return $this->container['merchantDefinedFieldValues'];
+    }
+
+    /**
+     * Sets merchantDefinedFieldValues
+     * @param \CyberSource\Model\Invoicingv2invoicesMerchantDefinedFieldValues[] $merchantDefinedFieldValues
+     * @return $this
+     */
+    public function setMerchantDefinedFieldValues($merchantDefinedFieldValues)
+    {
+        $this->container['merchantDefinedFieldValues'] = $merchantDefinedFieldValues;
 
         return $this;
     }

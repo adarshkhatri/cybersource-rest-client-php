@@ -38,34 +38,34 @@ namespace CyberSource;
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class InlineResponse4011Test extends \PHPUnit_Framework_TestCase
+class InlineResponse4011Test extends \PHPUnit\Framework\TestCase
 {
 
     /**
      * Setup before running any test case
      */
-    public static function setUpBeforeClass()
+    public static function setUpBeforeClass(): void
     {
     }
 
     /**
      * Setup before running each test case
      */
-    public function setUp()
+    protected function setUp(): void
     {
     }
 
     /**
      * Clean up after running each test case
      */
-    public function tearDown()
+    protected function tearDown(): void
     {
     }
 
     /**
      * Clean up after running all test cases
      */
-    public static function tearDownAfterClass()
+    public static function tearDownAfterClass(): void
     {
     }
 
@@ -77,44 +77,23 @@ class InlineResponse4011Test extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "links"
+     * Test attribute "id"
      */
-    public function testPropertyLinks()
+    public function testPropertyId()
     {
     }
 
     /**
-     * Test attribute "code"
+     * Test attribute "submitTimeStampUtc"
      */
-    public function testPropertyCode()
+    public function testPropertySubmitTimeStampUtc()
     {
     }
 
     /**
-     * Test attribute "correlationId"
+     * Test attribute "reason"
      */
-    public function testPropertyCorrelationId()
-    {
-    }
-
-    /**
-     * Test attribute "detail"
-     */
-    public function testPropertyDetail()
-    {
-    }
-
-    /**
-     * Test attribute "fields"
-     */
-    public function testPropertyFields()
-    {
-    }
-
-    /**
-     * Test attribute "localizationKey"
-     */
-    public function testPropertyLocalizationKey()
+    public function testPropertyReason()
     {
     }
 

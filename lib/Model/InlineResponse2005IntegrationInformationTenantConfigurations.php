@@ -57,7 +57,7 @@ class InlineResponse2005IntegrationInformationTenantConfigurations implements Ar
         'tenantConfigurationId' => 'string',
         'status' => 'string',
         'submitTimeUtc' => '\DateTime',
-        'tenantInformation' => '\CyberSource\Model\Boardingv1registrationsIntegrationInformationTenantInformation'
+        'tenantInformation' => '\CyberSource\Model\TenantInformation'
     ];
 
     /**
@@ -269,7 +269,7 @@ class InlineResponse2005IntegrationInformationTenantConfigurations implements Ar
 
     /**
      * Gets tenantInformation
-     * @return \CyberSource\Model\Boardingv1registrationsIntegrationInformationTenantInformation
+     * @return \CyberSource\Model\TenantInformation
      */
     public function getTenantInformation()
     {
@@ -278,7 +278,7 @@ class InlineResponse2005IntegrationInformationTenantConfigurations implements Ar
 
     /**
      * Sets tenantInformation
-     * @param \CyberSource\Model\Boardingv1registrationsIntegrationInformationTenantInformation $tenantInformation
+     * @param \CyberSource\Model\TenantInformation $tenantInformation
      * @return $this
      */
     public function setTenantInformation($tenantInformation)

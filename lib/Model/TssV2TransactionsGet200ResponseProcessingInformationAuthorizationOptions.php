@@ -57,6 +57,7 @@ class TssV2TransactionsGet200ResponseProcessingInformationAuthorizationOptions i
         'authIndicator' => 'string',
         'extendAuthIndicator' => 'string',
         'cardVerificationIndicator' => 'bool',
+        'aftIndicator' => 'bool',
         'initiator' => '\CyberSource\Model\TssV2TransactionsGet200ResponseProcessingInformationAuthorizationOptionsInitiator'
     ];
 
@@ -69,6 +70,7 @@ class TssV2TransactionsGet200ResponseProcessingInformationAuthorizationOptions i
         'authIndicator' => null,
         'extendAuthIndicator' => null,
         'cardVerificationIndicator' => null,
+        'aftIndicator' => null,
         'initiator' => null
     ];
 
@@ -91,6 +93,7 @@ class TssV2TransactionsGet200ResponseProcessingInformationAuthorizationOptions i
         'authIndicator' => 'authIndicator',
         'extendAuthIndicator' => 'extendAuthIndicator',
         'cardVerificationIndicator' => 'cardVerificationIndicator',
+        'aftIndicator' => 'aftIndicator',
         'initiator' => 'initiator'
     ];
 
@@ -104,6 +107,7 @@ class TssV2TransactionsGet200ResponseProcessingInformationAuthorizationOptions i
         'authIndicator' => 'setAuthIndicator',
         'extendAuthIndicator' => 'setExtendAuthIndicator',
         'cardVerificationIndicator' => 'setCardVerificationIndicator',
+        'aftIndicator' => 'setAftIndicator',
         'initiator' => 'setInitiator'
     ];
 
@@ -117,6 +121,7 @@ class TssV2TransactionsGet200ResponseProcessingInformationAuthorizationOptions i
         'authIndicator' => 'getAuthIndicator',
         'extendAuthIndicator' => 'getExtendAuthIndicator',
         'cardVerificationIndicator' => 'getCardVerificationIndicator',
+        'aftIndicator' => 'getAftIndicator',
         'initiator' => 'getInitiator'
     ];
 
@@ -155,6 +160,7 @@ class TssV2TransactionsGet200ResponseProcessingInformationAuthorizationOptions i
         $this->container['authIndicator'] = isset($data['authIndicator']) ? $data['authIndicator'] : null;
         $this->container['extendAuthIndicator'] = isset($data['extendAuthIndicator']) ? $data['extendAuthIndicator'] : null;
         $this->container['cardVerificationIndicator'] = isset($data['cardVerificationIndicator']) ? $data['cardVerificationIndicator'] : null;
+        $this->container['aftIndicator'] = isset($data['aftIndicator']) ? $data['aftIndicator'] : null;
         $this->container['initiator'] = isset($data['initiator']) ? $data['initiator'] : null;
     }
 
@@ -263,6 +269,27 @@ class TssV2TransactionsGet200ResponseProcessingInformationAuthorizationOptions i
     public function setCardVerificationIndicator($cardVerificationIndicator)
     {
         $this->container['cardVerificationIndicator'] = $cardVerificationIndicator;
+
+        return $this;
+    }
+
+    /**
+     * Gets aftIndicator
+     * @return bool
+     */
+    public function getAftIndicator()
+    {
+        return $this->container['aftIndicator'];
+    }
+
+    /**
+     * Sets aftIndicator
+     * @param bool $aftIndicator Indicates whether the transaction is an Account Funding Transaction (AFT).  This field is mandatory for Account Funding Transactions (AFT).   Possible values:   - `true` (This is an AFT transaction)   - `false` (default value) (This is not an AFT transaction)
+     * @return $this
+     */
+    public function setAftIndicator($aftIndicator)
+    {
+        $this->container['aftIndicator'] = $aftIndicator;
 
         return $this;
     }

@@ -244,6 +244,30 @@ class NetworkTokensApi
                     $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse2002', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
+                case 400:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse400', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 403:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse403', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 404:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse404', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 410:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse410', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 424:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse424', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse500', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
             }
 
             self::$logger->error("ApiException : $e");
@@ -495,7 +519,7 @@ class NetworkTokensApi
         }
 
         //MLE check and mle encryption for req body
-        $inboundMLEStatus = 'false';
+        $inboundMLEStatus = 'optional';
         if (MLEUtility::checkIsMLEForAPI($this->apiClient->merchantConfig, $inboundMLEStatus, "postIssuerLifeCycleSimulation,postIssuerLifeCycleSimulationWithHttpInfo")) {
             try {
                 $httpBody = MLEUtility::encryptRequestPayload($this->apiClient->merchantConfig, $httpBody);
@@ -1067,7 +1091,7 @@ class NetworkTokensApi
      *
      * @param string $tokenizedCardId The Id of a tokenized card. (required)
      * @param string $profileId The Id of a profile containing user specific TMS configuration. (optional)
-     * @param \CyberSource\Model\TmsTokenizedCardDeleteRequest $postTokenizedCardDeleteRequest  (optional)
+     * @param \CyberSource\Model\PostTokenizedCardDeleteRequest $postTokenizedCardDeleteRequest  (optional)
      * @throws \CyberSource\ApiException on non-2xx response
      * @return array of void, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1087,7 +1111,7 @@ class NetworkTokensApi
      *
      * @param string $tokenizedCardId The Id of a tokenized card. (required)
      * @param string $profileId The Id of a profile containing user specific TMS configuration. (optional)
-     * @param \CyberSource\Model\TmsTokenizedCardDeleteRequest $postTokenizedCardDeleteRequest  (optional)
+     * @param \CyberSource\Model\PostTokenizedCardDeleteRequest $postTokenizedCardDeleteRequest  (optional)
      * @throws \CyberSource\ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1131,7 +1155,7 @@ class NetworkTokensApi
         }
         
         $sdkTracker = new \CyberSource\Utilities\Tracking\SdkTracker();
-        $modelClassLocation = explode('\\', '\CyberSource\Model\TmsTokenizedCardDeleteRequest');
+        $modelClassLocation = explode('\\', '\CyberSource\Model\PostTokenizedCardDeleteRequest');
 
         $_tempBody = $sdkTracker->insertDeveloperIdTracker($_tempBody, end($modelClassLocation), $this->apiClient->merchantConfig->getRunEnvironment(), $this->apiClient->merchantConfig->getDefaultDeveloperId());
 

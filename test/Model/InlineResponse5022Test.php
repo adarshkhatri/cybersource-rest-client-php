@@ -38,34 +38,34 @@ namespace CyberSource;
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class InlineResponse5022Test extends \PHPUnit_Framework_TestCase
+class InlineResponse5022Test extends \PHPUnit\Framework\TestCase
 {
 
     /**
      * Setup before running any test case
      */
-    public static function setUpBeforeClass()
+    public static function setUpBeforeClass(): void
     {
     }
 
     /**
      * Setup before running each test case
      */
-    public function setUp()
+    protected function setUp(): void
     {
     }
 
     /**
      * Clean up after running each test case
      */
-    public function tearDown()
+    protected function tearDown(): void
     {
     }
 
     /**
      * Clean up after running all test cases
      */
-    public static function tearDownAfterClass()
+    public static function tearDownAfterClass(): void
     {
     }
 
@@ -77,9 +77,16 @@ class InlineResponse5022Test extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "submitTimeUtc"
+     * Test attribute "id"
      */
-    public function testPropertySubmitTimeUtc()
+    public function testPropertyId()
+    {
+    }
+
+    /**
+     * Test attribute "submitTimeStampUtc"
+     */
+    public function testPropertySubmitTimeStampUtc()
     {
     }
 
@@ -91,16 +98,16 @@ class InlineResponse5022Test extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "message"
+     * Test attribute "reason"
      */
-    public function testPropertyMessage()
+    public function testPropertyReason()
     {
     }
 
     /**
-     * Test attribute "reason"
+     * Test attribute "message"
      */
-    public function testPropertyReason()
+    public function testPropertyMessage()
     {
     }
 }

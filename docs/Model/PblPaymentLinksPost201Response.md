@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **processingInformation** | [**\CyberSource\Model\Iplv2paymentlinksProcessingInformation**](Iplv2paymentlinksProcessingInformation.md) |  | [optional] 
 **purchaseInformation** | [**\CyberSource\Model\PblPaymentLinksPost201ResponsePurchaseInformation**](PblPaymentLinksPost201ResponsePurchaseInformation.md) |  | [optional] 
 **orderInformation** | [**\CyberSource\Model\PblPaymentLinksPost201ResponseOrderInformation**](PblPaymentLinksPost201ResponseOrderInformation.md) |  | [optional] 
+**merchantDefinedFieldValuesWithDefinition** | [**\CyberSource\Model\InvoicingV2InvoicesPost201ResponseMerchantDefinedFieldValuesWithDefinition[]**](InvoicingV2InvoicesPost201ResponseMerchantDefinedFieldValuesWithDefinition.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

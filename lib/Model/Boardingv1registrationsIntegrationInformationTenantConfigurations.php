@@ -54,7 +54,7 @@ class Boardingv1registrationsIntegrationInformationTenantConfigurations implemen
       */
     protected static $swaggerTypes = [
         'solutionId' => 'string',
-        'tenantInformation' => '\CyberSource\Model\Boardingv1registrationsIntegrationInformationTenantInformation'
+        'tenantInformation' => '\CyberSource\Model\TenantInformation'
     ];
 
     /**
@@ -194,7 +194,7 @@ class Boardingv1registrationsIntegrationInformationTenantConfigurations implemen
 
     /**
      * Gets tenantInformation
-     * @return \CyberSource\Model\Boardingv1registrationsIntegrationInformationTenantInformation
+     * @return \CyberSource\Model\TenantInformation
      */
     public function getTenantInformation()
     {
@@ -203,7 +203,7 @@ class Boardingv1registrationsIntegrationInformationTenantConfigurations implemen
 
     /**
      * Sets tenantInformation
-     * @param \CyberSource\Model\Boardingv1registrationsIntegrationInformationTenantInformation $tenantInformation
+     * @param \CyberSource\Model\TenantInformation $tenantInformation
      * @return $this
      */
     public function setTenantInformation($tenantInformation)

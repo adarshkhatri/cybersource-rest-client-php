@@ -38,34 +38,34 @@ namespace CyberSource;
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class Iplv2paymentlinksPurchaseInformationTest extends \PHPUnit_Framework_TestCase
+class Iplv2paymentlinksPurchaseInformationTest extends \PHPUnit\Framework\TestCase
 {
 
     /**
      * Setup before running any test case
      */
-    public static function setUpBeforeClass()
+    public static function setUpBeforeClass(): void
     {
     }
 
     /**
      * Setup before running each test case
      */
-    public function setUp()
+    protected function setUp(): void
     {
     }
 
     /**
      * Clean up after running each test case
      */
-    public function tearDown()
+    protected function tearDown(): void
     {
     }
 
     /**
      * Clean up after running all test cases
      */
-    public static function tearDownAfterClass()
+    public static function tearDownAfterClass(): void
     {
     }
 
@@ -80,6 +80,34 @@ class Iplv2paymentlinksPurchaseInformationTest extends \PHPUnit_Framework_TestCa
      * Test attribute "purchaseNumber"
      */
     public function testPropertyPurchaseNumber()
+    {
+    }
+
+    /**
+     * Test attribute "transactionReferenceNumber"
+     */
+    public function testPropertyTransactionReferenceNumber()
+    {
+    }
+
+    /**
+     * Test attribute "expirationDate"
+     */
+    public function testPropertyExpirationDate()
+    {
+    }
+
+    /**
+     * Test attribute "expirationAmount"
+     */
+    public function testPropertyExpirationAmount()
+    {
+    }
+
+    /**
+     * Test attribute "expirationQuantity"
+     */
+    public function testPropertyExpirationQuantity()
     {
     }
 }

@@ -222,7 +222,7 @@ class SubscriptionsApi
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse4003', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse4005', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 404:
@@ -359,7 +359,7 @@ class SubscriptionsApi
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse4003', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse4005', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 404:
@@ -495,7 +495,7 @@ class SubscriptionsApi
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse4004', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse4006', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 502:
@@ -655,7 +655,7 @@ class SubscriptionsApi
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse4003', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse4005', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 502:
@@ -788,7 +788,7 @@ class SubscriptionsApi
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse4003', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse4005', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 404:
@@ -910,7 +910,7 @@ class SubscriptionsApi
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse4003', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse4005', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 502:
@@ -1064,7 +1064,7 @@ class SubscriptionsApi
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse4006', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse4008', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 404:
@@ -1164,7 +1164,7 @@ class SubscriptionsApi
         }
 
         //MLE check and mle encryption for req body
-        $inboundMLEStatus = 'false';
+        $inboundMLEStatus = 'optional';
         if (MLEUtility::checkIsMLEForAPI($this->apiClient->merchantConfig, $inboundMLEStatus, "subscriptionsIdPaymentsPut,subscriptionsIdPaymentsPutWithHttpInfo")) {
             try {
                 $httpBody = MLEUtility::encryptRequestPayload($this->apiClient->merchantConfig, $httpBody);
@@ -1215,7 +1215,7 @@ class SubscriptionsApi
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse4007', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse4009', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 404:
@@ -1352,7 +1352,7 @@ class SubscriptionsApi
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse4003', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse4005', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 404:
@@ -1452,7 +1452,7 @@ class SubscriptionsApi
         }
 
         //MLE check and mle encryption for req body
-        $inboundMLEStatus = 'false';
+        $inboundMLEStatus = 'optional';
         if (MLEUtility::checkIsMLEForAPI($this->apiClient->merchantConfig, $inboundMLEStatus, "updateSubscription,updateSubscriptionWithHttpInfo")) {
             try {
                 $httpBody = MLEUtility::encryptRequestPayload($this->apiClient->merchantConfig, $httpBody);
@@ -1503,7 +1503,7 @@ class SubscriptionsApi
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse4004', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse4006', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 404:

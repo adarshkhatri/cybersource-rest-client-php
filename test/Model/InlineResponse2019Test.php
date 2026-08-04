@@ -38,34 +38,34 @@ namespace CyberSource;
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class InlineResponse2019Test extends \PHPUnit_Framework_TestCase
+class InlineResponse2019Test extends \PHPUnit\Framework\TestCase
 {
 
     /**
      * Setup before running any test case
      */
-    public static function setUpBeforeClass()
+    public static function setUpBeforeClass(): void
     {
     }
 
     /**
      * Setup before running each test case
      */
-    public function setUp()
+    protected function setUp(): void
     {
     }
 
     /**
      * Clean up after running each test case
      */
-    public function tearDown()
+    protected function tearDown(): void
     {
     }
 
     /**
      * Clean up after running all test cases
      */
-    public static function tearDownAfterClass()
+    public static function tearDownAfterClass(): void
     {
     }
 
@@ -77,23 +77,37 @@ class InlineResponse2019Test extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "clientReferenceInformation"
+     * Test attribute "webhookId"
      */
-    public function testPropertyClientReferenceInformation()
+    public function testPropertyWebhookId()
     {
     }
 
     /**
-     * Test attribute "id"
+     * Test attribute "organizationId"
      */
-    public function testPropertyId()
+    public function testPropertyOrganizationId()
     {
     }
 
     /**
-     * Test attribute "submitTimeUtc"
+     * Test attribute "products"
      */
-    public function testPropertySubmitTimeUtc()
+    public function testPropertyProducts()
+    {
+    }
+
+    /**
+     * Test attribute "webhookUrl"
+     */
+    public function testPropertyWebhookUrl()
+    {
+    }
+
+    /**
+     * Test attribute "healthCheckUrl"
+     */
+    public function testPropertyHealthCheckUrl()
     {
     }
 
@@ -105,23 +119,44 @@ class InlineResponse2019Test extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "errorInformation"
+     * Test attribute "name"
      */
-    public function testPropertyErrorInformation()
+    public function testPropertyName()
     {
     }
 
     /**
-     * Test attribute "orderInformation"
+     * Test attribute "description"
      */
-    public function testPropertyOrderInformation()
+    public function testPropertyDescription()
     {
     }
 
     /**
-     * Test attribute "processorInformation"
+     * Test attribute "retryPolicy"
      */
-    public function testPropertyProcessorInformation()
+    public function testPropertyRetryPolicy()
+    {
+    }
+
+    /**
+     * Test attribute "securityPolicy"
+     */
+    public function testPropertySecurityPolicy()
+    {
+    }
+
+    /**
+     * Test attribute "createdOn"
+     */
+    public function testPropertyCreatedOn()
+    {
+    }
+
+    /**
+     * Test attribute "notificationScope"
+     */
+    public function testPropertyNotificationScope()
     {
     }
 }

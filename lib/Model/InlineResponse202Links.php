@@ -53,7 +53,7 @@ class InlineResponse202Links implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'self' => '\CyberSource\Model\InlineResponse4011LinksSelf',
+        'self' => '\CyberSource\Model\InlineResponse4013LinksSelf',
         'status' => '\CyberSource\Model\InlineResponse202LinksStatus[]'
     ];
 
@@ -167,7 +167,7 @@ class InlineResponse202Links implements ArrayAccess
 
     /**
      * Gets self
-     * @return \CyberSource\Model\InlineResponse4011LinksSelf
+     * @return \CyberSource\Model\InlineResponse4013LinksSelf
      */
     public function getSelf()
     {
@@ -176,7 +176,7 @@ class InlineResponse202Links implements ArrayAccess
 
     /**
      * Sets self
-     * @param \CyberSource\Model\InlineResponse4011LinksSelf $self
+     * @param \CyberSource\Model\InlineResponse4013LinksSelf $self
      * @return $this
      */
     public function setSelf($self)

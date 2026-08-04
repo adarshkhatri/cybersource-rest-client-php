@@ -53,15 +53,15 @@ class InlineResponse2017 implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'eventDate' => 'string',
-        'eventType' => 'string',
-        'organizationId' => 'string',
-        'payloads' => '\CyberSource\Model\InlineResponse2017Payloads',
-        'productId' => 'string',
-        'requestType' => 'string',
-        'retryNumber' => 'int',
-        'transactionTraceId' => 'string',
-        'webhookId' => 'string'
+        'id' => 'string',
+        'submitTimeUtc' => '\DateTime',
+        'status' => 'string',
+        'registrationInformation' => '\CyberSource\Model\InlineResponse2017RegistrationInformation',
+        'integrationInformation' => '\CyberSource\Model\InlineResponse2017IntegrationInformation',
+        'organizationInformation' => '\CyberSource\Model\InlineResponse2017OrganizationInformation',
+        'productInformationSetups' => '\CyberSource\Model\InlineResponse2017ProductInformationSetups[]',
+        'message' => 'string',
+        'details' => 'map[string,object[]]'
     ];
 
     /**
@@ -69,15 +69,15 @@ class InlineResponse2017 implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'eventDate' => null,
-        'eventType' => null,
-        'organizationId' => null,
-        'payloads' => null,
-        'productId' => null,
-        'requestType' => null,
-        'retryNumber' => null,
-        'transactionTraceId' => null,
-        'webhookId' => null
+        'id' => null,
+        'submitTimeUtc' => 'date-time',
+        'status' => null,
+        'registrationInformation' => null,
+        'integrationInformation' => null,
+        'organizationInformation' => null,
+        'productInformationSetups' => null,
+        'message' => null,
+        'details' => null
     ];
 
     public static function swaggerTypes()
@@ -95,15 +95,15 @@ class InlineResponse2017 implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'eventDate' => 'eventDate',
-        'eventType' => 'eventType',
-        'organizationId' => 'organizationId',
-        'payloads' => 'payloads',
-        'productId' => 'productId',
-        'requestType' => 'requestType',
-        'retryNumber' => 'retryNumber',
-        'transactionTraceId' => 'transactionTraceId',
-        'webhookId' => 'webhookId'
+        'id' => 'id',
+        'submitTimeUtc' => 'submitTimeUtc',
+        'status' => 'status',
+        'registrationInformation' => 'registrationInformation',
+        'integrationInformation' => 'integrationInformation',
+        'organizationInformation' => 'organizationInformation',
+        'productInformationSetups' => 'productInformationSetups',
+        'message' => 'message',
+        'details' => 'details'
     ];
 
 
@@ -112,15 +112,15 @@ class InlineResponse2017 implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'eventDate' => 'setEventDate',
-        'eventType' => 'setEventType',
-        'organizationId' => 'setOrganizationId',
-        'payloads' => 'setPayloads',
-        'productId' => 'setProductId',
-        'requestType' => 'setRequestType',
-        'retryNumber' => 'setRetryNumber',
-        'transactionTraceId' => 'setTransactionTraceId',
-        'webhookId' => 'setWebhookId'
+        'id' => 'setId',
+        'submitTimeUtc' => 'setSubmitTimeUtc',
+        'status' => 'setStatus',
+        'registrationInformation' => 'setRegistrationInformation',
+        'integrationInformation' => 'setIntegrationInformation',
+        'organizationInformation' => 'setOrganizationInformation',
+        'productInformationSetups' => 'setProductInformationSetups',
+        'message' => 'setMessage',
+        'details' => 'setDetails'
     ];
 
 
@@ -129,15 +129,15 @@ class InlineResponse2017 implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'eventDate' => 'getEventDate',
-        'eventType' => 'getEventType',
-        'organizationId' => 'getOrganizationId',
-        'payloads' => 'getPayloads',
-        'productId' => 'getProductId',
-        'requestType' => 'getRequestType',
-        'retryNumber' => 'getRetryNumber',
-        'transactionTraceId' => 'getTransactionTraceId',
-        'webhookId' => 'getWebhookId'
+        'id' => 'getId',
+        'submitTimeUtc' => 'getSubmitTimeUtc',
+        'status' => 'getStatus',
+        'registrationInformation' => 'getRegistrationInformation',
+        'integrationInformation' => 'getIntegrationInformation',
+        'organizationInformation' => 'getOrganizationInformation',
+        'productInformationSetups' => 'getProductInformationSetups',
+        'message' => 'getMessage',
+        'details' => 'getDetails'
     ];
 
     public static function attributeMap()
@@ -171,15 +171,15 @@ class InlineResponse2017 implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['eventDate'] = isset($data['eventDate']) ? $data['eventDate'] : null;
-        $this->container['eventType'] = isset($data['eventType']) ? $data['eventType'] : null;
-        $this->container['organizationId'] = isset($data['organizationId']) ? $data['organizationId'] : null;
-        $this->container['payloads'] = isset($data['payloads']) ? $data['payloads'] : null;
-        $this->container['productId'] = isset($data['productId']) ? $data['productId'] : null;
-        $this->container['requestType'] = isset($data['requestType']) ? $data['requestType'] : null;
-        $this->container['retryNumber'] = isset($data['retryNumber']) ? $data['retryNumber'] : null;
-        $this->container['transactionTraceId'] = isset($data['transactionTraceId']) ? $data['transactionTraceId'] : null;
-        $this->container['webhookId'] = isset($data['webhookId']) ? $data['webhookId'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['submitTimeUtc'] = isset($data['submitTimeUtc']) ? $data['submitTimeUtc'] : null;
+        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['registrationInformation'] = isset($data['registrationInformation']) ? $data['registrationInformation'] : null;
+        $this->container['integrationInformation'] = isset($data['integrationInformation']) ? $data['integrationInformation'] : null;
+        $this->container['organizationInformation'] = isset($data['organizationInformation']) ? $data['organizationInformation'] : null;
+        $this->container['productInformationSetups'] = isset($data['productInformationSetups']) ? $data['productInformationSetups'] : null;
+        $this->container['message'] = isset($data['message']) ? $data['message'] : null;
+        $this->container['details'] = isset($data['details']) ? $data['details'] : null;
     }
 
     /**
@@ -208,190 +208,190 @@ class InlineResponse2017 implements ArrayAccess
 
 
     /**
-     * Gets eventDate
+     * Gets id
      * @return string
      */
-    public function getEventDate()
+    public function getId()
     {
-        return $this->container['eventDate'];
+        return $this->container['id'];
     }
 
     /**
-     * Sets eventDate
-     * @param string $eventDate Date that the webhook was delivered
+     * Sets id
+     * @param string $id
      * @return $this
      */
-    public function setEventDate($eventDate)
+    public function setId($id)
     {
-        $this->container['eventDate'] = $eventDate;
+        $this->container['id'] = $id;
 
         return $this;
     }
 
     /**
-     * Gets eventType
+     * Gets submitTimeUtc
+     * @return \DateTime
+     */
+    public function getSubmitTimeUtc()
+    {
+        return $this->container['submitTimeUtc'];
+    }
+
+    /**
+     * Sets submitTimeUtc
+     * @param \DateTime $submitTimeUtc Time of request in UTC. `Format: YYYY-MM-DDThh:mm:ssZ`  Example 2016-08-11T22:47:57Z equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The T separates the date and the time. The Z indicates UTC.
+     * @return $this
+     */
+    public function setSubmitTimeUtc($submitTimeUtc)
+    {
+        $this->container['submitTimeUtc'] = $submitTimeUtc;
+
+        return $this;
+    }
+
+    /**
+     * Gets status
      * @return string
      */
-    public function getEventType()
+    public function getStatus()
     {
-        return $this->container['eventType'];
+        return $this->container['status'];
     }
 
     /**
-     * Sets eventType
-     * @param string $eventType The event name the webhook was delivered for
+     * Sets status
+     * @param string $status The status of Registration request Possible Values:   - 'INITIALIZED'   - 'RECEIVED'   - 'PROCESSING'   - 'SUCCESS'   - 'FAILURE'   - 'PARTIAL'
      * @return $this
      */
-    public function setEventType($eventType)
+    public function setStatus($status)
     {
-        $this->container['eventType'] = $eventType;
+        $this->container['status'] = $status;
 
         return $this;
     }
 
     /**
-     * Gets organizationId
+     * Gets registrationInformation
+     * @return \CyberSource\Model\InlineResponse2017RegistrationInformation
+     */
+    public function getRegistrationInformation()
+    {
+        return $this->container['registrationInformation'];
+    }
+
+    /**
+     * Sets registrationInformation
+     * @param \CyberSource\Model\InlineResponse2017RegistrationInformation $registrationInformation
+     * @return $this
+     */
+    public function setRegistrationInformation($registrationInformation)
+    {
+        $this->container['registrationInformation'] = $registrationInformation;
+
+        return $this;
+    }
+
+    /**
+     * Gets integrationInformation
+     * @return \CyberSource\Model\InlineResponse2017IntegrationInformation
+     */
+    public function getIntegrationInformation()
+    {
+        return $this->container['integrationInformation'];
+    }
+
+    /**
+     * Sets integrationInformation
+     * @param \CyberSource\Model\InlineResponse2017IntegrationInformation $integrationInformation
+     * @return $this
+     */
+    public function setIntegrationInformation($integrationInformation)
+    {
+        $this->container['integrationInformation'] = $integrationInformation;
+
+        return $this;
+    }
+
+    /**
+     * Gets organizationInformation
+     * @return \CyberSource\Model\InlineResponse2017OrganizationInformation
+     */
+    public function getOrganizationInformation()
+    {
+        return $this->container['organizationInformation'];
+    }
+
+    /**
+     * Sets organizationInformation
+     * @param \CyberSource\Model\InlineResponse2017OrganizationInformation $organizationInformation
+     * @return $this
+     */
+    public function setOrganizationInformation($organizationInformation)
+    {
+        $this->container['organizationInformation'] = $organizationInformation;
+
+        return $this;
+    }
+
+    /**
+     * Gets productInformationSetups
+     * @return \CyberSource\Model\InlineResponse2017ProductInformationSetups[]
+     */
+    public function getProductInformationSetups()
+    {
+        return $this->container['productInformationSetups'];
+    }
+
+    /**
+     * Sets productInformationSetups
+     * @param \CyberSource\Model\InlineResponse2017ProductInformationSetups[] $productInformationSetups
+     * @return $this
+     */
+    public function setProductInformationSetups($productInformationSetups)
+    {
+        $this->container['productInformationSetups'] = $productInformationSetups;
+
+        return $this;
+    }
+
+    /**
+     * Gets message
      * @return string
      */
-    public function getOrganizationId()
+    public function getMessage()
     {
-        return $this->container['organizationId'];
+        return $this->container['message'];
     }
 
     /**
-     * Sets organizationId
-     * @param string $organizationId The Organization Identifier.
+     * Sets message
+     * @param string $message
      * @return $this
      */
-    public function setOrganizationId($organizationId)
+    public function setMessage($message)
     {
-        $this->container['organizationId'] = $organizationId;
+        $this->container['message'] = $message;
 
         return $this;
     }
 
     /**
-     * Gets payloads
-     * @return \CyberSource\Model\InlineResponse2017Payloads
+     * Gets details
+     * @return map[string,object[]]
      */
-    public function getPayloads()
+    public function getDetails()
     {
-        return $this->container['payloads'];
+        return $this->container['details'];
     }
 
     /**
-     * Sets payloads
-     * @param \CyberSource\Model\InlineResponse2017Payloads $payloads
+     * Sets details
+     * @param map[string,object[]] $details
      * @return $this
      */
-    public function setPayloads($payloads)
+    public function setDetails($details)
     {
-        $this->container['payloads'] = $payloads;
-
-        return $this;
-    }
-
-    /**
-     * Gets productId
-     * @return string
-     */
-    public function getProductId()
-    {
-        return $this->container['productId'];
-    }
-
-    /**
-     * Sets productId
-     * @param string $productId The product the webhook was delivered for
-     * @return $this
-     */
-    public function setProductId($productId)
-    {
-        $this->container['productId'] = $productId;
-
-        return $this;
-    }
-
-    /**
-     * Gets requestType
-     * @return string
-     */
-    public function getRequestType()
-    {
-        return $this->container['requestType'];
-    }
-
-    /**
-     * Sets requestType
-     * @param string $requestType Identifies the the type of request
-     * @return $this
-     */
-    public function setRequestType($requestType)
-    {
-        $this->container['requestType'] = $requestType;
-
-        return $this;
-    }
-
-    /**
-     * Gets retryNumber
-     * @return int
-     */
-    public function getRetryNumber()
-    {
-        return $this->container['retryNumber'];
-    }
-
-    /**
-     * Sets retryNumber
-     * @param int $retryNumber The number of retry attempts for a given webhook
-     * @return $this
-     */
-    public function setRetryNumber($retryNumber)
-    {
-        $this->container['retryNumber'] = $retryNumber;
-
-        return $this;
-    }
-
-    /**
-     * Gets transactionTraceId
-     * @return string
-     */
-    public function getTransactionTraceId()
-    {
-        return $this->container['transactionTraceId'];
-    }
-
-    /**
-     * Sets transactionTraceId
-     * @param string $transactionTraceId The identifier for the webhook
-     * @return $this
-     */
-    public function setTransactionTraceId($transactionTraceId)
-    {
-        $this->container['transactionTraceId'] = $transactionTraceId;
-
-        return $this;
-    }
-
-    /**
-     * Gets webhookId
-     * @return string
-     */
-    public function getWebhookId()
-    {
-        return $this->container['webhookId'];
-    }
-
-    /**
-     * Sets webhookId
-     * @param string $webhookId The identifier of the subscription
-     * @return $this
-     */
-    public function setWebhookId($webhookId)
-    {
-        $this->container['webhookId'] = $webhookId;
+        $this->container['details'] = $details;
 
         return $this;
     }
