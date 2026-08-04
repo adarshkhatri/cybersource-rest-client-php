@@ -317,7 +317,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 $api_instance = new CyberSource\Api\NetworkTokensApi();
 $tokenizedCardId = "tokenizedCardId_example"; // string | The Id of a tokenized card.
 $profileId = "profileId_example"; // string | The Id of a profile containing user specific TMS configuration.
-$postTokenizedCardDeleteRequest = new \CyberSource\Model\TmsTokenizedCardDeleteRequest(); // \CyberSource\Model\TmsTokenizedCardDeleteRequest | 
+$postTokenizedCardDeleteRequest = new \CyberSource\Model\PostTokenizedCardDeleteRequest(); // \CyberSource\Model\PostTokenizedCardDeleteRequest | 
 
 try {
     $api_instance->postTokenizedCardDelete($tokenizedCardId, $profileId, $postTokenizedCardDeleteRequest);
@@ -333,7 +333,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **tokenizedCardId** | **string**| The Id of a tokenized card. |
  **profileId** | **string**| The Id of a profile containing user specific TMS configuration. | [optional]
- **postTokenizedCardDeleteRequest** | [**\CyberSource\Model\TmsTokenizedCardDeleteRequest**](../Model/TmsTokenizedCardDeleteRequest.md)|  | [optional]
+ **postTokenizedCardDeleteRequest** | [**\CyberSource\Model\PostTokenizedCardDeleteRequest**](../Model/PostTokenizedCardDeleteRequest.md)|  | [optional]
 
 ### Return type
 

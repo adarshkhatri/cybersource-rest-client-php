@@ -40,34 +40,34 @@ use \CyberSource\ObjectSerializer;
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class MerchantDefinedFieldsApiTest extends \PHPUnit_Framework_TestCase
+class MerchantDefinedFieldsApiTest extends \PHPUnit\Framework\TestCase
 {
 
     /**
      * Setup before running any test cases
      */
-    public static function setUpBeforeClass()
+    public static function setUpBeforeClass(): void
     {
     }
 
     /**
      * Setup before running each test case
      */
-    public function setUp()
+    protected function setUp(): void
     {
     }
 
     /**
      * Clean up after running each test case
      */
-    public function tearDown()
+    protected function tearDown(): void
     {
     }
 
     /**
      * Clean up after running all test cases
      */
-    public static function tearDownAfterClass()
+    public static function tearDownAfterClass(): void
     {
     }
 
@@ -82,12 +82,32 @@ class MerchantDefinedFieldsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for createPblMerchantDefinedFieldDefinition
+     *
+     * Create a PayByLink merchant defined field for a given reference type.
+     *
+     */
+    public function testCreatePblMerchantDefinedFieldDefinition()
+    {
+    }
+
+    /**
      * Test case for deleteMerchantDefinedFieldsDefinitions
      *
      * Delete a MerchantDefinedField by ID.
      *
      */
     public function testDeleteMerchantDefinedFieldsDefinitions()
+    {
+    }
+
+    /**
+     * Test case for deletePblMerchantDefinedFieldsDefinitions
+     *
+     * Delete a PayByLink MerchantDefinedField by ID.
+     *
+     */
+    public function testDeletePblMerchantDefinedFieldsDefinitions()
     {
     }
 
@@ -102,12 +122,32 @@ class MerchantDefinedFieldsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for getPblMerchantDefinedFieldsDefinitions
+     *
+     * Get all PayByLink merchant defined fields for a given reference type.
+     *
+     */
+    public function testGetPblMerchantDefinedFieldsDefinitions()
+    {
+    }
+
+    /**
      * Test case for putMerchantDefinedFieldsDefinitions
      *
      * Update a MerchantDefinedField by ID.
      *
      */
     public function testPutMerchantDefinedFieldsDefinitions()
+    {
+    }
+
+    /**
+     * Test case for putPblMerchantDefinedFieldsDefinitions
+     *
+     * Update a PayByLink MerchantDefinedField by ID.
+     *
+     */
+    public function testPutPblMerchantDefinedFieldsDefinitions()
     {
     }
 }

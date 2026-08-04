@@ -54,7 +54,8 @@ class InlineResponse40012Details implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'field' => 'string',
-        'reason' => 'string'
+        'reason' => 'string',
+        'code' => 'string'
     ];
 
     /**
@@ -63,7 +64,8 @@ class InlineResponse40012Details implements ArrayAccess
       */
     protected static $swaggerFormats = [
         'field' => null,
-        'reason' => null
+        'reason' => null,
+        'code' => null
     ];
 
     public static function swaggerTypes()
@@ -82,7 +84,8 @@ class InlineResponse40012Details implements ArrayAccess
      */
     protected static $attributeMap = [
         'field' => 'field',
-        'reason' => 'reason'
+        'reason' => 'reason',
+        'code' => 'code'
     ];
 
 
@@ -92,7 +95,8 @@ class InlineResponse40012Details implements ArrayAccess
      */
     protected static $setters = [
         'field' => 'setField',
-        'reason' => 'setReason'
+        'reason' => 'setReason',
+        'code' => 'setCode'
     ];
 
 
@@ -102,7 +106,8 @@ class InlineResponse40012Details implements ArrayAccess
      */
     protected static $getters = [
         'field' => 'getField',
-        'reason' => 'getReason'
+        'reason' => 'getReason',
+        'code' => 'getCode'
     ];
 
     public static function attributeMap()
@@ -138,6 +143,7 @@ class InlineResponse40012Details implements ArrayAccess
     {
         $this->container['field'] = isset($data['field']) ? $data['field'] : null;
         $this->container['reason'] = isset($data['reason']) ? $data['reason'] : null;
+        $this->container['code'] = isset($data['code']) ? $data['code'] : null;
     }
 
     /**
@@ -197,12 +203,33 @@ class InlineResponse40012Details implements ArrayAccess
 
     /**
      * Sets reason
-     * @param string $reason Possible reasons for the error.  Possible values:   - `MISSING_FIELD`   - `INVALID_DATA`
+     * @param string $reason Possible reasons for the error.
      * @return $this
      */
     public function setReason($reason)
     {
         $this->container['reason'] = $reason;
+
+        return $this;
+    }
+
+    /**
+     * Gets code
+     * @return string
+     */
+    public function getCode()
+    {
+        return $this->container['code'];
+    }
+
+    /**
+     * Sets code
+     * @param string $code An optional short string which identifies the exact field error.
+     * @return $this
+     */
+    public function setCode($code)
+    {
+        $this->container['code'] = $code;
 
         return $this;
     }

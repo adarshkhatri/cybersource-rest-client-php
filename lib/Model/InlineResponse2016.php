@@ -53,18 +53,12 @@ class InlineResponse2016 implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'webhookId' => 'string',
-        'organizationId' => 'string',
-        'products' => '\CyberSource\Model\Notificationsubscriptionsv2webhooksProducts[]',
-        'webhookUrl' => 'string',
-        'healthCheckUrl' => 'string',
+        'id' => 'string',
+        'submitTimeUtc' => 'string',
         'status' => 'string',
-        'name' => 'string',
-        'description' => 'string',
-        'retryPolicy' => '\CyberSource\Model\Notificationsubscriptionsv2webhooksRetryPolicy',
-        'securityPolicy' => '\CyberSource\Model\Notificationsubscriptionsv2webhooksSecurityPolicy',
-        'createdOn' => 'string',
-        'notificationScope' => 'string'
+        'paymentAccountInformation' => '\CyberSource\Model\TmsBinLookupPaymentAccountInformation',
+        'issuerInformation' => '\CyberSource\Model\TmsBinLookupIssuerInformation',
+        'payoutInformation' => '\CyberSource\Model\InlineResponse2016PayoutInformation'
     ];
 
     /**
@@ -72,18 +66,12 @@ class InlineResponse2016 implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'webhookId' => null,
-        'organizationId' => null,
-        'products' => null,
-        'webhookUrl' => null,
-        'healthCheckUrl' => null,
+        'id' => null,
+        'submitTimeUtc' => null,
         'status' => null,
-        'name' => null,
-        'description' => null,
-        'retryPolicy' => null,
-        'securityPolicy' => null,
-        'createdOn' => null,
-        'notificationScope' => null
+        'paymentAccountInformation' => null,
+        'issuerInformation' => null,
+        'payoutInformation' => null
     ];
 
     public static function swaggerTypes()
@@ -101,18 +89,12 @@ class InlineResponse2016 implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'webhookId' => 'webhookId',
-        'organizationId' => 'organizationId',
-        'products' => 'products',
-        'webhookUrl' => 'webhookUrl',
-        'healthCheckUrl' => 'healthCheckUrl',
+        'id' => 'id',
+        'submitTimeUtc' => 'submitTimeUtc',
         'status' => 'status',
-        'name' => 'name',
-        'description' => 'description',
-        'retryPolicy' => 'retryPolicy',
-        'securityPolicy' => 'securityPolicy',
-        'createdOn' => 'createdOn',
-        'notificationScope' => 'notificationScope'
+        'paymentAccountInformation' => 'paymentAccountInformation',
+        'issuerInformation' => 'issuerInformation',
+        'payoutInformation' => 'payoutInformation'
     ];
 
 
@@ -121,18 +103,12 @@ class InlineResponse2016 implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'webhookId' => 'setWebhookId',
-        'organizationId' => 'setOrganizationId',
-        'products' => 'setProducts',
-        'webhookUrl' => 'setWebhookUrl',
-        'healthCheckUrl' => 'setHealthCheckUrl',
+        'id' => 'setId',
+        'submitTimeUtc' => 'setSubmitTimeUtc',
         'status' => 'setStatus',
-        'name' => 'setName',
-        'description' => 'setDescription',
-        'retryPolicy' => 'setRetryPolicy',
-        'securityPolicy' => 'setSecurityPolicy',
-        'createdOn' => 'setCreatedOn',
-        'notificationScope' => 'setNotificationScope'
+        'paymentAccountInformation' => 'setPaymentAccountInformation',
+        'issuerInformation' => 'setIssuerInformation',
+        'payoutInformation' => 'setPayoutInformation'
     ];
 
 
@@ -141,18 +117,12 @@ class InlineResponse2016 implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'webhookId' => 'getWebhookId',
-        'organizationId' => 'getOrganizationId',
-        'products' => 'getProducts',
-        'webhookUrl' => 'getWebhookUrl',
-        'healthCheckUrl' => 'getHealthCheckUrl',
+        'id' => 'getId',
+        'submitTimeUtc' => 'getSubmitTimeUtc',
         'status' => 'getStatus',
-        'name' => 'getName',
-        'description' => 'getDescription',
-        'retryPolicy' => 'getRetryPolicy',
-        'securityPolicy' => 'getSecurityPolicy',
-        'createdOn' => 'getCreatedOn',
-        'notificationScope' => 'getNotificationScope'
+        'paymentAccountInformation' => 'getPaymentAccountInformation',
+        'issuerInformation' => 'getIssuerInformation',
+        'payoutInformation' => 'getPayoutInformation'
     ];
 
     public static function attributeMap()
@@ -186,18 +156,12 @@ class InlineResponse2016 implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['webhookId'] = isset($data['webhookId']) ? $data['webhookId'] : null;
-        $this->container['organizationId'] = isset($data['organizationId']) ? $data['organizationId'] : null;
-        $this->container['products'] = isset($data['products']) ? $data['products'] : null;
-        $this->container['webhookUrl'] = isset($data['webhookUrl']) ? $data['webhookUrl'] : null;
-        $this->container['healthCheckUrl'] = isset($data['healthCheckUrl']) ? $data['healthCheckUrl'] : null;
-        $this->container['status'] = isset($data['status']) ? $data['status'] : 'INACTIVE';
-        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
-        $this->container['retryPolicy'] = isset($data['retryPolicy']) ? $data['retryPolicy'] : null;
-        $this->container['securityPolicy'] = isset($data['securityPolicy']) ? $data['securityPolicy'] : null;
-        $this->container['createdOn'] = isset($data['createdOn']) ? $data['createdOn'] : null;
-        $this->container['notificationScope'] = isset($data['notificationScope']) ? $data['notificationScope'] : 'DESCENDANTS';
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['submitTimeUtc'] = isset($data['submitTimeUtc']) ? $data['submitTimeUtc'] : null;
+        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['paymentAccountInformation'] = isset($data['paymentAccountInformation']) ? $data['paymentAccountInformation'] : null;
+        $this->container['issuerInformation'] = isset($data['issuerInformation']) ? $data['issuerInformation'] : null;
+        $this->container['payoutInformation'] = isset($data['payoutInformation']) ? $data['payoutInformation'] : null;
     }
 
     /**
@@ -226,106 +190,43 @@ class InlineResponse2016 implements ArrayAccess
 
 
     /**
-     * Gets webhookId
+     * Gets id
      * @return string
      */
-    public function getWebhookId()
+    public function getId()
     {
-        return $this->container['webhookId'];
+        return $this->container['id'];
     }
 
     /**
-     * Sets webhookId
-     * @param string $webhookId Webhook Id. This is generated by the server.
+     * Sets id
+     * @param string $id An unique identification number generated by Cybersource to identify the submitted request. Returned by all services. It is also appended to the endpoint of the resource. On incremental authorizations, this value with be the same as the identification number returned in the original authorization response.
      * @return $this
      */
-    public function setWebhookId($webhookId)
+    public function setId($id)
     {
-        $this->container['webhookId'] = $webhookId;
+        $this->container['id'] = $id;
 
         return $this;
     }
 
     /**
-     * Gets organizationId
+     * Gets submitTimeUtc
      * @return string
      */
-    public function getOrganizationId()
+    public function getSubmitTimeUtc()
     {
-        return $this->container['organizationId'];
+        return $this->container['submitTimeUtc'];
     }
 
     /**
-     * Sets organizationId
-     * @param string $organizationId Organization ID.
+     * Sets submitTimeUtc
+     * @param string $submitTimeUtc Time of request in UTC. Format: `YYYY-MM-DDThh:mm:ssZ` **Example** `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The `T` separates the date and the time. The `Z` indicates UTC.  Returned by Cybersource for all services.
      * @return $this
      */
-    public function setOrganizationId($organizationId)
+    public function setSubmitTimeUtc($submitTimeUtc)
     {
-        $this->container['organizationId'] = $organizationId;
-
-        return $this;
-    }
-
-    /**
-     * Gets products
-     * @return \CyberSource\Model\Notificationsubscriptionsv2webhooksProducts[]
-     */
-    public function getProducts()
-    {
-        return $this->container['products'];
-    }
-
-    /**
-     * Sets products
-     * @param \CyberSource\Model\Notificationsubscriptionsv2webhooksProducts[] $products
-     * @return $this
-     */
-    public function setProducts($products)
-    {
-        $this->container['products'] = $products;
-
-        return $this;
-    }
-
-    /**
-     * Gets webhookUrl
-     * @return string
-     */
-    public function getWebhookUrl()
-    {
-        return $this->container['webhookUrl'];
-    }
-
-    /**
-     * Sets webhookUrl
-     * @param string $webhookUrl The client's endpoint (URL) to receive webhooks.
-     * @return $this
-     */
-    public function setWebhookUrl($webhookUrl)
-    {
-        $this->container['webhookUrl'] = $webhookUrl;
-
-        return $this;
-    }
-
-    /**
-     * Gets healthCheckUrl
-     * @return string
-     */
-    public function getHealthCheckUrl()
-    {
-        return $this->container['healthCheckUrl'];
-    }
-
-    /**
-     * Sets healthCheckUrl
-     * @param string $healthCheckUrl The client's health check endpoint (URL).
-     * @return $this
-     */
-    public function setHealthCheckUrl($healthCheckUrl)
-    {
-        $this->container['healthCheckUrl'] = $healthCheckUrl;
+        $this->container['submitTimeUtc'] = $submitTimeUtc;
 
         return $this;
     }
@@ -341,7 +242,7 @@ class InlineResponse2016 implements ArrayAccess
 
     /**
      * Sets status
-     * @param string $status Webhook status.
+     * @param string $status The status of the submitted transaction.  Possible values:  - COMPLETED  - MULTIPLE  - NO MATCH
      * @return $this
      */
     public function setStatus($status)
@@ -352,127 +253,64 @@ class InlineResponse2016 implements ArrayAccess
     }
 
     /**
-     * Gets name
-     * @return string
+     * Gets paymentAccountInformation
+     * @return \CyberSource\Model\TmsBinLookupPaymentAccountInformation
      */
-    public function getName()
+    public function getPaymentAccountInformation()
     {
-        return $this->container['name'];
+        return $this->container['paymentAccountInformation'];
     }
 
     /**
-     * Sets name
-     * @param string $name Client friendly webhook name.
+     * Sets paymentAccountInformation
+     * @param \CyberSource\Model\TmsBinLookupPaymentAccountInformation $paymentAccountInformation
      * @return $this
      */
-    public function setName($name)
+    public function setPaymentAccountInformation($paymentAccountInformation)
     {
-        $this->container['name'] = $name;
+        $this->container['paymentAccountInformation'] = $paymentAccountInformation;
 
         return $this;
     }
 
     /**
-     * Gets description
-     * @return string
+     * Gets issuerInformation
+     * @return \CyberSource\Model\TmsBinLookupIssuerInformation
      */
-    public function getDescription()
+    public function getIssuerInformation()
     {
-        return $this->container['description'];
+        return $this->container['issuerInformation'];
     }
 
     /**
-     * Sets description
-     * @param string $description Client friendly webhook description.
+     * Sets issuerInformation
+     * @param \CyberSource\Model\TmsBinLookupIssuerInformation $issuerInformation
      * @return $this
      */
-    public function setDescription($description)
+    public function setIssuerInformation($issuerInformation)
     {
-        $this->container['description'] = $description;
+        $this->container['issuerInformation'] = $issuerInformation;
 
         return $this;
     }
 
     /**
-     * Gets retryPolicy
-     * @return \CyberSource\Model\Notificationsubscriptionsv2webhooksRetryPolicy
+     * Gets payoutInformation
+     * @return \CyberSource\Model\InlineResponse2016PayoutInformation
      */
-    public function getRetryPolicy()
+    public function getPayoutInformation()
     {
-        return $this->container['retryPolicy'];
+        return $this->container['payoutInformation'];
     }
 
     /**
-     * Sets retryPolicy
-     * @param \CyberSource\Model\Notificationsubscriptionsv2webhooksRetryPolicy $retryPolicy
+     * Sets payoutInformation
+     * @param \CyberSource\Model\InlineResponse2016PayoutInformation $payoutInformation
      * @return $this
      */
-    public function setRetryPolicy($retryPolicy)
+    public function setPayoutInformation($payoutInformation)
     {
-        $this->container['retryPolicy'] = $retryPolicy;
-
-        return $this;
-    }
-
-    /**
-     * Gets securityPolicy
-     * @return \CyberSource\Model\Notificationsubscriptionsv2webhooksSecurityPolicy
-     */
-    public function getSecurityPolicy()
-    {
-        return $this->container['securityPolicy'];
-    }
-
-    /**
-     * Sets securityPolicy
-     * @param \CyberSource\Model\Notificationsubscriptionsv2webhooksSecurityPolicy $securityPolicy
-     * @return $this
-     */
-    public function setSecurityPolicy($securityPolicy)
-    {
-        $this->container['securityPolicy'] = $securityPolicy;
-
-        return $this;
-    }
-
-    /**
-     * Gets createdOn
-     * @return string
-     */
-    public function getCreatedOn()
-    {
-        return $this->container['createdOn'];
-    }
-
-    /**
-     * Sets createdOn
-     * @param string $createdOn Date on which webhook was created/registered.
-     * @return $this
-     */
-    public function setCreatedOn($createdOn)
-    {
-        $this->container['createdOn'] = $createdOn;
-
-        return $this;
-    }
-
-    /**
-     * Gets notificationScope
-     * @return string
-     */
-    public function getNotificationScope()
-    {
-        return $this->container['notificationScope'];
-    }
-
-    /**
-     * Sets notificationScope
-     * @param string $notificationScope The webhook scope. 1. SELF The Webhook is used to deliver webhooks for only this Organization (or Merchant). 2. DESCENDANTS The Webhook is used to deliver webhooks for this Organization and its children. This field is optional.    Possible values: - SELF - DESCENDANTS
-     * @return $this
-     */
-    public function setNotificationScope($notificationScope)
-    {
-        $this->container['notificationScope'] = $notificationScope;
+        $this->container['payoutInformation'] = $payoutInformation;
 
         return $this;
     }

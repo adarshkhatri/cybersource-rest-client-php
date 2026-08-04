@@ -54,14 +54,12 @@ class InlineResponse2014 implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'string',
-        'submitTimeUtc' => '\DateTime',
         'status' => 'string',
-        'registrationInformation' => '\CyberSource\Model\InlineResponse2014RegistrationInformation',
-        'integrationInformation' => '\CyberSource\Model\InlineResponse2014IntegrationInformation',
-        'organizationInformation' => '\CyberSource\Model\InlineResponse2014OrganizationInformation',
-        'productInformationSetups' => '\CyberSource\Model\InlineResponse2014ProductInformationSetups[]',
-        'message' => 'string',
-        'details' => 'map[string,object[]]'
+        'submitTimeStampUtc' => 'string',
+        'orderInformation' => '\CyberSource\Model\InlineResponse2014OrderInformation',
+        'errorInformation' => '\CyberSource\Model\InlineResponse2014ErrorInformation',
+        'processorInformation' => '\CyberSource\Model\InlineResponse2014ProcessorInformation',
+        'processingInformation' => '\CyberSource\Model\InlineResponse2014ProcessingInformation'
     ];
 
     /**
@@ -70,14 +68,12 @@ class InlineResponse2014 implements ArrayAccess
       */
     protected static $swaggerFormats = [
         'id' => null,
-        'submitTimeUtc' => 'date-time',
         'status' => null,
-        'registrationInformation' => null,
-        'integrationInformation' => null,
-        'organizationInformation' => null,
-        'productInformationSetups' => null,
-        'message' => null,
-        'details' => null
+        'submitTimeStampUtc' => null,
+        'orderInformation' => null,
+        'errorInformation' => null,
+        'processorInformation' => null,
+        'processingInformation' => null
     ];
 
     public static function swaggerTypes()
@@ -96,14 +92,12 @@ class InlineResponse2014 implements ArrayAccess
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'submitTimeUtc' => 'submitTimeUtc',
         'status' => 'status',
-        'registrationInformation' => 'registrationInformation',
-        'integrationInformation' => 'integrationInformation',
-        'organizationInformation' => 'organizationInformation',
-        'productInformationSetups' => 'productInformationSetups',
-        'message' => 'message',
-        'details' => 'details'
+        'submitTimeStampUtc' => 'submitTimeStampUtc',
+        'orderInformation' => 'orderInformation',
+        'errorInformation' => 'errorInformation',
+        'processorInformation' => 'processorInformation',
+        'processingInformation' => 'processingInformation'
     ];
 
 
@@ -113,14 +107,12 @@ class InlineResponse2014 implements ArrayAccess
      */
     protected static $setters = [
         'id' => 'setId',
-        'submitTimeUtc' => 'setSubmitTimeUtc',
         'status' => 'setStatus',
-        'registrationInformation' => 'setRegistrationInformation',
-        'integrationInformation' => 'setIntegrationInformation',
-        'organizationInformation' => 'setOrganizationInformation',
-        'productInformationSetups' => 'setProductInformationSetups',
-        'message' => 'setMessage',
-        'details' => 'setDetails'
+        'submitTimeStampUtc' => 'setSubmitTimeStampUtc',
+        'orderInformation' => 'setOrderInformation',
+        'errorInformation' => 'setErrorInformation',
+        'processorInformation' => 'setProcessorInformation',
+        'processingInformation' => 'setProcessingInformation'
     ];
 
 
@@ -130,14 +122,12 @@ class InlineResponse2014 implements ArrayAccess
      */
     protected static $getters = [
         'id' => 'getId',
-        'submitTimeUtc' => 'getSubmitTimeUtc',
         'status' => 'getStatus',
-        'registrationInformation' => 'getRegistrationInformation',
-        'integrationInformation' => 'getIntegrationInformation',
-        'organizationInformation' => 'getOrganizationInformation',
-        'productInformationSetups' => 'getProductInformationSetups',
-        'message' => 'getMessage',
-        'details' => 'getDetails'
+        'submitTimeStampUtc' => 'getSubmitTimeStampUtc',
+        'orderInformation' => 'getOrderInformation',
+        'errorInformation' => 'getErrorInformation',
+        'processorInformation' => 'getProcessorInformation',
+        'processingInformation' => 'getProcessingInformation'
     ];
 
     public static function attributeMap()
@@ -172,14 +162,12 @@ class InlineResponse2014 implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['submitTimeUtc'] = isset($data['submitTimeUtc']) ? $data['submitTimeUtc'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
-        $this->container['registrationInformation'] = isset($data['registrationInformation']) ? $data['registrationInformation'] : null;
-        $this->container['integrationInformation'] = isset($data['integrationInformation']) ? $data['integrationInformation'] : null;
-        $this->container['organizationInformation'] = isset($data['organizationInformation']) ? $data['organizationInformation'] : null;
-        $this->container['productInformationSetups'] = isset($data['productInformationSetups']) ? $data['productInformationSetups'] : null;
-        $this->container['message'] = isset($data['message']) ? $data['message'] : null;
-        $this->container['details'] = isset($data['details']) ? $data['details'] : null;
+        $this->container['submitTimeStampUtc'] = isset($data['submitTimeStampUtc']) ? $data['submitTimeStampUtc'] : null;
+        $this->container['orderInformation'] = isset($data['orderInformation']) ? $data['orderInformation'] : null;
+        $this->container['errorInformation'] = isset($data['errorInformation']) ? $data['errorInformation'] : null;
+        $this->container['processorInformation'] = isset($data['processorInformation']) ? $data['processorInformation'] : null;
+        $this->container['processingInformation'] = isset($data['processingInformation']) ? $data['processingInformation'] : null;
     }
 
     /**
@@ -218,33 +206,12 @@ class InlineResponse2014 implements ArrayAccess
 
     /**
      * Sets id
-     * @param string $id
+     * @param string $id A unique identification number to identify the submitted request. It is also appended to the endpoint of the resource.
      * @return $this
      */
     public function setId($id)
     {
         $this->container['id'] = $id;
-
-        return $this;
-    }
-
-    /**
-     * Gets submitTimeUtc
-     * @return \DateTime
-     */
-    public function getSubmitTimeUtc()
-    {
-        return $this->container['submitTimeUtc'];
-    }
-
-    /**
-     * Sets submitTimeUtc
-     * @param \DateTime $submitTimeUtc Time of request in UTC. `Format: YYYY-MM-DDThh:mm:ssZ`  Example 2016-08-11T22:47:57Z equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The T separates the date and the time. The Z indicates UTC.
-     * @return $this
-     */
-    public function setSubmitTimeUtc($submitTimeUtc)
-    {
-        $this->container['submitTimeUtc'] = $submitTimeUtc;
 
         return $this;
     }
@@ -260,7 +227,7 @@ class InlineResponse2014 implements ArrayAccess
 
     /**
      * Sets status
-     * @param string $status The status of Registration request Possible Values:   - 'INITIALIZED'   - 'RECEIVED'   - 'PROCESSING'   - 'SUCCESS'   - 'FAILURE'   - 'PARTIAL'
+     * @param string $status The status of the submitted transaction.  Possible values: - `COMPLETED` - `INVALID_REQUEST` - `SERVER_ERROR`
      * @return $this
      */
     public function setStatus($status)
@@ -271,127 +238,106 @@ class InlineResponse2014 implements ArrayAccess
     }
 
     /**
-     * Gets registrationInformation
-     * @return \CyberSource\Model\InlineResponse2014RegistrationInformation
-     */
-    public function getRegistrationInformation()
-    {
-        return $this->container['registrationInformation'];
-    }
-
-    /**
-     * Sets registrationInformation
-     * @param \CyberSource\Model\InlineResponse2014RegistrationInformation $registrationInformation
-     * @return $this
-     */
-    public function setRegistrationInformation($registrationInformation)
-    {
-        $this->container['registrationInformation'] = $registrationInformation;
-
-        return $this;
-    }
-
-    /**
-     * Gets integrationInformation
-     * @return \CyberSource\Model\InlineResponse2014IntegrationInformation
-     */
-    public function getIntegrationInformation()
-    {
-        return $this->container['integrationInformation'];
-    }
-
-    /**
-     * Sets integrationInformation
-     * @param \CyberSource\Model\InlineResponse2014IntegrationInformation $integrationInformation
-     * @return $this
-     */
-    public function setIntegrationInformation($integrationInformation)
-    {
-        $this->container['integrationInformation'] = $integrationInformation;
-
-        return $this;
-    }
-
-    /**
-     * Gets organizationInformation
-     * @return \CyberSource\Model\InlineResponse2014OrganizationInformation
-     */
-    public function getOrganizationInformation()
-    {
-        return $this->container['organizationInformation'];
-    }
-
-    /**
-     * Sets organizationInformation
-     * @param \CyberSource\Model\InlineResponse2014OrganizationInformation $organizationInformation
-     * @return $this
-     */
-    public function setOrganizationInformation($organizationInformation)
-    {
-        $this->container['organizationInformation'] = $organizationInformation;
-
-        return $this;
-    }
-
-    /**
-     * Gets productInformationSetups
-     * @return \CyberSource\Model\InlineResponse2014ProductInformationSetups[]
-     */
-    public function getProductInformationSetups()
-    {
-        return $this->container['productInformationSetups'];
-    }
-
-    /**
-     * Sets productInformationSetups
-     * @param \CyberSource\Model\InlineResponse2014ProductInformationSetups[] $productInformationSetups
-     * @return $this
-     */
-    public function setProductInformationSetups($productInformationSetups)
-    {
-        $this->container['productInformationSetups'] = $productInformationSetups;
-
-        return $this;
-    }
-
-    /**
-     * Gets message
+     * Gets submitTimeStampUtc
      * @return string
      */
-    public function getMessage()
+    public function getSubmitTimeStampUtc()
     {
-        return $this->container['message'];
+        return $this->container['submitTimeStampUtc'];
     }
 
     /**
-     * Sets message
-     * @param string $message
+     * Sets submitTimeStampUtc
+     * @param string $submitTimeStampUtc Time of request in UTC. Format: `YYYY-MM-DD'T'HH:mm:ssZ`  Example: `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The T separates the date and the time. The Z indicates UTC.
      * @return $this
      */
-    public function setMessage($message)
+    public function setSubmitTimeStampUtc($submitTimeStampUtc)
     {
-        $this->container['message'] = $message;
+        $this->container['submitTimeStampUtc'] = $submitTimeStampUtc;
 
         return $this;
     }
 
     /**
-     * Gets details
-     * @return map[string,object[]]
+     * Gets orderInformation
+     * @return \CyberSource\Model\InlineResponse2014OrderInformation
      */
-    public function getDetails()
+    public function getOrderInformation()
     {
-        return $this->container['details'];
+        return $this->container['orderInformation'];
     }
 
     /**
-     * Sets details
-     * @param map[string,object[]] $details
+     * Sets orderInformation
+     * @param \CyberSource\Model\InlineResponse2014OrderInformation $orderInformation
      * @return $this
      */
-    public function setDetails($details)
+    public function setOrderInformation($orderInformation)
     {
-        $this->container['details'] = $details;
+        $this->container['orderInformation'] = $orderInformation;
+
+        return $this;
+    }
+
+    /**
+     * Gets errorInformation
+     * @return \CyberSource\Model\InlineResponse2014ErrorInformation
+     */
+    public function getErrorInformation()
+    {
+        return $this->container['errorInformation'];
+    }
+
+    /**
+     * Sets errorInformation
+     * @param \CyberSource\Model\InlineResponse2014ErrorInformation $errorInformation
+     * @return $this
+     */
+    public function setErrorInformation($errorInformation)
+    {
+        $this->container['errorInformation'] = $errorInformation;
+
+        return $this;
+    }
+
+    /**
+     * Gets processorInformation
+     * @return \CyberSource\Model\InlineResponse2014ProcessorInformation
+     */
+    public function getProcessorInformation()
+    {
+        return $this->container['processorInformation'];
+    }
+
+    /**
+     * Sets processorInformation
+     * @param \CyberSource\Model\InlineResponse2014ProcessorInformation $processorInformation
+     * @return $this
+     */
+    public function setProcessorInformation($processorInformation)
+    {
+        $this->container['processorInformation'] = $processorInformation;
+
+        return $this;
+    }
+
+    /**
+     * Gets processingInformation
+     * @return \CyberSource\Model\InlineResponse2014ProcessingInformation
+     */
+    public function getProcessingInformation()
+    {
+        return $this->container['processingInformation'];
+    }
+
+    /**
+     * Sets processingInformation
+     * @param \CyberSource\Model\InlineResponse2014ProcessingInformation $processingInformation
+     * @return $this
+     */
+    public function setProcessingInformation($processingInformation)
+    {
+        $this->container['processingInformation'] = $processingInformation;
 
         return $this;
     }

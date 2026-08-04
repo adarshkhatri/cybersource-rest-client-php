@@ -38,34 +38,34 @@ namespace CyberSource;
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class InlineResponse2016Test extends \PHPUnit_Framework_TestCase
+class InlineResponse2016Test extends \PHPUnit\Framework\TestCase
 {
 
     /**
      * Setup before running any test case
      */
-    public static function setUpBeforeClass()
+    public static function setUpBeforeClass(): void
     {
     }
 
     /**
      * Setup before running each test case
      */
-    public function setUp()
+    protected function setUp(): void
     {
     }
 
     /**
      * Clean up after running each test case
      */
-    public function tearDown()
+    protected function tearDown(): void
     {
     }
 
     /**
      * Clean up after running all test cases
      */
-    public static function tearDownAfterClass()
+    public static function tearDownAfterClass(): void
     {
     }
 
@@ -77,37 +77,16 @@ class InlineResponse2016Test extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "webhookId"
+     * Test attribute "id"
      */
-    public function testPropertyWebhookId()
+    public function testPropertyId()
     {
     }
 
     /**
-     * Test attribute "organizationId"
+     * Test attribute "submitTimeUtc"
      */
-    public function testPropertyOrganizationId()
-    {
-    }
-
-    /**
-     * Test attribute "products"
-     */
-    public function testPropertyProducts()
-    {
-    }
-
-    /**
-     * Test attribute "webhookUrl"
-     */
-    public function testPropertyWebhookUrl()
-    {
-    }
-
-    /**
-     * Test attribute "healthCheckUrl"
-     */
-    public function testPropertyHealthCheckUrl()
+    public function testPropertySubmitTimeUtc()
     {
     }
 
@@ -119,44 +98,23 @@ class InlineResponse2016Test extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "name"
+     * Test attribute "paymentAccountInformation"
      */
-    public function testPropertyName()
+    public function testPropertyPaymentAccountInformation()
     {
     }
 
     /**
-     * Test attribute "description"
+     * Test attribute "issuerInformation"
      */
-    public function testPropertyDescription()
+    public function testPropertyIssuerInformation()
     {
     }
 
     /**
-     * Test attribute "retryPolicy"
+     * Test attribute "payoutInformation"
      */
-    public function testPropertyRetryPolicy()
-    {
-    }
-
-    /**
-     * Test attribute "securityPolicy"
-     */
-    public function testPropertySecurityPolicy()
-    {
-    }
-
-    /**
-     * Test attribute "createdOn"
-     */
-    public function testPropertyCreatedOn()
-    {
-    }
-
-    /**
-     * Test attribute "notificationScope"
-     */
-    public function testPropertyNotificationScope()
+    public function testPropertyPayoutInformation()
     {
     }
 }

@@ -72,6 +72,7 @@ class Ptsv2paymentsProcessingInformation implements ArrayAccess
         'visaCheckoutId' => 'string',
         'industryDataType' => 'string',
         'authorizationOptions' => '\CyberSource\Model\ProcessingInfoAuthorizationOptions',
+        'cardVerification' => '\CyberSource\Model\Ptsv2paymentsProcessingInformationCardVerification',
         'captureOptions' => '\CyberSource\Model\Ptsv2paymentsProcessingInformationCaptureOptions',
         'recurringOptions' => '\CyberSource\Model\Ptsv2paymentsProcessingInformationRecurringOptions',
         'bankTransferOptions' => '\CyberSource\Model\Ptsv2paymentsProcessingInformationBankTransferOptions',
@@ -127,6 +128,7 @@ class Ptsv2paymentsProcessingInformation implements ArrayAccess
         'visaCheckoutId' => null,
         'industryDataType' => null,
         'authorizationOptions' => null,
+        'cardVerification' => null,
         'captureOptions' => null,
         'recurringOptions' => null,
         'bankTransferOptions' => null,
@@ -192,6 +194,7 @@ class Ptsv2paymentsProcessingInformation implements ArrayAccess
         'visaCheckoutId' => 'visaCheckoutId',
         'industryDataType' => 'industryDataType',
         'authorizationOptions' => 'authorizationOptions',
+        'cardVerification' => 'cardVerification',
         'captureOptions' => 'captureOptions',
         'recurringOptions' => 'recurringOptions',
         'bankTransferOptions' => 'bankTransferOptions',
@@ -248,6 +251,7 @@ class Ptsv2paymentsProcessingInformation implements ArrayAccess
         'visaCheckoutId' => 'setVisaCheckoutId',
         'industryDataType' => 'setIndustryDataType',
         'authorizationOptions' => 'setAuthorizationOptions',
+        'cardVerification' => 'setCardVerification',
         'captureOptions' => 'setCaptureOptions',
         'recurringOptions' => 'setRecurringOptions',
         'bankTransferOptions' => 'setBankTransferOptions',
@@ -304,6 +308,7 @@ class Ptsv2paymentsProcessingInformation implements ArrayAccess
         'visaCheckoutId' => 'getVisaCheckoutId',
         'industryDataType' => 'getIndustryDataType',
         'authorizationOptions' => 'getAuthorizationOptions',
+        'cardVerification' => 'getCardVerification',
         'captureOptions' => 'getCaptureOptions',
         'recurringOptions' => 'getRecurringOptions',
         'bankTransferOptions' => 'getBankTransferOptions',
@@ -385,6 +390,7 @@ class Ptsv2paymentsProcessingInformation implements ArrayAccess
         $this->container['visaCheckoutId'] = isset($data['visaCheckoutId']) ? $data['visaCheckoutId'] : null;
         $this->container['industryDataType'] = isset($data['industryDataType']) ? $data['industryDataType'] : null;
         $this->container['authorizationOptions'] = isset($data['authorizationOptions']) ? $data['authorizationOptions'] : null;
+        $this->container['cardVerification'] = isset($data['cardVerification']) ? $data['cardVerification'] : null;
         $this->container['captureOptions'] = isset($data['captureOptions']) ? $data['captureOptions'] : null;
         $this->container['recurringOptions'] = isset($data['recurringOptions']) ? $data['recurringOptions'] : null;
         $this->container['bankTransferOptions'] = isset($data['bankTransferOptions']) ? $data['bankTransferOptions'] : null;
@@ -836,6 +842,27 @@ class Ptsv2paymentsProcessingInformation implements ArrayAccess
     public function setAuthorizationOptions($authorizationOptions)
     {
         $this->container['authorizationOptions'] = $authorizationOptions;
+
+        return $this;
+    }
+
+    /**
+     * Gets cardVerification
+     * @return \CyberSource\Model\Ptsv2paymentsProcessingInformationCardVerification
+     */
+    public function getCardVerification()
+    {
+        return $this->container['cardVerification'];
+    }
+
+    /**
+     * Sets cardVerification
+     * @param \CyberSource\Model\Ptsv2paymentsProcessingInformationCardVerification $cardVerification
+     * @return $this
+     */
+    public function setCardVerification($cardVerification)
+    {
+        $this->container['cardVerification'] = $cardVerification;
 
         return $this;
     }

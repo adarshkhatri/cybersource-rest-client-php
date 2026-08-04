@@ -55,6 +55,7 @@ class InvoicingV2InvoicesPost201ResponseInvoiceInformation implements ArrayAcces
       */
     protected static $swaggerTypes = [
         'invoiceNumber' => 'string',
+        'transactionReferenceNumber' => 'string',
         'description' => 'string',
         'dueDate' => '\DateTime',
         'expirationDate' => '\DateTime',
@@ -70,6 +71,7 @@ class InvoicingV2InvoicesPost201ResponseInvoiceInformation implements ArrayAcces
       */
     protected static $swaggerFormats = [
         'invoiceNumber' => null,
+        'transactionReferenceNumber' => null,
         'description' => null,
         'dueDate' => 'date',
         'expirationDate' => 'date',
@@ -95,6 +97,7 @@ class InvoicingV2InvoicesPost201ResponseInvoiceInformation implements ArrayAcces
      */
     protected static $attributeMap = [
         'invoiceNumber' => 'invoiceNumber',
+        'transactionReferenceNumber' => 'transactionReferenceNumber',
         'description' => 'description',
         'dueDate' => 'dueDate',
         'expirationDate' => 'expirationDate',
@@ -111,6 +114,7 @@ class InvoicingV2InvoicesPost201ResponseInvoiceInformation implements ArrayAcces
      */
     protected static $setters = [
         'invoiceNumber' => 'setInvoiceNumber',
+        'transactionReferenceNumber' => 'setTransactionReferenceNumber',
         'description' => 'setDescription',
         'dueDate' => 'setDueDate',
         'expirationDate' => 'setExpirationDate',
@@ -127,6 +131,7 @@ class InvoicingV2InvoicesPost201ResponseInvoiceInformation implements ArrayAcces
      */
     protected static $getters = [
         'invoiceNumber' => 'getInvoiceNumber',
+        'transactionReferenceNumber' => 'getTransactionReferenceNumber',
         'description' => 'getDescription',
         'dueDate' => 'getDueDate',
         'expirationDate' => 'getExpirationDate',
@@ -168,6 +173,7 @@ class InvoicingV2InvoicesPost201ResponseInvoiceInformation implements ArrayAcces
     public function __construct(array $data = null)
     {
         $this->container['invoiceNumber'] = isset($data['invoiceNumber']) ? $data['invoiceNumber'] : null;
+        $this->container['transactionReferenceNumber'] = isset($data['transactionReferenceNumber']) ? $data['transactionReferenceNumber'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['dueDate'] = isset($data['dueDate']) ? $data['dueDate'] : null;
         $this->container['expirationDate'] = isset($data['expirationDate']) ? $data['expirationDate'] : null;
@@ -224,6 +230,27 @@ class InvoicingV2InvoicesPost201ResponseInvoiceInformation implements ArrayAcces
     }
 
     /**
+     * Gets transactionReferenceNumber
+     * @return string
+     */
+    public function getTransactionReferenceNumber()
+    {
+        return $this->container['transactionReferenceNumber'];
+    }
+
+    /**
+     * Sets transactionReferenceNumber
+     * @param string $transactionReferenceNumber The transaction reference number (TRN) is a identifier assigned to each payment transaction that allows merchants, customers, and payment processors to track and reference specific transactions throughout their lifecycle.  When provided, this value is passed to the payment processor as the reconciliation ID for the payment. For invoices this is typically the invoice number, and for purchase or donation links it is typically the link identifier.  Only letters and numbers are allowed; spaces and other special characters are not permitted.
+     * @return $this
+     */
+    public function setTransactionReferenceNumber($transactionReferenceNumber)
+    {
+        $this->container['transactionReferenceNumber'] = $transactionReferenceNumber;
+
+        return $this;
+    }
+
+    /**
      * Gets description
      * @return string
      */
@@ -255,7 +282,7 @@ class InvoicingV2InvoicesPost201ResponseInvoiceInformation implements ArrayAcces
 
     /**
      * Sets dueDate
-     * @param \DateTime $dueDate The invoice due date. This field is required for creating an invoice. Format: `YYYY-MM-DD`, where `YYYY` = year, `MM` = month, and `DD` = day
+     * @param \DateTime $dueDate The invoice due date. This field is required for creating an invoice. Format: `YYYY-MM-DD`, where `YYYY` = year, `MM` = month, and `DD` = day.  The invoice link automatically expires 12 months after the due date.
      * @return $this
      */
     public function setDueDate($dueDate)
@@ -276,7 +303,7 @@ class InvoicingV2InvoicesPost201ResponseInvoiceInformation implements ArrayAcces
 
     /**
      * Sets expirationDate
-     * @param \DateTime $expirationDate Define an expiration date for the link.  Format: `YYYY-MM-DD`, where `YYYY` = year, `MM` = month, and `DD` = day
+     * @param \DateTime $expirationDate Define an expiration date for the link.  The date must be today or in the future.  Format: `YYYY-MM-DD`, where `YYYY` = year, `MM` = month, and `DD` = day.  The invoice link automatically expires 12 months after the due date.
      * @return $this
      */
     public function setExpirationDate($expirationDate)

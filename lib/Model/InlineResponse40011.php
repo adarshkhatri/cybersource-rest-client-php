@@ -53,11 +53,11 @@ class InlineResponse40011 implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'correlationId' => 'string',
-        'details' => '\CyberSource\Model\InlineResponse4001Details[]',
-        'informationLink' => 'string',
+        'submitTimeUtc' => '\DateTime',
+        'status' => 'string',
+        'reason' => 'string',
         'message' => 'string',
-        'reason' => 'string'
+        'details' => '\CyberSource\Model\InlineResponse40011Details[]'
     ];
 
     /**
@@ -65,11 +65,11 @@ class InlineResponse40011 implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'correlationId' => null,
-        'details' => null,
-        'informationLink' => null,
+        'submitTimeUtc' => 'date-time',
+        'status' => null,
+        'reason' => null,
         'message' => null,
-        'reason' => null
+        'details' => null
     ];
 
     public static function swaggerTypes()
@@ -87,11 +87,11 @@ class InlineResponse40011 implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'correlationId' => 'correlationId',
-        'details' => 'details',
-        'informationLink' => 'informationLink',
+        'submitTimeUtc' => 'submitTimeUtc',
+        'status' => 'status',
+        'reason' => 'reason',
         'message' => 'message',
-        'reason' => 'reason'
+        'details' => 'details'
     ];
 
 
@@ -100,11 +100,11 @@ class InlineResponse40011 implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'correlationId' => 'setCorrelationId',
-        'details' => 'setDetails',
-        'informationLink' => 'setInformationLink',
+        'submitTimeUtc' => 'setSubmitTimeUtc',
+        'status' => 'setStatus',
+        'reason' => 'setReason',
         'message' => 'setMessage',
-        'reason' => 'setReason'
+        'details' => 'setDetails'
     ];
 
 
@@ -113,11 +113,11 @@ class InlineResponse40011 implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'correlationId' => 'getCorrelationId',
-        'details' => 'getDetails',
-        'informationLink' => 'getInformationLink',
+        'submitTimeUtc' => 'getSubmitTimeUtc',
+        'status' => 'getStatus',
+        'reason' => 'getReason',
         'message' => 'getMessage',
-        'reason' => 'getReason'
+        'details' => 'getDetails'
     ];
 
     public static function attributeMap()
@@ -151,11 +151,11 @@ class InlineResponse40011 implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['correlationId'] = isset($data['correlationId']) ? $data['correlationId'] : null;
-        $this->container['details'] = isset($data['details']) ? $data['details'] : null;
-        $this->container['informationLink'] = isset($data['informationLink']) ? $data['informationLink'] : null;
-        $this->container['message'] = isset($data['message']) ? $data['message'] : null;
+        $this->container['submitTimeUtc'] = isset($data['submitTimeUtc']) ? $data['submitTimeUtc'] : null;
+        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['reason'] = isset($data['reason']) ? $data['reason'] : null;
+        $this->container['message'] = isset($data['message']) ? $data['message'] : null;
+        $this->container['details'] = isset($data['details']) ? $data['details'] : null;
     }
 
     /**
@@ -167,12 +167,6 @@ class InlineResponse40011 implements ArrayAccess
     {
         $invalid_properties = [];
 
-        if ($this->container['message'] === null) {
-            $invalid_properties[] = "'message' can't be null";
-        }
-        if ($this->container['reason'] === null) {
-            $invalid_properties[] = "'reason' can't be null";
-        }
         return $invalid_properties;
     }
 
@@ -185,96 +179,48 @@ class InlineResponse40011 implements ArrayAccess
     public function valid()
     {
 
-        if ($this->container['message'] === null) {
-            return false;
-        }
-        if ($this->container['reason'] === null) {
-            return false;
-        }
         return true;
     }
 
 
     /**
-     * Gets correlationId
-     * @return string
+     * Gets submitTimeUtc
+     * @return \DateTime
      */
-    public function getCorrelationId()
+    public function getSubmitTimeUtc()
     {
-        return $this->container['correlationId'];
+        return $this->container['submitTimeUtc'];
     }
 
     /**
-     * Sets correlationId
-     * @param string $correlationId
+     * Sets submitTimeUtc
+     * @param \DateTime $submitTimeUtc Time of request in UTC. `Format: YYYY-MM-DDThh:mm:ssZ`  Example 2016-08-11T22:47:57Z equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The T separates the date and the time. The Z indicates UTC.
      * @return $this
      */
-    public function setCorrelationId($correlationId)
+    public function setSubmitTimeUtc($submitTimeUtc)
     {
-        $this->container['correlationId'] = $correlationId;
+        $this->container['submitTimeUtc'] = $submitTimeUtc;
 
         return $this;
     }
 
     /**
-     * Gets details
-     * @return \CyberSource\Model\InlineResponse4001Details[]
-     */
-    public function getDetails()
-    {
-        return $this->container['details'];
-    }
-
-    /**
-     * Sets details
-     * @param \CyberSource\Model\InlineResponse4001Details[] $details
-     * @return $this
-     */
-    public function setDetails($details)
-    {
-        $this->container['details'] = $details;
-
-        return $this;
-    }
-
-    /**
-     * Gets informationLink
+     * Gets status
      * @return string
      */
-    public function getInformationLink()
+    public function getStatus()
     {
-        return $this->container['informationLink'];
+        return $this->container['status'];
     }
 
     /**
-     * Sets informationLink
-     * @param string $informationLink
+     * Sets status
+     * @param string $status The http status description of the submitted request.
      * @return $this
      */
-    public function setInformationLink($informationLink)
+    public function setStatus($status)
     {
-        $this->container['informationLink'] = $informationLink;
-
-        return $this;
-    }
-
-    /**
-     * Gets message
-     * @return string
-     */
-    public function getMessage()
-    {
-        return $this->container['message'];
-    }
-
-    /**
-     * Sets message
-     * @param string $message
-     * @return $this
-     */
-    public function setMessage($message)
-    {
-        $this->container['message'] = $message;
+        $this->container['status'] = $status;
 
         return $this;
     }
@@ -290,12 +236,54 @@ class InlineResponse40011 implements ArrayAccess
 
     /**
      * Sets reason
-     * @param string $reason Possible values: - INVALID_APIKEY - INVALID_SHIPPING_INPUT_PARAMS - CAPTURE_CONTEXT_INVALID - CAPTURE_CONTEXT_EXPIRED - SDK_XHR_ERROR - UNIFIEDPAYMENTS_VALIDATION_PARAMS - UNIFIEDPAYMENTS_VALIDATION_FIELDS - UNIFIEDPAYMENT_PAYMENT_PARAMITERS - CREATE_TOKEN_TIMEOUT - CREATE_TOKEN_XHR_ERROR - SHOW_LOAD_CONTAINER_SELECTOR - SHOW_LOAD_INVALID_CONTAINER - SHOW_TOKEN_TIMEOUT - SHOW_TOKEN_XHR_ERROR - SHOW_PAYMENT_TIMEOUT
+     * @param string $reason Documented reason codes. Client should be able to use the key for generating their own error message Possible Values:   - 'INVALID_DATA'   - 'SYSTEM_ERROR'   - 'RESOURCE_NOT_FOUND'
      * @return $this
      */
     public function setReason($reason)
     {
         $this->container['reason'] = $reason;
+
+        return $this;
+    }
+
+    /**
+     * Gets message
+     * @return string
+     */
+    public function getMessage()
+    {
+        return $this->container['message'];
+    }
+
+    /**
+     * Sets message
+     * @param string $message Descriptive message for the error.
+     * @return $this
+     */
+    public function setMessage($message)
+    {
+        $this->container['message'] = $message;
+
+        return $this;
+    }
+
+    /**
+     * Gets details
+     * @return \CyberSource\Model\InlineResponse40011Details[]
+     */
+    public function getDetails()
+    {
+        return $this->container['details'];
+    }
+
+    /**
+     * Sets details
+     * @param \CyberSource\Model\InlineResponse40011Details[] $details
+     * @return $this
+     */
+    public function setDetails($details)
+    {
+        $this->container['details'] = $details;
 
         return $this;
     }

@@ -5,6 +5,7 @@ All URIs are relative to *https://apitest.cybersource.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**getRegistration**](MerchantBoardingApi.md#getRegistration) | **GET** /boarding/v1/registrations/{registrationId} | Gets all the information on a boarding registration
+[**patchRegistration**](MerchantBoardingApi.md#patchRegistration) | **PATCH** /boarding/v1/registrations/{registrationId} | Updates the information on a boarding registration
 [**postRegistration**](MerchantBoardingApi.md#postRegistration) | **POST** /boarding/v1/registrations | Create a boarding registration
 
 
@@ -53,8 +54,57 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
+# **patchRegistration**
+> \CyberSource\Model\InlineResponse2005 patchRegistration($registrationId, $patchRegistrationBody, $vCIdempotencyId)
+
+Updates the information on a boarding registration
+
+This end point will partially update a boarding registration
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new CyberSource\Api\MerchantBoardingApi();
+$registrationId = "registrationId_example"; // string | Identifies the boarding registration to be updated
+$patchRegistrationBody = new \CyberSource\Model\PatchRegistrationBody(); // \CyberSource\Model\PatchRegistrationBody | Boarding registration data to be patched
+$vCIdempotencyId = "vCIdempotencyId_example"; // string | defines idempotency of the request
+
+try {
+    $result = $api_instance->patchRegistration($registrationId, $patchRegistrationBody, $vCIdempotencyId);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling MerchantBoardingApi->patchRegistration: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **registrationId** | **string**| Identifies the boarding registration to be updated |
+ **patchRegistrationBody** | [**\CyberSource\Model\PatchRegistrationBody**](../Model/PatchRegistrationBody.md)| Boarding registration data to be patched |
+ **vCIdempotencyId** | **string**| defines idempotency of the request | [optional]
+
+### Return type
+
+[**\CyberSource\Model\InlineResponse2005**](../Model/InlineResponse2005.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
 # **postRegistration**
-> \CyberSource\Model\InlineResponse2014 postRegistration($postRegistrationBody, $vCIdempotencyId)
+> \CyberSource\Model\InlineResponse2017 postRegistration($postRegistrationBody, $vCIdempotencyId)
 
 Create a boarding registration
 
@@ -87,7 +137,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CyberSource\Model\InlineResponse2014**](../Model/InlineResponse2014.md)
+[**\CyberSource\Model\InlineResponse2017**](../Model/InlineResponse2017.md)
 
 ### Authorization
 

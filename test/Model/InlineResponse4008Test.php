@@ -32,40 +32,40 @@ namespace CyberSource;
  * InlineResponse4008Test Class Doc Comment
  *
  * @category    Class */
-// * @description Error Bean
+// * @description InlineResponse4008
 /**
  * @package     CyberSource
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class InlineResponse4008Test extends \PHPUnit_Framework_TestCase
+class InlineResponse4008Test extends \PHPUnit\Framework\TestCase
 {
 
     /**
      * Setup before running any test case
      */
-    public static function setUpBeforeClass()
+    public static function setUpBeforeClass(): void
     {
     }
 
     /**
      * Setup before running each test case
      */
-    public function setUp()
+    protected function setUp(): void
     {
     }
 
     /**
      * Clean up after running each test case
      */
-    public function tearDown()
+    protected function tearDown(): void
     {
     }
 
     /**
      * Clean up after running all test cases
      */
-    public static function tearDownAfterClass()
+    public static function tearDownAfterClass(): void
     {
     }
 
@@ -77,9 +77,23 @@ class InlineResponse4008Test extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "code"
+     * Test attribute "submitTimeUtc"
      */
-    public function testPropertyCode()
+    public function testPropertySubmitTimeUtc()
+    {
+    }
+
+    /**
+     * Test attribute "status"
+     */
+    public function testPropertyStatus()
+    {
+    }
+
+    /**
+     * Test attribute "reason"
+     */
+    public function testPropertyReason()
     {
     }
 
@@ -91,30 +105,9 @@ class InlineResponse4008Test extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "localizationKey"
+     * Test attribute "details"
      */
-    public function testPropertyLocalizationKey()
-    {
-    }
-
-    /**
-     * Test attribute "correlationId"
-     */
-    public function testPropertyCorrelationId()
-    {
-    }
-
-    /**
-     * Test attribute "detail"
-     */
-    public function testPropertyDetail()
-    {
-    }
-
-    /**
-     * Test attribute "fields"
-     */
-    public function testPropertyFields()
+    public function testPropertyDetails()
     {
     }
 }

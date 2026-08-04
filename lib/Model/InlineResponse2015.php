@@ -34,7 +34,6 @@ use \ArrayAccess;
  * InlineResponse2015 Class Doc Comment
  *
  * @category    Class
- * @description Egress Key Information Response
  * @package     CyberSource
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
@@ -54,10 +53,13 @@ class InlineResponse2015 implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'submitTimeUtc' => 'string',
+        'id' => 'string',
         'status' => 'string',
-        'clientReferenceInformation' => '\CyberSource\Model\Kmsegressv2keyssymClientReferenceInformation',
-        'keyInformation' => '\CyberSource\Model\InlineResponse2015KeyInformation'
+        'submitTimeStampUtc' => 'string',
+        'links' => '\CyberSource\Model\InlineResponse2015Links',
+        'transactions' => '\CyberSource\Model\InlineResponse2015Transactions[]',
+        'clientReferenceInformation' => '\CyberSource\Model\InlineResponse2015ClientReferenceInformation',
+        'errorInformation' => '\CyberSource\Model\InlineResponse2015ErrorInformation'
     ];
 
     /**
@@ -65,10 +67,13 @@ class InlineResponse2015 implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'submitTimeUtc' => null,
+        'id' => null,
         'status' => null,
+        'submitTimeStampUtc' => null,
+        'links' => null,
+        'transactions' => null,
         'clientReferenceInformation' => null,
-        'keyInformation' => null
+        'errorInformation' => null
     ];
 
     public static function swaggerTypes()
@@ -86,10 +91,13 @@ class InlineResponse2015 implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'submitTimeUtc' => 'submitTimeUtc',
+        'id' => 'id',
         'status' => 'status',
+        'submitTimeStampUtc' => 'submitTimeStampUtc',
+        'links' => '_links',
+        'transactions' => 'transactions',
         'clientReferenceInformation' => 'clientReferenceInformation',
-        'keyInformation' => 'keyInformation'
+        'errorInformation' => 'errorInformation'
     ];
 
 
@@ -98,10 +106,13 @@ class InlineResponse2015 implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'submitTimeUtc' => 'setSubmitTimeUtc',
+        'id' => 'setId',
         'status' => 'setStatus',
+        'submitTimeStampUtc' => 'setSubmitTimeStampUtc',
+        'links' => 'setLinks',
+        'transactions' => 'setTransactions',
         'clientReferenceInformation' => 'setClientReferenceInformation',
-        'keyInformation' => 'setKeyInformation'
+        'errorInformation' => 'setErrorInformation'
     ];
 
 
@@ -110,10 +121,13 @@ class InlineResponse2015 implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'submitTimeUtc' => 'getSubmitTimeUtc',
+        'id' => 'getId',
         'status' => 'getStatus',
+        'submitTimeStampUtc' => 'getSubmitTimeStampUtc',
+        'links' => 'getLinks',
+        'transactions' => 'getTransactions',
         'clientReferenceInformation' => 'getClientReferenceInformation',
-        'keyInformation' => 'getKeyInformation'
+        'errorInformation' => 'getErrorInformation'
     ];
 
     public static function attributeMap()
@@ -147,10 +161,13 @@ class InlineResponse2015 implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['submitTimeUtc'] = isset($data['submitTimeUtc']) ? $data['submitTimeUtc'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['submitTimeStampUtc'] = isset($data['submitTimeStampUtc']) ? $data['submitTimeStampUtc'] : null;
+        $this->container['links'] = isset($data['links']) ? $data['links'] : null;
+        $this->container['transactions'] = isset($data['transactions']) ? $data['transactions'] : null;
         $this->container['clientReferenceInformation'] = isset($data['clientReferenceInformation']) ? $data['clientReferenceInformation'] : null;
-        $this->container['keyInformation'] = isset($data['keyInformation']) ? $data['keyInformation'] : null;
+        $this->container['errorInformation'] = isset($data['errorInformation']) ? $data['errorInformation'] : null;
     }
 
     /**
@@ -162,6 +179,9 @@ class InlineResponse2015 implements ArrayAccess
     {
         $invalid_properties = [];
 
+        if ($this->container['status'] === null) {
+            $invalid_properties[] = "'status' can't be null";
+        }
         return $invalid_properties;
     }
 
@@ -174,27 +194,30 @@ class InlineResponse2015 implements ArrayAccess
     public function valid()
     {
 
+        if ($this->container['status'] === null) {
+            return false;
+        }
         return true;
     }
 
 
     /**
-     * Gets submitTimeUtc
+     * Gets id
      * @return string
      */
-    public function getSubmitTimeUtc()
+    public function getId()
     {
-        return $this->container['submitTimeUtc'];
+        return $this->container['id'];
     }
 
     /**
-     * Sets submitTimeUtc
-     * @param string $submitTimeUtc Time of request in UTC. Format: `YYYY-MM-DDThh:mm:ssZ` Example `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The `T` separates the date and the time. The `Z` indicates UTC.
+     * Sets id
+     * @param string $id A unique identification number to identify the submitted request. It is also appended to the endpoint of the resource.
      * @return $this
      */
-    public function setSubmitTimeUtc($submitTimeUtc)
+    public function setId($id)
     {
-        $this->container['submitTimeUtc'] = $submitTimeUtc;
+        $this->container['id'] = $id;
 
         return $this;
     }
@@ -210,7 +233,7 @@ class InlineResponse2015 implements ArrayAccess
 
     /**
      * Sets status
-     * @param string $status The status of the submitted transaction. Possible values:  - ACCEPTED
+     * @param string $status The status of the submitted transaction.  Possible values: - `COMPLETED` - `SERVER_ERROR` - `INVALID_REQUEST` - `DECLINED`
      * @return $this
      */
     public function setStatus($status)
@@ -221,8 +244,71 @@ class InlineResponse2015 implements ArrayAccess
     }
 
     /**
+     * Gets submitTimeStampUtc
+     * @return string
+     */
+    public function getSubmitTimeStampUtc()
+    {
+        return $this->container['submitTimeStampUtc'];
+    }
+
+    /**
+     * Sets submitTimeStampUtc
+     * @param string $submitTimeStampUtc Time of request in UTC. Format: `YYYY-MM-DD'T'HH:mm:ssZ`  Example: `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The T separates the date and the time. The Z indicates UTC.
+     * @return $this
+     */
+    public function setSubmitTimeStampUtc($submitTimeStampUtc)
+    {
+        $this->container['submitTimeStampUtc'] = $submitTimeStampUtc;
+
+        return $this;
+    }
+
+    /**
+     * Gets links
+     * @return \CyberSource\Model\InlineResponse2015Links
+     */
+    public function getLinks()
+    {
+        return $this->container['links'];
+    }
+
+    /**
+     * Sets links
+     * @param \CyberSource\Model\InlineResponse2015Links $links
+     * @return $this
+     */
+    public function setLinks($links)
+    {
+        $this->container['links'] = $links;
+
+        return $this;
+    }
+
+    /**
+     * Gets transactions
+     * @return \CyberSource\Model\InlineResponse2015Transactions[]
+     */
+    public function getTransactions()
+    {
+        return $this->container['transactions'];
+    }
+
+    /**
+     * Sets transactions
+     * @param \CyberSource\Model\InlineResponse2015Transactions[] $transactions
+     * @return $this
+     */
+    public function setTransactions($transactions)
+    {
+        $this->container['transactions'] = $transactions;
+
+        return $this;
+    }
+
+    /**
      * Gets clientReferenceInformation
-     * @return \CyberSource\Model\Kmsegressv2keyssymClientReferenceInformation
+     * @return \CyberSource\Model\InlineResponse2015ClientReferenceInformation
      */
     public function getClientReferenceInformation()
     {
@@ -231,7 +317,7 @@ class InlineResponse2015 implements ArrayAccess
 
     /**
      * Sets clientReferenceInformation
-     * @param \CyberSource\Model\Kmsegressv2keyssymClientReferenceInformation $clientReferenceInformation
+     * @param \CyberSource\Model\InlineResponse2015ClientReferenceInformation $clientReferenceInformation
      * @return $this
      */
     public function setClientReferenceInformation($clientReferenceInformation)
@@ -242,22 +328,22 @@ class InlineResponse2015 implements ArrayAccess
     }
 
     /**
-     * Gets keyInformation
-     * @return \CyberSource\Model\InlineResponse2015KeyInformation
+     * Gets errorInformation
+     * @return \CyberSource\Model\InlineResponse2015ErrorInformation
      */
-    public function getKeyInformation()
+    public function getErrorInformation()
     {
-        return $this->container['keyInformation'];
+        return $this->container['errorInformation'];
     }
 
     /**
-     * Sets keyInformation
-     * @param \CyberSource\Model\InlineResponse2015KeyInformation $keyInformation
+     * Sets errorInformation
+     * @param \CyberSource\Model\InlineResponse2015ErrorInformation $errorInformation
      * @return $this
      */
-    public function setKeyInformation($keyInformation)
+    public function setErrorInformation($errorInformation)
     {
-        $this->container['keyInformation'] = $keyInformation;
+        $this->container['errorInformation'] = $errorInformation;
 
         return $this;
     }

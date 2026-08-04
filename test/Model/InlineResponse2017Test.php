@@ -38,34 +38,34 @@ namespace CyberSource;
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class InlineResponse2017Test extends \PHPUnit_Framework_TestCase
+class InlineResponse2017Test extends \PHPUnit\Framework\TestCase
 {
 
     /**
      * Setup before running any test case
      */
-    public static function setUpBeforeClass()
+    public static function setUpBeforeClass(): void
     {
     }
 
     /**
      * Setup before running each test case
      */
-    public function setUp()
+    protected function setUp(): void
     {
     }
 
     /**
      * Clean up after running each test case
      */
-    public function tearDown()
+    protected function tearDown(): void
     {
     }
 
     /**
      * Clean up after running all test cases
      */
-    public static function tearDownAfterClass()
+    public static function tearDownAfterClass(): void
     {
     }
 
@@ -77,65 +77,65 @@ class InlineResponse2017Test extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "eventDate"
+     * Test attribute "id"
      */
-    public function testPropertyEventDate()
+    public function testPropertyId()
     {
     }
 
     /**
-     * Test attribute "eventType"
+     * Test attribute "submitTimeUtc"
      */
-    public function testPropertyEventType()
+    public function testPropertySubmitTimeUtc()
     {
     }
 
     /**
-     * Test attribute "organizationId"
+     * Test attribute "status"
      */
-    public function testPropertyOrganizationId()
+    public function testPropertyStatus()
     {
     }
 
     /**
-     * Test attribute "payloads"
+     * Test attribute "registrationInformation"
      */
-    public function testPropertyPayloads()
+    public function testPropertyRegistrationInformation()
     {
     }
 
     /**
-     * Test attribute "productId"
+     * Test attribute "integrationInformation"
      */
-    public function testPropertyProductId()
+    public function testPropertyIntegrationInformation()
     {
     }
 
     /**
-     * Test attribute "requestType"
+     * Test attribute "organizationInformation"
      */
-    public function testPropertyRequestType()
+    public function testPropertyOrganizationInformation()
     {
     }
 
     /**
-     * Test attribute "retryNumber"
+     * Test attribute "productInformationSetups"
      */
-    public function testPropertyRetryNumber()
+    public function testPropertyProductInformationSetups()
     {
     }
 
     /**
-     * Test attribute "transactionTraceId"
+     * Test attribute "message"
      */
-    public function testPropertyTransactionTraceId()
+    public function testPropertyMessage()
     {
     }
 
     /**
-     * Test attribute "webhookId"
+     * Test attribute "details"
      */
-    public function testPropertyWebhookId()
+    public function testPropertyDetails()
     {
     }
 }

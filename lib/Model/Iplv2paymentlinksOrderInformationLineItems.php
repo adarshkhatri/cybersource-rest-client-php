@@ -62,7 +62,8 @@ class Iplv2paymentlinksOrderInformationLineItems implements ArrayAccess
         'discountAmount' => 'string',
         'discountPercent' => 'string',
         'taxAmount' => 'string',
-        'taxRate' => 'string'
+        'taxRate' => 'string',
+        'totalAmount' => 'string'
     ];
 
     /**
@@ -78,7 +79,8 @@ class Iplv2paymentlinksOrderInformationLineItems implements ArrayAccess
         'discountAmount' => null,
         'discountPercent' => null,
         'taxAmount' => null,
-        'taxRate' => null
+        'taxRate' => null,
+        'totalAmount' => null
     ];
 
     public static function swaggerTypes()
@@ -104,7 +106,8 @@ class Iplv2paymentlinksOrderInformationLineItems implements ArrayAccess
         'discountAmount' => 'discountAmount',
         'discountPercent' => 'discountPercent',
         'taxAmount' => 'taxAmount',
-        'taxRate' => 'taxRate'
+        'taxRate' => 'taxRate',
+        'totalAmount' => 'totalAmount'
     ];
 
 
@@ -121,7 +124,8 @@ class Iplv2paymentlinksOrderInformationLineItems implements ArrayAccess
         'discountAmount' => 'setDiscountAmount',
         'discountPercent' => 'setDiscountPercent',
         'taxAmount' => 'setTaxAmount',
-        'taxRate' => 'setTaxRate'
+        'taxRate' => 'setTaxRate',
+        'totalAmount' => 'setTotalAmount'
     ];
 
 
@@ -138,7 +142,8 @@ class Iplv2paymentlinksOrderInformationLineItems implements ArrayAccess
         'discountAmount' => 'getDiscountAmount',
         'discountPercent' => 'getDiscountPercent',
         'taxAmount' => 'getTaxAmount',
-        'taxRate' => 'getTaxRate'
+        'taxRate' => 'getTaxRate',
+        'totalAmount' => 'getTotalAmount'
     ];
 
     public static function attributeMap()
@@ -181,6 +186,7 @@ class Iplv2paymentlinksOrderInformationLineItems implements ArrayAccess
         $this->container['discountPercent'] = isset($data['discountPercent']) ? $data['discountPercent'] : null;
         $this->container['taxAmount'] = isset($data['taxAmount']) ? $data['taxAmount'] : null;
         $this->container['taxRate'] = isset($data['taxRate']) ? $data['taxRate'] : null;
+        $this->container['totalAmount'] = isset($data['totalAmount']) ? $data['totalAmount'] : null;
     }
 
     /**
@@ -330,7 +336,7 @@ class Iplv2paymentlinksOrderInformationLineItems implements ArrayAccess
 
     /**
      * Sets discountAmount
-     * @param string $discountAmount Discount amount applied to the item. Maximum of 2 decimal places. You may provide either discountAmount or discountPercent (not both). If both are present, their values must be consistent. Otherwise, a validation error will be returned.
+     * @param string $discountAmount Discount amount applied to the item. Maximum of 2 decimal places. You may provide either discountAmount or discountPercent (not both). Example: 0.60
      * @return $this
      */
     public function setDiscountAmount($discountAmount)
@@ -351,7 +357,7 @@ class Iplv2paymentlinksOrderInformationLineItems implements ArrayAccess
 
     /**
      * Sets discountPercent
-     * @param string $discountPercent Discount rate applied to the item. Maximum of 3 decimal places. You may provide either discountAmount or discountPercent (not both). If both are present, their values must be consistent; otherwise, a validation error will be returned. Example: 5.25 (=5.25%)
+     * @param string $discountPercent Discount rate applied to the item. Maximum of 3 decimal places. You may provide either discountAmount or discountPercent (not both). If you add discountPercent, a discountAmount will be calculated automatically. Example: 5.00 (=5.00%)
      * @return $this
      */
     public function setDiscountPercent($discountPercent)
@@ -372,7 +378,7 @@ class Iplv2paymentlinksOrderInformationLineItems implements ArrayAccess
 
     /**
      * Sets taxAmount
-     * @param string $taxAmount Tax amount applied to the item. This value cannot be negative. Maximum of 2 decimal places. The tax amount and the offer amount must be in the same currency. The tax amount field is additive. If taxAmount is provided but taxRate is not, the taxRate will be calculated.
+     * @param string $taxAmount Tax amount applied to the item. This value cannot be negative. Maximum of 2 decimal places. The tax amount and the offer amount must be in the same currency. The tax amount field is additive. If taxAmount is provided but taxRate is not, the taxRate will be calculated. Example: 2.86
      * @return $this
      */
     public function setTaxAmount($taxAmount)
@@ -393,12 +399,33 @@ class Iplv2paymentlinksOrderInformationLineItems implements ArrayAccess
 
     /**
      * Sets taxRate
-     * @param string $taxRate Tax rate applied to the item. Valid range: 1.001% to 99.999%. Maximum of 3 decimal places. If a taxRate is provided but taxAmount is missing or incorrect, the taxAmount based on the given taxRate will be overwritten. Example: 21.00 (=21.00%)
+     * @param string $taxRate Tax rate applied to the item. Valid range: 1.001% to 99.999%. Maximum of 3 decimal places. If a taxRate is provided but taxAmount is missing or incorrect, the taxAmount based on the given taxRate will be overwritten. Example: 25.00 (=25.00%)
      * @return $this
      */
     public function setTaxRate($taxRate)
     {
         $this->container['taxRate'] = $taxRate;
+
+        return $this;
+    }
+
+    /**
+     * Gets totalAmount
+     * @return string
+     */
+    public function getTotalAmount()
+    {
+        return $this->container['totalAmount'];
+    }
+
+    /**
+     * Sets totalAmount
+     * @param string $totalAmount Total amount for the line item after discount and tax, calculated per single unit. Formula: (unitPrice - discountAmount) + taxAmount. This field is calculated automatically and does not need to be provided in the request. Example: 14.31
+     * @return $this
+     */
+    public function setTotalAmount($totalAmount)
+    {
+        $this->container['totalAmount'] = $totalAmount;
 
         return $this;
     }

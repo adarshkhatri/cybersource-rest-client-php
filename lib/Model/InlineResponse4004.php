@@ -53,11 +53,12 @@ class InlineResponse4004 implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'submitTimeUtc' => 'string',
+        'id' => 'string',
+        'submitTimeStampUtc' => 'string',
         'status' => 'string',
         'reason' => 'string',
         'message' => 'string',
-        'details' => '\CyberSource\Model\PtsV2PaymentsPost201ResponseErrorInformationDetails[]'
+        'details' => '\CyberSource\Model\InlineResponse2014ErrorInformationDetails[]'
     ];
 
     /**
@@ -65,7 +66,8 @@ class InlineResponse4004 implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'submitTimeUtc' => null,
+        'id' => null,
+        'submitTimeStampUtc' => null,
         'status' => null,
         'reason' => null,
         'message' => null,
@@ -87,7 +89,8 @@ class InlineResponse4004 implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'submitTimeUtc' => 'submitTimeUtc',
+        'id' => 'id',
+        'submitTimeStampUtc' => 'submitTimeStampUtc',
         'status' => 'status',
         'reason' => 'reason',
         'message' => 'message',
@@ -100,7 +103,8 @@ class InlineResponse4004 implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'submitTimeUtc' => 'setSubmitTimeUtc',
+        'id' => 'setId',
+        'submitTimeStampUtc' => 'setSubmitTimeStampUtc',
         'status' => 'setStatus',
         'reason' => 'setReason',
         'message' => 'setMessage',
@@ -113,7 +117,8 @@ class InlineResponse4004 implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'submitTimeUtc' => 'getSubmitTimeUtc',
+        'id' => 'getId',
+        'submitTimeStampUtc' => 'getSubmitTimeStampUtc',
         'status' => 'getStatus',
         'reason' => 'getReason',
         'message' => 'getMessage',
@@ -151,7 +156,8 @@ class InlineResponse4004 implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['submitTimeUtc'] = isset($data['submitTimeUtc']) ? $data['submitTimeUtc'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['submitTimeStampUtc'] = isset($data['submitTimeStampUtc']) ? $data['submitTimeStampUtc'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['reason'] = isset($data['reason']) ? $data['reason'] : null;
         $this->container['message'] = isset($data['message']) ? $data['message'] : null;
@@ -167,6 +173,9 @@ class InlineResponse4004 implements ArrayAccess
     {
         $invalid_properties = [];
 
+        if ($this->container['status'] === null) {
+            $invalid_properties[] = "'status' can't be null";
+        }
         return $invalid_properties;
     }
 
@@ -179,27 +188,51 @@ class InlineResponse4004 implements ArrayAccess
     public function valid()
     {
 
+        if ($this->container['status'] === null) {
+            return false;
+        }
         return true;
     }
 
 
     /**
-     * Gets submitTimeUtc
+     * Gets id
      * @return string
      */
-    public function getSubmitTimeUtc()
+    public function getId()
     {
-        return $this->container['submitTimeUtc'];
+        return $this->container['id'];
     }
 
     /**
-     * Sets submitTimeUtc
-     * @param string $submitTimeUtc Time of request in UTC. Format: `YYYY-MM-DDThh:mm:ssZ` **Example** `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The `T` separates the date and the time. The `Z` indicates UTC.  Returned by Cybersource for all services.
+     * Sets id
+     * @param string $id A unique identification number to identify the submitted request. It is also appended to the endpoint of the resource.
      * @return $this
      */
-    public function setSubmitTimeUtc($submitTimeUtc)
+    public function setId($id)
     {
-        $this->container['submitTimeUtc'] = $submitTimeUtc;
+        $this->container['id'] = $id;
+
+        return $this;
+    }
+
+    /**
+     * Gets submitTimeStampUtc
+     * @return string
+     */
+    public function getSubmitTimeStampUtc()
+    {
+        return $this->container['submitTimeStampUtc'];
+    }
+
+    /**
+     * Sets submitTimeStampUtc
+     * @param string $submitTimeStampUtc Time of request in UTC. Format: `YYYY-MM-DD'T'HH:mm:ssZ`  Example: `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The T separates the date and the time. The Z indicates UTC.
+     * @return $this
+     */
+    public function setSubmitTimeStampUtc($submitTimeStampUtc)
+    {
+        $this->container['submitTimeStampUtc'] = $submitTimeStampUtc;
 
         return $this;
     }
@@ -215,7 +248,7 @@ class InlineResponse4004 implements ArrayAccess
 
     /**
      * Sets status
-     * @param string $status The status of the submitted transaction.  Possible values:  - INVALID_REQUEST
+     * @param string $status Possible values: - INVALID_REQUEST
      * @return $this
      */
     public function setStatus($status)
@@ -236,7 +269,7 @@ class InlineResponse4004 implements ArrayAccess
 
     /**
      * Sets reason
-     * @param string $reason The reason of the status.  Possible values:  - MISSING_FIELD  - INVALID_DATA  - DUPLICATE_REQUEST  - INVALID_CARD  - CARD_TYPE_NOT_ACCEPTED  - INVALID_MERCHANT_CONFIGURATION  - PROCESSOR_UNAVAILABLE  - INVALID_CARD_TYPE
+     * @param string $reason The reason of the status.  Possible values: - INVALID_DATA - MISSING_FIELD
      * @return $this
      */
     public function setReason($reason)
@@ -269,7 +302,7 @@ class InlineResponse4004 implements ArrayAccess
 
     /**
      * Gets details
-     * @return \CyberSource\Model\PtsV2PaymentsPost201ResponseErrorInformationDetails[]
+     * @return \CyberSource\Model\InlineResponse2014ErrorInformationDetails[]
      */
     public function getDetails()
     {
@@ -278,7 +311,7 @@ class InlineResponse4004 implements ArrayAccess
 
     /**
      * Sets details
-     * @param \CyberSource\Model\PtsV2PaymentsPost201ResponseErrorInformationDetails[] $details
+     * @param \CyberSource\Model\InlineResponse2014ErrorInformationDetails[] $details
      * @return $this
      */
     public function setDetails($details)

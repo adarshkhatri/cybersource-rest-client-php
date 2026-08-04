@@ -53,10 +53,10 @@ class InlineResponse401 implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'status' => 'string',
-        'message' => 'string',
-        'code' => 'string',
-        'submitTimeUtc' => 'string'
+        'id' => 'string',
+        'submitTimeStampUtc' => 'string',
+        'reason' => 'string',
+        'message' => 'string'
     ];
 
     /**
@@ -64,10 +64,10 @@ class InlineResponse401 implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'status' => null,
-        'message' => null,
-        'code' => null,
-        'submitTimeUtc' => null
+        'id' => null,
+        'submitTimeStampUtc' => null,
+        'reason' => null,
+        'message' => null
     ];
 
     public static function swaggerTypes()
@@ -85,10 +85,10 @@ class InlineResponse401 implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'status' => 'status',
-        'message' => 'message',
-        'code' => 'code',
-        'submitTimeUtc' => 'submitTimeUtc'
+        'id' => 'id',
+        'submitTimeStampUtc' => 'submitTimeStampUtc',
+        'reason' => 'reason',
+        'message' => 'message'
     ];
 
 
@@ -97,10 +97,10 @@ class InlineResponse401 implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'status' => 'setStatus',
-        'message' => 'setMessage',
-        'code' => 'setCode',
-        'submitTimeUtc' => 'setSubmitTimeUtc'
+        'id' => 'setId',
+        'submitTimeStampUtc' => 'setSubmitTimeStampUtc',
+        'reason' => 'setReason',
+        'message' => 'setMessage'
     ];
 
 
@@ -109,10 +109,10 @@ class InlineResponse401 implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'status' => 'getStatus',
-        'message' => 'getMessage',
-        'code' => 'getCode',
-        'submitTimeUtc' => 'getSubmitTimeUtc'
+        'id' => 'getId',
+        'submitTimeStampUtc' => 'getSubmitTimeStampUtc',
+        'reason' => 'getReason',
+        'message' => 'getMessage'
     ];
 
     public static function attributeMap()
@@ -146,10 +146,10 @@ class InlineResponse401 implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['submitTimeStampUtc'] = isset($data['submitTimeStampUtc']) ? $data['submitTimeStampUtc'] : null;
+        $this->container['reason'] = isset($data['reason']) ? $data['reason'] : null;
         $this->container['message'] = isset($data['message']) ? $data['message'] : null;
-        $this->container['code'] = isset($data['code']) ? $data['code'] : null;
-        $this->container['submitTimeUtc'] = isset($data['submitTimeUtc']) ? $data['submitTimeUtc'] : null;
     }
 
     /**
@@ -178,22 +178,64 @@ class InlineResponse401 implements ArrayAccess
 
 
     /**
-     * Gets status
+     * Gets id
      * @return string
      */
-    public function getStatus()
+    public function getId()
     {
-        return $this->container['status'];
+        return $this->container['id'];
     }
 
     /**
-     * Sets status
-     * @param string $status The status of the submitted request.   Possible values: - UNAUTHORIZED
+     * Sets id
+     * @param string $id A unique identification number to identify the submitted request. It is also appended to the endpoint of the resource.
      * @return $this
      */
-    public function setStatus($status)
+    public function setId($id)
     {
-        $this->container['status'] = $status;
+        $this->container['id'] = $id;
+
+        return $this;
+    }
+
+    /**
+     * Gets submitTimeStampUtc
+     * @return string
+     */
+    public function getSubmitTimeStampUtc()
+    {
+        return $this->container['submitTimeStampUtc'];
+    }
+
+    /**
+     * Sets submitTimeStampUtc
+     * @param string $submitTimeStampUtc Time of request in UTC. Format: `YYYY-MM-DD'T'HH:mm:ssZ`  Example: `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The T separates the date and the time. The Z indicates UTC.
+     * @return $this
+     */
+    public function setSubmitTimeStampUtc($submitTimeStampUtc)
+    {
+        $this->container['submitTimeStampUtc'] = $submitTimeStampUtc;
+
+        return $this;
+    }
+
+    /**
+     * Gets reason
+     * @return string
+     */
+    public function getReason()
+    {
+        return $this->container['reason'];
+    }
+
+    /**
+     * Sets reason
+     * @param string $reason The reason of the status.  Possible values: - UNAUTHORIZED
+     * @return $this
+     */
+    public function setReason($reason)
+    {
+        $this->container['reason'] = $reason;
 
         return $this;
     }
@@ -215,48 +257,6 @@ class InlineResponse401 implements ArrayAccess
     public function setMessage($message)
     {
         $this->container['message'] = $message;
-
-        return $this;
-    }
-
-    /**
-     * Gets code
-     * @return string
-     */
-    public function getCode()
-    {
-        return $this->container['code'];
-    }
-
-    /**
-     * Sets code
-     * @param string $code An optional short string which identifies the exact error.
-     * @return $this
-     */
-    public function setCode($code)
-    {
-        $this->container['code'] = $code;
-
-        return $this;
-    }
-
-    /**
-     * Gets submitTimeUtc
-     * @return string
-     */
-    public function getSubmitTimeUtc()
-    {
-        return $this->container['submitTimeUtc'];
-    }
-
-    /**
-     * Sets submitTimeUtc
-     * @param string $submitTimeUtc Time of request in UTC. `Format: YYYY-MM-DDThh:mm:ssZ`  Example 2016-08-11T22:47:57Z equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The T separates the date and the time. The Z indicates UTC.
-     * @return $this
-     */
-    public function setSubmitTimeUtc($submitTimeUtc)
-    {
-        $this->container['submitTimeUtc'] = $submitTimeUtc;
 
         return $this;
     }

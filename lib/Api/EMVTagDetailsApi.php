@@ -211,7 +211,7 @@ class EMVTagDetailsApi
      *
      * Parse an EMV String
      *
-     * @param \CyberSource\Model\Body $body  (required)
+     * @param \CyberSource\Model\Body2 $body  (required)
      * @throws \CyberSource\ApiException on non-2xx response
      * @return array of \CyberSource\Model\TssV2PostEmvTags200Response, HTTP status code, HTTP response headers (array of strings)
      */
@@ -229,7 +229,7 @@ class EMVTagDetailsApi
      *
      * Parse an EMV String
      *
-     * @param \CyberSource\Model\Body $body  (required)
+     * @param \CyberSource\Model\Body2 $body  (required)
      * @throws \CyberSource\ApiException on non-2xx response
      * @return array of \CyberSource\Model\TssV2PostEmvTags200Response, HTTP status code, HTTP response headers (array of strings)
      */
@@ -261,7 +261,7 @@ class EMVTagDetailsApi
         }
         
         $sdkTracker = new \CyberSource\Utilities\Tracking\SdkTracker();
-        $modelClassLocation = explode('\\', '\CyberSource\Model\Body');
+        $modelClassLocation = explode('\\', '\CyberSource\Model\Body2');
 
         $_tempBody = $sdkTracker->insertDeveloperIdTracker($_tempBody, end($modelClassLocation), $this->apiClient->merchantConfig->getRunEnvironment(), $this->apiClient->merchantConfig->getDefaultDeveloperId());
 

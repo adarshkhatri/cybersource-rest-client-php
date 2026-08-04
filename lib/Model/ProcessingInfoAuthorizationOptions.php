@@ -63,6 +63,7 @@ class ProcessingInfoAuthorizationOptions implements ArrayAccess
         'balanceInquiry' => 'bool',
         'ignoreAvsResult' => 'bool',
         'declineAvsFlags' => 'string[]',
+        'declineAniFlags' => 'string[]',
         'ignoreCvResult' => 'bool',
         'initiator' => '\CyberSource\Model\ProcessingInfoAuthorizationOptionsInitiator',
         'billPayment' => 'bool',
@@ -97,6 +98,7 @@ class ProcessingInfoAuthorizationOptions implements ArrayAccess
         'balanceInquiry' => null,
         'ignoreAvsResult' => null,
         'declineAvsFlags' => null,
+        'declineAniFlags' => null,
         'ignoreCvResult' => null,
         'initiator' => null,
         'billPayment' => null,
@@ -141,6 +143,7 @@ class ProcessingInfoAuthorizationOptions implements ArrayAccess
         'balanceInquiry' => 'balanceInquiry',
         'ignoreAvsResult' => 'ignoreAvsResult',
         'declineAvsFlags' => 'declineAvsFlags',
+        'declineAniFlags' => 'declineAniFlags',
         'ignoreCvResult' => 'ignoreCvResult',
         'initiator' => 'initiator',
         'billPayment' => 'billPayment',
@@ -176,6 +179,7 @@ class ProcessingInfoAuthorizationOptions implements ArrayAccess
         'balanceInquiry' => 'setBalanceInquiry',
         'ignoreAvsResult' => 'setIgnoreAvsResult',
         'declineAvsFlags' => 'setDeclineAvsFlags',
+        'declineAniFlags' => 'setDeclineAniFlags',
         'ignoreCvResult' => 'setIgnoreCvResult',
         'initiator' => 'setInitiator',
         'billPayment' => 'setBillPayment',
@@ -211,6 +215,7 @@ class ProcessingInfoAuthorizationOptions implements ArrayAccess
         'balanceInquiry' => 'getBalanceInquiry',
         'ignoreAvsResult' => 'getIgnoreAvsResult',
         'declineAvsFlags' => 'getDeclineAvsFlags',
+        'declineAniFlags' => 'getDeclineAniFlags',
         'ignoreCvResult' => 'getIgnoreCvResult',
         'initiator' => 'getInitiator',
         'billPayment' => 'getBillPayment',
@@ -271,6 +276,7 @@ class ProcessingInfoAuthorizationOptions implements ArrayAccess
         $this->container['balanceInquiry'] = isset($data['balanceInquiry']) ? $data['balanceInquiry'] : null;
         $this->container['ignoreAvsResult'] = isset($data['ignoreAvsResult']) ? $data['ignoreAvsResult'] : false;
         $this->container['declineAvsFlags'] = isset($data['declineAvsFlags']) ? $data['declineAvsFlags'] : null;
+        $this->container['declineAniFlags'] = isset($data['declineAniFlags']) ? $data['declineAniFlags'] : null;
         $this->container['ignoreCvResult'] = isset($data['ignoreCvResult']) ? $data['ignoreCvResult'] : false;
         $this->container['initiator'] = isset($data['initiator']) ? $data['initiator'] : null;
         $this->container['billPayment'] = isset($data['billPayment']) ? $data['billPayment'] : null;
@@ -521,6 +527,27 @@ class ProcessingInfoAuthorizationOptions implements ArrayAccess
     public function setDeclineAvsFlags($declineAvsFlags)
     {
         $this->container['declineAvsFlags'] = $declineAvsFlags;
+
+        return $this;
+    }
+
+    /**
+     * Gets declineAniFlags
+     * @return string[]
+     */
+    public function getDeclineAniFlags()
+    {
+        return $this->container['declineAniFlags'];
+    }
+
+    /**
+     * Sets declineAniFlags
+     * @param string[] $declineAniFlags User-defined list of ANI (Address Name Inquiry) codes that will cause the system to decline a transaction.  Address Name Inquiry is a Verification suite product which checks whether the name shared in the  transaction matches with the one stored at the issuing bank. This field replicates the same behavior  as AVS (which uses DAVSNO flag), but for ANI verification using the DANINO flag.  **Important**:  - By default, no ANI codes cause declines (empty/null) - Merchant specifies which ANI codes should trigger declines - When triggered, returns reason code 217 with reply flag `DANINO` - Use space to separate values in the list - To receive declines for the ANI code N, include the value N in the list  ### ANI Result Codes  |ANI Code|Description| |--- |--- | |Y|Match: Full name match with issuing bank records| |O|Partial match: Partial name match with issuing bank records| |N|No match: Name does not match issuing bank records| |U|Unverified: ANI verification not performed or not supported| |R|Retry: System should retry the ANI check|  ### Reply Flag When Triggered  When a transaction's ANI result matches one of the codes in this list, the system returns: - **Reason Code**: 217 - **Reply Flag**: `DANINO` - **Description**: Decline. The authorization request was approved by the issuing bank but was    flagged because it did not pass the Address Name Inquiry (ANI) check. - **Possible Action**: Review the order for the possibility of fraud.  #### Used by **Authorization** Optional field for controlling ANI-based declines.  #### API Ticket ACCAPI-2138
+     * @return $this
+     */
+    public function setDeclineAniFlags($declineAniFlags)
+    {
+        $this->container['declineAniFlags'] = $declineAniFlags;
 
         return $this;
     }

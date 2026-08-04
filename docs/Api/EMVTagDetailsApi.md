@@ -62,7 +62,7 @@ Pass an EMV Tag-Length-Value (TLV) string for parsing.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new CyberSource\Api\EMVTagDetailsApi();
-$body = new \CyberSource\Model\Body(); // \CyberSource\Model\Body | 
+$body = new \CyberSource\Model\Body2(); // \CyberSource\Model\Body2 | 
 
 try {
     $result = $api_instance->parseEmvTags($body);
@@ -77,7 +77,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\CyberSource\Model\Body**](../Model/Body.md)|  |
+ **body** | [**\CyberSource\Model\Body2**](../Model/Body2.md)|  |
 
 ### Return type
 

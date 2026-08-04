@@ -57,7 +57,7 @@ class InlineResponse2005 implements ArrayAccess
         'integrationInformation' => '\CyberSource\Model\InlineResponse2005IntegrationInformation',
         'organizationInformation' => '\CyberSource\Model\Boardingv1registrationsOrganizationInformation',
         'productInformation' => '\CyberSource\Model\Boardingv1registrationsProductInformation',
-        'productInformationSetups' => '\CyberSource\Model\InlineResponse2014ProductInformationSetups[]',
+        'productInformationSetups' => '\CyberSource\Model\InlineResponse2017ProductInformationSetups[]',
         'documentInformation' => '\CyberSource\Model\Boardingv1registrationsDocumentInformation',
         'details' => 'map[string,object[]]'
     ];
@@ -281,7 +281,7 @@ class InlineResponse2005 implements ArrayAccess
 
     /**
      * Gets productInformationSetups
-     * @return \CyberSource\Model\InlineResponse2014ProductInformationSetups[]
+     * @return \CyberSource\Model\InlineResponse2017ProductInformationSetups[]
      */
     public function getProductInformationSetups()
     {
@@ -290,7 +290,7 @@ class InlineResponse2005 implements ArrayAccess
 
     /**
      * Sets productInformationSetups
-     * @param \CyberSource\Model\InlineResponse2014ProductInformationSetups[] $productInformationSetups
+     * @param \CyberSource\Model\InlineResponse2017ProductInformationSetups[] $productInformationSetups
      * @return $this
      */
     public function setProductInformationSetups($productInformationSetups)

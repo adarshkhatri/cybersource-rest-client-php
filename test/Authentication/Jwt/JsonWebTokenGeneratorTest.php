@@ -162,7 +162,7 @@ class JsonWebTokenGeneratorTest extends TestCase
     }
 
     // -----------------------------------------------------------------------
-    // Resource path — query params should be stripped
+    // Resource path — query params are retained in the resource path
     // -----------------------------------------------------------------------
 
     public function testResourcePathStripsQueryParameters(): void
@@ -170,7 +170,7 @@ class JsonWebTokenGeneratorTest extends TestCase
         $token = $this->generator->generateToken('/reporting/v3/reports?startDate=2024-01-01&endDate=2024-01-31', '', 'GET', $this->merchantConfig);
         $decoded = JWT::decode(substr($token, 7), new Key(base64_decode($this->testSecret), 'HS256'));
 
-        $this->assertSame('/reporting/v3/reports', $decoded->{'request-resource-path'});
+        $this->assertSame('/reporting/v3/reports?startDate=2024-01-01&endDate=2024-01-31', $decoded->{'request-resource-path'});
     }
 
     public function testResourcePathWithoutQueryParamsRemainsUnchanged(): void

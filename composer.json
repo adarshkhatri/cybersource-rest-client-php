@@ -1,6 +1,6 @@
 {
     "name": "cybersource/rest-client-php",
-    "version": "0.0.74",
+    "version": "0.0.75",
     "description": "Client SDK for CyberSource REST APIs",
     "keywords": [
         "cybersource", "payments", "ecommerce", "merchant", "merchants", "authorize", "visa", "payment", "payment-gateway", "payment-integration", "payment-module", "payment-processing", "payment-service", "payment-methods"
@@ -29,7 +29,7 @@
         "ramsey/uuid": "^4.0"
     },
     "require-dev": {
-        "phpunit/phpunit": "9.6.15"
+        "phpunit/phpunit": "~9.6.33"
     },
     "autoload": {
         "psr-4": { "CyberSource\\" : "lib/" }

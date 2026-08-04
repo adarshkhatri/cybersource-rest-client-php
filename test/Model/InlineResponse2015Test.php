@@ -32,40 +32,40 @@ namespace CyberSource;
  * InlineResponse2015Test Class Doc Comment
  *
  * @category    Class */
-// * @description Egress Key Information Response
+// * @description InlineResponse2015
 /**
  * @package     CyberSource
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class InlineResponse2015Test extends \PHPUnit_Framework_TestCase
+class InlineResponse2015Test extends \PHPUnit\Framework\TestCase
 {
 
     /**
      * Setup before running any test case
      */
-    public static function setUpBeforeClass()
+    public static function setUpBeforeClass(): void
     {
     }
 
     /**
      * Setup before running each test case
      */
-    public function setUp()
+    protected function setUp(): void
     {
     }
 
     /**
      * Clean up after running each test case
      */
-    public function tearDown()
+    protected function tearDown(): void
     {
     }
 
     /**
      * Clean up after running all test cases
      */
-    public static function tearDownAfterClass()
+    public static function tearDownAfterClass(): void
     {
     }
 
@@ -77,9 +77,9 @@ class InlineResponse2015Test extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "submitTimeUtc"
+     * Test attribute "id"
      */
-    public function testPropertySubmitTimeUtc()
+    public function testPropertyId()
     {
     }
 
@@ -91,6 +91,27 @@ class InlineResponse2015Test extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "submitTimeStampUtc"
+     */
+    public function testPropertySubmitTimeStampUtc()
+    {
+    }
+
+    /**
+     * Test attribute "links"
+     */
+    public function testPropertyLinks()
+    {
+    }
+
+    /**
+     * Test attribute "transactions"
+     */
+    public function testPropertyTransactions()
+    {
+    }
+
+    /**
      * Test attribute "clientReferenceInformation"
      */
     public function testPropertyClientReferenceInformation()
@@ -98,9 +119,9 @@ class InlineResponse2015Test extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "keyInformation"
+     * Test attribute "errorInformation"
      */
-    public function testPropertyKeyInformation()
+    public function testPropertyErrorInformation()
     {
     }
 }

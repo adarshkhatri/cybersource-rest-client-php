@@ -40,34 +40,64 @@ use \CyberSource\ObjectSerializer;
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class AgentCapabilitiesApiTest extends \PHPUnit_Framework_TestCase
+class AgentCapabilitiesApiTest extends \PHPUnit\Framework\TestCase
 {
 
     /**
      * Setup before running any test cases
      */
-    public static function setUpBeforeClass()
+    public static function setUpBeforeClass(): void
     {
     }
 
     /**
      * Setup before running each test case
      */
-    public function setUp()
+    protected function setUp(): void
     {
     }
 
     /**
      * Clean up after running each test case
      */
-    public function tearDown()
+    protected function tearDown(): void
     {
     }
 
     /**
      * Clean up after running all test cases
      */
-    public static function tearDownAfterClass()
+    public static function tearDownAfterClass(): void
+    {
+    }
+
+    /**
+     * Test case for activateAgentKey
+     *
+     * Activate a key.
+     *
+     */
+    public function testActivateAgentKey()
+    {
+    }
+
+    /**
+     * Test case for addAgentKey
+     *
+     * Add a key to an agent.
+     *
+     */
+    public function testAddAgentKey()
+    {
+    }
+
+    /**
+     * Test case for cancelCheckout
+     *
+     * Cancel Checkout ACP.
+     *
+     */
+    public function testCancelCheckout()
     {
     }
 
@@ -82,12 +112,42 @@ class AgentCapabilitiesApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for completeCheckout
+     *
+     * Complete Checkout ACP.
+     *
+     */
+    public function testCompleteCheckout()
+    {
+    }
+
+    /**
      * Test case for confirmTransactionEvents
      *
      * Confirm transaction events.
      *
      */
     public function testConfirmTransactionEvents()
+    {
+    }
+
+    /**
+     * Test case for createCheckoutSession
+     *
+     * Create Checkout Session ACP.
+     *
+     */
+    public function testCreateCheckoutSession()
+    {
+    }
+
+    /**
+     * Test case for deactivateAgentKey
+     *
+     * Deactivate a key.
+     *
+     */
+    public function testDeactivateAgentKey()
     {
     }
 
@@ -102,6 +162,36 @@ class AgentCapabilitiesApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for getAgent
+     *
+     * Get an agent.
+     *
+     */
+    public function testGetAgent()
+    {
+    }
+
+    /**
+     * Test case for getAgentKey
+     *
+     * Get a key by agent and key ID.
+     *
+     */
+    public function testGetAgentKey()
+    {
+    }
+
+    /**
+     * Test case for getCheckoutSession
+     *
+     * Get Checkout Session ACP.
+     *
+     */
+    public function testGetCheckoutSession()
+    {
+    }
+
+    /**
      * Test case for initiatePurchaseIntent
      *
      * Initiate a purchase intent.
@@ -112,12 +202,112 @@ class AgentCapabilitiesApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for listAgentKeys
+     *
+     * List keys for an agent.
+     *
+     */
+    public function testListAgentKeys()
+    {
+    }
+
+    /**
+     * Test case for registerAgent
+     *
+     * Register an agent.
+     *
+     */
+    public function testRegisterAgent()
+    {
+    }
+
+    /**
      * Test case for retrievePaymentCredentials
      *
      * Retrieve payment credentials.
      *
      */
     public function testRetrievePaymentCredentials()
+    {
+    }
+
+    /**
+     * Test case for ucpCancelCheckout
+     *
+     * Cancel Checkout UCP.
+     *
+     */
+    public function testUcpCancelCheckout()
+    {
+    }
+
+    /**
+     * Test case for ucpCompleteCheckout
+     *
+     * Complete Checkout UCP.
+     *
+     */
+    public function testUcpCompleteCheckout()
+    {
+    }
+
+    /**
+     * Test case for ucpCreateCheckoutSession
+     *
+     * Create Checkout Session UCP.
+     *
+     */
+    public function testUcpCreateCheckoutSession()
+    {
+    }
+
+    /**
+     * Test case for ucpGetCheckoutSession
+     *
+     * Get Checkout Session UCP.
+     *
+     */
+    public function testUcpGetCheckoutSession()
+    {
+    }
+
+    /**
+     * Test case for ucpUpdateCheckoutSession
+     *
+     * Update Checkout Session UCP.
+     *
+     */
+    public function testUcpUpdateCheckoutSession()
+    {
+    }
+
+    /**
+     * Test case for updateAgent
+     *
+     * Update an agent.
+     *
+     */
+    public function testUpdateAgent()
+    {
+    }
+
+    /**
+     * Test case for updateAgentKey
+     *
+     * Update a key.
+     *
+     */
+    public function testUpdateAgentKey()
+    {
+    }
+
+    /**
+     * Test case for updateCheckoutSession
+     *
+     * Update Checkout Session ACP.
+     *
+     */
+    public function testUpdateCheckoutSession()
     {
     }
 
